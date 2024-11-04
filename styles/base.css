@@ -27,22 +27,13 @@ header {
     align-items: stretch;
 }
 
-main {
-    width: 87%;
-    background: rgb(180, 215, 215);
-    padding: 2rem;
-}
-
-aside {
-    background: rgb(220, 245, 227);
-    padding: 1rem;
-}
-
-footer {
-    background: rgb(210, 202, 191);
-    padding: 0rem;
-    text-align: left;
-    grid-area: footer;
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 1.5;
+    text-align: center;
 }
 
 nav {
@@ -78,12 +69,22 @@ nav a:hover {
     border-radius: 5px;
 }
 
-h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 2rem;
-    margin: 0;
+main {
+    max-width: 80%;
+    background: rgb(180, 215, 215);
+    padding: 2rem;
+}
+
+aside {
+    background: rgb(220, 245, 227);
+    padding: 1rem;
+}
+
+footer {
+    background: rgb(210, 202, 191);
+    padding: 0rem;
+    text-align: left;
+    grid-area: footer;
 }
 
 script {
