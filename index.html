@@ -32,6 +32,12 @@
         <div class="card">Placeholder card 2</div>
         <div class="card">Placeholder card 3</div>
         <div class="card">Placeholder card 4</div>
+            <div class ="about-me-header"> About Me</div>
+            <div class=""about-me-content">
+                <img src+"pathtoimage.jpg" alt="Picture of Christi Dobbins">
+                <p>This is the paragraph that has information about me.</p>
+            </div>
+        </div>
     </main>
     <aside>
         <h2>Aside</h2>
@@ -45,3 +51,28 @@
 </body>
 
 </html>
+
+
+<!-- The defer attribute is a boolean attribute that can be added to a <script> tag in HTML. When present, it specifies that the script should be executed after the HTML document has been completely parsed. This is particularly useful for scripts that manipulate the DOM, as it ensures that the DOM is fully loaded before the script runs.
+
+    Key Points about defer
+    Non-blocking: When a script has the defer attribute, it does not block the HTML parser. The browser continues to parse the HTML while the script is being fetched.
+    Execution Order: Deferred scripts are executed in the order they appear in the document.
+    DOM Ready: Deferred scripts are guaranteed to execute after the entire HTML document has been parsed, but before the DOMContentLoaded event. -->
+
+    <!-- Explanation -->
+<!-- <script src="scripts/getdates.js" defer></script>: This line references the getdates.js file located in the scripts directory. The defer attribute ensures that the script is executed after the HTML document has been completely parsed.
+Summary
+The defer attribute is a boolean attribute that ensures the script is executed after the HTML document has been completely parsed. It allows the browser to continue parsing the HTML while the script is being fetched, and it guarantees that the script will run in the order it appears in the document, but only after the DOM is fully loaded. This is particularly useful for scripts that manipulate the DOM. -->
+
+<!-- JavaScript at the End of the Body
+You can place the <script> tag at the end of the <body> section. This ensures that the script is executed after the HTML document has been completely parsed, similar to using defer. -->
+
+    <!-- There are multiple ways to include and use JavaScript in an HTML document:
+
+Inline JavaScript: Directly within the HTML file using the <script> tag.
+External JavaScript with defer: Ensures the script is executed after the HTML document has been completely parsed.
+External JavaScript with async: Allows the script to be downloaded in parallel with the HTML parsing and executed as soon as it is available.
+External JavaScript without defer or async: Blocks the HTML parsing until the script is downloaded and executed.
+JavaScript at the End of the Body: Ensures the script is executed after the HTML document has been completely parsed.
+Each method has its own use cases and benefits, and you can choose the one that best fits your needs. -->

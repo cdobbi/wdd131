@@ -2,10 +2,6 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic; */
     display: grid;
     height: 100vh;
     margin: 0;
@@ -73,6 +69,47 @@ main {
     max-width: 80%;
     background: rgb(180, 215, 215);
     padding: 2rem;
+    margin: 0 auto;
+}
+
+.card {
+    background: auqamarine;
+    padding: 1rem;
+    border: 1px solid #ccc border-radius 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-me {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: white;
+}
+
+.abbout-me-header {
+    background: coral;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.about-me-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.about-me-content p {
+    flex: 1;
 }
 
 aside {
@@ -83,7 +120,7 @@ aside {
 footer {
     background: rgb(210, 202, 191);
     padding: 0rem;
-    text-align: left;
+    text-align: center;
     grid-area: footer;
 }
 
@@ -94,3 +131,8 @@ script {
     font-size: 1rem;
     margin: 0;
 }
+
+/* .poppins-extralight-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic; */
