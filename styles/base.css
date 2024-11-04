@@ -28,7 +28,7 @@ h1 {
     font-weight: 100;
     font-style: normal;
     font-size: 2rem;
-    margin: 1.5;
+    margin: 1.5 rem 0;
     text-align: center;
 }
 
@@ -49,7 +49,7 @@ nav ul {
 }
 
 nav ul li {
-    flex: 1 1 100% margin;
+    flex: 100% margin;
 }
 
 nav a {
@@ -73,9 +73,9 @@ main {
 }
 
 .card {
-    background: auqamarine;
+    background: aliceblue;
     padding: 1rem;
-    border: 1px solid #ccc border-radius 5px;
+    border: 1px solid #ccc; border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
