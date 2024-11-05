@@ -28,7 +28,7 @@ h1 {
     font-weight: 100;
     font-style: normal;
     font-size: 2rem;
-    margin: 1.5 rem 0;
+    margin: 1.5;
     text-align: center;
 }
 
@@ -48,15 +48,15 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
-    flex: 100% margin;
-}
+/* nav ul li {
+    flex: 1; */
+/* } */
 
 nav a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 1 rem;
+    padding: .5rem;
     text-decoration: none;
 }
 
@@ -73,13 +73,14 @@ main {
 }
 
 .card {
-    background: aliceblue;
+    background: rgb(132, 191, 243);
     padding: 1rem;
-    border: 1px solid #ccc; border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.about-me {
+.card1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 1rem;
@@ -87,7 +88,7 @@ main {
     background: white;
 }
 
-.abbout-me-header {
+.card1 header {
     background: coral;
     color: white;
     padding: 0.5rem;
@@ -96,19 +97,19 @@ main {
     font-weight: bold;
 }
 
-.about-me-content {
+.card1 content {
     display: flex;
     align-items: center;
     padding: 1rem;
 }
 
-.about-me-content img {
+.card1 img {
     max-width: 100%;
     height: auto;
     margin-top: 1rem;
 }
 
-.about-me-content p {
+.card1 p {
     flex: 1;
 }
 
@@ -131,8 +132,3 @@ script {
     font-size: 1rem;
     margin: 0;
 }
-
-/* .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic; */
