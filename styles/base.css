@@ -33,7 +33,7 @@ header {
     /* padding around header */
     grid-area: header;
     /* header full width */
-    max-width: 80%;
+    width: 80%;
     /* header full width */
 }
 
