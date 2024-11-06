@@ -222,7 +222,7 @@ aside.card {
 }
 
 footer {
-    max-width: 80%;
+    width: 80%;
     /* footer is a grid container */
     background: rgb(210, 202, 191);
     /* footer background color */
