@@ -1,6 +1,7 @@
 body {
     /* body is a grid container */
     display: grid;
+    place-items: center;
     height: 100vh;
     /* full height */
     margin: 0;
@@ -32,7 +33,7 @@ header {
     /* padding around header */
     grid-area: header;
     /* header full width */
-    width: 100%;
+    width: 80%;
     /* header full width */
 }
 
@@ -221,6 +222,7 @@ aside.card {
 }
 
 footer {
+    width: 80%;
     /* footer is a grid container */
     background: rgb(210, 202, 191);
     /* footer background color */
