@@ -33,7 +33,7 @@ header {
     /* padding around header */
     grid-area: header;
     /* header full width */
-    width: 80%;
+    max-width: 80%;
     /* header full width */
 }
 
@@ -61,7 +61,7 @@ nav {
     /* nav background color */
     padding: 1rem;
     /* padding around nav */
-    width: 100%;
+    max-width: 100%;
     /* nav bar full width */
 }
 
@@ -115,7 +115,7 @@ main {
     /* main takes 2/3, aside takes 1/3 */
     gap: .8rem;
     /* gap between main and aside */
-    width: 80%;
+    max-width: 80%;
     /* main has full width */
     background: rgb(199, 228, 228);
     padding: 2rem;
@@ -222,7 +222,7 @@ aside.card {
 }
 
 footer {
-    width: 80%;
+    max-width: 80%;
     /* footer is a grid container */
     background: rgb(210, 202, 191);
     /* footer background color */
