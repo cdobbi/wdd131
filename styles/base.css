@@ -181,6 +181,7 @@ main {
     /* image width */
     height: auto;
     /* maintain aspect ratio */
+    padding: .5rem;
 }
 
 .country-content {
