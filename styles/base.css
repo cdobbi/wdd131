@@ -57,7 +57,7 @@ nav {
     /* nav is a flex container */
     box-sizing: border-box;
     /* padding width */
-    background-color: rgb(253, 82, 104);
+    background-color: rgb(254, 119, 137);
     /* nav background color */
     padding: 1rem;
     /* padding around nav */
@@ -85,7 +85,7 @@ nav a {
     /* nav links */
     display: block;
     /* block element */
-    color: white;
+    color: black;
     /* text color */
     text-align: center;
     /* center text */
