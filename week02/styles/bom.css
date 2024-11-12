@@ -8,8 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: Acme, Arial, sans-serif;
+    justify-content: left;
+    font-family: Verdana, Verdana, sans-serif;
 }
 
 h1 {
@@ -20,18 +20,19 @@ main {
     margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    background-color: #ddd;
+    background-color: #dadfad;
     display: flex;
     flex-direction: column;
 }
 
 input,
 button {
-    padding: 0.5rem;
+    padding: .7rem;
+    margin: .5rem;
 }
 
 button {
-    margin: 0.5rem;
+    margin: 1.5.rem;
 }
 
 .delete {
@@ -40,11 +41,12 @@ button {
 
 .input {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 .list {
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 ul {
@@ -54,8 +56,28 @@ ul {
 
 li {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+    color: lightyellow;
+    cursor: pointer;
+    margin: -.5rem;
+}
+
+li button:hover {
+    color: rgb(239, 209, 127);
+}
+
+footer {
+    padding: 1rem;
+    background-color: #dadfad;
+    text-align: center;
+    background-color: white;
+    font-size: 0.8rem;
 }
 
 @media only screen and (min-width: 32.5em) {
@@ -64,6 +86,6 @@ li {
     }
 
     main {
-        width: 320px;
+        width: 450px;
     }
 }
