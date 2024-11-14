@@ -17,7 +17,7 @@
     }
 
     main {
-        grid-template-columns: repeat(2, 1fr); /* Change the layout to 2 columns */
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         margin: 1rem auto;
     }
@@ -30,30 +30,6 @@
 
 @media screen and (min-width: 1024px) {
     main {
-        grid-template-columns: repeat(3, 1fr); /* Change the layout to 3 columns */
+        grid-template-columns: repeat(3, 1fr);
     }
-}
-
-.header-bar {
-    background: rgb(230, 230, 230);
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header-bar ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-}
-
-.header-bar ul li {
-    margin: 0;
-}
-
-.header-bar ul li a {
-    text-decoration: none;
 }

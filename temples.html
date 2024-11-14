@@ -18,13 +18,13 @@
     <header>
         <h1>Temple Album</h1>
         <nav class="header-bar">
-            <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger button -->
+            <button class="hamburger" id="hamburger">&#9776;</button>
             <ul id="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="homelink">Home</a></li>
+                <li><a href="oldlink">Old</a></li>
+                <li><a href="largelink"newlink">New</a></li>
+                <li><a href="largelink">Large</a></li>
+                <li><a href="smalllink">Small</a></li>
             </ul>
         </nav>
     </header>
@@ -77,20 +77,7 @@
 
 </html>
 
-
-
 <!-- 
-CSS Media Queries
-Overview
-CSS Media Queries help web designers/developers show different styles for the content on various screen sizes. Designers use these queries to decide when to change the design or layout based on the content and set breakpoints, like the minimum screen width.
-
-"Do NOT define breakpoints based on device classes. Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use today can result in a maintenance nightmare. Instead, the content itself should determine how the layout adjusts to its container."
-- How to choose breakpoints - Responsive Web - Google Web Fundamentals
-
-Associated Course Learning Outcome(s)
-Prepare
-CSS media queries are essential to responsive web design. The @media at-rule specifies condition(s) to create a block of CSS rules that are applied if the condition(s) evaluates to true. This is extremely useful as selected elements can be repositioned, resized, hidden, exposed, etc. based upon the user's viewport size.
-
 Here is the general syntax is setting up a CSS media query:
 
 @media not|only mediatype and (expressions) {

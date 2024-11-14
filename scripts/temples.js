@@ -2,7 +2,7 @@
 document.getElementById("lastModified").textContent = document.lastModified;
 
 // Update the current year
-document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear(); // Ensure the ID matches the HTML
 
 // Toggle the navigation menu
 const hamburger = document.getElementById('hamburger');
@@ -13,7 +13,7 @@ hamburger.addEventListener('click', () => {
     hamburger.textContent = navMenu.classList.contains('show') ? 'X' : '☰';
 });
 
-// Existing code for adding chapters
+// Existing code for adding chapters (if necessary for your task)
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
@@ -48,6 +48,7 @@ function addChapter() {
 
 button.addEventListener("click", addChapter);
 
+// Optional: Remove if not needed
 window.addEventListener("resize", function() {
     console.log("The window has been resized!");
 });
