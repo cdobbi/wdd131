@@ -7,11 +7,13 @@
     <title>WDD 131 - Photo Album</title>
     <meta name="author" content="Christina Brunyer Dobbins">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Poppins:ital,wght@0,100;0,400;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Poppins:ital,wght@0,100;0,400;1,200&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
-    <meta name="description" content="This file applies the concepts being learned to a picture album page of Temples, that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests">
+    <meta name="description"
+        content="This file applies the concepts being learned to a picture album page of Temples, that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
             <ul id="nav-menu">
                 <li><a href="homelink">Home</a></li>
                 <li><a href="oldlink">Old</a></li>
-                <li><a href="largelink"newlink">New</a></li>
+                <li><a href="largelink" newlink">New</a></li>
                 <li><a href="largelink">Large</a></li>
                 <li><a href="smalllink">Small</a></li>
             </ul>
@@ -99,24 +101,9 @@ Sample code explanation
 
 3️⃣-5️⃣ The @font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <h1> elements if the @media query conditions are met.
 
-6️⃣ The first }closes the CSS rule for <h1> code elements.
-
-7️⃣ The last }closes the media query.
-
-⚠️ Note that curly brackets { } are used to contain a specific media query and are also used to define CSS Rules. Be sure to keep track of your bracket scope (start and end). Using automatic VS Code Format Document features will help you recognize issues with your structure.
-
-Media Query Application Demonstration ~3 min
-Design Considerations: The Viewport
-Designing for A Viewport ~13:30 min | Designing for a Viewport Transcript
 Activity Instructions
 For this activity, you will create a simple HTML page with two CSS files. The first CSS file will be used to style the page for mobile devices. The second CSS file will be used to style the page for larger viewports. You will use CSS media queries to apply the appropriate CSS file based upon the viewport width.
 
-Remember that a responsible use of an ♾️AI generative tool could be to ask questions about how to formulate a specific code piece. For example, "how to combine selectors in CSS", and an example will be given with which you can apply to your own code. Do not spin your tires in the mud so that you do not get stuck on a single requirement in the activity.
-
-File and Folder Setup
-Add a new HTML file named "media-query.html" in a "week02" named folder all within your same wdd131 repo.
-Add two CSS files named "media-query.css" and "media-query-large.css" to an appropriate subfolder ("styles") within the week02 folder.
-HTML
 In your media-query.html file, create a valid HTML page with standard head content including
 Meta Charset Attribute
 Meta Viewport Element
@@ -235,20 +222,3 @@ Apply a responsive hamburger effect to your existing navigation menu using JavaS
 The hamburger button should only show in the mobile view.
 Clicking the hamburger button toggles the navigation menu items from viewable to not viewable.
 Use a symbol, such as an 'X' to close the hamburger menu.
-Testing
-Continuously check your work by rendering the page locally using Live Server in VS Code.
-Screenshot of console error icon in DevToolsUse the browser's DevTools to check for JavaScript runtime errors in the console or click the red, error icon in the upper right corner of DevTools.
-"DevTools" is an abbreviation for "Developer Tools." It refers to a set of tools or utilities provided by web browsers to help developers debug, profile, and analyze web pages during the development process. The tools are typically accessed by pressing the F12 function key or selecting the menu option for the browser's developer tools.
-Use DevTools CSS Overview to check your color contrast.
-Generate the DevTools Lighthouse report and run diagnostics for Accessibility, Best Practices, and SEO in both the mobile and Desktop views.
-It is best to test your page in a Private or Incognito browser window.
-Hard reload the page using Empty Cache and Hard Reload in DevTools with the Network tab open to view the total transferred bytes at the bottom of the tab. Check that the page is 500 kB or less. The usually fixes at this point are:
-Make sure that all images are optimized.
-Third party libraries are not allowed because these libraries typically add a lot of unused code to the page and the learning outcome is to understand the basic concepts in web frontend development.
-Audit and Submission
-Commit your local repository and push or upload your work to your GitHub Pages enabled wdd 131 repository on GitHub.
-Use this ☑️ audit tool to check some basic HTML and CSS standards and requirements.
-Share your work by posting your URL in the course's Microsoft Teams weekly forum and comment on your peers' work by providing constructive feedback.
-Return to I-Learn and submit your the correct GitHub Pages enabled URL.
-https://your-github-username.github.io/wdd131/temples.html
-Home -->

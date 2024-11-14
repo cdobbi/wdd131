@@ -22,7 +22,8 @@ body {
     }
 
     #nav-menu {
-        display: none; /* Hide navigation menu by default */
+        display: none;
+        /* Hide navigation menu by default */
     }
 
     #nav-menu.show {
@@ -56,7 +57,7 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 1fr; /* One column in mobile view */
+    grid-template-columns: 1fr;
     gap: 0.5rem;
     width: 100%;
     max-width: 600px;

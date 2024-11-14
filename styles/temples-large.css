@@ -1,6 +1,7 @@
 /* temples-large.css */
 
 @media screen and (min-width: 768px) {
+
     header,
     main,
     footer {
@@ -18,18 +19,36 @@
 
     main {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: .5rem;
         margin: 1rem auto;
     }
 
-    section {
+    /* section {
         padding: 1rem;
         background-color: #f5f5f5;
+    } */
+
+    footer {
+        background-color: rgb(191, 240, 213);
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1640px) {
     main {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
