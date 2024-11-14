@@ -1,0 +1,59 @@
+/* temples-large.css */
+
+@media screen and (min-width: 768px) {
+    header,
+    main,
+    footer {
+        max-width: 90%;
+        margin: 1rem auto;
+        border: 1px solid #141414;
+        padding: 1rem;
+        background-color: #d4f3f5;
+    }
+
+    header {
+        background-color: rgb(191, 240, 213);
+        color: black;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Change the layout to 2 columns */
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    section {
+        padding: 1rem;
+        background-color: #f5f5f5;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Change the layout to 3 columns */
+    }
+}
+
+.header-bar {
+    background: rgb(230, 230, 230);
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-bar ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.header-bar ul li {
+    margin: 0;
+}
+
+.header-bar ul li a {
+    text-decoration: none;
+}

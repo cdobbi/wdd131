@@ -1,11 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples</title>
+    <title>WDD 131 - Photo Album</title>
+    <meta name="author" content="Christina Brunyer Dobbins">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Poppins:ital,wght@0,100;0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+    <meta name="description" content="This file applies the concepts being learned to a picture album page of Temples, that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="header-bar">
+            <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger button -->
+            <ul id="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Home</h2>
+    <main>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 1</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 2</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 3</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 4</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 5</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 6</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 7</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 8</figcaption>
+        </figure>
+        <figure>
+            <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+            <figcaption>Temple 9</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🐇 Christina Brunyer Dobbins 🐇 USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
 </body>
+
 </html>
+
+
+
+<!-- 
+CSS Media Queries
+Overview
+CSS Media Queries help web designers/developers show different styles for the content on various screen sizes. Designers use these queries to decide when to change the design or layout based on the content and set breakpoints, like the minimum screen width.
+
+"Do NOT define breakpoints based on device classes. Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use today can result in a maintenance nightmare. Instead, the content itself should determine how the layout adjusts to its container."
+- How to choose breakpoints - Responsive Web - Google Web Fundamentals
+
+Associated Course Learning Outcome(s)
+Prepare
+CSS media queries are essential to responsive web design. The @media at-rule specifies condition(s) to create a block of CSS rules that are applied if the condition(s) evaluates to true. This is extremely useful as selected elements can be repositioned, resized, hidden, exposed, etc. based upon the user's viewport size.
+
+Here is the general syntax is setting up a CSS media query:
+
+@media not|only mediatype and (expressions) {
+  /* CSS rules go here inside the @media query's opening and closing curly brackets {} */
+}
+Here is an example CSS media query which could be embedded in a CSS file or be the entire contents of a CSS file if wanted. This example only has one CSS rule.
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: navy;
+  }
+}
+Sample code explanation
+1️⃣ The @media screen and (min-width: 640px) {is the signature line of the @media query block of CSS rules to be applied if the conditions are met. In this case the conditions are if the media type is a screen and the viewport minimum width is at least 640 pixels wide.
+
+2️⃣ The h1 {is a heading 1 (<h1>) element selector which starts the defined CSS rule.
+
+3️⃣-5️⃣ The @font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <h1> elements if the @media query conditions are met.
+
+6️⃣ The first }closes the CSS rule for <h1> code elements.
+
+7️⃣ The last }closes the media query.
+
+⚠️ Note that curly brackets { } are used to contain a specific media query and are also used to define CSS Rules. Be sure to keep track of your bracket scope (start and end). Using automatic VS Code Format Document features will help you recognize issues with your structure.
+
+Media Query Application Demonstration ~3 min
+Design Considerations: The Viewport
+Designing for A Viewport ~13:30 min | Designing for a Viewport Transcript
+Activity Instructions
+For this activity, you will create a simple HTML page with two CSS files. The first CSS file will be used to style the page for mobile devices. The second CSS file will be used to style the page for larger viewports. You will use CSS media queries to apply the appropriate CSS file based upon the viewport width.
+
+Remember that a responsible use of an ♾️AI generative tool could be to ask questions about how to formulate a specific code piece. For example, "how to combine selectors in CSS", and an example will be given with which you can apply to your own code. Do not spin your tires in the mud so that you do not get stuck on a single requirement in the activity.
+
+File and Folder Setup
+Add a new HTML file named "media-query.html" in a "week02" named folder all within your same wdd131 repo.
+Add two CSS files named "media-query.css" and "media-query-large.css" to an appropriate subfolder ("styles") within the week02 folder.
+HTML
+In your media-query.html file, create a valid HTML page with standard head content including
+Meta Charset Attribute
+Meta Viewport Element
+Title Element
+Meta Description Element
+Meta Author Element
+Link to a Google Font named "Roboto" - regular 400.
+Link references to your CSS two (2) files. Link the media-query.css file first.
+Example
+In the body of the HTML document, add a header with an h1, a main element with two section elements, and a footer element.
+The h1 element should contain the words "Media Query Example".
+Each section h2 heading contains a scripture with book, chapter, and verse.
+The section paragraph contains a copy of the actual scripture referenced in the heading.
+The footer should contain your name.
+Example
+CSS
+Style the document as shown in the example screenshots given below.
+media-query.css
+Do not include a media query.
+Use the Google Font - Roboto in the body rule.
+The header, main, and footer each
+have a maximum width of 640 pixels,
+are centered on the page using margin: 1rem auto,
+include a faint border,
+use appropriate padding, and
+have a blueish background color of your choice.
+Remember that you can combine these three selectors into one rule or create a class that contains these common CSS declarations.
+
+Declare the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and
+If you had a question to pose to the class in Microsoft Teams, use specific and descriptive language, e.g., "I have a question about the media-query assignment part 5.1.4. I do not know how to set the main element grid to only one column with an even gap of 1rem."
+
+Declare the section elements to also have padding and a lighter or white background.
+Check Your Understanding
+In the media-query-large.css,
+Write a containing media query to be applied at a viewport width of 500px or greater.
+@media screen and (min-width: 500px)
+Change through declaration within the media query the header to a black background with white text, and
+Change the main element to display two columns of equal size.
+Example
+Example Screenshots
+Screenshot of media query example in the mobile view.
+Figure 1: Mobile View Screenshot
+Screenshot of media query example in the large view
+Figure 2: Wider View Screenshot
+Testing
+You should be continuously checking your browser rendered work using Live Server extension.
+-->
+
+<!-- W02 Assignment: Picture Album
+Overview
+This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests.
+
+Associated Course Learning Outcomes
+Task
+Design, develop, test, and then deploy a temple album page using your own selections of temple pictures.
+
+Example Picture Album Page Screenshot - Mobile
+Figure 1: Screenshot Example in Mobile View
+Example Picture Album Page Screenshot - Larger
+Figure 2: Screenshot Example in Larger View
+Demonstration of Responsive Behavior
+responsive example
+Instructions
+File and Folder Setup
+In VS Code, open the wdd131 local repository folder if it does not open automatically because it was your last working directory.
+Create a new file named "temples.html".
+Add two CSS files named "temples.css" and "temples-large.css" to the "styles" directory.
+Add a JavaScript file named "temples.js" to the "scripts" directory.
+HTML
+In the temples.html document, include the standard HTML document and <head> elements.
+Refer to the development standards if you need a review.
+
+Add links to the CSS files in the proper order to support mobile first dev.
+Add a deferred <script> reference to the JavaScript file.
+In the <body>, create a basic layout using a header, a main, and a footer as main line elements.
+The <header> element contains:
+a heading that matches up with the title, and
+a <nav> menu with the following text links:
+Home
+Old
+New
+Large
+Small
+You can build this navigation using straight up anchor <a> tags or using a common, unordered list <ul> with list items <li> and <a> tags. Of course, the structural decision you make affects how you will use CSS to style the vertical (mobile) and horizontal (larger) menu.
+The <main> element contains the following:
+a heading element with content matches the current menu selection,
+at least (9) <figure> elements with temple images and captions. Use the built in figure captions elements and name the temple.
+It is OK to have a single placeholder temple image at this point in the course. We will be adding additional functionality, including responsive image variations to this page in the coming weeks.
+The <footer> contains the same dynamic and static information found on your home page from last week.
+Common Footer Screenshot Example
+Figure 3: Screenshot Example of Common Footer
+CSS
+Use the external temples.css and temples-large.css files to layout and style the page as shown is the example screenshots. Your design must support a responsive view in mobile and larger views.
+
+The temples.css file is used for the mobile view and the temples-large.css file is used for the larger view. Most of your CSS should be located in the temples.css file in mobile first design
+Use your own color schema.
+Please note: You are responsible to practice good design principles of alignment, color contrast, proximity, repetition, and consistent spacing in all of your work.
+Use your own typography choice by using the Google Fonts API service to select one or two fonts to use on the page.
+Google Fonts Demonstration
+Use CSS Flex on the navigation nav.
+CSS Flex Navigation Menu - Demonstration Video
+CSS Flex Menu Example - CodePen Source Code
+Header Contained CSS Flex Example - CodePen Source Code
+The navigation must employ a hover affect. See the CodePen above for an example.
+The main element has a limited width and is centered on the screen horizontally.
+Layout the main column figure elements using CSS Grid. In the mobile view, there should only be one (1) column.
+The application of CSS Grid to support a responsive view is up to you. Some of the options could be:
+• use grid-template-column specific fr changes in the media query, or
+• use grid-template-column property with a repeat function and auto-fit and minmax function.
+Example: Grid Column Layouts and Image Effects - CodePen
+
+JavaScript
+Remember that all of your JavaScript references in this class should be to external files.
+Support the footer copyright year and date last modified output through a valid JavaScript reference. You already have one or could use the temples.js file.
+Apply a responsive hamburger effect to your existing navigation menu using JavaScript.
+The hamburger button should only show in the mobile view.
+Clicking the hamburger button toggles the navigation menu items from viewable to not viewable.
+Use a symbol, such as an 'X' to close the hamburger menu.
+Testing
+Continuously check your work by rendering the page locally using Live Server in VS Code.
+Screenshot of console error icon in DevToolsUse the browser's DevTools to check for JavaScript runtime errors in the console or click the red, error icon in the upper right corner of DevTools.
+"DevTools" is an abbreviation for "Developer Tools." It refers to a set of tools or utilities provided by web browsers to help developers debug, profile, and analyze web pages during the development process. The tools are typically accessed by pressing the F12 function key or selecting the menu option for the browser's developer tools.
+Use DevTools CSS Overview to check your color contrast.
+Generate the DevTools Lighthouse report and run diagnostics for Accessibility, Best Practices, and SEO in both the mobile and Desktop views.
+It is best to test your page in a Private or Incognito browser window.
+Hard reload the page using Empty Cache and Hard Reload in DevTools with the Network tab open to view the total transferred bytes at the bottom of the tab. Check that the page is 500 kB or less. The usually fixes at this point are:
+Make sure that all images are optimized.
+Third party libraries are not allowed because these libraries typically add a lot of unused code to the page and the learning outcome is to understand the basic concepts in web frontend development.
+Audit and Submission
+Commit your local repository and push or upload your work to your GitHub Pages enabled wdd 131 repository on GitHub.
+Use this ☑️ audit tool to check some basic HTML and CSS standards and requirements.
+Share your work by posting your URL in the course's Microsoft Teams weekly forum and comment on your peers' work by providing constructive feedback.
+Return to I-Learn and submit your the correct GitHub Pages enabled URL.
+https://your-github-username.github.io/wdd131/temples.html
+Home -->
