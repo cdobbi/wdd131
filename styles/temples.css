@@ -42,7 +42,7 @@ div.menu {
 main {
     max-width: 900px;
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
     background: rgb(201, 231, 231);
     margin: 0 auto;
     justify-content: center;
@@ -68,14 +68,22 @@ footer {
     padding: 0rem;
     text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 937px) {
     main {
-        grid-template-columns: repeat(2, 1fr);
+        display: block;
+        #nav-menu {
+            display: none;
+        }
     }
 }
 @media (max-width: 480px) {
     main {
         grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
 
