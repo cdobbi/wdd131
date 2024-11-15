@@ -40,9 +40,9 @@ div.menu {
     font-size: large;
 }
 main {
-    max-width: 1200px;
+    max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     background: rgb(201, 231, 231);
     margin: 0 auto;
     justify-content: center;
