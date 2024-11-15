@@ -1,16 +1,9 @@
-const year = document.getElementById('year');
-const lastModified = document.getElementById('lastModified');
-const menu = document.getElementById('menu');
-const nav = document.quesrySelector('nav');
+document.querySelector('.menu').addEventListener('click', function() {
+    document.getElementById('nav-menu').classList.toggle('show');
+});
+document.getElementById("lastModified").textContent = document.lastModified;
 
-const today = new Date().getFullYear();
-year.textContent = today;
-lastModified.textContent = "last modified: " + document.lastModified;
-
-menu.addEventListener("click", function () {
-    nav.classList.toggle("open");
-    menu.classList.toggle("open");
-})
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
 
 // document.getElementById("lastModified").textContent = document.lastModified;
