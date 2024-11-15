@@ -41,6 +41,9 @@
         margin: 0 auto;
         justify-content: center;
     }
+    h2 {
+        text-align: center;
+    }
     img {
         width: 250px;
         padding: 0.5rem;
