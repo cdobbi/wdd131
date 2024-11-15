@@ -17,14 +17,14 @@ nav a {
     text-decoration: none; /* Remove underline from links */
 }
 nav a:hover {
-    background: rgb(252, 129, 211);
-    color: white;
+    background: rgb(253, 143, 7);
+    color: yellow;
 }
 div.menu {
     text-align: right;
     padding: 0.5rem;
     cursor: pointer;
-    display: none;
+    display: none; /* Hide hamburger menu by default */
 }
 .menu::before {
     content: "☰";
@@ -52,14 +52,14 @@ main {
     justify-content: center;
     gap: 1rem;
 }
-h2 {
-    color: rgb(253, 175, 73);
-    text-align: center;
+main h2 {
+    color: rgb(253, 143, 7);
+    text-align: center; /* Center the text */
     padding: 0.5rem;
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Add space below the h2 */
 }
-img {
+.imges {
     margin: 0.5rem;
     padding: 0.5rem;
 }
@@ -89,7 +89,6 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
-
 @media (max-width: 480px) {
     main {
         grid-template-columns: 1fr; /* 1 column for small screens */
