@@ -24,6 +24,7 @@ div.menu {
     text-align: right;
     padding: 0.5rem;
     cursor: pointer;
+    display: none;
 }
 .menu::before {
     content: "☰";
