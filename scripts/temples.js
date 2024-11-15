@@ -1,48 +1,62 @@
+const year = document.getElementById('year');
+const lastModified = document.getElementById('lastModified');
+const menu = document.getElementById('menu');
+const nav = document.quesrySelector('nav');
 
-document.getElementById("lastModified").textContent = document.lastModified;
+const today = new Date().getFullYear();
+year.textContent = today;
+lastModified.textContent = "last modified: " + document.lastModified;
 
-document.getElementById("year").textContent = new Date().getFullYear(); 
+menu.addEventListener("click", function () {
+    nav.classList.toggle("open");
+    menu.classList.toggle("open");
+})
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-    hamburger.textContent = navMenu.classList.contains('show') ? 'X' : '☰';
-});
+// document.getElementById("lastModified").textContent = document.lastModified;
 
-const input = document.querySelector("#favchap");
-const button = document.querySelector("button");
-const list = document.querySelector("#list");
+// document.getElementById("year").textContent = new Date().getFullYear(); 
 
-function addChapter() {
-    const chapter = input.value.trim();
+// const hamburger = document.getElementById('hamburger');
+// const navMenu = document.getElementById('nav-menu');
 
-    if (chapter !== "") {
+// hamburger.addEventListener('click', () => {
+//     navMenu.classList.toggle('show');
+//     hamburger.textContent = navMenu.classList.contains('show') ? 'X' : '☰';
+// });
+
+// const input = document.querySelector("#favchap");
+// const button = document.querySelector("button");
+// const list = document.querySelector("#list");
+
+// // function addChapter() {
+// //     const chapter = input.value.trim();
+
+// //     if (chapter !== "") {
   
-        const li = document.createElement("li");
-        li.textContent = chapter;
+// //         const li = document.createElement("li");
+// //         li.textContent = chapter;
 
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "❌";
-        deleteButton.addEventListener("click", function () {
-            list.removeChild(li);
-            input.focus(); // 
-        });
+// //         const deleteButton = document.createElement("button");
+// //         deleteButton.textContent = "❌";
+// //         deleteButton.addEventListener("click", function () {
+// //             list.removeChild(li);
+// //             input.focus(); // 
+// //         });
 
-        li.append(deleteButton);
+// //         li.append(deleteButton);
 
-        list.append(li);
+// //         list.append(li);
 
-        input.value = "";
-        input.focus();
-    }
-}
+// //         input.value = "";
+// //         input.focus();
+// //     }
+// // }
 
-button.addEventListener("click", addChapter);
+// button.addEventListener("click", addChapter);
 
-window.addEventListener("resize", function() {
-    console.log("The window has been resized!");
-});
+// window.addEventListener("resize", function() {
+//     console.log("The window has been resized!");
+// });
 
 
