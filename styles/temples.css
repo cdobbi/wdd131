@@ -6,6 +6,7 @@
 }
 body {
     font-family: "Poppins", sans-serif;
+    font-weight: 400;
     font-style: normal;
     background: rgb(211, 231, 231);
 }
@@ -39,23 +40,24 @@ div.menu {
     font-size: large;
 }
 main {
-    max-width: 900px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     background: rgb(201, 231, 231);
     margin: 0 auto;
+    justify-content: center;
 }
 h2 {
     color: rgb(253, 175, 73);
     text-align: center;
     padding: 0.5rem;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 img {
     margin: 0.5rem;
     padding: 0.5rem;
 }
 figcaption {
-    margin-top: 5px;
-    margin-bottom: 10px;
     text-align: center;
     font-style: italic;
 }
@@ -66,8 +68,18 @@ footer {
     padding: 0rem;
     text-align: center;
 }
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
 
-/* @media (max-width: 768px) {
+/* {
     .before-nav {
         display: block;
     }

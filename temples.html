@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
     <meta name="description"
         content="This file applies the concepts being learned to a picture album page of Temples, that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests">
 </head>
@@ -19,12 +19,8 @@
 <body>
     <header>
         <h1>Temple Album</h1>
-        <div id="menu">
-            ::before
-        <!-- <nav class="header-bar"> -->
-        <nav>
-            <!-- <button class="hamburger" id="hamburger">&#9776;</button> -->
-            <!-- <ul id="nav-menu"> -->
+        <div class=""menu"></div>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
@@ -32,13 +28,12 @@
                 <li><a href="#">Large</a></li>
                 <li><a href="#">Small</a></li>
             </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
     <h2>Home</h2>
     <main>
-        <div class = "container">
+        <div class="image-grid">
             <figure>
                 <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
                 <figcaption>Temple 1</figcaption>
@@ -75,15 +70,24 @@
                 <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
                 <figcaption>Temple 9</figcaption>
             </figure>
+        </div>
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span> 🐇 Christina Brunyer Dobbins 🐇 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+        document.querySelector('.menu').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
+
+
 
 <!-- 
 Here is the general syntax is setting up a CSS media query:

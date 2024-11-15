@@ -16,11 +16,20 @@
     }
     h1 {
         padding: 10px;
-        font-size: 1rem;
     }
     header nav {
         width: 70vw;
         padding: 10px;
+    }
+    header nav li {
+        display: block;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul li {
+        flex: 1 1 auto;
     }
     #menu {
         display: none;
@@ -33,6 +42,7 @@
     }
     main div.container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
     img {
@@ -41,6 +51,12 @@
     }
     footer {
         background-color: rgb(191, 240, 213);
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 0 auto;
     }
 }
 
@@ -60,13 +76,4 @@
     main {
         grid-template-columns: 1fr;
     }
-} */
-/* header nav li {
-    display: block;
-} */
-/* header nav ul {
-    display: flex;
-} */
-/* header nav ul li {
-    flex: 1 1 100%
 } */
