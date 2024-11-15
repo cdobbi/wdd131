@@ -16,19 +16,11 @@
     }
     h1 {
         padding: 10px;
+        font-size: 1rem;
     }
     header nav {
         width: 70vw;
         padding: 10px;
-    }
-    header nav li {
-        display: block;
-    }
-    header nav ul {
-        display: flex;
-    }
-    header nav ul li {
-        flex: 1 1 100%
     }
     #menu {
         display: none;
@@ -41,7 +33,6 @@
     }
     main div.container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
     }
     img {
@@ -69,4 +60,13 @@
     main {
         grid-template-columns: 1fr;
     }
+} */
+/* header nav li {
+    display: block;
+} */
+/* header nav ul {
+    display: flex;
+} */
+/* header nav ul li {
+    flex: 1 1 100%
 } */
