@@ -6,9 +6,7 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
     font-style: normal;
-    background: rgb(211, 231, 231);
 }
 nav a {
     display: block;
@@ -16,7 +14,7 @@ nav a {
     text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
 }
 nav a:hover {
     background: rgb(252, 129, 211);
@@ -25,6 +23,7 @@ nav a:hover {
 div.menu {
     text-align: right;
     padding: 0.5rem;
+    cursor: pointer;
 }
 .menu::before {
     content: "☰";
@@ -32,20 +31,25 @@ div.menu {
     cursor: pointer;
     color: black;
 }
-.open li {
-    display: block;
-}
 .menu.open::before {
     content: "✖";
     font-size: large;
 }
+.nav-menu {
+    display: none;
+}
+.nav-menu.show {
+    display: flex;
+    flex-direction: column;
+}
 main {
-    /* max-width: 900px; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* background: rgb(201, 231, 231); */
-    /* margin: 0 auto; */
-    /* justify-content: center; */
+    max-width: 900px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    background: rgb(201, 231, 231);
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1rem;
 }
 h2 {
     color: rgb(253, 175, 73);
@@ -72,10 +76,10 @@ footer {
     .menu {
         display: block; /* Show hamburger menu */
     }
-    #nav-menu {
+    .nav-menu {
         display: none; /* Hide nav menu */
     }
-    #nav-menu.show {
+    .nav-menu.show {
         display: flex;
         flex-direction: column;
     }
