@@ -34,18 +34,18 @@
     }
     main {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin-bottom: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        /* margin-bottom: 40px; */
         background-color: #d4f3f5;
-        margin: 0 auto;
+        margin: 1rem auto;
         justify-content: center;
     }
     h2 {
         text-align: center;
     }
     img {
-        width: 250px;
+        width: auto;
         padding: 0.5rem;
     }
     footer {
@@ -70,3 +70,5 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* this file will be used to style the page for larger viewports. You will use CSS media queries to apply the appropriate CSS file based upon the viewport width.*/

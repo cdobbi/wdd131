@@ -30,7 +30,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <h2>Home</h2>
         <div class="image-grid">
@@ -88,103 +87,9 @@
 </html>
 
 
-
-<!-- 
-Here is the general syntax is setting up a CSS media query:
-
-@media not|only mediatype and (expressions) {
-  /* CSS rules go here inside the @media query's opening and closing curly brackets {} */
-}
-Here is an example CSS media query which could be embedded in a CSS file or be the entire contents of a CSS file if wanted. This example only has one CSS rule.
-
-@media screen and (min-width: 640px) {
-  h1 {
-    font-size: 2.5rem;
-    margin: 1rem;
-    color: navy;
-  }
-}
-Sample code explanation
-1️⃣ The @media screen and (min-width: 640px) {is the signature line of the @media query block of CSS rules to be applied if the conditions are met. In this case the conditions are if the media type is a screen and the viewport minimum width is at least 640 pixels wide.
-
-2️⃣ The h1 {is a heading 1 (<h1>) element selector which starts the defined CSS rule.
-
-3️⃣-5️⃣ The @font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <h1> elements if the @media query conditions are met.
-
-Activity Instructions
-For this activity, you will create a simple HTML page with two CSS files. The first CSS file will be used to style the page for mobile devices. The second CSS file will be used to style the page for larger viewports. You will use CSS media queries to apply the appropriate CSS file based upon the viewport width.
-
-In your media-query.html file, create a valid HTML page with standard head content including
-Meta Charset Attribute
-Meta Viewport Element
-Title Element
-Meta Description Element
-Meta Author Element
-Link to a Google Font named "Roboto" - regular 400.
-Link references to your CSS two (2) files. Link the media-query.css file first.
-Example
-In the body of the HTML document, add a header with an h1, a main element with two section elements, and a footer element.
-The h1 element should contain the words "Media Query Example".
-Each section h2 heading contains a scripture with book, chapter, and verse.
-The section paragraph contains a copy of the actual scripture referenced in the heading.
-The footer should contain your name.
-Example
-CSS
-Style the document as shown in the example screenshots given below.
-media-query.css
-Do not include a media query.
-Use the Google Font - Roboto in the body rule.
-The header, main, and footer each
-have a maximum width of 640 pixels,
-are centered on the page using margin: 1rem auto,
-include a faint border,
-use appropriate padding, and
-have a blueish background color of your choice.
-Remember that you can combine these three selectors into one rule or create a class that contains these common CSS declarations.
-
-Declare the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and
-If you had a question to pose to the class in Microsoft Teams, use specific and descriptive language, e.g., "I have a question about the media-query assignment part 5.1.4. I do not know how to set the main element grid to only one column with an even gap of 1rem."
-
-Declare the section elements to also have padding and a lighter or white background.
-Check Your Understanding
-In the media-query-large.css,
-Write a containing media query to be applied at a viewport width of 500px or greater.
-@media screen and (min-width: 500px)
-Change through declaration within the media query the header to a black background with white text, and
-Change the main element to display two columns of equal size.
-Example
-Example Screenshots
-Screenshot of media query example in the mobile view.
-Figure 1: Mobile View Screenshot
-Screenshot of media query example in the large view
-Figure 2: Wider View Screenshot
-Testing
-You should be continuously checking your browser rendered work using Live Server extension.
--->
-
 <!-- W02 Assignment: Picture Album
 Overview
 This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests.
-
-Associated Course Learning Outcomes
-Task
-Design, develop, test, and then deploy a temple album page using your own selections of temple pictures.
-
-Example Picture Album Page Screenshot - Mobile
-Figure 1: Screenshot Example in Mobile View
-Example Picture Album Page Screenshot - Larger
-Figure 2: Screenshot Example in Larger View
-Demonstration of Responsive Behavior
-responsive example
-Instructions
-File and Folder Setup
-In VS Code, open the wdd131 local repository folder if it does not open automatically because it was your last working directory.
-Create a new file named "temples.html".
-Add two CSS files named "temples.css" and "temples-large.css" to the "styles" directory.
-Add a JavaScript file named "temples.js" to the "scripts" directory.
-HTML
-In the temples.html document, include the standard HTML document and <head> elements.
-Refer to the development standards if you need a review.
 
 Add links to the CSS files in the proper order to support mobile first dev.
 Add a deferred <script> reference to the JavaScript file.
@@ -201,21 +106,14 @@ You can build this navigation using straight up anchor <a> tags or using a commo
 The <main> element contains the following:
 a heading element with content matches the current menu selection,
 at least (9) <figure> elements with temple images and captions. Use the built in figure captions elements and name the temple.
-It is OK to have a single placeholder temple image at this point in the course. We will be adding additional functionality, including responsive image variations to this page in the coming weeks.
-The <footer> contains the same dynamic and static information found on your home page from last week.
-Common Footer Screenshot Example
-Figure 3: Screenshot Example of Common Footer
-CSS
-Use the external temples.css and temples-large.css files to layout and style the page as shown is the example screenshots. Your design must support a responsive view in mobile and larger views.
 
-The temples.css file is used for the mobile view and the temples-large.css file is used for the larger view. Most of your CSS should be located in the temples.css file in mobile first design
-Use your own color schema.
-Please note: You are responsible to practice good design principles of alignment, color contrast, proximity, repetition, and consistent spacing in all of your work.
-Use your own typography choice by using the Google Fonts API service to select one or two fonts to use on the page.
-Google Fonts Demonstration
+CSS
+Use the external temples.css and temples-large.css files should support a responsive design view in mobile and larger views.
+
+The temples.css file is used for the mobile view and the temples-large.css file is used for the larger view.
+
 Use CSS Flex on the navigation nav.
-CSS Flex Navigation Menu - Demonstration Video
-CSS Flex Menu Example - CodePen Source Code
+
 Header Contained CSS Flex Example - CodePen Source Code
 The navigation must employ a hover affect. See the CodePen above for an example.
 The main element has a limited width and is centered on the screen horizontally.
@@ -223,7 +121,6 @@ Layout the main column figure elements using CSS Grid. In the mobile view, there
 The application of CSS Grid to support a responsive view is up to you. Some of the options could be:
 • use grid-template-column specific fr changes in the media query, or
 • use grid-template-column property with a repeat function and auto-fit and minmax function.
-Example: Grid Column Layouts and Image Effects - CodePen
 
 JavaScript
 Remember that all of your JavaScript references in this class should be to external files.

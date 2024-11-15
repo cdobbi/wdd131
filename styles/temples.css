@@ -4,147 +4,87 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
+
 nav a {
     display: block;
     color: black;
     text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
+    /* Remove underline from links */
 }
+
 nav a:hover {
     background: rgb(253, 143, 7);
     color: yellow;
 }
+
 div.menu {
     text-align: right;
     padding: 0.5rem;
     cursor: pointer;
     display: none; /* Hide hamburger menu by default */
 }
+
 .menu::before {
-    content: "☰";
+    content: "☰"; /* Hamburger icon */
     font-size: large;
     cursor: pointer;
     color: black;
 }
+
 .menu.open::before {
-    content: "✖";
+    content: "✖"; /* Close icon */
     font-size: large;
 }
+
 .nav-menu {
-    display: none;
+    display: none; /* Hide navigation menu by default */
 }
+
 .nav-menu.show {
     display: flex;
     flex-direction: column;
 }
-main {
-    max-width: 900px;
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
-    background: rgb(201, 231, 231);
-    margin: 0 auto;
-    justify-content: center;
-    gap: 1rem;
-}
-main h2 {
-    color: rgb(253, 143, 7);
-    text-align: center; /* Center the text */
-    padding: 0.5rem;
-    font-size: 3.5rem;
-    margin-bottom: 1rem; /* Add space below the h2 */
-}
-.imges {
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
-figcaption {
-    text-align: center;
-    font-style: italic;
-}
-footer {
-    grid-area: footer;
-    width: 100%;
-    background: rgb(191, 240, 213);
-    padding: 0rem;
-    text-align: center;
-}
+
+/* Add media query for mobile view */
 @media (max-width: 937px) {
     .menu {
-        display: block; /* Show hamburger menu */
+        display: block; /* Show hamburger menu in mobile view */
     }
     .nav-menu {
-        display: none; /* Hide nav menu */
+        display: none; /* Hide nav menu by default */
     }
     .nav-menu.show {
         display: flex;
         flex-direction: column;
     }
-    main {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    }
-}
-@media (max-width: 480px) {
-    main {
-        grid-template-columns: 1fr; /* 1 column for small screens */
-    }
 }
 
-/* {
-    .before-nav {
-        display: block;
-    }
-    #nav-menu {
-        display: none;
-   }
-    #nav-menu.show {
-        display: flex;
-        flex-direction: column;
-    }
-} */
-/* header-bar {
-    background: rgb(230, 230, 230);
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-} */
- /* .hamburger {
-    display: none;
-    font-size: 2.5rem;
-    background: none;
-    border: black;
-    cursor: pointer;
-} */
- 
-/* header {
-    background: rgb(191, 240, 213);
-    color: black;
-    padding: 20px;
+/* 
+
+this file should be used to style mobile devices.
+Most of your CSS should be located in the temples.css file in mobile first design
+
+Use CSS Flex on the navigation nav.
+
+Here is the general syntax is setting up a CSS media query:
+
+Header Contained CSS Flex Example - CodePen Source Code
+The navigation must employ a hover affect. See the CodePen above for an example.
+The main element has a limited width and is centered on the screen horizontally.
+Layout the main column figure elements using CSS Grid. In the mobile view, there should only be one (1) column.
+The application of CSS Grid to support a responsive view is up to you. Some of the options could be:
+• use grid-template-column specific fr changes in the media query, or
+• use grid-template-column property with a repeat function and auto-fit and minmax function.
+
+@media not|only mediatype and (expressions) {
+  /* CSS rules go here inside the @media query's opening and closing curly brackets {}
 }
-/* header ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-} */
-/* header ul li {
-    margin: 0;
-}
-header ul li a {
-    text-decoration: none;
-}
-header nav li{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-} */
+*/
