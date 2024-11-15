@@ -40,12 +40,12 @@ div.menu {
     font-size: large;
 }
 main {
-    max-width: 900px;
+    /* max-width: 900px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background: rgb(201, 231, 231);
-    margin: 0 auto;
-    justify-content: center;
+    /* background: rgb(201, 231, 231); */
+    /* margin: 0 auto; */
+    /* justify-content: center; */
 }
 h2 {
     color: rgb(253, 175, 73);
@@ -69,21 +69,24 @@ footer {
     text-align: center;
 }
 @media (max-width: 937px) {
+    .menu {
+        display: block; /* Show hamburger menu */
+    }
+    #nav-menu {
+        display: none; /* Hide nav menu */
+    }
+    #nav-menu.show {
+        display: flex;
+        flex-direction: column;
+    }
     main {
-        display: block;
-        #nav-menu {
-            display: none;
-        }
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
+
 @media (max-width: 480px) {
     main {
         grid-template-columns: 1fr; /* 1 column for small screens */
-    }
-}
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
 
