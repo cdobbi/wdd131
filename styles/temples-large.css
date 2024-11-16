@@ -31,15 +31,11 @@
 }
 
 @media (min-width: 937px) {
-    /* .nav-menu.show ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-
-    /* header nav li {
-        display: block;
-    } */
+    .nav-menu.show ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     header nav ul {
         display: flex;

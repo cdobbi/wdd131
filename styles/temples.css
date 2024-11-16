@@ -74,11 +74,9 @@ main {
     gap: .5rem;
     justify-content: center;
 }
-
-.card {
+/* .card {
     text-align: center;
-}
-
+} */
 .image-grid {
     display: grid;
     grid-template-columns: 1fr;
