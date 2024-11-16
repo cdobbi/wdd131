@@ -31,23 +31,15 @@
 }
 
 @media (min-width: 937px) {
-    .menu {
-        display: none;
-    }
+    /* .nav-menu.show ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
 
-    nav ul {
-        display: none;
-    }
-
-    .nav-menu.show ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    header nav li {
+    /* header nav li {
         display: block;
-    }
+    } */
 
     header nav ul {
         display: flex;
@@ -59,7 +51,6 @@
     }
 
     #menu {
-        display: none;
         cursor: pointer;
     }
 

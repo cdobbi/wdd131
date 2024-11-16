@@ -12,7 +12,6 @@ body {
 nav a {
     display: block;
     color: black;
-    text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
@@ -24,31 +23,35 @@ nav a:hover {
 }
 
 div.menu {
-    text-align: right;
+    text-align: left;
     padding: 0.5rem;
     cursor: pointer;
     display: none;
 }
 
-.menu::before {
+div.menu::before {
     content: "☰";
     font-size: large;
     cursor: pointer;
     color: black;
 }
 
-.menu.open::before {
+div.menu.open::before {
     content: "✖";
     font-size: large;
 }
 
-.nav-menu {
-    display: none;
+div.nav-menu.show {
+    display: flex;
+    flex-direction: row;
 }
 
-.nav-menu.show {
+nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 937px) {
@@ -56,13 +59,9 @@ div.menu {
         display: block;
     }
 
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-menu.show {
+    div.nav-menu.show {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
