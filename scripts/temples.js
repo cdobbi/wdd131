@@ -1,31 +1,11 @@
+// temples.js
+
 document.querySelector(".menu").addEventListener("click", function() {
-    document.querySelector(".nav-menu").classList.toggle("show");
-    this.classList.toggle("open"); 
+    document.getElementById("nav-menu").classList.toggle("show");
 });
 
+document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-window.addEventListener("resize", function() {
-    console.log("The window has been resized!");
-});
-
-window.addEventListener("resize", function() {
-    if (window.innerWidth <= 937) {
-        document.querySelector(".menu").style.display = "block";
-    } else {
-        document.querySelector(".menu").style.display = "none";
-        document.querySelector(".nav-menu").classList.remove("show");
-        document.querySelector(".menu").classList.remove("open");
-    }
-});
-
-if (window.innerWidth <= 937) {
-    document.querySelector(".menu").style.display = "block";
-} else {
-    document.querySelector(".menu").style.display = "none";
-}
-
 
 /*JavaScript
 Remember that all of your JavaScript references in this class should be to external files.

@@ -20,7 +20,7 @@
     <header>
         <h1>Temple Album</h1>
         <div class="menu" aria-label="Menu"></div>
-        <nav id="nav-menu">
+        <nav id="nav-menu" class="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
@@ -31,44 +31,46 @@
         </nav>
     </header>
     <main>
-        <h2>Home</h2>
-        <div class="image-grid">
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 2</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 3</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 4</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 5</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 6</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 7</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 8</figcaption>
-            </figure>
-            <figure>
-                <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
-                <figcaption>Temple 9</figcaption>
-            </figure>
+        <div class="card">
+            <h2>Home</h2>
+            <div class="image-grid">
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 4</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 5</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 6</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 7</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 8</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/SaltLakeTemple.jpg" alt="Salt Lake City LDS Temple">
+                    <figcaption>Temple 9</figcaption>
+                </figure>
+            </div>
         </div>
     </main>
 
@@ -78,7 +80,7 @@
     </footer>
 
     <script>
-        document.querySelector('.menu').addEventListener('click', function() {
+        document.querySelector('.menu').addEventListener('click', function () {
             document.getElementById('nav-menu').classList.toggle('show');
         });
     </script>

@@ -1,4 +1,5 @@
 @media screen and (min-width: 640px) {
+
     header,
     main,
     footer {
@@ -6,68 +7,105 @@
         margin: 1rem auto;
         padding: 10px;
     }
+
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+
     header {
         background-color: rgb(191, 240, 213);
         display: flex;
         justify-content: space-between;
         color: black;
+        padding: 1rem;
     }
+
     h1 {
         padding: 10px;
     }
+
     header nav {
         width: 70vw;
         padding: 10px;
     }
+}
+
+@media (min-width: 937px) {
+    .menu {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-menu.show ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     header nav li {
         display: block;
     }
+
     header nav ul {
         display: flex;
         justify-content: space-between;
     }
+
     header nav ul li {
         flex: 1 1 auto;
     }
+
     #menu {
         display: none;
+        cursor: pointer;
     }
+
     main {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: .5rem;
-        /* margin-bottom: 40px; */
         background-color: #d4f3f5;
         margin: 1rem auto;
         justify-content: center;
     }
+
     h2 {
         text-align: center;
     }
+
     img {
-        width: auto;
+        width: 100%;
+        height: auto;
         padding: 0.5rem;
+        max-width: 100%;
     }
+
     footer {
         background-color: rgb(191, 240, 213);
     }
+
     .image-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         margin: 0 auto;
+        justify-items: center;
+        width: 100%;
     }
 }
 
-@media (max-width: 768px) {
-    main {
+@media (min-width: 768px) {
+    .image-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    main {
-        grid-template-columns: 1fr;
+@media (min-width: 1670px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
