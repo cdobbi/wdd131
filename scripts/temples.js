@@ -10,6 +10,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 document.getElementById("lastModified").textContent = document.lastModified;
 
+
+
 /*JavaScript
 Remember that all of your JavaScript references in this class should be to external files.
 Support the footer copyright year and date last modified output through a valid JavaScript reference. You already have one or could use the temples.js file.
