@@ -32,6 +32,7 @@
 
     button.menu {
         display: none;
+        color: black;
     }
 
     nav ul {
