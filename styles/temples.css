@@ -15,6 +15,7 @@ nav a {
     margin: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
+    text-align: center;
 }
 
 nav a:hover {
@@ -22,47 +23,121 @@ nav a:hover {
     color: yellow;
 }
 
-div.menu {
-    text-align: left;
+button.menu {
+    text-align: center;
     padding: 0.5rem;
     cursor: pointer;
     display: none;
-}
-
-div.menu::before {
-    content: "☰";
-    font-size: large;
-    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
     color: black;
+    position: right;
+    top: 10px;
+    right: 10px;
 }
 
-div.menu.open::before {
+button.menu::before {
+    content: "☰";
+    font-size: extra-extra-large;
+    cursor: pointer;
+    color: red;
+}
+
+button.menu.open::before {
     content: "✖";
-    font-size: large;
+    font-size: extra-extra-large;
+    color: red;
 }
 
-div.nav-menu.show {
-    display: flex;
-    flex-direction: row;
+.navigation {
+    display: none;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
     list-style: none;
+    /* Remove default list style */
     padding: 0;
+    /* Remove default padding */
     margin: 0;
+    /* Remove default margin */
 }
 
 @media (max-width: 937px) {
-    .menu {
+    header {
+        background-color: rgb(252, 252, 186);
+    }
+
+    button.menu {
         display: block;
     }
 
-    div.nav-menu.show {
-        display: flex;
-        flex-direction: row;
+    .navigation {
+        display: none;
+        flex-direction: column;
     }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        /* Adjust padding for dropdown */
+        font-size: 1rem;
+        /* Adjust font size for dropdown */
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .navigation a:hover {
+        background-color: #bbb;
+        color: #333;
+        font-weight: 700;
+    }
+}
+
+main,
+footer {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(191, 240, 213);
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 1rem;
+}
+
+h1 {
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(191, 240, 213);
+    color: black;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+h2 {
+    padding: 10px;
+    text-align: center;
 }
 
 main {
@@ -74,10 +149,8 @@ main {
     gap: .5rem;
     justify-content: center;
 }
-/* .card {
-    text-align: center;
-} */
-.image-grid {
+
+.stuff {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -99,13 +172,13 @@ img {
 }
 
 @media (min-width: 768px) {
-    .image-grid {
+    .stuff {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1670px) {
-    .image-grid {
+    .stuff {
         grid-template-columns: repeat(3, 1fr);
     }
 }

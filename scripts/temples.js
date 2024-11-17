@@ -1,10 +1,13 @@
-// temples.js
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
 
-document.querySelector(".menu").addEventListener("click", function() {
-    document.getElementById("nav-menu").classList.toggle("show");
+hamButton.addEventListener('click', () => {
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
 document.getElementById("lastModified").textContent = document.lastModified;
 
 /*JavaScript
@@ -14,5 +17,3 @@ Apply a responsive hamburger effect to your existing navigation menu using JavaS
 The hamburger button should only show in the mobile view.
 Clicking the hamburger button toggles the navigation menu items from viewable to not viewable.
 Use a symbol, such as an "X" to close the hamburger menu.*/
-
-
