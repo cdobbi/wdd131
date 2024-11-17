@@ -9,6 +9,30 @@ body {
     font-style: normal;
 }
 
+button.menu {
+    padding: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    position: absolute;
+    right: 10px;
+}
+
+button.menu::before {
+    content: "☰";
+    font-size: extra-large;
+    color: red;
+    margin-right: 1.5rem;
+}
+
+button.menu.open::before {
+    content: "✖";
+    font-size: extra-large;
+    color: red;
+}
+
 nav a {
     display: block;
     color: black;
@@ -23,119 +47,33 @@ nav a:hover {
     color: yellow;
 }
 
-button.menu {
-    text-align: center;
-    padding: 0.5rem;
-    cursor: pointer;
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: black;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-}
-
-button.menu::before {
-    content: "☰";
-    font-size: large;
-    color: red;
-    margin-right: 1.5rem;
-}
-
-button.menu.open::before {
-    content: "✖";
-    font-size: large;
-    color: red;
-}
-
-.navigation {
-    display: none;
-}
-
-.navigation.show {
-    display: block;
-}
-
 .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-@media (max-width: 937px) {
-    header {
-        background-color: rgb(252, 252, 186);
-        max-width: 90%;
-        margin: 1rem auto;
-        justify-content: center;
-    }
-
-    button.menu {
-        display: block;
-        margin-right: 1.5rem;
-
-    }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-    }
-
-    .navigation.show {
-        display: flex;
-    }
-
-    .navigation a {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-    }
-
-    .navigation a:hover {
-        background-color: #bbb;
-        color: #333;
-        font-weight: 700;
-    }
-
-    h1 {
-        display: none;
-    }
-}
-
-h1 {
+.stuff {
+    display: grid;
+    margin: 1rem auto;
+    background-color: #d4f3f5;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 10px;
-    margin-top: 0;
-    margin-left: 1rem;
-    white-space: nowrap;
+    justify-content: center;
+    max-width: 100%;
 }
 
 h2 {
-    padding: 10px;
     text-align: center;
+    font-size: 1.5rem;
+    color: rgb(116, 116, 116);
 }
 
-main {
-    max-width: 90%;
-    margin: 1rem auto;
-    padding: 10px;
-    background-color: #d4f3f5;
-    display: grid;
-    gap: .5rem;
-    justify-content: center;
-}
-
-.stuff {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
-    width: 100%;
+img {
+    height: auto;
+    padding: 1.5rem;
+    max-width: 100%;
 }
 
 figure {
@@ -146,23 +84,11 @@ figure {
     font-style: italic;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    max-width: 100%;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-}
-
 footer {
     background-color: rgb(191, 240, 213);
-    display: flex;
     justify-content: space-between;
     color: black;
     padding: 1rem;
-    max-width: 90%;
-    justify-content: center;
-    margin: 1rem auto;
-
+    max-width: 100%;
+    margin: 2rem auto;
 }
