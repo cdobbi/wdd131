@@ -1,5 +1,7 @@
-@media screen and (min-width: 640px) {
+@media (min-width: 937px) {
     header {
+        max-width: 90%;
+        margin: 1rem auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -13,11 +15,20 @@
         padding: 10px;
         white-space: nowrap;
     }
-}
 
-@media (min-width: 937px) {
-    header {
+    footer {
         background-color: rgb(191, 240, 213);
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        padding: 1rem;
+    }
+
+    main,
+    footer {
+        max-width: 90%;
+        margin: 1rem auto;
+        padding: 10px;
     }
 
     .nav-menu.show ul {
@@ -48,7 +59,7 @@
     h2 {
         font-size: 2rem;
         text-align: center;
-        color: rgb(252, 172, 23);
+        color: black;
     }
 
     nav ul {
@@ -60,4 +71,14 @@
     }
 }
 
-/* this file will be used to style the page for larger viewports. You will use CSS media queries to apply the appropriate CSS file based upon the viewport width. */
+@media (min-width: 768px) {
+    .stuff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1670px) {
+    .stuff {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

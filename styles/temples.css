@@ -32,21 +32,22 @@ button.menu {
     border: none;
     font-size: 1.5rem;
     color: black;
-    position: right;
+    position: absolute;
     top: 10px;
     right: 10px;
+
 }
 
 button.menu::before {
     content: "☰";
-    font-size: extra-extra-large;
-    cursor: pointer;
+    font-size: large;
     color: red;
+    margin-right: 1.5rem;
 }
 
 button.menu.open::before {
     content: "✖";
-    font-size: extra-extra-large;
+    font-size: large;
     color: red;
 }
 
@@ -60,20 +61,22 @@ button.menu.open::before {
 
 .navigation ul {
     list-style: none;
-    /* Remove default list style */
     padding: 0;
-    /* Remove default padding */
     margin: 0;
-    /* Remove default margin */
 }
 
 @media (max-width: 937px) {
     header {
         background-color: rgb(252, 252, 186);
+        max-width: 90%;
+        margin: 1rem auto;
+        justify-content: center;
     }
 
     button.menu {
         display: block;
+        margin-right: 1.5rem;
+
     }
 
     .navigation {
@@ -87,9 +90,7 @@ button.menu.open::before {
 
     .navigation a {
         padding: 0.5rem 1rem;
-        /* Adjust padding for dropdown */
         font-size: 1rem;
-        /* Adjust font size for dropdown */
         text-align: center;
         text-decoration: none;
         color: black;
@@ -100,21 +101,10 @@ button.menu.open::before {
         color: #333;
         font-weight: 700;
     }
-}
 
-main,
-footer {
-    max-width: 90%;
-    margin: 1rem auto;
-    padding: 10px;
-}
-
-footer {
-    background-color: rgb(191, 240, 213);
-    display: flex;
-    justify-content: space-between;
-    color: black;
-    padding: 1rem;
+    h1 {
+        display: none;
+    }
 }
 
 h1 {
@@ -122,17 +112,6 @@ h1 {
     margin-top: 0;
     margin-left: 1rem;
     white-space: nowrap;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(191, 240, 213);
-    color: black;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    max-width: 90%;
-    margin: 1rem auto;
 }
 
 h2 {
@@ -161,24 +140,29 @@ main {
 
 figure {
     margin: 0;
+    padding: 0;
     text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 img {
     width: 100%;
     height: auto;
-    padding: 0.5rem;
+    padding: 0;
     max-width: 100%;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-@media (min-width: 768px) {
-    .stuff {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+footer {
+    background-color: rgb(191, 240, 213);
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 1rem;
+    max-width: 90%;
+    justify-content: center;
+    margin: 1rem auto;
 
-@media (min-width: 1670px) {
-    .stuff {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
