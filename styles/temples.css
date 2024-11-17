@@ -22,14 +22,14 @@ button.menu {
 
 button.menu::before {
     content: "☰";
-    font-size: extra-large;
+    font-size: large;
     color: red;
     margin-right: 1.5rem;
 }
 
 button.menu.open::before {
     content: "✖";
-    font-size: extra-large;
+    font-size: large;
     color: red;
 }
 
