@@ -1,0 +1,36 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+    background: #ccc;
+}
+
+nav {
+    grid-area: nav;
+    background: #aaa;
+}
+
+main {
+    grid-area: main;
+    background: #eee;
+}
+
+aside {
+    grid-area: aside;
+    background: #bbb;
+}
+
+footer {
+    grid-area: footer;
+    background: #ccc;
+}
