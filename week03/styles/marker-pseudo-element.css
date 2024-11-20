@@ -50,16 +50,28 @@ label {
 }
 
 .before::before {
-    content: "🎈 ";
+    content: "🥕 ";
 }
 
 .after::after {
-    content: " 🌮";
+    content: " 🐇";
 }
 
 ol {
-    list-style: numeric;
     margin-left: 2rem;
+    padding: 0;
+}
+
+ol li::marker {
+    color: navy;
+    font-size: 2rem;
+    font-variant: small-caps;
+}
+
+ol li::before {
+    content: "☑️ ";
+    margin-right: 0.5rem;
+    color: darkslategray;
 }
 
 .counter {
