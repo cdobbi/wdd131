@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Christi Dobbins</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Christi Dobbins">
+    <meta name="author" content="Christi Dobbins">
+    <link rel="stylesheet" href="place.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals</hjson>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="place.html">Place</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.wrebp" media="" (min-width: 1000px)">
+                <sousrce srcset="images/hero.medium.webp" media="" (min-width: 500px)">
+                    <img src="images/hero-small.webp" alt="Salt lake City LDS Temple, Salt Lake City, Utah" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+
+</body>
+<footer>
+    <p>&copy; <span id="currentyear"></span> Christi Dobbins</p>
+    <!--the p tag is used to define a paragraph. the span tag is used to group inline elements together. the id attribute is used to identify the span element  -->
+    <p>This document was last modified: <span id="lastModified"></span></p>
+</footer>
+
+</html>
+
+
+<!-- Design and build a single page based upon the following wireframe as the layout and content location guide:
+
+Wireframe Designs and Example Screenshots
+Wireframe in Mobile View
+Wireframe design of the page in mobile view
+Wireframe in a Wider View
+Wireframe design of the page in a wider view
+Screenshot example of Place page in mobile view
+Example Page in Mobile View
+Screenshot example of Place page in a wider view
+
+Instructions
+File and Folder Setup
+In your wdd131 local repository folder, add a new HTML file named "place.html".
+Add a CSS file or files in the appropriate subfolder.
+You may elect to use one CSS or multiple CSS files for this assignment to organize your media queries.
+
+Add a JavaScript file to the appropriate subfolder.
+HTML
+Include the standard HTML document and <head> elements.
+Refer to the course development standards if you need to review standards.
+
+Be sure to link your css file(s).
+Reference your js file using a defer attribute.
+Create the structure and layout for the page by referencing the wireframe and example screenshots given above.
+Important: It is required that you match the wireframe components and basic positioning of those components as shown in the wireframes.
+
+The "hero" images must utilize the srcset responsive design method to provide different images based on screen size. You can choose to implement this requirement by using either the picture element or a basic img approach. Ensure that the image subjects and dimensions support the subject, design, and layout of the page.
+Assets
+You have the option to use your own images or select from stock photos available on pexels.com or unsplash.com, as well as other resources.
+
+Use the WebP image format for the hero images.
+Use the SVG image format for the weather icon in the mobile view.
+An svg can be downloaded via most icon service sites like iconfinder.com.
+
+Use a emoticon or equivalent for the weather icon ⛅ in the wider view by the "Weather" heading.
+The weather will be static at this point and so try to pick an image/icon that matches your stated conditions.
+
+CSS
+Important: You are responsible to implement good design principles of alignment, color contrast, proximity, repetition, white space, and general usability in all of your work.
+
+Select a color schema that supports the country or place
+For example, the provided screenshots above use the official colors of the flag of Madagascar.
+
+The typography choice is up to you.
+The minimum styling requirements include:
+Matching the layouts shown in the wireframes
+Using a media query or queries.
+Using global CSS variables.
+Using a pseudo element for the weather icon in the large view located after the heading "Weather".
+JavaScript
+The footer of the page must include the current year and the date the document was last modified just like the other assignments. You can copy that code into this page and either use the existing JavaScript file or use your page specific JavaScript file to support this page's footer.
+In your JavaScript file, provide the code to support the following requirements:
+Use JavaScript to display the windchill factor in the "Weather" section of the page as shown in the examples. The windchill factor should be calculated and displayed when the page loads.
+At this point in the course, go ahead and define variables that use static values for the temperature and wind speed, matching the static, displayed values you have in your weather section content.
+The next course will cover how to use third-party APIs to get real-time weather data.
+
+Write a function named "calculateWindChill" that returns the windchill factor when passed the appropriate arguments (temperature and wind speed). The function should use one line of code that returns the result of the calculation of the wind. Of course, your formula should be based upon the location's preference of units (°C or °F).
+Using AI to help determine this formula might be a good approach.
+
+Do not call the calculateWindChill function unless the conditions are met which are as follows:
+Viable Wind Chill Calculations
+Metric	Imperial (English)
+Temperature	<= 10 °C	<= 50 °F
+Wind speed	> 4.8 km/h	> 3 mph
+If the conditions are not met, then display "N/A", which means not applicable.
+Of course, your code is using static inputs, nonetheless, your code should have this provision coded in preparation for dynamic, real-time inputs.
+
+Testing
+Continuously check your work by rendering the page locally using Live Server in VS Code.
+Use the browser's DevTools to check for JavaScript runtime errors in the console or click the red, error icon in the upper right corner of DevTools.
+Use DevTools CSS Overview to check your color contrast.
+Generate the DevTools Lighthouse report and run diagnostics for Accessibility, Best Practices, and SEO in both the mobile and Desktop views.
+It is best to test your page in a Private or Incognito browser window.
+
+Do not worry if the Best Practices report comes back low for the use of a content delivery network. We are uses the Church's media library on purpose.
+
+Audit and Submission
+Commit your local repository and push or upload your work to your GitHub Pages enabled wdd 131 repository on GitHub.
+Use this ☑️ audit tool to check some basic HTML and CSS standards and requirements.
+Share your work by posting your URL in the course's Microsoft Teams weekly forum and comment on your peers' work by providing constructive feedback.
+Return to I-Learn and submit your the correct GitHub Pages enabled URL.
+https://your-github-username.github.io/wdd131/place.html -->
