@@ -9,58 +9,50 @@
         content="The subject of the page is about a country or place where I have visited based on the provided wireframe. The goal is to develop a responsive web page that follows best practices and uses valid HTML and CSS, to demostrate knowledge of JavaScript and to use JS to respond to events and dynamically modify the HTML.">
     <meta name="author" content="Christi Dobbins">
     <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="place-large.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="images/english-flag-banner.webp" alt="Image flag of England.">
         <h1>England</h1>
-
     </header>
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/london-large.jpg" media="" (min-width: 1000px)">
-                <source srcset="images/london-meium.jpg" media="" (min-width: 500px)">
+                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/london-medium.webp" media="(min-width: 500px)">
                 <img src="images/london-small.webp" alt="Image of England." width="500" height="250">
             </picture>
-            <article>
-                <img src="images/london-small.webp" alt="Image of England">
-            </article>
-        </div>
-        <section class="card">
-            <ul class="data">
-                <h2>Data</h2>
-                <li>Population: 56,286,961</li>
-                <li>Capital: London</li>
-                <li>Area: 130,279 km²</li>
-                <li>Currency: Pound Sterling</li>
-                <li>Calling Code: +44</li>
-                <li>Internet TLD: .uk</li>
-                <li>Founded: 927 AD</li>
-            </ul>
+            <div class="overlay">
+                <section class="card">
+                    <ul class="data">
+                        <h2>Data</h2>
+                        <li>Population: 56,286,961</li>
+                        <li>Capital: London</li>
+                        <li>Area: 130,279 km²</li>
+                        <li>Currency: Pound Sterling</li>
+                        <li>Calling Code: +44</li>
+                        <li>Internet TLD: .uk</li>
+                        <li>Founded: 927 AD</li>
+                    </ul>
+                </section>
+                <aside class="card weather">
+                    <h2>Weather 🌤️</h2>
+                    <p><span>Temperature:</span> <span id="currentTemp">12</span>°C</p>
+                    <p><span>Feels Like:</span> <span id="windChill">10</span>°C</p>
+                    <p><span>Wind:</span> <span id="windSpeed">5</span> km/h</p>
+                    <p><span>Conditions:</span> Partly Cloudy</p>
+                    <p><span>Weather Icon:</span> <span id="weatherIcon">⛅</span></p>
+                </aside>
             </div>
-        </section>
-        <aside class="card">
-            <h2>Weather 🌤️</h2>
-            <p>Temperature: <span id="currentTemp">12</span>°C</p>
-            <p>Feels Like: <span id="windChill">10</span>°C</p>
-            <p>Wind: <span id="windSpeed">5</span> km/h</p>
-
-            <p>Conditions: Partly Cloudy</p>
-            <p>Weather Icon: <span id="weatherIcon">⛅</span></p>
-        </aside>
+        </div>
     </main>
-
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>This document was last modified: <span id="lastModified"></span></p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
-    <p>This document was last modified:
-        <script src="scripts/places.js" defer></script><span id="lastModified"></span>
-    </p>
-</footer>
 
 </html>
 
@@ -122,6 +114,4 @@ Temperature	<= 10 °C	<= 50 °F
 Wind speed	> 4.8 km/h	> 3 mph
 If the conditions are not met, then display "N/A", which means not applicable.
 Of course, your code is using static inputs, nonetheless, your code should have this provision coded in preparation for dynamic, real-time inputs.
-
-Do not worry if the Best Practices report comes back low for the use of a content delivery network. We are uses the Church's media library on purpose.
  -->
