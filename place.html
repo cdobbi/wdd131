@@ -8,7 +8,7 @@
     <meta name="description"
         content="The subject of the page is about a country or place where I have visited based on the provided wireframe. The goal is to develop a responsive web page that follows best practices and uses valid HTML and CSS, to demostrate knowledge of JavaScript and to use JS to respond to events and dynamically modify the HTML.">
     <meta name="author" content="Christi Dobbins">
-    <link rel="stylesheet" href="place.css">
+    <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -21,45 +21,48 @@
         <div class="hero">
             <picture>
                 <source srcset="images/hero-large.webp" media="" (min-width: 1000px)">
-                <sousrce srcset="images/hero.medium.webp" media="" (min-width: 500px)">
-                    <img src="images/hero-small.webp" alt="Image of a cathedral in Oxford England." width="500" height="250">
+                <source srcset="images/hero.medium.webp" media="" (min-width: 500px)">
+                <img src="images/hero-small.webp" alt="Image of England." width="500" height="250">
             </picture>
             <article>
-                <img src="images/oxford.webp" alt="Image of a cathedral in Oxford England">
-                <h2>Data</h2>
-                <ul class="data">
-                    <li>Population: 56,286,961</li>
-                    <li>Language: English</li>
-                    <li>Capital: London</li>
-                    <li>Area: 130,279 km²</li>
-                    <li>Currency: Pound Sterling</li>
-                    <li>Calling Code: +44</li>
-                    <li>Internet TLD: .uk</li>
-                    <li>National Flower: Rose</li>
-                    <li>National Animal: Lion</li>
-                    <li>National Dish: Fish and Chips</li>
-                    <li>National Drink: Tea</li>
-                    <li>National Sport: Cricket</li>
-                    <li>Founded: 927 AD</li>
-                    <li>Interesting Fact: The London Underground is the oldest underground railway network in the world.</li>
-                </ul>
+                <img src="images/oxford.webp" alt="Image of England">
             </article>
-            <aside>
-                <h2>Weather 🌤️</h2>
-                <p>Temperature: <span id="currentTemp">12</span>°C</p>
-                <p>Feels Like: <span id="windChill">10</span>°C</p>
-                <p>Wind: <span id="windSpeed">5</span> km/h</p>
-                <p>Wind Chill: <span id="windChill">10</span>°C</p>
-                <p>Conditions: Partly Cloudy</p>
-                <p>Weather Icon: <span id="weatherIcon">⛅</span></p>
-            </aside>
         </div>
+        <section class="card">
+            <ul class="data">
+                <h2>Data</h2>
+                <li>Population: 56,286,961</li>
+                <li>Language: English</li>
+                <li>Capital: London</li>
+                <li>Area: 130,279 km²</li>
+                <li>Currency: Pound Sterling</li>
+                <li>Calling Code: +44</li>
+                <li>Internet TLD: .uk</li>
+                <li>National Dish: Fish and Chips</li>
+                <li>National Drink: Tea</li>
+                <li>National Sport: Cricket</li>
+                <li>Founded: 927 AD</li>
+                <li>Interesting Fact: The London Underground is the oldest underground railway network in the world.</li>
+            </ul>
+            </div>
+        </section>
+        <aside class="card">
+            <h2>Weather 🌤️</h2>
+            <p>Temperature: <span id="currentTemp">12</span>°C</p>
+            <p>Feels Like: <span id="windChill">10</span>°C</p>
+            <p>Wind: <span id="windSpeed">5</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">10</span>°C</p>
+            <p>Conditions: Partly Cloudy</p>
+            <p>Weather Icon: <span id="weatherIcon">⛅</span></p>
+        </aside>
     </main>
 
 </body>
 <footer>
     <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
-    <p>This document was last modified: <script src="scripts/places.js" defer></script><span id="lastModified"></span></p>
+    <p>This document was last modified:
+        <script src="scripts/places.js" defer></script><span id="lastModified"></span>
+    </p>
 </footer>
 
 </html>
