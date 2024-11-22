@@ -30,8 +30,7 @@ header h1 {
 }
 
 main {
-    flex: 1;
-    /* Corrected syntax */
+    flex: 1; /* Corrected syntax */
 }
 
 .hero {
