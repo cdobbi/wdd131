@@ -7,6 +7,7 @@
     <title>Week03 Assignment | Place | Christi Dobbins</title>
     <meta name="description"
         content="The subject of the page is about a country or place where I have visited based on the provided wireframe. The goal is to develop a responsive web page that follows best practices and uses valid HTML and CSS, to demostrate knowledge of JavaScript and to use JS to respond to events and dynamically modify the HTML.">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="author" content="Christi Dobbins">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
@@ -26,30 +27,32 @@
             </picture>
             <div class="overlay">
                 <section class="card">
-                    <ul class="data">
+                    <div class="data-container">
                         <h2>Data</h2>
-                        <li>Population: 56,286,961</li>
-                        <li>Capital: London</li>
-                        <li>Area: 130,279 km²</li>
-                        <li>Currency: Pound Sterling</li>
-                        <li>Calling Code: +44</li>
-                        <li>Internet TLD: .uk</li>
-                        <li>Founded: 927 AD</li>
-                    </ul>
+                        <ul class="data">
+                            <li>Population: 56,286,961</li>
+                            <li>Capital: London</li>
+                            <li>Area: 130,279 km²</li>
+                            <li>Currency: Pound Sterling</li>
+                            <li>Calling Code: +44</li>
+                            <li>Internet TLD: .uk</li>
+                            <li>Founded: 927 AD</li>
+                        </ul>
+                    </div>
                 </section>
                 <aside class="card weather">
-                    <h2>Weather 🌤️</h2>
+                    <h2>Weather</h2>
+                    <p><span id="Weather Icon">🌦️</span></p>
                     <p><span>Temperature:</span> <span id="currentTemp">12</span>°C</p>
-                    <p><span>Feels Like:</span> <span id="windChill">10</span>°C</p>
+                    <p><span>Feels Like:</span> <span id="WindChill">10</span>°C</p>
                     <p><span>Wind:</span> <span id="windSpeed">5</span> km/h</p>
                     <p><span>Conditions:</span> Partly Cloudy</p>
-                    <p><span>Weather Icon:</span> <span id="Forcast">⛅</span></p>
                 </aside>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>&copy; <span id="currentyear"></span> 🦁 Christi Dobbins 🦁 USA</p>
         <p>This document was last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
