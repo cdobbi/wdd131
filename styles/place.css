@@ -205,8 +205,6 @@ footer p {
     }
 
     .weather-icon {
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5rem;
+        display: none;
     }
 }
