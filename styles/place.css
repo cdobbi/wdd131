@@ -151,7 +151,7 @@ footer {
     font-size: 0.8rem;
     font-weight: 550;
     font-family: 'Merriweather', sans-serif;
-    color: black;
+    color: #FFFF00;
     background: var(--secondary-color);
     padding: 0.5rem;
 }
