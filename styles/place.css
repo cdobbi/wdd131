@@ -1,6 +1,7 @@
 :root {
     --primary-color: #00247D;
     --secondary-color: #CF142B;
+    --tirtiary-color: #fa8e41;
     --font-family: 'Merriweather', sans-serif;
 }
 
@@ -20,7 +21,7 @@ footer {
 }
 
 header {
-    background: #00247D;
+    background: var(--primary-color);
     text-align: center;
     margin-bottom: 5px;
 }
@@ -151,7 +152,7 @@ footer {
     font-weight: 550;
     font-family: 'Merriweather', sans-serif;
     color: black;
-    background: #CF142B;
+    background: var(--secondary-color);
     padding: 0.5rem;
 }
 
@@ -172,7 +173,7 @@ footer p {
         align-items: center;
         position: static;
         width: 100%;
-        background: #fa8e41;
+        background: var(--tirtiary-color);
     }
 
     .data-container,
