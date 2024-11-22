@@ -59,7 +59,6 @@ function updateWeatherIcon(conditions) {
                     <line x1="46.93" y1="17.07" x2="53.07" y2="10.93" stroke="#00BFFF" stroke-width="2"/>
                 </svg>`;
             break;
-        // Add more cases for different weather conditions
         default:
             svgContent = `
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">

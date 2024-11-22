@@ -91,7 +91,7 @@ div.overlay {
     padding: 0.3rem;
     text-align: left;
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .data-container ul {
@@ -127,7 +127,7 @@ aside.card.weather h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     margin: 0;
     text-align: center;
     color: black;
