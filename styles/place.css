@@ -1,7 +1,8 @@
 :root {
     --primary-color: #00247D;
     --secondary-color: #CF142B;
-    --tirtiary-color: #fa8e41;
+    --tertiary-color: #fa8e41;
+    /* Corrected spelling */
     --font-family: 'Merriweather', sans-serif;
 }
 
@@ -125,6 +126,7 @@ aside.card.weather {
 
 aside.card.weather h2 {
     display: flex;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.7);
@@ -137,12 +139,9 @@ aside.card.weather h2 {
 }
 
 aside.card.weather p {
+    position: space-between;
     margin: 0;
     padding: 0.3rem;
-}
-
-.weather-icon {
-    margin-left: 0.5rem;
 }
 
 footer {
@@ -162,8 +161,35 @@ footer p {
 }
 
 @media (min-width: 601px) {
-    .weather-icon {
+    .path {
         display: inline;
+    }
+}
+
+.rainy-icon {
+    width: 32px;
+    height: 32px;
+    fill: #00BFFF;
+    margin-left: 1rem;
+}
+
+@media (min-width: 601px) {
+    .path {
+        display: inline;
+    }
+}
+
+.rainy-icon {
+    width: 32px;
+    height: 32px;
+    fill: #00BFFF;
+    margin-left: 0.5rem;
+}
+
+@media (min-width: 601px) {
+    .rainy-icon {
+        display: inline;
+        margin-left: 0.5rem;
     }
 }
 
@@ -173,7 +199,7 @@ footer p {
         align-items: center;
         position: static;
         width: 100%;
-        background: var(--tirtiary-color);
+        background: var(--tertiary-color);
     }
 
     .data-container,
@@ -198,14 +224,14 @@ footer p {
         color: black;
     }
 
+    .rainy-icon {
+        display: none;
+    }
+
     footer {
         box-sizing: border-box;
         width: 100%;
         padding: 0.5rem;
         margin-top: 0.5rem;
-    }
-
-    .weather-icon {
-        display: none;
     }
 }
