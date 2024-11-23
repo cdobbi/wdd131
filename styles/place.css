@@ -139,7 +139,6 @@ aside.card.weather h2 {
 }
 
 aside.card.weather p {
-    position: space-between;
     margin: 0;
     padding: 0.3rem;
 }

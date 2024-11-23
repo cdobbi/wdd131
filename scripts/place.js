@@ -23,3 +23,4 @@ function calculateWindChill(temp, speed) {
         return 'N/A';
     }
 }
+
