@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="author" content="Christina Dobbins">
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -22,9 +22,9 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+                <link rel="preload" href="images/london-large.webp" as="image">
                 <source srcset="images/london-medium.webp" media="(min-width: 500px)">
-                <img src="images/london-small.webp" alt="Image of England." width="500" height="250">
+                <img src="images/london-small.webp" alt="Image of England." width="500" height="250" loading="lazy">
             </picture>
             <div class="overlay">
                 <section class="card">
@@ -42,19 +42,13 @@
                     </div>
                 </section>
                 <aside class="card weather">
-                    <h2>Weather <span id="WeatherIcon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">
-                                <path d="M32 4a12 12 0 0 0-12 12 12 12 0 0 0 0 24h24a12 12 0 0 0 0-24A12 12 0 0 0 32 4z" fill="#00BFFF" />
-                                <path
-                                    d="M20 44c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                    fill="#00BFFF" />
-                            </svg>
-                        </span></h2>
+                    <h2>Weather <span class="weather-icon">🌦️</span></h2>
                     <p><span>Temperature:</span> <span id="currentTemp">12</span>°C</p>
                     <p><span>Feels Like:</span> <span id="WindChill">10</span>°C</p>
-                    <p><span>Wind:</span> <span id="WindSpeed">5</span> km/h</p>
-                    <p><span>Conditions:</span> <span id="Conditions">Rainy</span></p>
+                    <p><span>Wind:</span> <span id="windSpeed">5</span> km/h</p>
+                    <p><span>Conditions:</span> Partly Cloudy</p>
                 </aside>
+
             </div>
         </div>
     </main>
@@ -65,64 +59,3 @@
 </body>
 
 </html>
-
-<!-- <input type="text" id="favchap" name="favchap" placeholder="Enter your favorite chapter"> -->
-
-
-<!-- Design and build a single page based upon the following wireframe as the layout and content location guide:
-
-Wireframe Designs and Example Screenshots
-Wireframe in Mobile View
-Wireframe design of the page in mobile view
-Wireframe in a Wider View
-Wireframe design of the page in a wider view
-Screenshot example of Place page in mobile view
-Example Page in Mobile View
-Screenshot example of Place page in a wider view
-
-Instructions
-HTML
-Include the standard HTML document and <head> elements.
-Refer to the course development standards.
-
-Be sure to link your css file(s).
-Reference your js file using a defer attribute.
-Create the structure and layout for the page by referencing the wireframe and example screenshots given above.
-Important: It is required that you match the wireframe components and basic positioning of those components as shown in the wireframes.
-
-The "hero" images must utilize the srcset responsive design method to provide different images based on screen size. You can choose to implement this requirement by using either the picture element or a basic img approach. Ensure that the image subjects and dimensions support the subject, design, and layout of the page.
-
-Use the WebP image format for the hero images.
-Use the SVG image format for the weather icon in the mobile view.
-An svg can be downloaded via most icon service sites like iconfinder.com.
-
-Use a emoticon or equivalent for the weather icon ⛅ in the wider view by the "Weather" heading.
-
-CSS
-Select a color schema that supports the country.
-The typography choice is up to you.
-The minimum styling requirements include:
-Matching the layouts shown in the wireframes
-Using a media query or queries.
-Using global CSS variables.
-Using a pseudo element for the weather icon in the large view located after the heading "Weather".
-
-JavaScript
-The footer of the page must include the current year and the date the document was last modified. You can copy that code into this page and either use the existing JavaScript file or use your page specific JavaScript file to support this page's footer.
-In your JavaScript file, provide the code to support the following requirements:
-Use JavaScript to display the windchill factor in the "Weather" section of the page as shown in the examples. The windchill factor should be calculated and displayed when the page loads.
-At this point in the course, go ahead and define variables that use static values for the temperature and wind speed, matching the static, displayed values you have in your weather section content.
-
-Write a function named "calculateWindChill" that returns the windchill factor when passed the appropriate arguments (temperature and wind speed). The function should use one line of code that returns the result of the calculation of the wind. Of course, your formula should be based upon the location's preference of units (°C or °F).
-Using AI to help determine this formula might be a good approach.
-
-Do not call the calculateWindChill function unless the conditions are met which are as follows:
-Viable Wind Chill Calculations
-Metric	Imperial (English)
-Temperature	<= 10 °C	<= 50 °F
-Wind speed	> 4.8 km/h	> 3 mph
-If the conditions are not met, then display "N/A", which means not applicable.
-Of course, your code is using static inputs, nonetheless, your code should have this provision coded in preparation for dynamic, real-time inputs.
- -->
-
- 

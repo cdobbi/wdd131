@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('currentyear').textContent = currentYear;
     document.getElementById('lastModified').textContent = lastModified;
 
-    const temperature = 12; // °C
-    const windSpeed = 5; // km/h
-    const conditions = "Rainy"; // Fixed condition
+    const temperature = 12;
+    const windSpeed = 5;
+    const conditions = "Rainy";
 
     const windChill = calculateWindChill(temperature, windSpeed);
     document.getElementById('windChill').textContent = windChill;
