@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const temperature = 12;
     const windSpeed = 5;
-    const conditions = "Rainy";
+    const conditions = "Partly Cloudy";
 
     const windChill = calculateWindChill(temperature, windSpeed);
     document.getElementById('windChill').textContent = windChill;
