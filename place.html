@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="author" content="Christina Dobbins">
-    <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
-    <script src="scripts/place.js" defer></script>
+    <link rel="stylesheet" href="styles/place.css">
 </head>
 
 <body>
@@ -22,9 +21,9 @@
     <main>
         <div class="hero">
             <picture>
-                <link rel="preload" href="images/london-large.webp" as="image">
+                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
                 <source srcset="images/london-medium.webp" media="(min-width: 500px)">
-                <img src="images/london-small.webp" alt="Image of England." width="500" height="250" loading="lazy">
+                <img src="images/london-small.webp" alt="Image of England." width="500" height="250">
             </picture>
             <div class="overlay">
                 <section class="card">
@@ -42,7 +41,7 @@
                     </div>
                 </section>
                 <aside class="card weather">
-                    <h2>Weather <span class="weather-icon">🌦️</span></h2>
+                    <h2>Weather <span class="weather-icon">🌤️</span></h2>
                     <p><span>Temperature:</span> <span id="currentTemp">12</span>°C</p>
                     <p><span>Feels Like:</span> <span id="WindChill">10</span>°C</p>
                     <p><span>Wind:</span> <span id="windSpeed">5</span> km/h</p>
