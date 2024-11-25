@@ -85,6 +85,27 @@ figure {
     font-style: italic;
 }
 
+.temple {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+.temple img {
+    max-width: 100%;
+    height: auto;
+}
+
+.temple h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.temple p {
+    margin: 0.5rem 0;
+}
+
 footer {
     background-color: rgb(191, 240, 213);
     justify-content: space-between;
@@ -94,4 +115,21 @@ footer {
     margin: 2rem auto;
 }
 
-/* I can't get this to commit to github. */
+@media (max-width: 937px) {
+    header {
+        background-color: rgb(252, 252, 186);
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+}
