@@ -10,11 +10,102 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 document.getElementById("lastModified").textContent = document.lastModified;
 
-/* I can't get this to commit to github. */
-/*JavaScript
-Remember that all of your JavaScript references in this class should be to external files.
-Support the footer copyright year and date last modified output through a valid JavaScript reference. You already have one or could use the temples.js file.
-Apply a responsive hamburger effect to your existing navigation menu using JavaScript.
-The hamburger button should only show in the mobile view.
-Clicking the hamburger button toggles the navigation menu items from viewable to not viewable.
-Use a symbol, such as an "X" to close the hamburger menu.*/
+const temples = [
+    {
+      templeName: "Aba Nigeria",
+      location: "Aba, Nigeria",
+      dedicated: "2005, August, 7",
+      area: 11500,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    },
+    {
+      templeName: "Manti Utah",
+      location: "Manti, Utah, United States",
+      dedicated: "1888, May, 21",
+      area: 74792,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    },
+    {
+      templeName: "Payson Utah",
+      location: "Payson, Utah, United States",
+      dedicated: "2015, June, 7",
+      area: 96630,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    },
+    {
+      templeName: "Yigo Guam",
+      location: "Yigo, Guam",
+      dedicated: "2020, May, 2",
+      area: 6861,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    },
+    {
+      templeName: "Washington D.C.",
+      location: "Kensington, Maryland, United States",
+      dedicated: "1974, November, 19",
+      area: 156558,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    },
+    {
+      templeName: "Lima Perú",
+      location: "Lima, Perú",
+      dedicated: "1986, January, 10",
+      area: 9600,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    },
+    {
+      templeName: "London England",
+      location: "Surrey, England",
+      dedicated: "1958, September, 7",
+      area: 42652,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples.photo-galleries/london-england/400x250/london-england-exterior-2.jpg"
+    },
+    {
+      templeName: "Mesa Arizona",
+      location: "Mesa, Arizona, United States",
+      dedicated: "1927, October, 23",
+      area: 75000,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mesa-arizona/400x250/mesa-arizona-exterior-2.jpeg"
+    },
+    {
+      templeName: "Paris France",
+      location: "Le Chesnay, France",
+      dedicated: "2017, April, 22",
+      area: 44175,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-exterior-2.jpg"
+    },
+    {
+      templeName: "Mexico City Mexico",
+      location: "Mexico City, Mexico",
+      dedicated: "1983, December, 2",
+      area: 116642,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+];
+  
+const templeList = document.getElementById('templeList');
+
+temples.forEach(temple => {
+    const templeDiv = document.createElement('div');
+    templeDiv.classList.add('temple');
+
+    templeDiv.innerHTML = `
+        <h2>${temple.templeName}</h2>
+        <p>Location: ${temple.location}</p>
+        <p>Dedicated: ${temple.dedicated}</p>
+        <p>Area: ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}">
+    `;
+
+    templeList.appendChild(templeDiv);
+});
