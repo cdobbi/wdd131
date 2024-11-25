@@ -128,10 +128,7 @@ p {
 }
 
 aside.card.weather h2 {
-    display: flex;
     gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
     background: rgba(255, 255, 255, 0.7);
     margin: 0;
     text-align: center;
@@ -141,27 +138,18 @@ aside.card.weather h2 {
     width: 100%;
 }
 
-.weather-icon::before {
+.weather-icon {
     width: 24px;
+    /* Fixed width */
     height: 24px;
-    vertical-align: middle;
+    /* Fixed height */
     margin-left: 0.5rem;
 }
 
 footer {
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 550;
-    font-family: 'Merriweather', sans-serif;
     color: #FFFF00;
     background: var(--secondary-color);
     padding: 0.5rem;
-}
-
-footer p {
-    margin: 0;
-    margin-bottom: 5px;
 }
 
 @media (max-width: 600px) {
@@ -192,16 +180,18 @@ footer p {
 
     .weather-icon::before {
         display: none;
+        /* Hide the original icon */
     }
 
-    .weather-icon h2::after {
-        content: url('images/weather-icon.svg') !important;
-        display: inline-block !important;
+    aside.card.weather h2::after {
+        content: url('images/weather-icon.svg');
+        /* Path to your SVG icon */
+        display: inline-block;
         width: 24px;
         /* Adjust size as needed */
         height: 24px;
         /* Adjust size as needed */
-        margin-left: 0.5rem !important;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
     }
-
 }
