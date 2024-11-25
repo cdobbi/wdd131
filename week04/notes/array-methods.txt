@@ -1,0 +1,32 @@
+
+Array Methods for Functional Programming
+Overview
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. Array methods that support functional programming include filter(), map(), and reduce(). There are other array methods that support functional programming, but this learning activity dives into these three common and useful methods.
+
+Course Learning Outcomes
+Prepare
+array.filter()
+The array.filter() method creates a filtered array from the original array using the condition from the provided function.
+
+Reference Array.filter() - MDN Web Docs
+array.map()
+The array.map() method iterates through each element of the original array using a given function and produces a new array. The original array is not modified. The new array is returned by the map() method. The new array will have the same number of elements as the original array.
+
+Reference Array.map() - MDN Web Docs
+array.reduce()
+The array.reduce() method is used to reduce the array to a single value. It executes a reducer function on each element of the array, resulting in a single output value. The reducer function takes four arguments: Accumulator, Current Value, Current Index, Source Array. The reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array and ultimately becomes the final, single resulting value.
+
+Reference Array.reduce() - MDN Web Docs
+Check Your Understanding
+For all of these exercises, use this array declaration:
+
+let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
+Using the array.filter() method, create an array named namesB with only those names from the name array that start with the character 'B'.
+Answer
+Using the array.map() method, create a new array named namesLength that contains the length of each name in the names array. Expected output is [5, 8, 5, 8, 3].
+Answer
+Using the names.reduce() method, create an expression that returns the average string length of the names in the names array. Expected output is 5.8.
+Answer
+Complete this ponder activities: Practice with Array methods - WDD Learning Modules
+Back
+Copyright © Brigham Young University-Idaho | All rights reserved

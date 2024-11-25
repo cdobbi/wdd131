@@ -1,0 +1,39 @@
+
+Lazy Loading
+Overview
+In terms of site performance and search engine optimization, our document loading goal is to be ready for action in a few seconds upon a request by the user. The issue is that we have many requests and payloads within a document itself, including images, that increase the load time to much more than the ideal target. The goal of this activity is to alleviate some of the load time by waiting until the page assets are actually needed by the user as they scroll. We introduce the design pattern of progressive loading or 'lazy-loading' of images.
+
+Course Learning Outcomes
+First Meaningful Paint
+"It's important to deliver something meaningful to the user as soon as possible — the longer they wait for the page to load, the bigger the chance they will leave before waiting for everything to finish. We should be able to show them at least the basic view of the page they want to see, with placeholders in the places more content will eventually be loaded. This could be achieved by progressive loading — also known as Lazy loading. This is all about deferring loading of as many resources as possible (HTML, CSS, JavaScript), and only loading those immediately that are really needed for the very first experience." - MDN web docs
+
+Prepare
+The objective is to load pages faster and one way to do that is to provide only the essential content to the client/user as the content is requested through events such as scrolling down a page or through navigation. Native or browser-level lazy loading has evolved to be a built-in attribute that can be applied to select elements such as images.
+
+<img src="images/anyphoto.jpg" alt="A good description of the non decorative image" loading="lazy" width="300" height="500">
+The loading attribute has only two states, lazy and eager. The eager value instructs the browser to render the resource immediately and is the default. The lazy attribute will defer loading the element, such as an <img> or <iframe>, until the element is called into view by some user action, such as scrolling.
+
+"Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the critical rendering path, which translates into reduced page load times. Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation." - MDN
+
+Test the popularity of the loading="lazy" attribute by looking at Google Maps implementation.
+Demonstration of embedding a Google Map onto an HTML document using an iframe.
+Read: 📃Lazy Loading - MDN | Review the concepts and strategies of lazy loading in this official reference.
+Activity Instructions
+Build a small page with multiple images to scroll through as they are stacked on top of each other on a single page. When testing the page in a browser, the images will only load until they come into view. This is difficult to notice without carefully scrolling and viewing the network tab loading information in Dev Tools. Here is an example:
+
+Demonstration of browser-level lazy loading support.
+In VS Code, go to your course wdd131 repo and create a new HTML page named "lazyload.html" in a "week04" sub folder of wdd131.
+Support this new page with an external CSS and a JavaScript file that are each stored in their appropriately named folders within the folder.
+The lazyload.html page should have a standard <head> and a <body> and the body should have a <header>, <main>, and <footer>.
+The header should contain a page title in an <h1> element.
+The main section contains six (6) <img> child elements
+The footer can contain whatever you think appropriate along with the date that the document was last modified using JavaScript.
+The images dimensions must be 400px width by 600px+ height (portrait layouts).
+Use your own images or external placeholders.
+Display the <img> elements in one column down the center of the page regardless of the screen size. (HINT: CSS display:block)
+Correctly apply native lazy loading to the images so that they only load when the user scrolls down the page.
+Add a fade from black animation to each image using CSS animation and opacity.
+Demonstration: Activity Walkthrough
+
+Back
+Copyright © Brigham Young University-Idaho | All rights reserved

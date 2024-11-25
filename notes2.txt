@@ -1,0 +1,1060 @@
+###HTML
+###Explanation
+<!DOCTYPE html>: Declares the document type and version of HTML.
+
+<html lang="en">: The root element of the HTML document, with the language set to English.
+
+<head>: Contains meta-information about the document, such as character set, viewport settings, title, and linked stylesheets.
+
+<meta charset="UTF-8">: Specifies the character encoding for the document.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Ensures the page is responsive and scales correctly on different devices.
+
+<title>: Sets the title of the webpage, which appears in the browser tab.
+
+<meta name="description" content="A comparison of ACME Wildwest Services features.">: Provides a brief description of the page content.
+
+<link rel="stylesheet" href="styles.css">: Links to an external CSS file for styling the page.
+
+<body>: Contains the main content of the document.
+
+<header>: Defines the header section of the page, containing the main heading.
+
+<main>: Represents the main content area of the page.
+
+<section>: Defines a section of content within the main area.
+
+<table>: Creates a table to display data.
+
+<caption>: Provides a caption for the table.
+
+<thead>: Groups the header content in the table.
+
+<tr>: Defines a row in the table.
+
+<th>: Defines a header cell in the table.
+
+<td>: Defines a data cell in the table.
+
+<tbody>: Groups the body content in the table.
+
+<footer>: Defines the footer section of the page.
+
+
+### CSS (styles.css)
+### Explanation
+body: Styles the body element with a specific font and padding.
+
+table: Styles the table with a width of 100%, a border, and collapsed borders.
+
+caption: Styles the table caption, positioning it at the bottom and adjusting the font size and padding.
+
+th, td: Styles the table header and data cells with padding, a border, and white-space preservation.
+
+thead th, tbody td: Centers the text in the table header and data cells.
+
+thead: Styles the table header with white text on a black background.
+
+thead th: Adds padding and increases the font size for the table header cells.
+
+tbody tr:nth-child(even): Applies a background color to every even row in the table body.
+
+.blank: Styles elements with the blank class, setting the background color to black.
+
+
+###large.css
+###EXPLANATION
+Responsive Design: large.css can contain styles that are specifically tailored for larger screens, such as desktops or large tablets. This ensures that the layout and design look good on bigger displays.
+
+Media Queries: It often includes media queries that apply styles only when the screen width exceeds a certain threshold, ensuring that the design adapts to different screen sizes.
+
+@media (min-width: 1024px): This media query applies the styles within it only when the screen width is 1024 pixels or wider.
+
+body: Increases the font size for better readability on larger screens.
+
+header: Adds more padding to the header for a more spacious layout.
+
+main: Uses flexbox to arrange the main content side by side.
+
+.hero img: Adjusts the width of the hero image to 80% of its container.
+
+.data-container: Sets a maximum width for the data container to prevent it from stretching too wide.
+
+aside.card.weather: Increases the maximum width and padding of the weather card for a more balanced layout.
+
+footer: Adds more padding to the footer for a more comfortable layout.
+
+By using large.css, you can ensure that your website looks great on larger screens while maintaining a responsive design that adapts to different devices. This approach helps provide an optimal user experience across various screen sizes.
+
+
+###.js
+###EXPLANATION
+JavaScript (place.js)
+The JavaScript file contains code that runs on the client side to enhance the functionality of the webpage.
+
+document.addEventListener('DOMContentLoaded', () => { ... });: This event listener waits for the entire HTML document to be fully loaded and parsed before executing the enclosed code. This ensures that all elements are available for manipulation.
+
+const currentYear = new Date().getFullYear();: This line creates a constant currentYear and assigns it the current year using the Date object.
+
+const lastModified = document.lastModified;: This line creates a constant lastModified and assigns it the date and time when the document was last modified.
+
+document.getElementById('currentyear').textContent = currentYear;: This line finds the HTML element with the ID currentyear and sets its text content to the current year.
+
+document.getElementById('lastModified').textContent = lastModified;: This line finds the HTML element with the ID lastModified and sets its text content to the last modified date and time.
+
+const temperature = 12;: This line creates a constant temperature and assigns it a value of 12 (representing 12°C).
+
+const windSpeed = 5;: This line creates a constant windSpeed and assigns it a value of 5 (representing 5 km/h).
+
+const conditions = "Rainy";: This line creates a constant conditions and assigns it the string "Rainy".
+
+const windChill = calculateWindChill(temperature, windSpeed);: This line calls the calculateWindChill function with temperature and windSpeed as arguments and assigns the result to the constant windChill.
+
+document.getElementById('windChill').textContent = windChill;: This line finds the HTML element with the ID windChill and sets its text content to the calculated wind chill.
+
+document.getElementById('currentTemp').textContent = temperature;: This line finds the HTML element with the ID currentTemp and sets its text content to the temperature.
+
+document.getElementById('WindSpeed').textContent = windSpeed;: This line finds the HTML element with the ID WindSpeed and sets its text content to the wind speed.
+
+document.getElementById('Conditions').textContent = conditions;: This line finds the HTML element with the ID Conditions and sets its text content to the weather conditions.
+
+Sure! Let's break down the JavaScript code provided in the example and explain what each part does:
+
+### JavaScript (place.js)
+The JavaScript file contains code that runs on the client side to enhance the functionality of the webpage.
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+
+    document.getElementById('currentyear').textContent = currentYear;
+    document.getElementById('lastModified').textContent = lastModified;
+
+    const temperature = 12;
+    const windSpeed = 5;
+    const conditions = "Rainy";
+
+    const windChill = calculateWindChill(temperature, windSpeed);
+    document.getElementById('windChill').textContent = windChill;
+    document.getElementById('currentTemp').textContent = temperature;
+    document.getElementById('WindSpeed').textContent = windSpeed;
+    document.getElementById('Conditions').textContent = conditions;
+});
+
+function calculateWindChill(temp, speed) {
+    if (temp <= 10 && speed > 4.8) {
+        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + ' °C';
+    } else {
+        return 'N/A';
+    }
+}
+```
+
+
+### Explanation
+- **`document.addEventListener('DOMContentLoaded', () => { ... });`**: This event listener waits for the entire HTML document to be fully loaded and parsed before executing the enclosed code. This ensures that all elements are available for manipulation.
+
+- **`const currentYear = new Date().getFullYear();`**: This line creates a constant `currentYear` and assigns it the current year using the `Date` object.
+
+- **`const lastModified = document.lastModified;`**: This line creates a constant `lastModified` and assigns it the date and time when the document was last modified.
+
+- **`document.getElementById('currentyear').textContent = currentYear;`**: This line finds the HTML element with the ID `currentyear` and sets its text content to the current year.
+
+- **`document.getElementById('lastModified').textContent = lastModified;`**: This line finds the HTML element with the ID `lastModified` and sets its text content to the last modified date and time.
+
+- **`const temperature = 12;`**: This line creates a constant `temperature` and assigns it a value of 12 (representing 12°C).
+
+- **`const windSpeed = 5;`**: This line creates a constant `windSpeed` and assigns it a value of 5 (representing 5 km/h).
+
+- **`const conditions = "Rainy";`**: This line creates a constant `conditions` and assigns it the string "Rainy".
+
+- **`const windChill = calculateWindChill(temperature, windSpeed);`**: This line calls the `calculateWindChill` function with `temperature` and `windSpeed` as arguments and assigns the result to the constant `windChill`.
+
+- **`document.getElementById('windChill').textContent = windChill;`**: This line finds the HTML element with the ID `windChill` and sets its text content to the calculated wind chill.
+
+- **`document.getElementById('currentTemp').textContent = temperature;`**: This line finds the HTML element with the ID `currentTemp` and sets its text content to the temperature.
+
+- **`document.getElementById('WindSpeed').textContent = windSpeed;`**: This line finds the HTML element with the ID `WindSpeed` and sets its text content to the wind speed.
+
+- **`document.getElementById('Conditions').textContent = conditions;`**: This line finds the HTML element with the ID `Conditions` and sets its text content to the weather conditions.
+
+### `calculateWindChill` Function
+This function calculates the wind chill based on the temperature and wind speed.
+
+```javascript
+function calculateWindChill(temp, speed) {
+    if (temp <= 10 && speed > 4.8) {
+        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + ' °C';
+    } else {
+        return 'N/A';
+    }
+}
+```
+
+
+### Explanation
+- **`function calculateWindChill(temp, speed) { ... }`**: Defines a function named `calculateWindChill` that takes two parameters: `temp` (temperature) and `speed` (wind speed).
+
+- **`if (temp <= 10 && speed > 4.8) { ... }`**: Checks if the temperature is less than or equal to 10°C and the wind speed is greater than 4.8 km/h. If both conditions are met, it calculates the wind chill.
+
+- **`return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + ' °C';`**: Calculates the wind chill using the formula and returns the result rounded to two decimal places, followed by ' °C'.
+
+- **`else { return 'N/A'; }`**: If the conditions are not met, returns 'N/A' (Not Applicable).
+
+This JavaScript code enhances the functionality of the webpage by dynamically updating the weather information and ensuring that the content is accurate and up-to-date.
+
+
+###pseudo-elements and other stuff
+###Explanation
+display: flex: Turns the container into a flex container, allowing you to use Flexbox properties to align and distribute space among its children.
+
+display: block: Makes an element a block-level element, which takes up the full width available and starts on a new line.
+
+::before: Inserts content before the element's actual content. The content property specifies what to insert.
+
+::after: Inserts content after the element's actual content. The content property specifies what to insert.
+
+These properties and pseudo-elements are essential tools in CSS for creating flexible and responsive layouts, as well as adding decorative content.
+
+
+###Zebra Striping or Cany Striping
+###EXPLANATION
+Explanation
+tbody tr:nth-child(odd): This selector targets every odd row within the <tbody> element and applies a light gray background color (#f2f2f2).
+
+tbody tr:nth-child(even): This selector targets every even row within the <tbody> element and applies a white background color (#ffffff).
+
+By using the nth-child pseudo-class, you can easily apply zebra striping to your tables, making them more readable and visually appealing. This technique is especially useful for tables with a lot of data, as it helps users track rows more easily.
+
+
+###ADDITIONAL NOTES OTHER RESOURCES
+###EXPLANATION
+HTML
+HTML Structure: Understanding the basic structure of an HTML document, including <!DOCTYPE html>, <html>, <head>, and <body> tags.
+
+Semantic HTML: Using semantic tags like <header>, <footer>, <article>, <section>, and <aside> to improve the readability and accessibility of your web pages.
+
+Forms: Creating and styling forms using <form>, <input>, <textarea>, <select>, and <button> tags.
+
+Tables: Structuring tables with <table>, <thead>, <tbody>, <tfoot>, <tr>, <th>, and <td> tags. Remember to use zebra striping with the nth-child pseudo-class for better readability.
+
+CSS
+Selectors: Understanding different types of selectors, including class selectors (.class), ID selectors (#id), and attribute selectors ([attribute]).
+
+Box Model: Knowing how the box model works, including margin, border, padding, and content.
+
+Flexbox: Using Flexbox for layout with properties like display: flex, justify-content, align-items, and flex-direction.
+
+Grid: Using CSS Grid for more complex layouts with properties like display: grid, grid-template-columns, and grid-template-rows.
+
+Responsive Design: Implementing responsive design using media queries (@media) to adjust styles based on screen size.
+
+JavaScript
+Basics: Understanding variables, data types, functions, and control structures (loops, conditionals).
+
+DOM Manipulation: Using JavaScript to manipulate the Document Object Model (DOM) with methods like getElementById, querySelector, addEventListener, and innerHTML.
+
+Events: Handling events like click, submit, and DOMContentLoaded.
+
+Functions: Writing and using functions, including arrow functions and callback functions.
+
+Best Practices
+Accessibility: Ensuring your web pages are accessible to all users, including those with disabilities. Use semantic HTML, ARIA roles, and proper labeling.
+
+Performance: Optimizing your web pages for performance by minimizing CSS and JavaScript, using efficient selectors, and preloading key resources.
+
+SEO: Implementing basic SEO practices, such as using meta tags, descriptive titles, and alt attributes for images.
+
+Additional Resources
+MDN Web Docs: A comprehensive resource for web development documentation and tutorials.
+
+W3Schools: Offers tutorials and references on web development languages such as HTML, CSS, JavaScript, and more.
+
+CodePen: A social development environment for front-end designers and developers to showcase their work and find inspiration.
+
+
+Inspect Element
+Inspect Element is a powerful tool available in most modern browsers that allows you to view and manipulate the HTML, CSS, and JavaScript of a webpage. It's incredibly useful for debugging and testing changes in real-time.
+
+How to Use Inspect Element
+Open Inspect Element: Right-click on any element on a webpage and select "Inspect" or press Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac).
+
+View and Edit HTML/CSS: The Elements panel will show the HTML structure and associated CSS. You can edit these directly to see how changes affect the page.
+
+Check Accessibility: Inspect Element also provides accessibility information, such as contrast ratios and ARIA roles2.
+
+Lighthouse
+Lighthouse is an open-source, automated tool for improving the quality of web pages. It provides audits for performance, accessibility, progressive web apps, SEO, and more.
+
+How to Use Lighthouse
+Open Lighthouse: In Chrome, open DevTools (Ctrl+Shift+I or Cmd+Option+I), then go to the Lighthouse tab.
+
+Run an Audit: Click "Generate report" to run an audit on the current page. Lighthouse will provide a detailed report with scores and suggestions for improvement4.
+
+Color Contrast
+Color contrast is crucial for accessibility, ensuring that text is readable against its background. The Web Content Accessibility Guidelines (WCAG) recommend a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text.
+
+How to Check Color Contrast
+Use Online Tools: Tools like ContrastChecker and CheckMyColors can help you test your site's color contrast.
+
+Adjust Colors: Ensure your text and background colors meet the recommended contrast ratios6.
+
+Responsive Images
+Responsive images adjust to different screen sizes, improving load times and user experience. You can use the <picture> element and srcset attribute to provide different image sizes for different devices.
+
+Example
+html
+<picture>
+    <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+    <source srcset="images/london-medium.webp" media="(min-width: 500px)">
+    <img src="images/london-small.webp" alt="Image of England" width="500" height="250">
+</picture>
+Third-Party Fonts
+Using third-party fonts like Google Fonts can enhance the typography of your website. Ensure you load these fonts efficiently to avoid layout shifts.
+
+Example
+html
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+SVG (Scalable Vector Graphics)
+SVGs are vector images that scale without losing quality, making them perfect for responsive design. They can be styled with CSS and manipulated with JavaScript.
+
+Example
+html
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+Putting It All Together
+Here's an example HTML document that incorporates all these elements:
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Fundamentals</title>
+    <meta name="description" content="A comprehensive example of dynamic web fundamentals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .contrast {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dynamic Web Fundamentals</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/london-medium.webp" media="(min-width: 500px)">
+                <img src="images/london-small.webp" alt="Image of England" width="500" height="250">
+            </picture>
+        </div>
+        <section class="contrast">
+            <h2>High Contrast Section</h2>
+            <p>This section has high contrast text for better readability.</p>
+        </section>
+        <section>
+            <h2>SVG Example</h2>
+            <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dynamic Web Fundamentals</p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>
+This example demonstrates how to use Inspect Element, Lighthouse, color contrast, responsive images, third-party fonts, and SVGs to create a dynamic and responsive webpage.
+
+
+###ADDITIONAL NOTES
+###EXPLANATION
+Sure! Let's include links to other webpages and a JavaScript function to get the current date. Here's an updated example that incorporates these elements:
+
+HTML
+html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Fundamentals</title>
+    <meta name="description" content="A comprehensive example of dynamic web fundamentals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .contrast {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #00247D;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dynamic Web Fundamentals</h1>
+        <nav>
+            <a href="https://www.example.com">Home</a>
+            <a href="https://www.example.com/about">About</a>
+            <a href="https://www.example.com/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/london-medium.webp" media="(min-width: 500px)">
+                <img src="images/london-small.webp" alt="Image of England" width="500" height="250">
+            </picture>
+        </div>
+        <section class="contrast">
+            <h2>High Contrast Section</h2>
+            <p>This section has high contrast text for better readability.</p>
+        </section>
+        <section>
+            <h2>SVG Example</h2>
+            <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </section>
+        <section>
+            <h2>Current Date</h2>
+            <p id="currentDate"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🦁 Dynamic Web Fundamentals 🦁 USA</p>
+        <p>This document was last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentDate = new Date().toLocaleDateString();
+            document.getElementById('currentDate').textContent = currentDate;
+        });
+    </script>
+</body>
+
+</html>
+Explanation
+Links to Other Webpages: The <nav> element contains links to other webpages (Home, About, Contact). These links are styled with CSS to have no text decoration and a specific color.
+
+Get Current Date in JavaScript: The JavaScript code inside the <script> tag gets the current date using new Date().toLocaleDateString() and sets the text content of the element with the ID currentDate to this date.
+
+CSS
+The CSS styles the webpage, including the navigation links and other elements.
+
+css
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.contrast {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00247D;
+}
+JavaScript (place.js)
+The JavaScript file contains code to dynamically update the webpage content.
+
+javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+
+    document.getElementById('currentyear').textContent = currentYear;
+    document.getElementById('lastModified').textContent = lastModified;
+
+    const temperature = 12;
+    const windSpeed = 5;
+    const conditions = "Rainy";
+
+    const windChill = calculateWindChill(temperature, windSpeed);
+    document.getElementById('windChill').textContent = windChill;
+    document.getElementById('currentTemp').textContent = temperature;
+    document.getElementById('WindSpeed').textContent = windSpeed;
+    document.getElementById('Conditions').textContent = conditions;
+});
+
+function calculateWindChill(temp, speed) {
+    if (temp <= 10 && speed > 4.8) {
+        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + ' °C';
+    } else {
+        return 'N/A';
+    }
+}
+This example demonstrates how to use links to other webpages, get the current date in JavaScript, and incorporate responsive images, third-party fonts, and SVGs to create a dynamic and responsive webpage.
+
+
+Here's a quick checklist to ensure you have everything you need for your WDD 131 Dynamic Web Fundamentals exam:
+
+HTML
+HTML Structure: Basic structure, semantic HTML, forms, and tables.
+
+Tables: Use of <thead>, <tbody>, <caption>, and zebra striping with nth-child pseudo-class.
+
+Links: Creating links to other webpages.
+
+CSS
+Selectors: Class, ID, attribute selectors.
+
+Box Model: Understanding margin, border, padding, and content.
+
+Flexbox: display: flex, justify-content, align-items, flex-direction.
+
+Grid: display: grid, grid-template-columns, grid-template-rows.
+
+Responsive Design: Media queries (@media).
+
+Color Contrast: Ensuring text readability against backgrounds.
+
+Third-Party Fonts: Using fonts from sources like Google Fonts.
+
+SVG: Using and styling SVG images.
+
+JavaScript
+Basics: Variables, data types, functions, control structures.
+
+DOM Manipulation: getElementById, querySelector, addEventListener, innerHTML.
+
+Events: Handling events like click, submit, DOMContentLoaded.
+
+Functions: Writing and using functions, including arrow functions and callback functions.
+
+Get Current Date: Using JavaScript to get and display the current date.
+
+Tools and Techniques
+Inspect Element: Using browser DevTools to view and edit HTML/CSS.
+
+Lighthouse: Running audits for performance, accessibility, SEO, etc.
+
+Responsive Images: Using <picture> and srcset for different image sizes.
+
+Accessibility: Ensuring your site is accessible to all users.
+
+Example Code
+Here's a comprehensive example that includes all these elements:
+
+html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Fundamentals</title>
+    <meta name="description" content="A comprehensive example of dynamic web fundamentals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dynamic Web Fundamentals</h1>
+        <nav>
+            <a href="https://www.example.com">Home</a>
+            <a href="https://www.example.com/about">About</a>
+            <a href="https://www.example.com/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/london-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/london-medium.webp" media="(min-width: 500px)">
+                <img src="images/london-small.webp" alt="Image of England" width="500" height="250">
+            </picture>
+        </div>
+        <section class="contrast">
+            <h2>High Contrast Section</h2>
+            <p>This section has high contrast text for better readability.</p>
+        </section>
+        <section>
+            <h2>SVG Example</h2>
+            <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </section>
+        <section>
+            <h2>Current Date</h2>
+            <p id="currentDate"></p>
+        </section>
+        <section>
+            <h2>Account Feature Comparison</h2>
+            <table>
+                <caption>Table 1: Account Feature Comparison</caption>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic</th>
+                        <th>Premium</th>
+                        <th>Deluxe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feature 1</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 2</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 3</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🦁 Dynamic Web Fundamentals 🦁 USA</p>
+        <p>This document was last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</body>
+
+</html>
+CSS (styles.css)
+css
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.contrast {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00247D;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+h1::before {
+    content: "🌟 ";
+    color: gold;
+}
+
+h1::after {
+    content: " 🌟";
+    color: gold;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+}
+JavaScript (place.js)
+javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+
+    document.getElementById('currentyear').textContent = currentYear;
+    document.getElementById('lastModified').textContent = lastModified;
+
+    const temperature = 12;
+    const windSpeed = 5;
+    const conditions = "Rainy";
+
+    const windChill = calculateWindChill(temperature, windSpeed);
+    document.getElementById('windChill').textContent = windChill;
+    document.getElementById('currentTemp').textContent = temperature;
+    document.getElementById('WindSpeed').textContent = windSpeed;
+    document.getElementById('Conditions').textContent = conditions;
+});
+
+function calculateWindChill(temp, speed) {
+    if (temp <= 10 && speed > 4.8) {
+        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + ' °C';
+    } else {
+        return 'N/A';
+    }
+}
+JavaScript (date.js)
+javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const currentDate = new Date().toLocaleDateString();
+    document.getElementById('currentDate').textContent = currentDate;
+});
+Explanation
+HTML: The HTML file includes links to other webpages, responsive images, SVGs, and sections for high contrast text and a table with zebra striping.
+
+CSS: The CSS file styles the webpage, including the use of ::before and ::after pseudo-elements, and a media query for responsive design.
+
+JavaScript: The JavaScript files include code to dynamically update the current year, last modified date, weather information, and current date.
+
+This comprehensive example demonstrates how to create a dynamic and responsive webpage using HTML, CSS, and JavaScript
+
+
+
+###LAZY LOADING
+<img src="images/anyphoto.jpg" alt="A good description of the non decorative image" loading="lazy" width="300" height="500">
+The loading attribute has only two states, lazy and eager. The eager value instructs the browser to render the resource immediately and is the default. The lazy attribute will defer loading the element, such as an <img> or <iframe>, until the element is called into view by some user action, such as scrolling.
+
+"Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the critical rendering path, which translates into reduced page load times. Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation." - MDN
+
+
+
+JavaScript objects are a way to group related data and functions together. Objects are a core concept in JavaScript and are used extensively in the language. In this learning activity, you will learn how to create and use objects in JavaScript.
+
+"An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects)." - MDN Web Docs
+
+
+Here's an example of a JavaScript object representing a person:
+
+let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};
+
+Objects - Representing Data
+Beyond Arrays #
+Arrays are wonderful things. If you need to keep several things of the same type together so you can work with them, an array is the way to go. But what about more complicated data? Consider this situation, you need to write code to track medications in a pharmacy. For each medication you need to track its name, the amount of the medication, its unique code, and expiration date. If you do this with arrays, your code could look something like this, the worst possible implementation.
+
+let names = ['Lactated Ringers','levothyroxine','rosuvastatin','albuterol','esomeprazole']
+let amounts = ['100L','2000ct','1500ct','1325ct','23145ct']
+let codes = ['13ab7','at342','gr5423','iuy6532','mnb78932']
+let expDateDate = ['12/30/2029','03/18/2021','09/01/2020','01/01/2023','10/01/2021']
+This code is intrinsically unstable. To work with this data, your code must keep track of and use the same index across all three arrays. However, as the data becomes more and more complicated, not just more data, the medication information will become corrupted. It is too difficult to keep everything straight; everything lined up, let alone passing this data to a function. Bugs will creap into this code and the application it is part of will fail.
+
+Here is a slightly better way to solve this problem using a two dimentional array.
+
+let medications = [
+	['Lactated Ringers','levothyroxine','rosuvastatin','albuterol','esomeprazole'],
+	['100L','2000ct','1500ct','1325ct','23145ct'],
+	['13ab7','at342','gr5423','iuy6532','mnb78932'],
+	['12/30/2029','03/18/2021','09/01/2020','01/01/2023','10/01/2021']
+]
+This code is more organized, but has the same index and complicatedness problem as the first example, though it is easier to pass the data in this form to a function. However, when writing code using this data, you have to remember the order and indices of all the sub-arrays. This will be a constant problem as the data is passed, bugs fixed, and the data becomes more complicated. Thankfully, the creators of JavaScript provided a way out of this mess...defined objects.
+
+Defined Objects - keeping related data together #
+Defined objects allow us to mingle different types of data together, and build relationships between the data. Using the medication example, you could put a bunch of objects in an array. Each of these objects would hold one medication's name, its manufacturer, its best-by date, the amount of the medication on hand, and if that amount is a count or a volume in liters, milliliters, etc.
+
+The way you would accomplish this in JavaScript is to apply the concept of a key-value pair. Being a BYU-Idaho student, you are familiar with key-value pairs already. Your iNumber is a key, and the data you supplied to the school about yourself is the value. Applying this concept to the medications data representation problem, a possible, though not optimal, solution looks like this, where id, amount, amountType, and expDate are the keys, and key-value pairs are seperated by commas.
+
+let lactatedRingers = {'id':'13ab7','amount':100,'amountType':'L','expDate':'12/30/2029'}
+let levothyroxine = {'id':'at342','amount':2000,'amountType':'ct','expDate':'03/18/2021'}
+let rosuvastatin = {'id':'gr5423','amount':1500,'amountType':'ct','expDate':'09/01/2020'}
+let albuterol = {'id':'iuy6532','amount':1325,'amountType':'ct','expDate':'01/01/2023'}
+let esomeprazole = {'id':'mnb78932','amount':23145,'amountType':'ct','expDate':'10/01/2021'}
+To access the value associated with one of the keys, you use the name of the variable for the defined object and apply the key to look up the value.
+
+let anAmount = rosuvastatin['amount']
+The variable anAmount would now contain 1500.
+
+Changing a value works much like the code to modify a value in an array, but you would apply a key instead of using an array index.
+
+rosuvastatin['amount'] = 1455
+Though this solution improves on the array representations, it suffers from having to pass each of the medications to functions that may work with or on the data. Also, it is easy to accidentally disconnect the medication names from their associated data. An additional layer of keys and values is needed to resolve this problem. In this solution, a defined object for all the medications contains other defined objects. This is much like a two dimentional array, an array that contains other arrays. Here, the name of the medication, with correct capitalization, is used as a key, and the data for that medication is the key's associated value.
+
+let medications = {
+	'Lactated Ringers' : {'id':'13ab7','amount':100,'amountType':'L','expDate':'12/30/2029'},
+	'Levothyroxine' : {'id':'at342','amount':2000,'amountType':'ct','expDate':'03/18/2021'},
+	'Rosuvastatin' : {'id':'gr5423','amount':1500,'amountType':'ct','expDate':'09/01/2020'},
+	'Albuterol' : {'id':'iuy6532','amount':1325,'amountType':'ct','expDate':'01/01/2023'},
+	'Esomeprazole' : {'id':'mnb78932','amount':23145,'amountType':'ct','expDate':'10/01/2021'}
+}
+Another advantage of this organization of the data is there is no need to remember the order of the data. If you wanted all the data for Lactated Ringers, the code would look like this.
+
+let aMedication = medications['Lactated Ringers']
+To get the same data for Lactated Ringers from the 2 dimentional array implementation the code would look like this,
+
+let aName = medications[0][0]
+let anAmount = medications[1][0]
+let anId = medications[2][0]
+let anExpirationDate = medications[3][0]
+a much less readable, intuitive, and debuggable solution.
+
+Using the defined objects to get the expiration date for Albuterol without getting all the data for Albuterol, your code would look like this,
+
+let aBestByDate = medications['Albuterol']['expDate']
+where getting it using the 2 dimentional array implementation would look like this.
+
+let aBestByDate = medications[4][4]
+To change the amount of Rosuvastatin on hand, the code would look like this,
+
+medications['Rosuvastatin']['amount'] = 1432
+instead of like this, using the 2 dimentional array.
+
+medications[2][3] = '1432ct'
+There is Another Way #
+When you have defined objects, there is another way to access and change values. It uses what is called 'dot notation' by the JavaScript community. Let's look at the example where the amount of Rosuvastatin was changed again. You could do it like this.
+
+medications.Rosuvastatin.amount = 1432
+That's kind of nice. Many fewer characters to type. You drop all the brackets and quotation marks. But can you use dot notation to set a value? Yep. You can. Here is the Albutorol example from earlier rewritten using dot notation.
+
+let aBestByDate = medications.Albuterol.expDate
+It may seem that, because dot notation is so much less wordy, it should always be used. Not so fast. There are times when it doesn't work. It only works when you know what the keys are at the time you are writting your code. Let me explain.
+
+Suppose you had a user interface where the user selected the name of the medication to display the expiration data for. Now you have a problem. You have to put what the user selected into a variable in order to be able to use it. Let's say you put it in a variable called 'selectedMedication'. The temptation is to think that this code would work.
+
+let aBestByDate = medications.selectedMedication.expDate
+It doesn't. This code does work though.
+
+let aBestByDate = medications[selectedMedication]['expDate']
+This code works too. It combines both approaches and is probably the cleanest code to solve this problem.
+
+let aBestByDate = medications[selectedMedication].expDate
+If nothing else, JavaScript is very flexible. So which one should you use? It depends on which works to solve the problem you are working on. Pick the one that is the simplest for any given situation.
+
+
+This is similar to a Dictionary in Python. Objects in Javascript are collections of key:value pairs.
+The keys are strings but do not always need to be quoted. It's never an error to quote them, but becomes necessary if the key has a space in it. For example if instead of code we wanted to make the key more specific and call it course code we would need to do this: "course code": "CSE121b". But in most cases you would be better off to use courseCode instead.
+The key is on the left side of the colon and the value is on the right.
+The values can be anything that can be assigned to a variable in Javascript: primitives, arrays, other objects, functions...
+Keys that store data are called properties, keys that store functions are called methods
+
+One important concept when using Object Literals is this. "this" is a keyword in Javascript. When you create an object it creates a reference to itself. That reference is called this. We will need to use that reference in our methods for them to work.
+
+For example inside our enrollStudent method we will need to access the sections portion of our object. We have to tell the code where to look for sections. In english it would sound like this: 'Look inside of the current object for a property called sections'. In code it looks thus:
+
+this.sections;One important concept when using Object Literals is this. "this" is a keyword in Javascript. When you create an object it creates a reference to itself. That reference is called this. We will need to use that reference in our methods for them to work.
+
+For example inside our enrollStudent method we will need to access the sections portion of our object. We have to tell the code where to look for sections. In english it would sound like this: 'Look inside of the current object for a property called sections'. In code it looks thus:
+
+Functions added to objects like this are commonly referred to as methods
+
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+
+
+document.querySelector('#enrollStudent`)
+ .addEventListener('click', function(e) {
+  //what would the value of 'this' be inside this function?
+})
+Think about this and an event listener. We could setup the listener like this:
+
+document.querySelector('#enrollStudent`)
+ .addEventListener('click', function(e) {
+  //what would the value of 'this' be inside this function?
+})
+Remember that this gets assigned to the object on the left side of a '.' In this case it would be equal to the #enrollStudent element. This can sometimes cause problems if the event listener is set inside of another object and we expected this to be the parent object!
+
+Javascript developers run into this situation often. There are two common solutions:
+
+Arrow functions have one special feature. They do not rebind this. So sometimes you can solve the issue by changing your function(e) {} to (e) => {}
+
+If that doesn't work then the other option is to bind the value that you want this to be to a method.
+
+anObject.aMethod.bind(thisArg);
+
+
+Let's clarify the two choices and the `<strong>` tag:
+
+### Choices Explanation
+
+1. **`reveal.innerHTML = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`;`**
+   - **`innerHTML`**: This property allows you to set or get the HTML content inside an element. When you use `innerHTML`, you can include HTML tags within the string, and the browser will render them as HTML.
+   - **Example**: If `babygender` is "boy", the `div` will display: 🎉 Congratulations! You are having a **boy**!
+
+2. **`reveal.textContent = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`;`**
+   - **`textContent`**: This property sets or gets the text content of an element. It treats the content as plain text, meaning any HTML tags within the string will be displayed as text, not as HTML.
+   - **Example**: If `babygender` is "boy", the `div` will display: 🎉 Congratulations! You are having a `<strong>boy</strong>`!
+
+### `<strong>` Tag Explanation
+
+- **`<strong>`**: This is an HTML tag used to indicate that the text within it is of strong importance. By default, browsers render the text inside `<strong>` tags in bold.
+- **Example**: `<strong>important text</strong>` will be displayed as **important text**.
+
+### Correctness of Choices
+
+- **`innerHTML`**: Correct if you want to render HTML tags within the string.
+- **
+
+textContent
+
+**: Correct if you want to display the string as plain text, including any HTML tags as text.
+
+### Practical Example
+
+Given the following HTML:
+```html
+<div id="reveal"></div>
+```
+
+And the JavaScript:
+```javascript
+const reveal = document.getElementById('reveal');
+const babygender = "boy";
+
+// Using innerHTML
+reveal.innerHTML = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`;
+// Result: 🎉 Congratulations! You are having a boy! (with "boy" in bold)
+
+// Using textContent
+reveal.textContent = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`;
+// Result: 🎉 Congratulations! You are having a <strong>boy</strong>! (as plain text)
+```
+
+In summary:
+- Use `innerHTML` if you want to include and render HTML tags.
+- Use 
+
+textContent
+
+ if you want to display the content as plain text.
+
+ Yes, I am sure. The `map` method is the correct choice for transforming each element of an array using a provided function and returning a new array with the transformed elements.
+
+Given the provided code:
+
+```javascript
+const points = [100, 88, 94, 78, 84, 69];
+
+function convertPointsToStatus(pointTotal) {
+  let status = 'Not Complete';
+  if (pointTotal >= 93) {
+    status = "Excellent";
+  } else if (pointTotal >= 70) {
+    status = "Complete";
+  }
+  return status;
+}
+```
+
+The correct way to create a new array named `statusReport` that contains the course status for each point total in the `points` array is:
+
+```javascript
+const statusReport = points.map(convertPointsToStatus);
+```
+
+### Explanation
+
+- **`points.map(convertPointsToStatus)`**: This method applies the `convertPointsToStatus` function to each element in the `points` array and returns a new array with the results.
+
+### Example
+
+```javascript
+const statusReport = points.map(convertPointsToStatus);
+console.log(statusReport); 
+// Output: ["Excellent", "Complete", "Excellent", "Complete", "Complete", "Not Complete"]
+```
+
+### Incorrect Choices
+
+- **`points.filter(convertPointsToStatus)`**: The `filter` method creates a new array with all elements that pass the test implemented by the provided function. It is used for filtering elements, not transforming them.
+- **`points.reduce(convertPointsToStatus)`**: The `reduce` method executes a reducer function on each element of the array, resulting in a single output value. It is used for reducing the array to a single value, not for creating a new array with transformed elements.
+- **`points.convert(convertPointsToStatus)`**: There is no `convert` method in JavaScript arrays.
+
+### Conclusion
+
+The correct choice is:
+
+- `const statusReport = points.map(convertPointsToStatus);`
+
+This will correctly create a new array `statusReport` containing the course status for each point total in the `points` array.

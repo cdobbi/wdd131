@@ -1,0 +1,38 @@
+
+Objects
+Overview
+JavaScript objects are a way to group related data and functions together. Objects are a core concept in JavaScript and are used extensively in the language. In this learning activity, you will learn how to create and use objects in JavaScript.
+
+"An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects)." - MDN Web Docs
+Course Learning Outcomes
+Prepare
+Here's an example of a JavaScript object representing a person:
+
+let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};
+In this example, the person object has various properties such as name, age, profession, hobbies, address, and isEmployed. It also includes a greet method that logs a greeting message to the console using the person's name.
+
+The address property is an object itself, containing nested properties such as street, city, and country.
+
+You can access and modify the properties and invoke the methods of the person object using dot notation or bracket notation. For example:
+
+console.log(person.hobbies[0]); // Output: reading
+Read Objects - Representing Data - WDD Learning Modules
+Reference Object Basics - MDN web docs
+Check Your Understanding
+Complete the following Ponder activity: JS Objects - WDD Learning Modules
+Back
+Copyright © Brigham Young University-Idaho | All rights reserved

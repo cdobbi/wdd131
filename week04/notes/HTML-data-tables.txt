@@ -1,0 +1,36 @@
+
+HTML Tables for Data Presentation
+Overview
+HTML tables provide a structured way to represent data traditionally in rows and columns, such tabular data.
+
+"The table HTML element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data." – MDN
+Course Learning Outcomes
+Here are some examples of an HTML table structure being used on the Church's donation site.
+
+Screenshot of table use for Church donation statements.
+Example HTML Table Layout - Donation Statements with Zebra Striping
+Screenshot of table use on donation slip
+Example HTML Table Layout - Donation Slip
+Is an HTML table the best choice for this donation slip form with inputs?
+What is the purpose of the top edge row of holes and the dotted perforation line?
+Prepare
+The design issue with table markup is that HTML tables have been used for site layout. Do not use HTML table structures for page layout. This is a problem because of the following:
+The markup becomes bloated and bloated markup is confusing and it makes it hard to maintain and debug. There are far better page layout choices.
+Table layouts often reduce accessibility for the visually impaired when used for layout versus the intended purpose.
+Tables are not ideal for responsive page behavior.
+Tables are very common in all aspects of visual humanity and can be used to present data in a way that is well recognized by users and is accessible to screen readers and other assistive technologies. The following resources will help you understand the best practices for using tables in HTML.
+
+Ponder: HTML Advanced Features and Accessibility – MDN
+Practice: Table Structure and Formatting Example – CodePen Example
+This example uses zebra striping. Zebra striping is also know as candy striping and is a technique of formatting wide tables to improve readability. It is done by styling alternating rows of a data table a different background color, usually a faint shading. It may not always be necessary or appropriate, but it is a good technique to know.
+Activity Instructions
+Build the following HTML table.
+
+A screenshot of the table build assignment example.
+Use the thead and tbody tags in your table structure.
+Use a caption element within your table to display the "Table 1: Account Feature Comparison" caption.
+The color scheme is your choice.
+You must include zebra striping using nth-child pseudo-class.
+You can use built-in emoticons of ✔️ and ❌ or copy them from this page.
+Check Your Understanding
+Copyright © Brigham Young University-Idaho | All rights reserved
