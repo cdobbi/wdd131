@@ -1,0 +1,62 @@
+@media (max-width: 937px) {
+    header {
+        background-color: rgb(252, 252, 186);
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+}
+
+@media (min-width: 937px) {
+
+    header,
+    footer {
+        max-width: 90%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(191, 240, 213);
+        color: black;
+        padding: 1.5rem;
+    }
+
+    button.menu {
+        display: none;
+        color: black;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 1.5rem;
+    }
+
+    .stuff {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .stuff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1670px) {
+    .stuff {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* I can't get this to commit to github. */

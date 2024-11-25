@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+button.menu {
+    padding: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    position: absolute;
+    right: 10px;
+}
+
+button.menu::before {
+    content: "☰";
+    font-size: large;
+    color: red;
+    margin-right: 1.5rem;
+}
+
+button.menu.open::before {
+    content: "✖";
+    font-size: large;
+    color: red;
+}
+
+nav a {
+    display: block;
+    color: black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background: rgb(253, 143, 7);
+    color: yellow;
+}
+
+.navigation ul {
+    list-style: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.stuff {
+    display: grid;
+    margin: 1rem auto;
+    background-color: #d4f3f5;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 10px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(116, 116, 116);
+}
+
+img {
+    height: auto;
+    padding: 1.5rem;
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+footer {
+    background-color: rgb(191, 240, 213);
+    justify-content: space-between;
+    color: black;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 2rem auto;
+}
+
+/* I can't get this to commit to github. */
