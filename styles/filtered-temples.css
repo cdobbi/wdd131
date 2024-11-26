@@ -71,6 +71,21 @@ nav a:hover {
     gap: 1rem;
 }
 
+main p {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
 h2 {
     text-align: center;
     font-size: 1.5rem;
@@ -79,8 +94,9 @@ h2 {
 
 img {
     height: auto;
-    padding: 1.5rem;
+    padding: 1rem;
     max-width: 100%;
+    margin-bottom: 1rem;
 }
 
 p {
