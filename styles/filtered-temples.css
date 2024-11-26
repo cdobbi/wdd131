@@ -11,15 +11,7 @@ body {
     margin: 0 auto;
 }
 
-header,
-footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    background-color: rgb(191, 240, 213);
-    color: black;
-    margin: 1rem auto;
-    align-items: center;
-}
+header, footer { display: grid; grid-template-columns: 1fr auto; background-color: rgb(191, 240, 213); color: black; margin: 1rem auto; align-items: center; }
 
 button.menu {
     padding: 0.5rem;
@@ -45,7 +37,7 @@ button.menu.open::before {
     color: red;
 }
 
-nav a.hover {
+nav.hover {
     background: rgb(253, 143, 7);
     color: yellow;
 }
@@ -57,9 +49,9 @@ nav a.hover {
     margin: 0;
 }
 
-.navigation.open {
-    display: grid;
-}
+
+
+
 
 #temple-cards-container {
     display: grid;
