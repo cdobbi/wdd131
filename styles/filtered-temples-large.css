@@ -17,11 +17,11 @@
         color: black;
     }
 
-    nav ul {
+    /* nav ul {
         display: flex;
         flex-direction: row;
         list-style: none;
-    }
+    } */
 
     h1 {
         font-size: 2rem;
