@@ -21,6 +21,7 @@ footer {
 }
 
 button.menu {
+    display: flex;
     padding: 0.5rem;
     cursor: pointer;
     background: none;
@@ -114,7 +115,6 @@ p {
         color: black;
         padding: 0.5rem;
         margin: 0.5rem;
-        margin-left: 25rem;
     }
 
     h1 {
@@ -132,6 +132,14 @@ p {
 
     .navigation.show {
         display: flex;
+        align-items: center; /* Center the items */
+    }
+
+    .navigation.show ul {
+        width: 100%; /* Ensure ul takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the items */
     }
 
     footer {
