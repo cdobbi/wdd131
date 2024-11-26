@@ -58,11 +58,11 @@ a.filter-btn {
     cursor: pointer;
 }
 
-/* button.filter-btn:hover {
+a.button.filter-btn:hover {
     background: rgb(57, 97, 120);
     color: yellow;
     font-weight: bold;
-} */
+}
 
 .navigation {
     display: flex;
@@ -71,6 +71,10 @@ a.filter-btn {
 
 main {
     padding: 1rem;
+}
+
+.home-active nav a {
+    font-weight: bold;
 }
 
 #temple-cards-container {

@@ -74,7 +74,7 @@ const temples = [
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2055-thumb.jpg"
     },
     {
-        templeName: "Mexico Mexico",
+        templeName: "Mexico City Mexico",
         location: "Mexico City, Mexico",
         dedicated: "1983, December, 2",
         area: 116642,
@@ -97,15 +97,21 @@ const temples = [
 ];
 
 const templeCardsContainer = document.getElementById('temple-cards-container');
+const mainHeading = document.querySelector('main h2');
 
 function displayTemples(filter) {
     templeCardsContainer.innerHTML = '';
-    const mainHeading = document.querySelector('main h2'); // Add this line
     mainHeading.textContent = filter === 'all' ? 'Home' : filter.charAt(0).toUpperCase() + filter.slice(1);
+
+    if (filter === 'all') {
+        document.body.classList.add('home-active');
+    } else {
+        document.body.classList.remove('home-active');
+    }
 
     const filteredTemples = temples.filter(temple => {
         switch (filter) {
-            case 'home':
+            case 'all':
                 return true;
             case 'old':
                 return new Date(temple.dedicated).getFullYear() < 1900;
@@ -138,7 +144,8 @@ function displayTemples(filter) {
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
         const filter = button.getAttribute('data-filter');
         displayTemples(filter);
     });
