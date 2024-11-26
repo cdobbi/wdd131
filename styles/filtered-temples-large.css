@@ -2,13 +2,14 @@
 
     header,
     footer {
-        max-width: 90%;
-        margin: 1rem auto;
+        max-width: 100%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         background-color: rgb(191, 240, 213);
         color: black;
-        padding: 1.5rem;
+        padding: 0.5rem;
+        margin: 1rem auto;
     }
 
     button.menu {
@@ -20,17 +21,30 @@
         display: flex;
         flex-direction: row;
         list-style: none;
-        padding: 1.5rem;
     }
-}
 
-.stuff {
-    display: grid;
-    margin: 1rem auto;
-    background-color: #d4f3f5;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 10px;
-    justify-content: center;
-    max-width: 100%;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1.8rem;
+        margin-left: 1rem;
+    }
+
+    nav ul a {
+        margin-top: 2rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        display: block;
+        color: black;
+        margin-right: 1rem;
+    }
+
+    header,
+    footer p {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.5rem;
+    }
+
 }
