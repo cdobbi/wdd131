@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "merriweather", sans-serif;
     font-style: normal;
 }
 
@@ -55,7 +55,7 @@ nav a:hover {
 }
 
 .navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
@@ -73,7 +73,7 @@ nav a:hover {
 h2 {
     text-align: center;
     font-size: 1.5rem;
-    color: rgb(116, 116, 116);
+    color: rgb(0, 0, 0);
 }
 
 img {
@@ -82,22 +82,29 @@ img {
     max-width: 100%;
 }
 
-figure {
+p{
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    padding: .2rem;
+}
+
+/* figure {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 0.8rem;
     font-style: italic;
-}
+} */
 
-.temple {
+/* .temple {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     background-color: white;
-}
+} */
 
-.temple img {
+/* .temple img {
     max-width: 100%;
     height: auto;
 }
@@ -109,7 +116,7 @@ figure {
 
 .temple p {
     margin: 0.5rem 0;
-}
+} */
 
 footer {
     background-color: rgb(191, 240, 213);
@@ -137,7 +144,6 @@ footer {
     .navigation.show {
         display: flex;
     }
-
     #temple-cards-container {
         grid-template-columns: repeat(2, 1fr);
     }

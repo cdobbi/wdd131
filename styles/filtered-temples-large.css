@@ -23,3 +23,14 @@
         padding: 1.5rem;
     }
 }
+
+.stuff {
+    display: grid;
+    margin: 1rem auto;
+    background-color: #d4f3f5;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 10px;
+    justify-content: center;
+    max-width: 100%;
+}
