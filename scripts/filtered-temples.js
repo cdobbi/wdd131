@@ -40,7 +40,7 @@ const temples = [
     },
     {
         templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
+        location: "Kensington, Maryland, USA",
         dedicated: "1974, November, 19",
         area: 156558,
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-29514-thumb.jpg"

@@ -11,7 +11,14 @@ body {
     margin: 0 auto;
 }
 
-header, footer { display: grid; grid-template-columns: 1fr auto; background-color: rgb(191, 240, 213); color: black; margin: 1rem auto; align-items: center; }
+header,
+footer {
+    display: flex;
+    background-color: rgb(191, 240, 213);
+    justify-content: space-between;
+    color: black;
+    margin: 1rem auto;
+}
 
 button.menu {
     padding: 0.5rem;
@@ -37,7 +44,7 @@ button.menu.open::before {
     color: red;
 }
 
-nav.hover {
+nav a:hover {
     background: rgb(253, 143, 7);
     color: yellow;
 }
@@ -49,24 +56,28 @@ nav.hover {
     margin: 0;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
 
-
-
+.navigation.open {
+    display: flex;
+}
 
 #temple-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-
-main p {
+main p{
     text-align: center;
     font-size: 1rem;
     color: rgb(0, 0, 0);
     padding: 0.2rem;
 }
 
-main h2 {
+main h2{
     text-align: center;
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
