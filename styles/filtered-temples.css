@@ -12,14 +12,12 @@ body {
     margin: 0 auto;
 }
 
-header,
-footer {
-    display: flex;
-    background-color: rgb(191, 240, 213);
-    justify-content: space-between;
-    color: black;
+header, footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: rgb(191, 240, 213); color: black;
     margin: 1rem auto;
-}
+    align-items: center; }
 
 button.menu {
     display: flex;
