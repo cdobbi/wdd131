@@ -129,15 +129,15 @@ function displayTemples(filter) {
     filteredTemples.forEach(temple => {
         const templeCard = document.createElement('div');
         templeCard.classList.add('temple-card');
-
+    
         templeCard.innerHTML = `
             <h2>${temple.templeName}</h2>
             <p>Location: ${temple.location}</p>
             <p>Dedicated: ${temple.dedicated}</p>
             <p>Area: ${temple.area} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="350" height="450">
         `;
-
+    
         templeCardsContainer.appendChild(templeCard);
     });
 }

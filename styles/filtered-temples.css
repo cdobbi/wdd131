@@ -5,21 +5,12 @@
 }
 
 body {
+    display: block;
     font-family: "Merriweather", sans-serif;
     font-style: normal;
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* header, footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(93, 119, 105);
-    color: black;
-    padding: 1rem;
-    margin: 1rem auto;
-    align-items: flex-end; /* Align items at the bottom */
-/* } */ 
 
 button.menu {
     display: none;
@@ -35,10 +26,6 @@ nav ul {
     padding: .5rem;
     margin: 0 auto;
 }
-
-/* nav ul li {
-    margin-left: 1rem;
-} */
 
 button.filter-btn {
     text-decoration: none;
