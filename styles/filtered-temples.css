@@ -134,6 +134,11 @@ p {
         display: none;
     }
 
+    nav a:hover {
+        background: rgb(253, 143, 7);
+        color: yellow;
+    }
+
     .navigation.show {
         display: flex;
         align-items: center; /* Center the items */
