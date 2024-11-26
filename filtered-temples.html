@@ -4,49 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Photo Album</title>
+    <title>WDD 131 - Temple Gallery</title>
     <meta name="author" content="Christina Dobbins">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/filtered-temples.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/filtered-temples-large.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="scripts/filtered-temples.js" defer></script>
-    <meta name="description"
-        content="This file applies the concepts being learned to a picture album page of Temples, that is responsive in small and larger views. This page will utilize a 'hamburger' menu and respond to user requests">
+    <meta name="description" content="A responsive photo gallery of temples, featuring a hamburger menu and user-interactive filters.">
 </head>
 
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <h1>Temple Gallery</h1>
         <button id="menu" class="menu" aria-label="menu"></button>
         <nav id="nav-menu" class="navigation">
             <ul>
-                <li><a href="#" class="filter-btn" data-filter="all">Home</a></li>
-                <li><a href="#" class="filter-btn" data-filter="old">Old</a></li>
-                <li><a href="#" class="filter-btn" data-filter="new">New</a></li>
+                <li><a href="#" class="filter-btn" data-filter="all">All</a></li>
+                <li><a href="#" class="filter-btn" data-filter="historic">Historic</a></li>
+                <li><a href="#" class="filter-btn" data-filter="modern">Modern</a></li>
                 <li><a href="#" class="filter-btn" data-filter="large">Large</a></li>
-                <li><a href="#" class="filter-btn" data-filter="small">Small</a></li>
+                <li><a href="#" class="filter-btn" data-filter="compact">Compact</a></li>
             </ul>
         </nav>
-    </header>    
+    </header>
     <main>
-        <h2>Home</h2>
+        <h2>Gallery</h2>
         <div id="temple-cards-container">
             <!-- Example of a temple card with reserved space for the image -->
             <div class="temple-card">
-                <h2>Example Temple</h2>
-                <p>Location: Example Location</p>
-                <p>Dedicated: Example Date</p>
-                <p>Area: Example Area sq ft</p>
-                <img src="example.jpg" alt="Example Temple" width="300" height="200">
+                <h2>Sample Temple</h2>
+                <p>Location: Sample Location</p>
+                <p>Dedicated: Sample Date</p>
+                <p>Area: Sample Area sq ft</p>
+                <img src="example.jpg" alt="Sample Temple" width="300" height="200">
             </div>
         </div>
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span> 🐇 Christina Dobbins 🐇 USA</p>
-        <p>Last modified: <span id="lastModified"></span></p>
+        <p>Last updated: <span id="lastModified"></span></p>
     </footer>
 </body>
 

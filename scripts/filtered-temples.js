@@ -101,7 +101,7 @@ const mainHeading = document.querySelector('main h2');
 
 function displayTemples(filter) {
     templeCardsContainer.innerHTML = '';
-    mainHeading.textContent = filter === 'all' ? 'Home' : filter.charAt(0).toUpperCase() + filter.slice(1);
+    mainHeading.textContent = filter === 'all' ? 'All' : filter.charAt(0).toUpperCase() + filter.slice(1);
 
     if (filter === 'all') {
         document.body.classList.add('home-active');
@@ -113,13 +113,13 @@ function displayTemples(filter) {
         switch (filter) {
             case 'all':
                 return true;
-            case 'old':
+            case 'historic':
                 return new Date(temple.dedicated).getFullYear() < 1900;
-            case 'new':
+            case 'modern':
                 return new Date(temple.dedicated).getFullYear() > 2000;
             case 'large':
                 return temple.area > 90000;
-            case 'small':
+            case 'compact':
                 return temple.area < 10000;
             default:
                 return true;
