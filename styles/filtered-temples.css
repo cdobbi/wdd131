@@ -32,13 +32,13 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: .5rem;
+    margin: 0 auto;
 }
 
-nav ul li {
+/* nav ul li {
     margin-left: 1rem;
-}
+} */
 
 button.filter-btn {
     text-decoration: none;
@@ -49,11 +49,20 @@ button.filter-btn {
     cursor: pointer;
 }
 
-button.filter-btn:hover {
-    background: rgb(79, 127, 155);
+a.filter-btn {
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* button.filter-btn:hover {
+    background: rgb(57, 97, 120);
     color: yellow;
     font-weight: bold;
-}
+} */
 
 .navigation {
     display: flex;
@@ -81,7 +90,7 @@ main p {
 main h2 {
     text-align: center;
     font-size: 2rem;
-    color: rgb(79, 127, 155);
+    color: rgb(46, 84, 107);
     padding: 0.2rem;
     margin-bottom: 0.5rem;
 }
@@ -98,16 +107,17 @@ img {
     margin-bottom: 1rem;
 }
 
-p {
+/* p {
     text-align: center;
-    font-size: 1rem;
+    font-size: rem;
     color: rgb(0, 0, 0);
-}
+} */
 
 footer p {
     padding: 0.5rem;
     margin-top: 2rem;
     text-align: left;
+    font-weight: bold;
 }
 
 @media (max-width: 937px) {
@@ -127,6 +137,7 @@ footer p {
         border: none;
         font-size: 1.5rem;
         color: black;
+        font-weight: bold;
         position: absolute;
         right: 10px;
     }
