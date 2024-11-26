@@ -2,67 +2,62 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    display: block;
 }
 
 body {
-    font-family: "merriweather", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-style: normal;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-header, footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    background-color: rgb(191, 240, 213); color: black;
+/* header, footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(93, 119, 105);
+    color: black;
+    padding: 1rem;
     margin: 1rem auto;
-    align-items: center; }
+    align-items: flex-end; /* Align items at the bottom */
+/* } */ 
 
 button.menu {
+    display: none;
+}
+
+nav {
     display: flex;
-    padding: 0.5rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: black;
-    position: absolute;
-    right: 10px;
 }
 
-button.menu::before {
-    content: "☰";
-    font-size: large;
-    color: red;
-    margin-right: 1rem;
-}
-
-button.menu.open::before {
-    content: "✖";
-    font-size: large;
-    color: red;
-}
-
-nav a:hover {
-    background: rgb(253, 143, 7);
-    color: yellow;
-}
-
-.navigation ul {
+nav ul {
+    display: flex;
     list-style: none;
-    color: black;
     padding: 0;
     margin: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+button.filter-btn {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button.filter-btn:hover {
+    background: rgb(79, 127, 155);
+    color: yellow;
+    font-weight: bold;
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
-}
-
-.navigation.open {
-    display: flex;
 }
 
 main {
@@ -75,26 +70,26 @@ main {
     gap: 1rem;
     margin-top: 1rem;
 }
-main p{
+
+main p {
     text-align: center;
     font-size: 1rem;
     color: rgb(0, 0, 0);
     padding: 0.2rem;
 }
 
-main h2{
+main h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: rgb(95, 94, 94);
+    font-size: 2rem;
+    color: rgb(79, 127, 155);
     padding: 0.2rem;
     margin-bottom: 0.5rem;
 }
 
-/* h2 {
-    text-align: center;
-    font-size: 35.5px;
-    color: rgb(150, 146, 146);
-} */
+div.temple-card h2 {
+    color: rgb(136, 135, 135);
+    font-size: 1.5rem;
+}
 
 img {
     height: auto;
@@ -109,55 +104,61 @@ p {
     color: rgb(0, 0, 0);
 }
 
+footer p {
+    padding: 0.5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
 @media (max-width: 937px) {
     header {
         background-color: rgb(220, 232, 254);
     }
 
-    header a {
-        text-decoration: none;
-        color: black;
-        padding: 0.5rem;
-        margin: 0.5rem;
-    }
-
     h1 {
-        display: none;
+        display: none; /* Hide the h1 element in mobile view */
     }
 
-    li {
-        display: list-item;
-        margin: 1.5rem;
+    button.menu {
+        display: flex;
+        padding: 0.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: black;
+        position: absolute;
+        right: 10px;
+    }
+
+    button.menu::before {
+        content: "☰";
+        font-size: large;
+        color: red;
+        margin-right: 1rem;
+    }
+
+    button.menu.open::before {
+        content: "✖";
+        font-size: large;
+        color: red;
     }
 
     .navigation {
-        display: none;
+        display: none; /* Hide the nav by default */
     }
 
-    nav a:hover {
-        background: rgb(253, 143, 7);
-        color: yellow;
+    .navigation.open {
+        display: flex; /* Show the nav when the menu is open */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .navigation.show {
-        display: flex;
-        align-items: center; /* Center the items */
-    }
-
-    .navigation.show ul {
-        width: 100%; /* Ensure ul takes full width */
+    .navigation.open ul {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center the items */
-    }
-
-    footer {
-        background-color: rgb(220, 232, 254)
-    }
-
-    footer p {
-        padding: 0.5rem;
-        margin-top: 2rem;
+        align-items: center;
     }
 
     #temple-cards-container {

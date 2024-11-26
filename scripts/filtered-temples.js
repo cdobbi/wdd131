@@ -74,7 +74,7 @@ const temples = [
         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2055-thumb.jpg"
     },
     {
-        templeName: "Mexico City Mexico",
+        templeName: "Mexico Mexico",
         location: "Mexico City, Mexico",
         dedicated: "1983, December, 2",
         area: 116642,
@@ -98,17 +98,51 @@ const temples = [
 
 const templeCardsContainer = document.getElementById('temple-cards-container');
 
-temples.forEach(temple => {
-    const templeCard = document.createElement('div');
-    templeCard.classList.add('temple-card');
+function displayTemples(filter) {
+    templeCardsContainer.innerHTML = '';
+    const mainHeading = document.querySelector('main h2'); // Add this line
+    mainHeading.textContent = filter === 'all' ? 'Home' : filter.charAt(0).toUpperCase() + filter.slice(1);
 
-    templeCard.innerHTML = `
-        <h2>${temple.templeName}</h2>
-        <p>Location: ${temple.location}</p>
-        <p>Dedicated: ${temple.dedicated}</p>
-        <p>Area: ${temple.area} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+    const filteredTemples = temples.filter(temple => {
+        switch (filter) {
+            case 'home':
+                return true;
+            case 'old':
+                return new Date(temple.dedicated).getFullYear() < 1900;
+            case 'new':
+                return new Date(temple.dedicated).getFullYear() > 2000;
+            case 'large':
+                return temple.area > 90000;
+            case 'small':
+                return temple.area < 10000;
+            default:
+                return true;
+        }
+    });
 
-    templeCardsContainer.appendChild(templeCard);
+    filteredTemples.forEach(temple => {
+        const templeCard = document.createElement('div');
+        templeCard.classList.add('temple-card');
+
+        templeCard.innerHTML = `
+            <h2>${temple.templeName}</h2>
+            <p>Location: ${temple.location}</p>
+            <p>Dedicated: ${temple.dedicated}</p>
+            <p>Area: ${temple.area} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        `;
+
+        templeCardsContainer.appendChild(templeCard);
+    });
+}
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        displayTemples(filter);
+    });
 });
+
+// Initial render
+displayTemples('all');

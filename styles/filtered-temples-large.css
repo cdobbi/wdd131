@@ -6,7 +6,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        background-color: rgb(191, 240, 213);
+        background-color: rgb(93, 119, 105);
         color: black;
         padding: 0.5rem;
         margin: 1rem auto;
@@ -31,7 +31,7 @@
     }
 
     nav a:hover {
-        background: rgb(253, 143, 7);
+        background: rgb(168, 217, 245);
         color: yellow;
     }
 
