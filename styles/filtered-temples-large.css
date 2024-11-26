@@ -22,27 +22,4 @@
         list-style: none;
         padding: 1.5rem;
     }
-
-    .stuff {
-        max-width: 90%;
-    }
 }
-
-@media (min-width: 937px) {
-    .stuff {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (min-width: 768px) {
-    .stuff {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1670px) {
-    .stuff {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-

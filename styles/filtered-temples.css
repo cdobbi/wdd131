@@ -54,15 +54,20 @@ nav a:hover {
     margin: 0;
 }
 
-.stuff {
+.navigation {
+    display: none;
+    flex-direction: column;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+#temple-cards-container {
     display: grid;
-    margin: 1rem auto;
-    background-color: #d4f3f5;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 10px;
-    justify-content: center;
-    max-width: 100%;
+    padding: 1rem;
 }
 
 h2 {
@@ -131,5 +136,15 @@ footer {
 
     .navigation.show {
         display: flex;
+    }
+
+    #temple-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #temple-cards-container {
+        grid-template-columns: 1fr;
     }
 }
