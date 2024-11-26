@@ -16,9 +16,9 @@ button.menu {
     display: none;
 }
 
-nav {
+/* nav {
     display: flex;
-}
+} */
 
 nav ul {
     display: flex;
@@ -60,9 +60,9 @@ main {
     padding: 1rem;
 }
 
-.home-active nav a {
+/* .home-active nav a {
     font-weight: bold;
-}
+} */
 
 #temple-cards-container {
     display: grid;
@@ -133,6 +133,12 @@ footer p {
         right: 10px;
     }
 
+    .temple-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
     button.menu::before {
         content: "☰";
         font-size: large;
@@ -171,5 +177,9 @@ footer p {
 @media (max-width: 600px) {
     #temple-cards-container {
         grid-template-columns: 1fr;
+    }
+
+    #temple-cards-container img {
+        width: 100%;
     }
 }
