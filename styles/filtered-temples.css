@@ -16,30 +16,18 @@ button.menu {
     display: none;
 }
 
-/* nav {
-    display: flex;
-} */
-
 nav ul {
     display: flex;
     list-style: none;
-    padding: .5rem;
+    padding: 0.5rem;
     margin: 0 auto;
 }
 
-button.filter-btn {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
+button.filter-btn,
 a.filter-btn {
     text-decoration: none;
     color: black;
-    padding: .5rem;
+    padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -59,10 +47,6 @@ a.button.filter-btn:hover {
 main {
     padding: 1rem;
 }
-
-/* .home-active nav a {
-    font-weight: bold;
-} */
 
 #temple-cards-container {
     display: grid;
@@ -98,12 +82,6 @@ img {
     margin-bottom: 1rem;
 }
 
-/* p {
-    text-align: center;
-    font-size: rem;
-    color: rgb(0, 0, 0);
-} */
-
 footer p {
     padding: 0.5rem;
     margin-top: 2rem;
@@ -117,7 +95,7 @@ footer p {
     }
 
     h1 {
-        display: none; /* Hide the h1 element in mobile view */
+        display: none;
     }
 
     button.menu {
@@ -153,18 +131,17 @@ footer p {
     }
 
     .navigation {
-        display: none; /* Hide the nav by default */
+        display: none;
     }
 
     .navigation.open {
-        display: flex; /* Show the nav when the menu is open */
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .navigation.open ul {
         width: 100%;
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -175,6 +152,10 @@ footer p {
 }
 
 @media (max-width: 600px) {
+    header {
+        background-color: rgb(220, 232, 254);
+    }
+
     #temple-cards-container {
         grid-template-columns: 1fr;
     }
