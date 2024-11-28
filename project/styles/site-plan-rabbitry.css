@@ -1,26 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Verdana:wght@400&display=swap');
-
-
-/* Color Scheme
-/* Label: Rafting Adventure Theme Palette:
-1. #0B3C5D - Deep Ocean Blue
-2. #328CC1 - Sky Blue
-3. #D9B310 - Sunshine Yellow
-4. #1D2731 - Dark Night
-Link to the color scheme on coolors.co: https://coolors.co/0b3c5d-328cc1-d9b310-1d2731 */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
 
 :root {
-    --primary-color: #b06834;
-    /* Blue */
+    --primary-color: SaddleBrown;
     --secondary-color: #FFD700;
     /* Peach */
     --accent1-color: #000000;
     /* Black */
     --accent2-color: #0b6640;
     /* Salmon */
-    --heading-font: "Roboot", sans-serif;
+    --heading-font: "Comic Neue", sans-serif;
     /* Use DM Sans for headings */
-    --paragraph-font: "Open Sans", sans-serif;
+    --paragraph-font: "Poppins", sans-serif;
     /* Use Verdana for body text */
     --nav-background-color: #da9f41;
     /* Peach */
@@ -33,13 +23,12 @@ Link to the color scheme on coolors.co: https://coolors.co/0b3c5d-328cc1-d9b310-
 }
 
 body {
-    font-family: var(--paragraph-font);
+    font-family: var(--secondary-font);
     max-width: 960px;
     margin: auto;
     /* Center the content */
     padding: 20px;
     background-color: var(--primary-color);
-    /* Using accent2-color for body background */
 }
 
 h1,
@@ -50,24 +39,21 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: #000;
-    /* Sets the color of headings to primary-color */
 }
 
 header {
     background-color: #da9f41;
-    /* Orange-Gold */
     padding: 20px;
 }
 
 p {
     padding: 25px;
     color: #000000;
-    /* Black */
 }
 
 nav {
     background-color: #da9f41;
-    /* Orange */
+    font-family: var(--secondary-font);
     font-size: 1.2rem;
     display: flex;
 }
@@ -77,7 +63,6 @@ nav a:link,
 nav a:visited {
     display: block;
     color: #000000;
-    /* Black */
     text-decoration: none;
     padding: 10px 15px;
     /* Added padding for better spacing */
@@ -85,7 +70,6 @@ nav a:visited {
 
 nav a:hover {
     color: #000000;
-    /* Black */
     background-color: var(--nav-hover-background-color);
 }
 
