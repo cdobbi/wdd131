@@ -1,25 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
 
 :root {
-    --primary-color: SaddleBrown;
-    --secondary-color: #FFD700;
-    /* Peach */
+    --primary-color: #ebe0d8; /*Umber*/
+    --secondary-color:  #e49f5e; /* Dark Salmon */
     --accent1-color: #000000;
-    /* Black */
-    --accent2-color: #0b6640;
-    /* Salmon */
+    --accent2-color: #70558e;
     --heading-font: "Comic Neue", sans-serif;
-    /* Use DM Sans for headings */
     --paragraph-font: "Poppins", sans-serif;
-    /* Use Verdana for body text */
-    --nav-background-color: #da9f41;
-    /* Peach */
-    --nav-link-color: #000000;
-    /* Black */
-    --nav-hover-link-color: #da6a41;
-    /* Salmon */
-    --nav-hover-background-color: #981d73;
-    /* Purple */
+    /* --nav-background-color: #da9f41; */
+    --nav-color: black;
+    --nav-hover-link-color: #9e0570;
+    --nav-hover-background-color: #a76092;
 }
 
 body {
@@ -38,21 +29,19 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
-    color: #000;
 }
 
 header {
-    background-color: #da9f41;
+    background-color: var(--secondary-color);
     padding: 20px;
 }
 
 p {
-    padding: 25px;
-    color: #000000;
+    padding: 5px;
 }
 
 nav {
-    background-color: #da9f41;
+    /* background-color: #da9f41; */
     font-family: var(--secondary-font);
     font-size: 1.2rem;
     display: flex;
@@ -61,20 +50,24 @@ nav {
 nav a,
 nav a:link,
 nav a:visited {
+    color: var(--nav-color);
     display: block;
-    color: #000000;
     text-decoration: none;
     padding: 10px 15px;
     /* Added padding for better spacing */
 }
 
+nav a:visited {
+    color: var(--nav-hover-link-color);
+}
+
 nav a:hover {
-    color: #000000;
+    color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
 
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
