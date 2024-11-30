@@ -2,9 +2,7 @@
 
 :root {
     --primary-color: #ebe0d8;
-    /* Almond */
-    --secondary-color: #e4b182;
-    /* Desert Sand */
+    --secondary-color: #e4a150;
     --accent1-color: #000000;
     --accent2-color: #70558e;
     --heading-font: "Comic Neue", sans-serif;
@@ -12,8 +10,7 @@
     --nav-color: black;
     --nav-hover-link-color: #9e0570;
     --nav-hover-background-color: #a76092;
-    --nav-visited-link-color: #4b2e2a;
-    /* Dark Brown */
+    --nav-visited-link-color: #9e0570;
 }
 
 body {
@@ -57,10 +54,6 @@ nav a:visited {
     padding: 10px 15px;
 }
 
-nav a:visited {
-    color: var(--nav-visited-link-color);
-}
-
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
@@ -70,6 +63,12 @@ nav a:hover {
 img {
     max-height: 300px;
     width: auto;
+}
+
+.centered {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
 }
 
 a:-webkit-any-link {
