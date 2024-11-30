@@ -65,10 +65,11 @@ img {
     width: auto;
 }
 
-.centered {
+#random-fact {
+    font-size: 0.5em;
+    color: var(--accent2-color);
+    margin-top: .1px;
     text-align: center;
-    margin: 10px 0;
-    font-style: italic;
 }
 
 a:-webkit-any-link {
