@@ -20,6 +20,7 @@
         <div id="review-summary">
             <!-- review summary displayed here -->
         </div>
+        <h3>Total Reviews Completed: <span id="review-count">0</span></h3>
     </main>
 
     <script>
@@ -41,6 +42,9 @@
             }
             summaryHtml += '</ul>';
             summaryDiv.innerHTML = summaryHtml;
+
+            // Update review count
+            updateReviewCount();
         }
 
         // get query parameters from the URL
@@ -66,10 +70,19 @@
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
+        // Update review count in localStorage
+        function updateReviewCount() {
+            let reviewCount = localStorage.getItem('reviewCount');
+            if (!reviewCount) {
+                reviewCount = 0;
+            }
+            reviewCount = parseInt(reviewCount);
+            document.getElementById('review-count').textContent = reviewCount;
+        }
+
         // display review summary on page load
         window.onload = displayReviewSummary;
     </script>
 </body>
-
 
 </html>

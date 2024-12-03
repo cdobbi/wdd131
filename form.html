@@ -20,16 +20,10 @@
             <fieldset>
                 <legend>Rabbit Breed 🗝️</legend>
                 <div class="form-item">
-                    <label for="dropdown">Choose a breed to review</label>
-                    <select id="dropdown" name="Breed" required>
+                    <label for="breed-select">Choose a breed to review</label>
+                    <select id="breed-select" name="Breed" required>
                         <option value="" disabled selected>Choose a breed...</option>
-                        <option value="rhinelander">Rhinelander</option>
-                        <option value="mini lop">Mini Lop</option>
-                        <option value="harlequin">Harlequin</option>
-                        <option value="new zealand">New Zealand</option>
-                        <option value="checkered giant">Checkered Giant</option>
-                        <option value="silver fox">Silver Fox</option>
-                        <option value="other">Other</option>
+                        <!-- Options will be populated by JavaScript -->
                     </select>
                 </div>
             </fieldset>
@@ -38,6 +32,7 @@
                 <div class="form-item">
                     <label for="date-of-purchase">When did you purchase this breed?</label>
                     <input type="date" id="date-of-purchase" name="Date Of Purchase" required>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>What about this breed do you like most?</legend>
@@ -96,10 +91,10 @@
                     <h4>User name (Optional)</h4>
                     <input type="text" id="name" name="User Name" placeholder="Enter your name here">
                 </div>
-            </fieldsest>
-                <div class="form-item">
-                    <button type="submit">Post Review</button>
-                </div>
+            </fieldset>
+            <div class="form-item">
+                <button type="submit">Post Review</button>
+            </div>
         </form>
     </main>
 
@@ -111,42 +106,3 @@
 </body>
 
 </html>
-
-
-<!-- 
-Product Name
-Use a select element with an appropriate id attribute, name attribute, and set it to be required.
-The first option in the select element is an instructional placeholder that says "Select a Product ..." and is disabled and selected so that it displays by default but cannot be clicked by the user.
-The remaining options are created dynamically using a provided product array.
-Each option must have a value attribute that is the product name.
-A product array of objects is provided below to help you understand how to build a select field with the dynamic options. Normally the data would come from an external source.
-
-Overall Rating
-The overall product rating should have five levels (1 to 5) or stars.
-The example form uses star entities ☆ (&star;) to display the level. You are free to employ a design of your choice. For example, here is another example of using stars that fill up on selection: Form Input Radio Star+ - CodePen.
-
-Use a input of type radio for each of the levels.
-The required attributes are an id, name (each of the radio buttons should have the same name value), and required
-Why should each of the radio buttons that are part of this rating have the same name value?
-
-Date of Installation
-Use a input of type date to allow the user to select the date the product was installed.
-The required attributes are an id, name, and required
-Useful Features
-This field allows the user to select all the listed features that they found useful.
-This is a check all that apply field.
-Use a input of type checkbox
-Each checkbox should have an id, name, and value attribute.
-Written Review
-Use a textarea element to allow the user to write a review.
-The required attributes are an id and name
-The written review is not required by the user.
-User Name
-Use a input of type text for the user to enter their name.
-Add the id and name attributes.
-The user name entry is optional.
-Form Submission Button
-Use a input of type submit with an appropriate value that indicates the form action purpose.
-Each form field must have an associated label.
-Check that the keyboard tab order is correct.
-Include the common footer content found on all assignments. -->
