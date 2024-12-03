@@ -11,39 +11,31 @@ body {
     background-color: #f5f5f5;
     color: #333;
     font-size: 0.6em;
-    /* Reduced font size */
 }
 
 header {
     margin: 0 auto;
     width: 325px;
-    /* Reduced width */
 }
 
 h1 {
     margin: 0.1rem;
-    /* Reduced margin */
     font-size: 0.75em;
-    /* Reduced font size */
     color: navy;
     text-align: center;
 }
 
 h4 {
     font-size: 0.5rem;
-    /* Reduced font size */
     color: black;
     text-align: left;
     padding: 0.2rem;
-    /* Reduced padding */
 }
 
 form {
     width: 325px;
-    /* Reduced width */
     margin: 0 auto;
     padding: 0.2rem;
-    /* Reduced padding */
     border: 1px solid #5d5c5c;
     border-radius: 0.5rem;
     background-color: #eee;
@@ -53,20 +45,15 @@ form {
 fieldset {
     display: grid;
     grid-gap: 0.2rem;
-    /* Reduced gap */
     margin: 0.05rem;
-    /* Reduced margin */
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0.25rem;
-    /* Reduced padding */
 }
 
 legend {
     padding: 0.2rem;
-    /* Reduced padding */
     color: navy;
     font-size: 0.60em;
-    /* Reduced font size */
 }
 
 label,
@@ -79,42 +66,31 @@ textarea {
 
 label {
     padding: 0.5rem 0.1rem;
-    /* Reduced padding */
 }
 
 input,
 select,
 textarea {
     padding: 0.2rem;
-    /* Reduced padding */
     font-size: 0.5rem;
-    /* Reduced font size */
 }
 
 input[type="checkbox"] {
     width: 10px;
-    /* Reduced size */
     height: 10px;
-    /* Reduced size */
     vertical-align: bottom;
 }
 
 input[type="date"] {
     width: 150px;
-    /* Adjusted width */
     height: 30px;
-    /* Adjusted height */
     font-size: 0.6rem;
-    /* Adjusted font size */
     padding: 0.2rem;
-    /* Adjusted padding */
 }
 
 button {
     padding: 0.5rem;
-    /* Reduced padding */
     font-size: 0.5rem;
-    /* Reduced font size */
     background-color: navy;
     color: #fff;
     border: #5d5c5c;
@@ -128,12 +104,9 @@ button:hover {
 
 footer {
     margin: 0.5rem auto 0;
-    /* Reduced margin */
     width: 320px;
-    /* Reduced width */
     text-align: center;
     font-size: 0.4em;
-    /* Reduced font size */
     color: #5d5c5c;
     border-top: 1px solid #5d5c5c;
 }
@@ -149,20 +122,23 @@ footer {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.0025rem;
-    /* Reduced gap */
 }
 
 .checkbox input[type="checkbox"] {
     width: 15px;
-    /* Reduced size */
     height: 15px;
-    /* Reduced size */
     vertical-align: middle;
     margin-right: 0.2rem;
-    /* Reduced margin */
 }
 
 .checkbox label {
     margin: 0;
     padding: 0.2rem 0;
 }
+
+fieldset.rating-fieldset.div {
+    padding: 1rem;
+}
+
+
+

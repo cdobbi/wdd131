@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('input[name="Feature"]');
     const form = document.querySelector('form');
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit',
+        function (event) {
         let checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
         if (!checkedOne) {
             event.preventDefault();

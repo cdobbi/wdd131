@@ -36,7 +36,6 @@
             <fieldset>
                 <legend>Date of Purchase</legend>
                 <div class="form-item">
-                    <h4>Date of purchase?</h4>
                     <input type="date" id="date-of-purchase" name="Date Of Purchase" required>
             </fieldset>
             <fieldset>
@@ -55,36 +54,26 @@
                     <label for="temperament">Temperament</label>
                     <input type="checkbox" id="fur-quality" name="Feature" value="Fur Quality">
                     <label for="fur-quality">Fur Quality</label>
-                    <!-- <input type="checkbox" id="color" name="Feature" value="Color">
-                    <label for="color">Color</label>
-                    <input type="checkbox" id="full-arch" name="Feature" value="Full Arch">
-                    <label for="full-arch-pose">Full Arch</label>
-                    <input type="checkbox" id="markings" name="Feature" value="Markings">
-                    <label for="markings">Markings</label>
-                    <input type="checkbox" id="pose" name="Feature" value="Pose">
-                    <label for="pose">Pose</label>
-                    <input type="checkbox" id="trainability" name="Feature" value="Trainability">
-                    <label for="trainability">Trainability</label>
-                    <input type="checkbox" id="condition" name="Feature" value="Condition">
-                    <label for="condition">Condition</label>
-                    <input type="checkbox" id="head" name="Feature" value="Head">
-                    <label for="head">Head</label>
-                    <input type="checkbox" id="ears" name="Feature" value="Ears">
-                    <label for="ears">Ears</label>
-                    <input type="checkbox" id="eyes" name="Feature" value="Eyes">
-                    <label for="eyes">Eyes</label>
-                    <input type="checkbox" id="feet" name="Feature" value="Feet">
-                    <label for="feet">Feet</label>
-                    <input type="checkbox" id="legs-and-ankles" name="Feature" value="Legs and Ankles">
-                    <label for="legs-and-ankels">Legs and Ankles</label>
-                    <input type="checkbox" id="presentation" name="Feature" value="Presentation">
-                    <label for="presentation">Presentation</label> -->
+                </div>
+            </fieldset>
+            <fieldset class="rating-fieldset">
+                <legend>Overall Rating</legend>
+                <div>
+                    <input type="radio" id="star1" name="Overall Rating" value="1">
+                    <label for="star1">☆</label>
+                    <input type="radio" id="star2" name="Overall Rating" value="2">
+                    <label for="star2">☆☆</label>
+                    <input type="radio" id="star3" name="Overall Rating" value="3">
+                    <label for="star3">☆☆☆</label>
+                    <input type="radio" id="star4" name="Overall Rating" value="4">
+                    <label for="star4">☆☆☆☆</label>
+                    <input type="radio" id="star5" name="Overall Rating" value="5">
+                    <label for="star5">☆☆☆☆☆</label>
                 </div>
             </fieldset>
             <fieldset>
-                <legend>Written Review</legend>
+                <legend>Written Review (Optional)</legend>
                 <div class="form-item">
-                    <h4>Written Review (Optional)</h4>
                     <textarea id="written-review-box" name="Written Review" rows="4" placeholder="Write the review here"></textarea>
                 </div>
             </fieldset>
@@ -94,9 +83,9 @@
                     <h4>User name (Optional)</h4>
                     <input type="text" id="name" name="User Name" placeholder="Enter your name here">
                 </div>
-                </fieldsest>
-                <div class="form-item"></div>
-                <button type="submit">Post Review</button>
+            </fieldsest>
+                <div class="form-item">
+                    <button type="submit">Post Review</button>
                 </div>
         </form>
     </main>
