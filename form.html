@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Christi Dobbins">
     <meta name="description" content="Christi Dobbins' student week 05 Product Review Form activity.">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"></noscript>
-    <link rel="stylesheet" href="styles/form.css" media="print" onload="this.media='all'">
-    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
 </head>
 
 <body>
@@ -23,7 +20,7 @@
             <fieldset>
                 <legend>Rabbit Breed 🗝️</legend>
                 <div class="form-item">
-                    <h4>Choose a breed to review.</h4>
+                    <label for="dropdown">Choose a breed to review</label>
                     <select id="dropdown" name="Breed" required>
                         <option value="" disabled selected>Choose a breed...</option>
                         <option value="rhinelander">Rhinelander</option>
@@ -39,24 +36,37 @@
             <fieldset>
                 <legend>Date of Purchase 🗝️</legend>
                 <div class="form-item">
+                    <label for="date-of-purchase">When did you purchase this breed?</label>
                     <input type="date" id="date-of-purchase" name="Date Of Purchase" required>
             </fieldset>
             <fieldset>
                 <legend>What about this breed do you like most?</legend>
                 <h4>Check all that apply</h4>
                 <div class="checkbox">
-                    <input type="checkbox" id="show-worthiness" name="Feature" value="Show Worthiness">
-                    <label for="show-worthiness">Show Worthiness</label>
-                    <input type="checkbox" id="overall-quality" name="Feature" value="Overall Quality">
-                    <label for="overall-quality">Overall Quality</label>
-                    <input type="checkbox" id="body-type" name="Feature" value="Body Type">
-                    <label for="body-type">Body Type</label>
-                    <input type="checkbox" id="structure" name="Feature" value="Structure">
-                    <label for="structure">Structure</label>
-                    <input type="checkbox" id="temperament" name="Feature" value="Temperament">
-                    <label for="temperament">Temperament</label>
-                    <input type="checkbox" id="fur-quality" name="Feature" value="Fur Quality">
-                    <label for="fur-quality">Fur Quality</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="show-worthiness" name="Feature" value="Show Worthiness">
+                        <label for="show-worthiness">Show Worthiness</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="overall-quality" name="Feature" value="Overall Quality">
+                        <label for="overall-quality">Overall Quality</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="body-type" name="Feature" value="Body Type">
+                        <label for="body-type">Body Type</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="structure" name="Feature" value="Structure">
+                        <label for="structure">Structure</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="temperament" name="Feature" value="Temperament">
+                        <label for="temperament">Temperament</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="fur-quality" name="Feature" value="Fur Quality">
+                        <label for="fur-quality">Fur Quality</label>
+                    </div>
                 </div>
             </fieldset>
             <fieldset class="rating-fieldset">
@@ -97,6 +107,7 @@
         <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
+    <script src="scripts/form.js" defer></script>
 </body>
 
 </html>
