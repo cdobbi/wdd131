@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>WDD 13 | HTML Form - Rabbit Breed Review</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Christi Dobbins">
+    <meta name="description" content="Christi Dobbins' student week 05 Product Review Form activity.">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rabbit Breed Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Rabbit Breed</legend>
+                <div class="form-item">
+                    <h4>Choose a breed to review.</h4>
+                    <select id="dropdown" name="dropdown" required>
+                        <option value="" disabled selected>Choose a breed...</option>
+                        <option value="rhinelander">Rhinelander</option>
+                        <option value="mini lop">Mini Lop</option>
+                        <option value="harlequin">Harlequin</option>
+                        <option value="new zealand">New Zealand</option>
+                        <option value="checkered giant">Checkered Giant</option>
+                        <option value="silver fox">Silver Fox</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Date of Purchase</legend>
+                <div class="form-item">
+                    <h4>What day did you purchse the bun?</h4>
+                    <input type="date" id="date-of-purchase" name="date-of-purchase" required>
+            </fieldset>
+            <fieldset>
+                <legend>What about this breed do you like most?</legend>
+                <h4>Check all that apply</h4>
+                <div class="checkbox">
+                    <input type="checkbox" id="coat-color" name="features" value="coat-color" required> <label for="coat-color">Coat Color</label>
+                    <input type="checkbox" id="coat-texture" name="features" value="coat-texture">
+                    <label for="coat-texture">Coat Texture</label>
+                    <input type="checkbox" id="temperament" name="features" value="temperament">
+                    <label for="temperament">Temperament</label>
+                    <input type="checkbox" id="weight" name="features" value="weight">
+                    <label for="weight">Weight</label>
+                    <input type="checkbox" id="breadth" name="features" value="breadth">
+                    <label for="breadth">Breadth</label>
+                    <input type="checkbox" id="full-arch-pose" name="features" value="full-arch-pose"> <label for="full-arch-pose">Full Arch Pose</label>
+                    <input type="checkbox" id="body-type" name="features" value="body-type">
+                    <label for="body-type">Body Type</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review</legend>
+                <div class="form-item">
+                    <h4>Written Review (Optional)</h4>
+                    <textarea id="written-review-box" name="review-box" rows="4" placeholder="Write the review here"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Finish Up</legend>
+                <div class="form-item">
+                    <h4>User name (Optional)</h4>
+                    <input type="text" id="name" name="name" placeholder="Enter your name here">
+                </div>
+                </fieldsest>
+                <div class="form-item"></div>
+                <button type="submit">Post Review</button>
+                </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+Product Name
+Use a select element with an appropriate id attribute, name attribute, and set it to be required.
+The first option in the select element is an instructional placeholder that says "Select a Product ..." and is disabled and selected so that it displays by default but cannot be clicked by the user.
+The remaining options are created dynamically using a provided product array.
+Each option must have a value attribute that is the product name.
+A product array of objects is provided below to help you understand how to build a select field with the dynamic options. Normally the data would come from an external source.
+
+Overall Rating
+The overall product rating should have five levels (1 to 5) or stars.
+The example form uses star entities ☆ (&star;) to display the level. You are free to employ a design of your choice. For example, here is another example of using stars that fill up on selection: Form Input Radio Star+ - CodePen.
+
+Use a input of type radio for each of the levels.
+The required attributes are an id, name (each of the radio buttons should have the same name value), and required
+Why should each of the radio buttons that are part of this rating have the same name value?
+
+Date of Installation
+Use a input of type date to allow the user to select the date the product was installed.
+The required attributes are an id, name, and required
+Useful Features
+This field allows the user to select all the listed features that they found useful.
+This is a check all that apply field.
+Use a input of type checkbox
+Each checkbox should have an id, name, and value attribute.
+Written Review
+Use a textarea element to allow the user to write a review.
+The required attributes are an id and name
+The written review is not required by the user.
+User Name
+Use a input of type text for the user to enter their name.
+Add the id and name attributes.
+The user name entry is optional.
+Form Submission Button
+Use a input of type submit with an appropriate value that indicates the form action purpose.
+Each form field must have an associated label.
+Check that the keyboard tab order is correct.
+Include the common footer content found on all assignments. -->
