@@ -16,12 +16,12 @@
     </header>
 
     <main>
-        <form method="get" action="review.html">
+        <form id="review-form" method="get" action="form-review.html">
             <fieldset>
                 <legend>Rabbit Breed</legend>
                 <div class="form-item">
                     <h4>Choose a breed to review.</h4>
-                    <select id="dropdown" name="dropdown" required>
+                    <select id="dropdown" name="Breed" required>
                         <option value="" disabled selected>Choose a breed...</option>
                         <option value="rhinelander">Rhinelander</option>
                         <option value="mini lop">Mini Lop</option>
@@ -36,39 +36,63 @@
             <fieldset>
                 <legend>Date of Purchase</legend>
                 <div class="form-item">
-                    <h4>What day did you purchse the bun?</h4>
-                    <input type="date" id="date-of-purchase" name="date-of-purchase" required>
+                    <h4>Date of purchase?</h4>
+                    <input type="date" id="date-of-purchase" name="Date Of Purchase" required>
             </fieldset>
             <fieldset>
                 <legend>What about this breed do you like most?</legend>
                 <h4>Check all that apply</h4>
                 <div class="checkbox">
-                    <input type="checkbox" id="coat-color" name="features" value="coat-color" required> <label for="coat-color">Coat Color</label>
-                    <input type="checkbox" id="coat-texture" name="features" value="coat-texture">
-                    <label for="coat-texture">Coat Texture</label>
-                    <input type="checkbox" id="temperament" name="features" value="temperament">
-                    <label for="temperament">Temperament</label>
-                    <input type="checkbox" id="weight" name="features" value="weight">
-                    <label for="weight">Weight</label>
-                    <input type="checkbox" id="breadth" name="features" value="breadth">
-                    <label for="breadth">Breadth</label>
-                    <input type="checkbox" id="full-arch-pose" name="features" value="full-arch-pose"> <label for="full-arch-pose">Full Arch Pose</label>
-                    <input type="checkbox" id="body-type" name="features" value="body-type">
+                    <input type="checkbox" id="show-worthiness" name="Feature" value="Show Worthiness">
+                    <label for="show-worthiness">Show Worthiness</label>
+                    <input type="checkbox" id="overall-quality" name="Feature" value="Overall Quality">
+                    <label for="overall-quality">Overall Quality</label>
+                    <input type="checkbox" id="body-type" name="Feature" value="Body Type">
                     <label for="body-type">Body Type</label>
+                    <input type="checkbox" id="structure" name="Feature" value="Structure">
+                    <label for="structure">Structure</label>
+                    <input type="checkbox" id="temperament" name="Feature" value="Temperament">
+                    <label for="temperament">Temperament</label>
+                    <input type="checkbox" id="fur-quality" name="Feature" value="Fur Quality">
+                    <label for="fur-quality">Fur Quality</label>
+                    <!-- <input type="checkbox" id="color" name="Feature" value="Color">
+                    <label for="color">Color</label>
+                    <input type="checkbox" id="full-arch" name="Feature" value="Full Arch">
+                    <label for="full-arch-pose">Full Arch</label>
+                    <input type="checkbox" id="markings" name="Feature" value="Markings">
+                    <label for="markings">Markings</label>
+                    <input type="checkbox" id="pose" name="Feature" value="Pose">
+                    <label for="pose">Pose</label>
+                    <input type="checkbox" id="trainability" name="Feature" value="Trainability">
+                    <label for="trainability">Trainability</label>
+                    <input type="checkbox" id="condition" name="Feature" value="Condition">
+                    <label for="condition">Condition</label>
+                    <input type="checkbox" id="head" name="Feature" value="Head">
+                    <label for="head">Head</label>
+                    <input type="checkbox" id="ears" name="Feature" value="Ears">
+                    <label for="ears">Ears</label>
+                    <input type="checkbox" id="eyes" name="Feature" value="Eyes">
+                    <label for="eyes">Eyes</label>
+                    <input type="checkbox" id="feet" name="Feature" value="Feet">
+                    <label for="feet">Feet</label>
+                    <input type="checkbox" id="legs-and-ankles" name="Feature" value="Legs and Ankles">
+                    <label for="legs-and-ankels">Legs and Ankles</label>
+                    <input type="checkbox" id="presentation" name="Feature" value="Presentation">
+                    <label for="presentation">Presentation</label> -->
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Written Review</legend>
                 <div class="form-item">
                     <h4>Written Review (Optional)</h4>
-                    <textarea id="written-review-box" name="review-box" rows="4" placeholder="Write the review here"></textarea>
+                    <textarea id="written-review-box" name="Written Review" rows="4" placeholder="Write the review here"></textarea>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Finish Up</legend>
                 <div class="form-item">
                     <h4>User name (Optional)</h4>
-                    <input type="text" id="name" name="name" placeholder="Enter your name here">
+                    <input type="text" id="name" name="User Name" placeholder="Enter your name here">
                 </div>
                 </fieldsest>
                 <div class="form-item"></div>

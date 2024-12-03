@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('input[name="features"]');
+    const checkboxes = document.querySelectorAll('input[name="Feature"]');
     const form = document.querySelector('form');
 
     form.addEventListener('submit', function(event) {
@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearElement.textContent = new Date().getFullYear();
     }
 });
+
+
 
 // JavaScript
 // Use JavaScript to populate the Product Name options where the array's name field is used for the select option display and the array's id is used for the value field.

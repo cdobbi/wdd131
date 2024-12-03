@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>WDD 13 | HTML Form - Rabbit Breed Review</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Christi Dobbins">
+    <meta name="description" content="Christi Dobbins' student week 05 Product Review Form activity.">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Rabbit Breed Review</h1>
+    </header>
+
+    <main>
+        <h2>Review Summary</h2>
+        <div id="review-summary">
+            <!-- review summary displayed here -->
+        </div>
+    </main>
+
+    <script>
+        // display review summary
+        function displayReviewSummary() {
+            const params = getQueryParams();
+            const summaryDiv = document.getElementById('review-summary');
+            let summaryHtml = '<ul>';
+            for (const key in params) {
+                let value = params[key];
+                if (key.toLowerCase() === 'breed') {
+                    value = capitalizeFirstLetter(value);
+                }
+                if (Array.isArray(value)) {
+                    summaryHtml += `<li><strong>${key}:</strong> ${value.join(', ')}</li>`;
+                } else {
+                    summaryHtml += `<li><strong>${key}:</strong> ${value}</li>`;
+                }
+            }
+            summaryHtml += '</ul>';
+            summaryDiv.innerHTML = summaryHtml;
+        }
+
+        // get query parameters from the URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const result = {};
+            for (const [key, value] of params.entries()) {
+                if (result[key]) {
+                    if (Array.isArray(result[key])) {
+                        result[key].push(value);
+                    } else {
+                        result[key] = [result[key], value];
+                    }
+                } else {
+                    result[key] = value;
+                }
+            }
+            return result;
+        }
+
+        // capitalize the first letter of a string
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        // display review summary on page load
+        window.onload = displayReviewSummary;
+    </script>
+</body>
+
+
+</html>
