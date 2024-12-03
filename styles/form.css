@@ -20,8 +20,8 @@ header {
 
 h1 {
     margin: 0.1rem;
-    font-size: 0.75em;
-    color: navy;
+    font-size: 1.5rem;
+    color: #000080;
     text-align: center;
 }
 
@@ -36,7 +36,7 @@ form {
     width: 325px;
     margin: 0 auto;
     padding: 0.2rem;
-    border: 1px solid #5d5c5c;
+    border: 1px solid #5c5b5b;
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
@@ -48,12 +48,14 @@ fieldset {
     margin: 0.05rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 legend {
     padding: 0.2rem;
     color: navy;
-    font-size: 0.60em;
+    font-size: 1.5em;
+    margin-bottom: 0;
 }
 
 label,
@@ -73,19 +75,7 @@ select,
 textarea {
     padding: 0.2rem;
     font-size: 0.5rem;
-}
-
-input[type="checkbox"] {
-    width: 10px;
-    height: 10px;
-    vertical-align: bottom;
-}
-
-input[type="date"] {
-    width: 150px;
-    height: 30px;
-    font-size: 0.6rem;
-    padding: 0.2rem;
+    height: 44px;
 }
 
 button {
@@ -96,6 +86,7 @@ button {
     border: #5d5c5c;
     border-radius: 0.5rem;
     cursor: pointer;
+    height: 44px;
 }
 
 button:hover {
@@ -120,15 +111,19 @@ footer {
 .checkbox {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
     gap: 0.0025rem;
 }
 
 .checkbox input[type="checkbox"] {
     width: 15px;
     height: 15px;
-    vertical-align: middle;
-    margin-right: 0.2rem;
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+}
+
+.input#star {
+    padding-bottom: 0.5rem;
 }
 
 .checkbox label {
@@ -136,9 +131,23 @@ footer {
     padding: 0.2rem 0;
 }
 
-fieldset.rating-fieldset.div {
-    padding: 1rem;
+.rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0;
 }
 
+.rating-container label {
+    margin: 0;
+    padding: 0;
+    margin-left: -0.8rem;
+}
 
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 20px;
+    height: 20px;
+}
