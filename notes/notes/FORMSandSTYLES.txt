@@ -1,0 +1,471 @@
+### Display Properties
+display: Determines how an element is displayed.
+- block
+- inline
+- inline-block
+- flex
+- grid
+- none
+
+### Flexbox Properties
+flex-direction: Defines the direction of the flex items.
+- row
+- row-reverse
+- column
+- column-reverse
+- justify-content: Aligns flex items along the main axis.
+- flex-start
+- flex-end
+- center
+- space-between
+- space-around
+- space-evenly
+- align-items: Aligns flex items along the cross axis.
+- flex-start
+- flex-end
+- center
+- baseline
+- stretch
+
+### Grid Properties
+grid-template-columns: Defines the columns of the grid.
+- repeat(3, 1fr)
+- 100px 200px 1fr
+- grid-template-rows: Defines the rows of the grid.
+- repeat(2, 1fr)
+- auto 1fr
+- grid-gap: Sets the gap between grid items.
+- 10px
+- 1rem
+
+### Positioning Properties
+position: Specifies the type of positioning method.
+- static
+- relative
+- absolute
+- fixed
+- sticky
+- top, right, bottom, left: Specifies the offset for positioned elements.
+- 10px
+- 50%
+- auto
+
+### Sizing Properties
+- width: Sets the width of an element.
+- 100px
+- 50%
+- auto
+- height: Sets the height of an element.
+- 200px
+- 100vh
+- auto
+
+### Margin and Padding Properties
+- margin: Sets the margin around an element.
+- 10px
+- 1rem
+- auto
+- padding: Sets the padding inside an element
+- 10px
+- 1rem
+- auto
+
+### Background Properties
+- background-color: Sets the background color of an element.
+- #ffffff
+- rgba(0, 0, 0, 0.5)
+- background-image: Sets the background image of an element.
+- url('image.jpg')
+- none
+
+### Text Properties
+- color: Sets the color of the text.
+- #000000
+- rgb(255, 255, 255)
+- font-size: Sets the size of the font.
+- 16px
+- 1.5rem
+- text-align: Aligns the text inside an element.
+- left
+- right
+- center
+- justify
+
+
+
+###FORMS
+
+form input boxes should be at least 44 pixels tall. 
+
+use buttons if 5 questions or less, use drop down if more than 5 questions.
+Key Takeaways
+The pattern attribute in HTML5 allows developers to provide a regular expression that the user’s input must match in order to be considered valid. This can be useful for input fields where the user can enter free-form text.
+The disabled attribute in HTML5 can be used to disable form controls, preventing the user from interacting with them. This attribute can be useful in situations where certain input fields should not be editable until specific conditions are met.
+The readonly attribute in HTML5 makes it impossible for the user to edit the form field, but unlike the disabled attribute, the field can still receive focus and its value is submitted with the form.
+The form attribute in HTML5 allows developers to associate form elements with forms in which they’re not nested. This means that you can now associate a fieldset or form control with any other form in the document, solving the age-old issue of forms not being nestable.
+The pattern Attribute
+The pattern attribute enables you to provide a regular expression that the user’s input must match in order to be considered valid. For any input where the user can enter free-form text, you can limit what syntax is acceptable with the pattern attribute.
+
+The regular expression language used in patterns is the same Perl-based regular expression syntax as JavaScript, except that the pattern attribute must match the entire value, not just a subset. When including a pattern, you should always indicate to users what is the expected (and required) pattern.
+
+The global title attribute has special significance when used in conjunction with the pattern attribute. Since browsers currently show the value of the title attribute on hover such as a tooltip, include pattern instructions that are more detailed than placeholder text, and which form a coherent statement. That title attribute will also be displayed with the browser’s default error message in browsers that support native form validation with error messaging, which we’ll cover later in this chapter.
+
+Note: Regular Expressions
+Regular expressions are a feature of most programming languages that allow developers to specify patterns of characters and check to see if a given string matches the pattern. Regular expressions are famously indecipherable to the uninitiated. For instance, one possible regular expression to check if a string is formatted as a hexidecimal color value is this: #[A-Fa-f0-9]{6}.
+
+A full tutorial on the syntax of regular expressions is beyond the scope of this book, but there are plenty of great resources, tutorials, and cheat sheets available online if you’d like to learn. Alternatively, you can search the Web or ask around on forums for a pattern that will serve your purpose.
+
+For a basic example, let’s add a pattern attribute to the password field in our form. We want to enforce the requirement that the password be at least six characters long with no spaces:
+<li> 
+<label for="password">I would like my password to be:</label> 
+<p>(at least 6 characters, no spaces)</p>
+<input type="password" id="password" name="password" 
+required title="(at least 6 characters, no spaces)" pattern="\S{6,}"> 
+</li>
+\S refers to “any nonwhitespace character,” and {6,} means “at least six times.” If you wanted to stipulate the maximum amount of characters, the syntax for between six and ten characters, for example, would be \S{6,10}.
+
+As with the required attribute, the pattern attribute will prevent the form from being submitted if there is no match for the pattern, and will provide an error message.
+
+If your pattern is not a valid regular expression, it will be ignored for the purposes of validation.
+
+The pattern attribute has been supported to some extent in all browsers since Firefox 4, Safari 5, Chrome 10, Opera 11, IE10, and Android 2.3. By “some extent,” we mean that while all browsers now support the pattern attribute, some—notably Safari and Android through 4.4 allow invalid data to be sent on form submission.
+
+Additionally, similar to the placeholder and required attributes, you can use the value of this attribute to provide the basis for your JavaScript validation code for nonsupporting browsers.
+
+The disabled Attribute
+The Boolean disabled attribute has been around longer than HTML5 but has been expanded on, to a degree. It can be used with any form control except the new output element, and, unlike previous versions of HTML, HTML5 allows you to set the disabled attribute on a fieldset and have it apply to all the form elements contained in that fieldset.
+
+Generally, form elements with the disabled
+
+attribute have the content grayed out by default in the browser. Browsers will prohibit the user from focusing on a form control that has the disabled attribute set. This attribute is often used to disable the submit button until all fields are correctly filled out. You can employ the :disabled pseudo-class in your CSS to style disabled form controls, and use either :enabled or :not(:disabled) pseudo-classes to target form controls that aren’t disabled. Form controls with the disabled attribute aren’t submitted along with the form so their values will be inaccessible to your form processing code on the server side. If you want a form value that users are unable to edit but can still see and submit, use the readonly attribute.
+The readonly Attribute
+The readonly attribute is similar to the disabled attribute: it makes it impossible for the user to edit the form field. Unlike disabled,however, the field canreceive focus and its value is submitted with the form. In a comments form, we may want to include the URL of the current page or the title of the article that is being commented on, letting the user know that we’re collecting this data without allowing them to change it:
+<label for="about">Article Title</label> 
+<input type="text" name="about" id="about" readonly 
+↵value="http://www.thehtml5herald.com/register.html">
+The multiple Attribute
+The multiple attribute, if present, indicates that multiple values can be entered in a form control. While it was available in previous versions of HTML, it only applied to the select element. In HTML5, it can be added to file, email, and range input types as well. If present, the user can select more than one file, include several comma-separated email addresses, or have a range with two sliders.
+
+While multiple file input is supported in all browsers since mobile Safari 7 and IE10, the multiple attribute on range input is yet to be supported anywhere at the time of writing.
+
+Note: Spaces or commas?
+You may notice that the iOS touch keyboard for email inputs includes a space. Of course, spaces aren’t permitted in email addresses, but browsers allow you to separate multiple emails with spaces along with the required comma. Originally the spaces were disallowed in some browsers, but adding spaces after the comma separator has been included in the specification.
+
+The form Attribute
+Not to be confused with the form element, the form attribute in HTML5 allows you to associate form elements with forms in which they’re not nested. It means that you can now associate a fieldset or form control with any other form in the document. This solves the age-old issue of forms not being nestable. While you’re still unable to nest forms, you can associate “nested” form controls with a form that’s not an ancestor.
+
+The form attribute takes as its value the ID of the form element with which the fieldset or control should be associated.
+
+awsmarketplace_2024_12_726x300
+If the attribute is omitted, the control will only be submitted with the form in which it’s nested. If you include the form attribute and remove it, make sure to use el.removeAttribute('form') and not el.setAttribute('form', ''). If the form attribute is included but the value is either empty or points to an invalid form ID, the form control will be disassociated from all forms on the page and will not be submitted with any form, including any ancestral form in which it may be nested.
+
+his attribute is supported in all browsers, starting with Android 4 and IE 11.
+
+The autocomplete Attribute
+The autocomplete attribute specifies whether the form, or a form control, should have autocomplete functionality. For most form fields, this will be a drop-down that appears when the user begins typing. For password fields, it’s the ability to save the password in the browser. Support for this attribute has been present in browsers for years, though it was never in the specification until HTML5.
+
+If the autocomplete attribute is omitted from the form control or the form, the default value is on. You may have noticed this the last time you filled out a form. In order to disable autocomplete on a form control (or form), use autocomplete="off". This is a good idea for sensitive information, such as a credit card number, or data that will never need to be reused, such as a CAPTCHA.
+
+Autocompletion is also controlled by the browser, ignoring developer-set preferences. While the default value is on, the browser must have it enabled for it to work at all; however, setting the autocomplete attribute to off overrides the browser’s on preference for the relevant form control.
+
+The datalist Element and the list Attribute
+Datalists are currently supported in all browsers except Safari, starting with IE10 and Android 4.4.3. In the default form, they fulfill a common requirement: a text field with a set of predefined autocomplete options. Unlike the select element, users can enter whatever value they like, but they’ll be presented with a set of suggested options.
+
+
+Figure 4.4. The datalist element in action in Firefox
+For some input types, like text and date input types, a drop-down list of options is presented as users type into the field, as shown in Figure 4.4. For the range input type, the browser will display little tick marks along the slider rule indicating where suggested options are found. For the color input type, users are presented with swatches of color suggestions, with the option to switch to the device’s default color picker if they prefer to pick a different color.
+
+The datalist element, much like select, is a list of options, with each one placed in an option element. You then associate the datalist with an input using the list attribute on the input. The list attribute takes as its value the id attribute of the datalist you want to associate with the input. One datalist can be associated with several input fields.
+
+Here’s what this would look like in practice:
+
+<label for="favcolor">Favorite Color</label> 
+<input type="color" list="colors" id="favcolor" name="favcolor"> 
+
+<datalist id="colors"> 
+<option value="#0000FF" label="blue"> 
+<option value="#008000" label="green"> 
+<option value="#ff0000" label="red"> 
+<option value="#663399" label="RebeccaPurple"> </datalist>
+The autofocus Attribute
+The Boolean autofocus attribute specifies that a form control should be focused as soon as the page loads. Only one form element can have autofocus in a given page. For a better user experience and for accessibility reasons, it is best not to use this attribute.
+
+The input elements support many more attributes, with some being type-specific. The attributes include alt,src, height, and width for the image input type, and step, min, and max for numeric input types, including dates and range. dirname helps tell the server the form control’s directionality. formaction, formenctype, formmethod formnovalidate, and formtarget provide methods to override the form’s attributes inputmode helps indicate to the browser what keypad to show when the device is capable of displaying dynamic keypads. minlength and maxlength dictate the length of allowable input. checked, name, size, type, and value should already be familiar to you, though :checked and :default pseudo-classes may be new. We’ll cover some of these with their relevant input types next.
+
+Frequently Asked Questions (FAQs) about HTML5 Form Attributes
+What are the different types of HTML5 form attributes?
+HTML5 form attributes are properties that provide additional information about an HTML element. They include ‘autocomplete’, ‘autofocus’, ‘disabled’, ‘form’, ‘formaction’, ‘formenctype’, ‘formmethod’, ‘formnovalidate’, ‘formtarget’, ‘height and width’, ‘list’, ‘min and max’, ‘multiple’, ‘pattern’, ‘placeholder’, ‘required’, ‘step’, and ‘value’. Each attribute serves a unique purpose in form validation, enhancing user experience, and ensuring data integrity.
+
+How does the ‘autocomplete’ attribute work in HTML5?
+The ‘autocomplete’ attribute in HTML5 is used to control the browser’s autocomplete feature for form fields. When set to ‘on’, the browser will automatically complete the input based on previously entered values. Conversely, when set to ‘off’, the autocomplete feature is disabled. This attribute is particularly useful for forms that require repetitive information, such as address or email fields.
+
+What is the purpose of the ‘autofocus’ attribute in HTML5?
+The ‘autofocus’ attribute is used to automatically focus the cursor on a particular input field when a page loads. This can be particularly useful for forms where users are expected to input data immediately upon page load, such as a search bar or login form.
+
+How does the ‘disabled’ attribute function in HTML5?
+The ‘disabled’ attribute is used to disable an input field, preventing users from interacting with it. This can be useful in situations where certain input fields should not be editable until specific conditions are met.
+
+What is the role of the ‘formaction’ attribute in HTML5?
+The ‘formaction’ attribute in HTML5 specifies the URL where the form data is sent when the form is submitted. This attribute overrides the ‘action’ attribute of the ‘form’ element.
+
+How does the ‘pattern’ attribute enhance form validation in HTML5?
+The ‘pattern’ attribute in HTML5 is used to specify a regular expression that the input field’s value is checked against. This attribute is used for form validation, ensuring that the data entered by the user matches the expected format.
+
+What is the significance of the ‘placeholder’ attribute in HTML5?
+The ‘placeholder’ attribute in HTML5 is used to provide a hint or example value for the input field. This hint is displayed in the input field before the user enters a value and disappears once the user starts typing.
+
+How does the ‘required’ attribute function in HTML5?
+The ‘required’ attribute in HTML5 is used to specify that an input field must be filled out before the user can submit the form. If a user attempts to submit a form with an empty required field, a message will be displayed, prompting the user to fill in the field.
+
+What is the role of the ‘step’ attribute in HTML5?
+The ‘step’ attribute in HTML5 is used with numeric input types to specify the legal number intervals for an input field. For example, if the step attribute is set to ‘2’, the user can only input even numbers.
+
+How does the ‘value’ attribute work in HTML5?
+The ‘value’ attribute in HTML5 is used to specify the initial value of an input field. This attribute can be used with various input types, including text, checkbox, radio, and button. The value attribute is particularly useful when you want to pre-fill certain form fields for the user.
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Acme, Arial, sans-serif;
+  line-height: 1.4;
+}
+h1 {
+  margin: 1rem;
+}
+
+main {
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  background: #eee;
+}
+
+form {
+  text-align: center;
+}
+
+input[type=text] {
+  padding: 0.65rem;
+  text-size: 1.1rem;
+  font-weight: 700;
+  border: 1px solid #777;
+  background-color: #eee;
+}
+
+input[type=text]:valid {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+input[type=text]:invalid {
+  background-color: pink;
+  color: indianred;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+p {
+  margin-left: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+code {
+  font-size: .7rem;
+}
+
+fetchData Function
+javascript
+function fetchData(callback) {
+  setTimeout(() => {
+    callback('Data has been fetched');
+  }, 2000);
+}
+function fetchData(callback): This defines a function named fetchData that takes a single argument, callback, which is expected to be a function.
+
+setTimeout(() => { callback('Data has been fetched'); }, 2000);: This uses the setTimeout function to simulate a delay (in this case, 2 seconds or 2000 milliseconds). After the delay, it calls the callback function and passes the string 'Data has been fetched' to it.
+
+processData Function
+javascript
+function processData(data) {
+  console.log("Data received:", data);
+}
+function processData(data): This defines a function named processData that takes a single argument, data.
+
+console.log("Data received:", data);: This logs the string "Data received:" followed by the value of data to the console.
+
+
+
+###Calling fetchData
+
+javascript
+fetchData(processData);
+fetchData(processData);: This calls the fetchData function and passes the processData function as the callback argument. When fetchData calls callback('Data has been fetched'), it actually calls processData('Data has been fetched').
+
+Summary
+The fetchData function simulates fetching data with a 2-second delay.
+
+After the delay, it calls the processData function, passing the fetched data as an argument.
+
+The processData function then logs the received data to the console.
+
+This is a common pattern in JavaScript for handling asynchronous operations using callback functions. If you have any more questions or need further clarification, feel free to ask!
+
+The form itself should use a method of "get" in order to be supported on GitHub The action should reference a form submission, confirmation page named "review.html".
+Got it! Here's a simple example of an HTML form that uses the GET method and references a confirmation page named review.html:
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+</head>
+<body>
+    <form method="get" action="review.html">
+        <label for="productName">Product Name:</label>
+        <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product...</option>
+            <!-- Dynamic options will be populated here -->
+        </select>
+        
+        <label for="rating">Overall Rating:</label>
+        <input type="radio" id="rating1" name="rating" value="1" required> 1
+        <input type="radio" id="rating2" name="rating" value="2" required> 2
+        <input type="radio" id="rating3" name="rating" value="3" required> 3
+        <input type="radio" id="rating4" name="rating" value="4" required> 4
+        <input type="radio" id="rating5" name="rating" value="5" required> 5
+        
+        <label for="installationDate">Date of Installation:</label>
+        <input type="date" id="installationDate" name="installationDate" required>
+        
+        <label for="usefulFeatures">Useful Features:</label>
+        <input type="checkbox" id="feature1" name="usefulFeatures" value="Feature1"> Feature 1
+        <input type="checkbox" id="feature2" name="usefulFeatures" value="Feature2"> Feature 2
+        <input type="checkbox" id="feature3" name="usefulFeatures" value="Feature3"> Feature 3
+        
+        <label for="writtenReview">Written Review:</label>
+        <textarea id="writtenReview" name="writtenReview"></textarea>
+        
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" name="userName">
+        
+        <input type="submit" value="Submit Review">
+    </form>
+</body>
+</html>
+This form includes all the required fields and uses the GET method to submit the data to review.html. You can customize the form design and add dynamic options for the product name using JavaScript as needed. If you need any further assistance, feel free to ask!
+
+wht is get and review.html and what do they do
+The GET method and review.html are essential components of the form submission process in web development.
+
+GET Method
+The GET method is one of the HTTP methods used to request data from a specified resource. When you use the GET method in a form, the form data is appended to the URL as query parameters. This method is typically used for retrieving data rather than submitting sensitive information because the data is visible in the URL. For example, if you fill out a form and submit it using GET, the URL might look something like this:
+
+http://example.com/review.html?productName=Product1&rating=5&installationDate=2024-12-01
+review.html
+The review.html page is the destination where the form data is sent after submission. This page can be designed to display a confirmation message, show the submitted data, or perform any other action you want. In this case, review.html would likely display a confirmation of the review submission and possibly a summary of the data entered in the form.
+
+Would you like to know more about how to handle the data on review.html?
+
+
+Sure! Here are some common CSS properties and their possible values, along with a short description of what each property does:
+
+### Display Properties
+- **`display`**: Determines how an element is displayed.
+  - `block`: The element is displayed as a block-level element (e.g., `<div>`).
+  - `inline`: The element is displayed as an inline element (e.g., `<span>`).
+  - `inline-block`: The element is displayed as an inline-level block container.
+  - `flex`: The element is displayed as a flex container.
+  - `grid`: The element is displayed as a grid container.
+  - `none`: The element is not displayed.
+
+### Flexbox Properties
+- **`flex-direction`**: Defines the direction of the flex items.
+  - `row`: Items are placed in a row (default).
+  - `row-reverse`: Items are placed in a row in reverse order.
+  - `column`: Items are placed in a column.
+  - `column-reverse`: Items are placed in a column in reverse order.
+- **`justify-content`**: Aligns flex items along the main axis.
+  - `flex-start`: Items align to the start of the container.
+  - `flex-end`: Items align to the end of the container.
+  - `center`: Items align at the center of the container.
+  - `space-between`: Items are evenly distributed with space between them.
+  - `space-around`: Items are evenly distributed with space around them.
+  - `space-evenly`: Items are evenly distributed with equal space around them.
+- **`align-items`**: Aligns flex items along the cross axis.
+  - `flex-start`: Items align to the start of the container.
+  - `flex-end`: Items align to the end of the container.
+  - `center`: Items align at the center of the container.
+  - `baseline`: Items align at the baseline of the container.
+  - `stretch`: Items stretch to fill the container.
+
+### Grid Properties
+- **`grid-template-columns`**: Defines the columns of the grid.
+  - `repeat(3, 1fr)`: Creates three columns of equal width.
+  - `100px 200px 1fr`: Creates columns with specific widths.
+- **`grid-template-rows`**: Defines the rows of the grid.
+  - `repeat(2, 1fr)`: Creates two rows of equal height.
+  - `auto 1fr`: Creates rows with specific heights.
+- **`grid-gap`**: Sets the gap between grid items.
+  - `10px`: Sets a 10-pixel gap between items.
+  - `1rem`: Sets a gap based on the root element's font size.
+
+### Positioning Properties
+- **`position`**: Specifies the type of positioning method.
+  - `static`: Default positioning (no special positioning).
+  - `relative`: Positioned relative to its normal position.
+  - `absolute`: Positioned relative to the nearest positioned ancestor.
+  - `fixed`: Positioned relative to the viewport.
+  - `sticky`: Switches between relative and fixed positioning based on scroll position.
+- **`top`, `right`, `bottom`, `left`**: Specifies the offset for positioned elements.
+  - `10px`: Moves the element 10 pixels from the specified edge.
+  - `50%`: Moves the element 50% from the specified edge.
+  - `auto`: Default positioning (no offset).
+
+### Sizing Properties
+- **`width`**: Sets the width of an element.
+  - `100px`: Sets the width to 100 pixels.
+  - `50%`: Sets the width to 50% of the parent element.
+  - `auto`: Default width (based on content).
+- **`height`**: Sets the height of an element.
+  - `200px`: Sets the height to 200 pixels.
+  - `100vh`: Sets the height to 100% of the viewport height.
+  - `auto`: Default height (based on content).
+
+### Margin and Padding Properties
+- **`margin`**: Sets the margin around an element.
+  - `10px`: Sets a 10-pixel margin.
+  - `1rem`: Sets a margin based on the root element's font size.
+  - `auto`: Automatically adjusts the margin.
+- **`padding`**: Sets the padding inside an element.
+  - `10px`: Sets a 10-pixel padding.
+  - `1rem`: Sets padding based on the root element's font size.
+  - `auto`: Automatically adjusts the padding.
+
+### Background Properties
+- **`background-color`**: Sets the background color of an element.
+  - `#ffffff`: Sets the background color to white.
+  - `rgba(0, 0, 0, 0.5)`: Sets the background color with transparency.
+- **`background-image`**: Sets the background image of an element.
+  - `url('image.jpg')`: Sets the background image to the specified URL.
+  - `none`: Removes any background image.
+
+### Text Properties
+- **`color`**: Sets the color of the text.
+  - `#000000`: Sets the text color to black.
+  - `rgb(255, 255, 255)`: Sets the text color to white.
+- **`font-size`**: Sets the size of the font.
+  - `16px`: Sets the font size to 16 pixels.
+  - `1.5rem`: Sets the font size based on the root element's font size.
+- **`text-align`**: Aligns the text inside an element.
+  - `left`: Aligns the text to the left.
+  - `right`: Aligns the text to the right.
+  - `center`: Centers the text.
+  - `justify`: Justifies the text.
+
+These are just a few examples of the many properties and values available in CSS. Each property has a specific purpose and can be combined with others to create complex and responsive designs. Need any more help with CSS or anything else?

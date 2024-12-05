@@ -1,0 +1,112 @@
+### QUIZ 4
+
+Question 2
+1 / 1 pts
+Which of the following would change the background color of every other row in an HTML table?
+Check all that apply.
+  tr:odd-rows {background-color: skyblue} 
+  * tr:nth-child(odd) {background-color: skyblue} 
+  tr:nth-child(:not(first)) {background-color: skyblue} 
+  * tr:nth-child(even) {background-color: skyblue} 
+  tr:even-rows {background-color: skyblue} 
+ 
+Question 3
+1 / 1 pts
+In JavaScript, to set the text node of a preselected div element assigned to a variable identified as "reveal" as intended by the code, which of the following could you use?
+Check all that apply.
+  * reveal.innerHTML = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  reveal.HTMLvalue = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  reveal.textContent = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  reveal.text = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+ 
+Question 4
+1 / 1 pts
+Rewrite the following JavaScript string build that uses concatenation (+) to use a template literal instead.
+
+"Welcome to the " + courseName + " " + stuFirstName + "!" 
+* `Welcome to the ${courseName} ${stuFirstName}!`
+ 
+Question 5
+1 / 1 pts
+Given this function expression that computes the wind chill factor,
+
+const computeWindChill = function(windSpeed, temperature) {
+  // Fahrenheit Only
+  return 35.74 + (0.6215 * temperature) - (35.75 * Math.pow(windSpeed, 0.16)) + (0.4275 * temperature * Math.pow(windSpeed, 0.16));
+};
+Which of the following correctly calls the function using arguments of speed and temp?
+
+  * computeWindChill(speed, temp) 
+  let windChill = windChill(windSpeed, temperature) 
+  function computeWindChill(speed, temp) 
+  function computeWindChill() 
+  computeWindChill(windSpeed, temperature) 
+ 
+Question 6
+1 / 1 pts
+Given the following object definition:
+
+let esomeprazole = {'id':'mnb78932','amount':23145,'amountType':'ct','expDate':'10/01/2021'}
+Which of the following JavaScript statements accesses the value associated with the amount key for this variable and stores it in a variable named dose? 
+The variable dose may or may not already exist.
+
+Check all that apply.
+
+  const dose = esomeprazole[0].amount[1]; 
+  * let dose = esomeprazole['amount'] 
+  const dose = amount 
+  let dose = amount 
+  * let dose = esomeprazole.amount 
+ 
+Question 7
+1 / 1 pts
+Given the following array definition and subsequent code,
+
+const countries = ["Canada", "Chili", "Colombia", "Croatia", "Costa Rica"];
+const countriesLong = countries.filter((country) => country.length > 7);
+What will be assigned to the array countriesLong?
+
+  * "Colombia", "Costa Rica" 
+  "Canada", "Chili", "Colombia", "Croatia", "Costa Rica" 
+  null 
+  undefined 
+ 
+Question 8
+1 / 1 pts
+Given the following segment of code, which of the following options will return a new array named statusReport which will contain the course status of any array of point total grades?
+An example array is provided as points.
+
+const points = [100, 88, 94, 78, 84, 69];
+
+function convertPointsToStatus(pointTotal) {
+  let status = 'Not Complete';
+  if (pointTotal >= 93) {
+    status = "Excellent";
+  } else if (pointTotal >= 70) {
+    status = "Complete";
+  }
+  return status;
+}
+
+
+  const statusReport = points.reduce(convertPointsToStatus); 
+  const statusReport = points.convert(convertPointsToStatus); 
+  const statusReport = points.filter(convertPointsToStatus); 
+  * const statusReport = points.map(convertPointsToStatus); 
+ 
+Question 9
+1 / 1 pts
+In your base.css file you have the following CSS rule:
+
+span p {font-size: 1.5rem}
+In the larger.css file you have the following rule:
+
+@media only screen and (min-width: 32rem) {
+     span {font-size: 2rem}
+}
+What will the font size be for paragraphs in span elements when rendered on a browser?
+Check all that apply.
+
+  * On larger screens the font size will be 2rem. 
+  The font size on larger screens cannot be determined and the result will be a default font size. 
+  On larger screens the font size will be 1.5rem. 

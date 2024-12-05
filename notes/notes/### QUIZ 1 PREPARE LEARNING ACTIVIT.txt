@@ -1,0 +1,148 @@
+### QUIZ 1 PREPARE LEARNING ACTIVITIES
+
+Question 1
+1 / 1 pts
+Which of the following file and folder names are appropriate given the naming standards documented for this class?
+Check all that apply.
+  Images/temple.JPG 
+  chamber/home page.html 
+  scripts/#counter.js 
+  * scripts/weather.js 
+  * images/temple.webp 
+ 
+Question 2
+1 / 1 pts
+Which of the following folder names does this course use as the standard folder names to contain images, CSS files, and JavaScript files?
+Check all that apply.
+  img 
+  * styles 
+  * images 
+  css 
+ * scripts 
+  js 
+ 
+Question 3
+1 / 1 pts
+A fellow student is frustrated because their navigation menu does not distribute the links evenly in the navigation bar as intended.
+The first image is what they are getting and the second image is what they want it to look like.
+
+What feedback should you provide to help them?
+
+Current: Screenshot of current navigation issue with navigation aligned all to the left with deadspace on the right.
+
+Intended: image.pngScreenshot of intended navigation with links distributed evenly across the bar.
+
+The student posted the relevant HTML and associated CSS for review.
+
+<nav class="navigation">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="services.html">Services</a>
+</nav>
+.navigation { 
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+ }
+
+.navigation a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+} 
+  * The 'flex' property must be applied to the immediate children a of the flex container (.navigation).
+  A width: 100% declaration is needed within the .navigation CSS rule. 
+  The CSS declarations in for the anchor tags (a) are out of order. 
+  You cannot apply the CSS Flex display property to a nav element.
+ 
+Question 4
+1 / 1 pts
+Select the correct answer to complete the following statement.
+To apply CSS Grid, you can define a grid container using the                                property on the parent element.
+  media: css-grid; 
+  cssgrid: 100%; 
+  grid: 100%; 
+  * display: grid; 
+ 
+Question 5
+1 / 1 pts
+What is the correct HTML markup to reference an external JavaScript file name util.js which is located in the scripts folder?
+  <javascript>util.js</javascript> 
+  * <script src="scripts/util.js"></script>
+  <script src="../scripts/util.js"></script> 
+  <link src="./scripts/util.js"> 
+ 
+Question 6
+1 / 1 pts
+What is the key difference between JavaScript's let and const for variable declarations?
+  * let allows variable reassignment, while const enforces immutability.
+  let is used for global variables, while const is recommended for local variables.
+  let can only be used for primitive types, while const is reserved for objects and arrays.
+  let is block-scoped, while const is function-scoped.
+ 
+Question 7
+1 / 1 pts
+Given that the parent item for aside is a CSS grid, how many columns will the aside element span?
+
+aside { 
+  border: 1px solid #eee;
+  padding: 2rem;
+  text-align: center;
+  grid-column: 1 / 3;
+}
+  3 
+  1 
+  4 
+  5 
+  * 2 
+ 
+Question 8
+1 / 1 pts
+A member of your team is getting an HTML validation error on this page. What feedback would you provide?
+Check all that apply.
+
+<link href="styles/base.css">
+  A link element is missing the name attribute. 
+  * The link element is missing the rel attribute. 
+  You have a spelling error in your path. 
+  Looks like you fixed the problem, your code looks good now. 
+ 
+Question 9
+1 / 1 pts
+A student uses this image on an assignment. You Inspect the image using the browser's DevTools by hovering over the <img> src attribute. What feedback should you provide given the data provided?
+Check all that apply.
+
+Example Inspection of an image.
+
+  * Your image file size is too large, try reducing the quality using an image editing program. 
+  * The rendered aspect ratio of the image is not correct. The image is stretched, blurry, and/or pixelated (this is not shown in the popup). Keep the aspect ratio the same. 
+  * Your image pixel dimensions are way too large for what is actually needed on the page. Reduce the image's dimensions to a more manageable size. 
+  Good job, everything looks fine. 
+ 
+Question 10
+1 / 1 pts
+How many points are deducted when you submit an assignment after the due date?
+Check all that apply.
+  You lose 10 points for a late assignment. 
+  * No points are deducted for late assignments submitted by the UNTIL date. 
+  * You can turn in assignments until the UNTIL date. 
+  * Late assignments are not penalized for being submitted by the UNTIL date. 
+ 
+Question 11
+1 / 1 pts
+Which of the following JavaScript statements correctly declares and instantiates a variable that can be changed named "firstName" that holds the string "Antonia Francesca"?
+  const firstName = "Antonia Francesca"; 
+  firstName = "Antonia Francesca"; 
+  * let firstName = "Antonia Francesca"; 
+  firstName = {Antonia Francesca}; 
+ 
+Question 12
+1 / 1 pts
+Which of the following technologies or service is used to host your work as rendered web pages in this class?
+  * GitHub Pages 
+  Visual Studio Code 
+  I-Learn 
+  git 
+Quiz Score: 12 out of 12

@@ -1,0 +1,129 @@
+### QUIZ 2 
+
+Question 1
+3 / 3 pts
+I completed all of the learning activities assigned this week and posted my work to my GitHub Pages repository, if it was requested.
+  True 
+  False 
+ 
+Question 2
+1 / 1 pts
+In your base.css file you have the following CSS rule:
+
+span {background-color: red}
+In the larger.css file you have the following rule:
+
+@media only screen and (min-width: 32rem) {
+     span {background-color: green}
+}
+In what color will span tags be rendered, given that the root element font size is the default size of 16px?
+
+  Screens wider than 32px, the span background color will be green. 
+  Screens wider than 576px, the span background color will be green. 
+  * Screens wider than 512px, the span background color will be green. 
+  Screens wider than 608px, the span background color will be green. 
+ 
+Question 3
+1 / 1 pts
+If you have several child items and you want them to display in multiple rows and columns, depending on the browser screen width, you could display the parent tag as a flex item. 
+
+div.parent {display: flex;}
+What additional CSS declaration would you need to add to the above rule to get the child items to display on multiple rows?
+Check all that apply.
+  justify-content: multiple; 
+  * flex-wrap: wrap; 
+  flex-template-columns: auto; 
+  warp: flex-wrap; 
+ 
+Question 4
+1 / 1 pts
+The intent of the JavaScript here is to add or remove (in other words, toggle) a class named  "open" when a menubutton element is clicked.
+Complete the code block by filling in the three blanks.
+
+menubutton.addEventListener('
+click
+ ', () => {
+  menuitems.
+classList
+ .toggle('
+open
+ ');
+});
+* Answer 1:
+click
+* Answer 2:
+classlist
+* Answer 3:
+open
+ 
+Question 5
+1 / 1 pts
+Given the following JavaScript statement,
+
+const msg = document.querySelector('span');
+what element does this statement reference and assign to the msg variable? 
+
+  No answer text provided. 
+  The last span element found on the document. 
+  * The first span element found on the document. 
+  A random one from the NodeList. 
+ 
+Question 6
+1 / 1 pts
+In JavaScript, to assign a variable identified as 'msg' a document element with an id named 'message', which of the following would you use?
+Select all the apply.
+  * const msg = document.querySelector('#message'); 
+  const msg = document.querySelector('message'); 
+  * const msg = document.getElementById('message'); 
+  No answer text provided. 
+  const msg = document.querySelector('.message'); 
+ 
+Question 7
+1 / 1 pts
+In JavaScript, to set the text node of a preselected div element assigned to a variable identified as "reveal" as intended by the code, which of the following could you use?
+Check all that apply.
+  reveal.text = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  * reveal.innerHTML = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  reveal.HTMLvalue = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+  reveal.textContent = `🎉 Congratulations! You are having a <strong>${babygender}</strong>!`; 
+ 
+Question 8
+1 / 1 pts
+Which web design element is crucial for effective wayfinding on a website?
+  * Navigation menu 
+  Font size 
+  Image resolution 
+  Background color 
+ 
+Question 9
+1 / 1 pts
+What does the :: syntax in the CSS rule selector do?
+Example:
+
+p::first-line {
+  ...
+}
+  Selects a JSON value 
+  * Selects a pseudo-element 
+  Increases the specificity of the element 
+  Selects a pseudo-class 
+ 
+Question 10
+1 / 1 pts
+One way to change the inline CSS style of an element is by using the setProperty method such as
+
+// Assuming 'articleElement' is the reference to a valid HTML element of coursearticleElement.style.setProperty('font-weight', '700');
+Which of the following is a valid alternative to the code above?
+
+  * articleElement.style.fontWeight = 700; 
+  articleElement.style.font-weight('700'); 
+  articleElement.style.font-weight = 700; 
+  articleElement.cssstyle-font-weight = '700'; 
+ 
+Question 11
+1 / 1 pts
+Which of the following accurately describes the DOM (Document Object Model)?
+  * A standardized interface allowing programs to dynamically access and manipulate the content of a web page. 
+  A programming language used for styling web pages. 
+  A browser-specific rendering engine for HTML and CSS. 
+  A security protocol for encrypting data transmitted between the web server and the client. 

@@ -1,0 +1,73 @@
+
+Question 2
+1 / 1 pts
+Which of the following would set the background color for only the input elements on an HTML document that have the text type?
+
+Select all that apply.
+
+  text {background-color: #efac3e;} 
+  input[name=text] {background-color: #efac3e;} 
+  * input[type=text] {background-color: #efac3e;} 
+  input {background-color: #efac3e;} 
+ 
+Question 3
+1 / 1 pts
+How do you invoke a callback function in JavaScript?
+  * By passing it as an argument to another function and calling it later 
+  By defining it inside an if statement 
+  By using the return statement 
+  By declaring it as a method of an object 
+ 
+Question 4
+1 / 1 pts
+Which of the following is a common use case for callback functions in JavaScript?
+  Defining object literals 
+ *  Handling asynchronous operations, such as fetching data from a server 
+  Implementing nested conditional statements 
+  Performing mathematical operations that involve modulo 
+ 
+Question 5
+1 / 1 pts
+How can you retrieve data from localStorage?
+  * Using localStorage.getItem("key") 
+  Accessing properties directly from localStorage 
+  Retrieval is not possible, only storage 
+  Using localStorage.get("key") 
+ 
+Question 6
+1 / 1 pts
+When storing data in localStorage, what data type is used in the key-value pairs?
+  Any JavaScript data type 
+  Numbers and strings 
+  Objects and arrays 
+  * Only strings 
+ 
+Question 7
+1 / 1 pts
+A HTML form is designed to let users sign up for a newsletter where they provide their name, email address, and where they answer some preference questions.
+
+Which of the following are acceptable text content for the submission button?
+
+Check all that apply.
+
+  * "Subscribe to the Newsletter" 
+  * "Sign Up" 
+  "Go" 
+ *  "Confirm Subscription" 
+  "Submit" 
+ 
+Question 8
+1 / 1 pts
+Which of the following is the correct way to require a form field element in HTML?
+  Add an attribute to the element of content="require" 
+  * Add an attribute of "required" to the element. 
+  Put an asterisk * within the name attribute of the element. 
+  Surround the element in a span tag that contains has a class attribute of "require" 
+ 
+Question 9
+1 / 1 pts
+Which of the following input types would be the best choice for displaying three choices to a user if they are only allowed to select one?
+  * input type="radio" 
+  select 
+  input type="checkbox" 
+  input type="select" 
