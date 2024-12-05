@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Christi Dobbins">
+    <meta name="description" content="Christi Dobbins' week 06 final project rabbitry website.">
+    <title>WDD 131 | HTML Project - Rhinelander Rabbitry Website | Christi Dobbins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/rabbitry.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/orion-lyra.webp" alt="Image of a rabbit in the sunset." class="header-image">
+            <div class="header-text">
+                <h1>Rhinelander Rabbitry!</h1>
+                <button id="menu" class="menu" aria-label="menu"></button>
+                <nav id="nav-menu" class="navigation">
+                    <ul>
+                        <li><a href="#" class="filter-btn" data-filter="all">All</a></li>
+                        <li><a href="#" class="filter-btn" data-filter="rhinelanders">Rhinelanders</a></li>
+                        <li><a href="#" class="filter-btn" data-filter="mini-lops">Mini Lops</a></li>
+                        <li><a href="#" class="filter-btn" data-filter="harlequins">Harlequins</a></li>
+                        <li><a href="#" class="filter-btn" data-filter="pets">Pets</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <p id="random-trivia">A Bit of Trivia: Rabbits have 360-degree vision.</p>
+    <main>
+        <!-- Main content here -->
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/rabbitry.js" defer></script>
+</body>
+
+</html>

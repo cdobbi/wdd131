@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
+
+:root {
+    --primary-color: #ebe0d8;
+    --secondary-color: #e4a150;
+    --tertiary-color: #f4e699;
+    --accent1-color: #000000;
+    --accent2-color: #d40e0e;
+    --heading-font: "Comic Neue", sans-serif;
+    --paragraph-font: "Poppins", sans-serif;
+    --nav-color: black;
+    --nav-hover-link-color: #9e4005;
+    --nav-hover-background-color: #a77260;
+    --nav-visited-link-color: #9e0570;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    font-family: var(--paragraph-font);
+    font-style: normal;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    width: 16.5em;
+    height: 18.75em;
+    padding: 1rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: -6em;
+    margin-left: 4.5rem;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.5rem;
+}
+
+.navigation li {
+    margin: 0 0.625em
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--nav-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    color: var(--nav-color);
+}
+
+h1 {}
+
+button.menu {
+    display: none;
+}
+
+button.filter-btn,
+a.filter-btn {
+    text-decoration: none;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+a.button.filter-btn:hover {
+    background: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: -1.5rem;
+    margin-bottom: -0.5rem;
+}
+
+main {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+#rabbit-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+main p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--accent1-color);
+    padding: 0.2rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent1-color);
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+div.rabbit-card h2 {
+    color: none;
+    font-size: 1.5rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+#random-trivia {
+    font-size: 0.3em;
+    color: var(--accent2-color);
+    font-family: var(--heading-font);
+    margin-right: 1.5rem;
+    text-align: right;
+    font-style: italic;
+}
+
+a:-webkit-any-link {
+    color: var(--nav-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 937px) {
+    header {
+        background-color: var(--tertiary-color);
+    }
+
+    h1,
+    #random-fact {
+        display: none;
+    }
+
+    button.menu {
+        display: flex;
+        padding: 0.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 10px;
+    }
+
+    .rabbit-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    button.menu::before {
+        content: "☰";
+        font-size: large;
+        color: red;
+        margin-right: 1rem;
+    }
+
+    button.menu.open::before {
+        content: "✖";
+        font-size: large;
+        color: red;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation.open ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rabbit-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        background-color: var(--tertiary-color);
+    }
+
+    #rabbit-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 937px) {
+    button.menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    nav a:hover {
+        background: var(--nav-hover-background-color);
+        color: var(--nav-hover-link-color);
+    }
+
+    nav ul a {
+        margin-top: 1rem;
+        text-decoration: none;
+        display: block;
+        margin-right: 1rem;
+    }
+
+}
