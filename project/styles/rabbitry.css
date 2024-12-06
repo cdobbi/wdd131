@@ -189,7 +189,7 @@ footer p {
 }
 
 #random-trivia {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: var(--heading-font);
     margin-right: 1.5rem;
     text-align: right;
