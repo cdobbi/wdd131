@@ -82,7 +82,13 @@ footer {
     color: var(--nav-color);
 }
 
-h1 {}
+h1 {
+    font-size: 3rem;
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
 
 button.menu {
     display: none;
@@ -148,12 +154,12 @@ footer p {
 }
 
 #random-trivia {
-    font-size: 0.3em;
-    color: var(--accent2-color);
+    font-size: 0.8rem;
     font-family: var(--heading-font);
     margin-right: 1.5rem;
     text-align: right;
     font-style: italic;
+    font-weight: lighter;
 }
 
 a:-webkit-any-link {
