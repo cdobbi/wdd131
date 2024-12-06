@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
 
     const trivia = [
-        "A Bit of Trivia: The Rhinelander has a distinctive butterfly marking on it's nose.",
+        "A Bit of Trivia: The Rhinelander has a distinctive butterfly marking on its nose.",
         "A Bit of Trivia: Rhinelanders are rare with about 2,000 in the world.",
         "A Bit of Trivia: The Rhinelander is a rare breed of rabbit.",
         "A Bit of Trivia: Rhinelanders are medium to large-sized rabbits, weighing between 6.5 to 10 pounds",
@@ -52,4 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const randomTrivia = trivia[Math.floor(Math.random() * trivia.length)];
     console.log("A Bit of Trivia: ", randomTrivia);
     document.getElementById("random-trivia").textContent = randomTrivia;
+
+    // Hamburger menu functionality
+    const menuButton = document.getElementById('menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuButton.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+    });
 });

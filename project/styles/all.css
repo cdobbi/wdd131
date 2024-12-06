@@ -31,6 +31,10 @@ h6 {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures space between header elements */
     background-color: var(--secondary-color);
     padding: 20px;
 }
@@ -43,6 +47,15 @@ nav {
     font-family: var(--paragraph-font);
     font-size: 1.2rem;
     display: flex;
+    margin-left: auto;
+    /* This will push the nav to the right */
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav a,
