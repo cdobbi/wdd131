@@ -40,54 +40,35 @@ header {
 }
 
 .header-image {
-    width: 16.5em;
-    height: 18.75em;
+    width: 20.5em;
+    height: 23.75em;
     padding: 1rem;
     max-width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: -6em;
-    margin-left: 4.5rem;
+    margin-left: 4rem;
+    margin-right: 2.5rem;
 }
 
 .header-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 2.2rem;
+    color: var(--accent1-color);
     font-family: var(--heading-font);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.navigation {
-    display: flex;
+nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
-    font-size: 0.5rem;
-}
-
-.navigation li {
-    margin: 0 0.625em
-}
-
-.navigation a {
-    text-decoration: none;
-    color: var(--nav-color);
+    font-size: 1rem;
+    font-family: var(--paragraph-font);
 }
 
 footer {
     background-color: var(--secondary-color);
     padding: 0.5rem;
     color: var(--nav-color);
-}
-
-h1 {
-    font-size: 3rem;
-    color: var(--accent1-color);
-    font-family: var(--heading-font);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 button.menu {
@@ -109,13 +90,6 @@ a.button.filter-btn:hover {
     font-weight: bold;
 }
 
-.navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: -1.5rem;
-    margin-bottom: -0.5rem;
-}
-
 main {
     background-color: var(--primary-color);
     min-height: 100vh;
@@ -127,26 +101,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-top: 1rem;
-}
-
-main p {
-    text-align: center;
-    font-size: 1rem;
-    color: var(--accent1-color);
-    padding: 0.2rem;
-}
-
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--accent1-color);
-    padding: 0.2rem;
-    margin-bottom: 0.5rem;
-}
-
-div.rabbit-card h2 {
-    color: none;
-    font-size: 1.5rem;
 }
 
 footer p {
