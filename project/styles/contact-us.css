@@ -1,63 +1,79 @@
-/* body {
-    font-family: Verdana, sans-serif;
-    display: grid;
-    height: 100vh;
-    margin: 0;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        "header header"
-        "main aside"
-        "footer footer";
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
+
+:root {
+    --primary-color: #ebe0d8;
+    --secondary-color: #e4a150;
+    --accent1-color: #000000;
+    --accent2-color: #70558e;
+    --heading-font: "Comic Neue", sans-serif;
+    --paragraph-font: "Poppins", sans-serif;
+    --nav-color: black;
+    --nav-hover-link-color: #9e0570;
+    --nav-hover-background-color: #a76092;
+    --nav-visited-link-color: #9e0570;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
 }
 
 header {
-    background: rgb(245, 210, 188);
-    padding: 2rem;
-    grid-area: header;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+p {
+    padding: 5px;
+}
+
+nav {
+    font-family: var(--paragraph-font);
+    font-size: 1.2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
 }
 
-main {
-    background: rgb(180, 215, 215);
-    padding: 1rem;
-}
-
-aside {
-    background: rgb(220, 245, 227);
-    padding: 1rem;
-}
-
-footer {
-    background: rgb(210, 202, 191);
-    padding: 5rem;
-    text-align: left;
-    grid-area: footer;
-}
-
-.header-bar {
-    background: rgb(230, 230, 230);
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header-bar ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-}
-
-.header-bar ul li {
-    margin: 0;
-}
-
-.header-bar ul li a {
+nav a,
+nav a:link,
+nav a:visited {
+    color: var(--nav-color);
+    display: block;
     text-decoration: none;
-} */
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    font-weight: bold;
+}
+
+img {
+    max-height: 300px;
+    width: auto;
+}
+
+#random-fact {
+    font-size: 0.5em;
+    color: var(--accent2-color);
+    margin-top: .1px;
+    text-align: center;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
