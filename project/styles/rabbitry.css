@@ -128,12 +128,8 @@ p {
 }
 
 .poem-card {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    font-size: 0.5rem;
     font-family: var(--paragraph-font);
 }
 
@@ -148,57 +144,79 @@ p {
     font-size: 0.3rem;
     text-align: center;
     font-family: var(--heading-font);
+    text-align: center;
 }
 
 /*poem card in row one positioned first */
 .poem-card:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-left: 3.3rem;
     text-align: center;
 }
 
-/* image card in row one positioned second*/
+/* Regi image card in row one positioned second*/
 .image-card:nth-child(2) {
     grid-column: 3 / 5;
     grid-row: 1 / 3;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
-/* image card in row two positioned first */
+/* Puppy card in row three positioned first */
 .image-card:nth-child(3) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
-    width: 75%;
-}
-
-/* poem card in second row positioned second */
-.poem-card:nth-child(4) {
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
-    margin: 0 0 0 9rem;
-    text-align: right;
-}
-
-/* image card in third row positioned first */
-.image-card:nth-child(5) {
-    grid-column: 4 / 5;
-    grid-row: 3 / 4;
-    margin: 0 auto;
+    width: 60%;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 /* poem card in third row positioned second */
-.poem-card:nth-child(6) {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    margin: 0 auto;
+.poem-card:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin-left: 5rem;
+    margin-top: 9rem;
+    margin-right: 3rem;
+    text-align: center;
+    margin-left: 10rem;
 }
 
-/* poem card in fourth row positioned first */
-.image-card:nth-child(7) {
-    grid-column: 2 / 4;
+/* Rhinelander kit line-up image card in third row positioned third */
+.image-card:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    margin-top: 3rem;
+    margin-right: 5rem;
+}
+
+/* Lyra & Kits image card fourth row first position */
+.image-card:nth-child(6) {
+    grid-column: 2 / 3;
     grid-row: 4 / 5;
+    margin-right: 2.5rem;
+}
+
+/* poem card in third row positioned first */
+.poem-card:nth-child(7) {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    margin-top: 25rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* Black Mini Lop image card in fourth row positioned second */
+.image-card:nth-child(8) {
+    grid-column: 3 / 5;
+    grid-row: 4 / 5;
+    margin-top: 3rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 #random-trivia {
