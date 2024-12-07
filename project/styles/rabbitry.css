@@ -22,6 +22,7 @@
 
 body {
     display: block;
+    font-family: var(--paragraph-font);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -32,11 +33,13 @@ header {
     align-items: center;
     background-color: var(--secondary-color);
     min-height: 10rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-image {
@@ -44,21 +47,24 @@ header {
     height: 23.75em;
     max-width: 100%;
     margin: 2rem 3rem -7em 4rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-text {
     font-size: 1.9rem;
     margin-bottom: -5rem;
     font-family: var(--heading-font);
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0 auto;
-    margin-top: -1rem;
-    font-family: var(--heading-font);
     display: flex;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0 auto;
+    font-family: var(--heading-font);
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 nav a {
@@ -66,25 +72,14 @@ nav a {
     color: var(--nav-color);
     white-space: nowrap;
     font-size: 1.05rem;
-
+    transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
     background: var(--nav-hover-background-color);
     color: var(--nav-hover-link-color);
     font-weight: bold;
-}
-
-footer {
-    margin-top: -1rem;
-    background-color: var(--secondary-color);
-    color: var(--nav-color);
-    text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-    padding-top: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 button.menu {
@@ -98,45 +93,52 @@ a.filter-btn {
     background: none;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 a.button.filter-btn:hover {
     background: var(--nav-hover-background-color);
     color: var(--nav-hover-link-color);
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
 }
 
 main {
+    padding: 1rem;
     background-color: var(--primary-color);
     min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
-p {
-    font-family: var(--paragraph-font);
-    font-size: 2rem;
-}
-
-#poem-cards-container,
-#image-cards-container {
+#poem-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .poem-card {
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-family: var(--paragraph-font);
+    transition: all 0.3s ease-in-out;
 }
 
 .image-card img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    transition: all 0.3s ease-in-out;
 }
 
 .image-card figcaption {
@@ -144,113 +146,29 @@ p {
     font-size: 0.3rem;
     text-align: center;
     font-family: var(--heading-font);
-    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-/*poem card in row one positioned first */
-.poem-card:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    margin-top: 10rem;
-    margin-left: 3.3rem;
-    text-align: center;
-}
-
-/* Regi image card in row one positioned second*/
-.image-card:nth-child(2) {
-    grid-column: 3 / 5;
-    grid-row: 1 / 3;
-    margin-top: 3rem;
-}
-
-/* Puppy card in row three positioned first */
-.image-card:nth-child(3) {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-    width: 60%;
-    margin-top: 4rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
-/* poem card in third row positioned second */
-.poem-card:nth-child(4) {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    margin-left: 5rem;
-    margin-top: 9rem;
-    margin-right: 3rem;
-    text-align: center;
-    margin-left: 10rem;
-}
-
-/* Rhinelander kit line-up image card in third row positioned third */
-.image-card:nth-child(5) {
-    grid-column: 4 / 5;
-    grid-row: 3 / 4;
-    margin-top: 3rem;
-    margin-right: 5rem;
-}
-
-/* Lyra & Kits image card fourth row first position */
-.image-card:nth-child(6) {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    margin-right: 2.5rem;
-}
-
-/* poem card in third row positioned first */
-.poem-card:nth-child(7) {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
-    margin-top: 25rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    margin-bottom: 5rem;
-}
-
-/* Black Mini Lop image card in fourth row positioned second */
-.image-card:nth-child(8) {
-    grid-column: 3 / 5;
-    grid-row: 4 / 5;
-    margin-top: 3rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-}
-
-#random-trivia {
-    font-size: 0.8rem;
-    font-family: var(--heading-font);
-    margin-right: 1.5rem;
-    text-align: right;
-    font-style: italic;
-    font-weight: lighter;
-}
-
-a:-webkit-any-link {
+footer {
+    margin-top: -1rem;
+    background-color: var(--secondary-color);
     color: var(--nav-color);
-    cursor: pointer;
-    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+footer p {
+    font-size: 1rem;
+    padding-top: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 937px) {
     header {
-        height: 5rem;
         background-color: var(--tertiary-color);
     }
 
     header h1 {
-        font-size: 1.5rem;
-    }
-
-    .poem-card p {
-        font-size: 1rem;
-        font-family: var(--paragraph-font);
-    }
-
-    .header-image,
-    h1 {
         display: none;
     }
 
@@ -260,7 +178,9 @@ a:-webkit-any-link {
         cursor: pointer;
         background: none;
         border: none;
-        font-size: 1rem;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
         position: absolute;
         right: 10px;
     }
@@ -269,17 +189,6 @@ a:-webkit-any-link {
         width: 100%;
         height: auto;
         display: block;
-    }
-
-    button.menu {
-        display: flex;
-        padding: 0.5rem;
-        cursor: pointer;
-        background: none;
-        border: none;
-        font-size: 1rem;
-        position: absolute;
-        right: 10px;
     }
 
     button.menu::before {
@@ -297,14 +206,12 @@ a:-webkit-any-link {
 
     .navigation {
         display: none;
-        flex-direction: center;
-        align-items: center;
-        width: 100%;
-        /* Make the dropdown fill the width of the header */
     }
 
     .navigation.open {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navigation.open ul {
@@ -313,67 +220,21 @@ a:-webkit-any-link {
         align-items: center;
     }
 
-    figcaption {
-        margin-top: 0.5rem;
-        font-size: 0.1rem;
-        color: var(--accent1-color);
-        text-align: center;
-    }
-
-    #rabbit-cards-container {
+    #poem-cards-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-
-    body,
-    .poem-card p,
-    nav a,
-    footer p {
-        font-size: 0.8rem;
+    header {
+        background-color: var(--tertiary-color);
     }
 
-    .poem-card,
-    .image-card {
-        grid-column: 1 / -1;
-        margin: 0 auto;
-    }
-
-    .image-card img {
-        width: 100%;
-        height: auto;
-    }
-
-    #rabbit-cards-container {
+    #poem-cards-container {
         grid-template-columns: 1fr;
     }
 
-    p#random-trivia {
-        display: none;
-    }
-}
-
-@media (min-width: 937px) {
-    button.menu {
-        display: none;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-    }
-
-    nav a:hover {
-        background: var(--nav-hover-background-color);
-        color: var(--nav-hover-link-color);
-    }
-
-    nav ul a {
-        margin-top: 1rem;
-        text-decoration: none;
-        display: block;
-        margin-right: 1rem;
+    #poem-cards-container img {
+        width: 100%;
     }
 }
