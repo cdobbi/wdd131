@@ -154,40 +154,50 @@ p {
 .poem-card:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
-    justify-self: center;
+    margin-top: 5rem;
+    margin-left: 3.3rem;
+    text-align: center;
 }
 
 /* image card in row one positioned second*/
 .image-card:nth-child(2) {
     grid-column: 3 / 5;
     grid-row: 1 / 3;
-    margin-right: 3rem;
+    margin: 0 auto;
 }
 
 /* image card in row two positioned first */
 .image-card:nth-child(3) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    width: 75%;
 }
 
-/* image card in third row  */
+/* poem card in second row positioned second */
 .poem-card:nth-child(4) {
-    grid-column: 3 / 5;
-    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    margin: 0 0 0 9rem;
+    text-align: right;
 }
 
+/* image card in third row positioned first */
 .image-card:nth-child(5) {
     grid-column: 4 / 5;
-    grid-row: 2/ 4;
+    grid-row: 3 / 4;
+    margin: 0 auto;
 }
 
+/* poem card in third row positioned second */
 .poem-card:nth-child(6) {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
+    margin: 0 auto;
 }
 
-.poem-card:nth-child(7) {
-    grid-column: 3 / 5;
+/* poem card in fourth row positioned first */
+.image-card:nth-child(7) {
+    grid-column: 2 / 4;
     grid-row: 4 / 5;
 }
 
