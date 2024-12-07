@@ -33,7 +33,8 @@ h6 {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures space between header elements */
+    justify-content: space-between;
+    /* Ensures space between header elements */
     background-color: var(--secondary-color);
     padding: 20px;
 }
@@ -46,7 +47,8 @@ nav {
     font-family: var(--paragraph-font);
     font-size: 1.2rem;
     display: flex;
-    margin-left: auto; /* This will push the nav to the right */
+    margin-left: auto;
+    /* This will push the nav to the right */
 }
 
 nav ul {
@@ -62,7 +64,7 @@ nav a:visited {
     color: var(--nav-color);
     display: block;
     text-decoration: none;
-    padding: 10px 15px;    
+    padding: 10px 15px;
 }
 
 nav a:hover {

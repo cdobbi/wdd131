@@ -51,6 +51,99 @@ nav {
     /* This will push the nav to the right */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
+
+:root {
+    --primary-color: #ebe0d8;
+    --secondary-color: #e4a150;
+    --accent1-color: #000000;
+    --accent2-color: #70558e;
+    --heading-font: "Comic Neue", sans-serif;
+    --paragraph-font: "Poppins", sans-serif;
+    --nav-color: black;
+    --nav-hover-link-color: #9e0570;
+    --nav-hover-background-color: #a76092;
+    --nav-visited-link-color: #9e0570;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures space between header elements */
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+p {
+    padding: 5px;
+}
+
+nav {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    display: flex;
+    margin-left: auto;
+    /* This will push the nav to the right */
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    color: var(--nav-color);
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    font-weight: bold;
+}
+
+img {
+    max-height: 300px;
+    width: auto;
+}
+
+#random-fact {
+    font-size: 0.5em;
+    color: var(--accent2-color);
+    margin-top: .1px;
+    text-align: center;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 nav ul {
     display: flex;
     margin: 0;
