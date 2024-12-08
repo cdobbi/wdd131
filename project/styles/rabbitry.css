@@ -57,11 +57,17 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-nav ul {
+a {
+    text-decoration: none;
+    color: var(--nav-color);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul,
+nav li {
     display: flex;
     list-style: none;
-    padding: 0.5rem;
-    margin: 0 auto;
+    margin: 0.vw;
     font-family: var(--heading-font);
     justify-content: center;
     transition: all 0.3s ease-in-out;
@@ -89,7 +95,6 @@ button.menu {
 button.filter-btn,
 a.filter-btn {
     text-decoration: none;
-    padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -106,6 +111,16 @@ a.button.filter-btn:hover {
 .navigation {
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+#random-trivia {
+    font-size: 0.5vw;
+    font-family: var(--heading-font);
+    margin-right: 1.5rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: lighter;
     transition: all 0.3s ease-in-out;
 }
 
@@ -143,11 +158,90 @@ main {
 
 .image-card figcaption {
     margin-top: 0.5rem;
-    font-size: 0.3rem;
+    font-size: 0.2vw;
     text-align: center;
     font-family: var(--heading-font);
     transition: all 0.3s ease-in-out;
 }
+
+/* Card Positioning */
+.poem-card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-top: 6.9rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    margin-right: 2rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    margin-top: 8rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-top: -6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card:nth-child(6) {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card:nth-child(7) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+    margin-top: 19rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card:nth-child(9) {
+    grid-column: 1/ 2;
+    grid-row: 2 / 3;
+    margin-top: 36.5rem;
+    margin-right: 1rem;
+    margin-left: 5.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    margin-top: 32rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
 
 footer {
     margin-top: -1rem;
@@ -155,12 +249,15 @@ footer {
     color: var(--nav-color);
     text-align: center;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 footer p {
     font-size: 1rem;
     padding-top: 1rem;
     transition: all 0.3s ease-in-out;
+    font-family: var(--heading-font);
+
 }
 
 @media (max-width: 937px) {
@@ -174,7 +271,6 @@ footer p {
 
     button.menu {
         display: flex;
-        padding: 0.5rem;
         cursor: pointer;
         background: none;
         border: none;
@@ -183,12 +279,6 @@ footer p {
         font-weight: bold;
         position: absolute;
         right: 10px;
-    }
-
-    .rabbit-card img {
-        width: 100%;
-        height: auto;
-        display: block;
     }
 
     button.menu::before {
@@ -212,16 +302,83 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .navigation.open ul {
         width: 100%;
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        margin: 0;
     }
 
     #poem-cards-container {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .poem-card {
+        display: none;
+    }
+
+    .image-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        margin: 0 auto;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(2) {
+        margin-top: -1rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image-card:nth-child(5) {
+        margin-top: 0.3rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(6) {
+        margin-top: -0.1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(9) {
+        margin-top: -3rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer {
+        display: block !important;
+        visibility: visible !important;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--tertiary-color);
+        color: var(--nav-color);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer p {
+        font-size: 1rem;
+        padding-top: 1rem;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -230,11 +387,75 @@ footer p {
         background-color: var(--tertiary-color);
     }
 
-    #poem-cards-container {
-        grid-template-columns: 1fr;
+    header img {
+        display: none;
     }
 
-    #poem-cards-container img {
+    ul {
+        text-align: center;
+    }
+
+    #poem-cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        /* Add gap between items */
+    }
+
+    .image-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        margin: 0 auto;
         width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(2) {
+        margin-top: -1rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image-card:nth-child(5) {
+        margin-top: -12rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(6) {
+        margin-top: -0.1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(9) {
+        margin-top: -55rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer {
+        display: block !important;
+        visibility: visible !important;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--tertiary-color);
+        color: var(--nav-color);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer p {
+        font-size: 1rem;
+        padding-top: 1rem;
+        transition: all 0.3s ease-in-out;
     }
 }
