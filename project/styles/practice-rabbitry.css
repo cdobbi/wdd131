@@ -57,13 +57,17 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    height: auto; /* Adjust the height as needed */
+    height: auto;
+    /* Adjust the height as needed */
 }
 
 .image-grid img {
-    width: 3in; /* Set the width to 3 inches */
-    height: 3in; /* Set the height to 3 inches */
-    object-fit: contain; /* Ensure the images maintain their aspect ratio */
+    width: 3in;
+    /* Set the width to 3 inches */
+    height: 3in;
+    /* Set the height to 3 inches */
+    object-fit: contain;
+    /* Ensure the images maintain their aspect ratio */
 }
 
 .bottom-left {
