@@ -1,14 +1,14 @@
 * {
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 body {
     display: block;
     font-family: "Merriweather", sans-serif;
     font-style: normal;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -44,10 +44,6 @@ a.button.filter-btn:hover {
     flex-direction: column;
 }
 
-main {
-    padding: 1rem;
-}
-
 #temple-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,15 +55,12 @@ main p {
     text-align: center;
     font-size: 1rem;
     color: rgb(0, 0, 0);
-    padding: 0.2rem;
 }
 
 main h2 {
     text-align: center;
     font-size: 2rem;
     color: rgb(46, 84, 107);
-    padding: 0.2rem;
-    margin-bottom: 0.5rem;
 }
 
 div.temple-card h2 {
@@ -77,20 +70,20 @@ div.temple-card h2 {
 
 img {
     height: auto;
-    padding: 1rem;
     max-width: 100%;
     margin-bottom: 1rem;
 }
 
 footer p {
-    padding: 0.5rem;
-    margin-top: 2rem;
+    width: 100%;
     text-align: left;
     font-weight: bold;
 }
 
 @media (max-width: 937px) {
     header {
+        width: 100%;
+        margin: 0 auto;
         background-color: rgb(220, 232, 254);
     }
 
@@ -100,7 +93,6 @@ footer p {
 
     button.menu {
         display: flex;
-        padding: 0.5rem;
         cursor: pointer;
         background: none;
         border: none;
@@ -169,14 +161,12 @@ footer p {
 
     header,
     footer {
-        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         background-color: rgb(93, 119, 105);
         color: black;
-        padding: 0.5rem;
-        margin: 1rem auto;
     }
 
     button.menu {
@@ -188,13 +178,12 @@ footer p {
         display: flex;
         flex-direction: row;
         list-style: none;
+        font-size: .8rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
-        margin-top: 1.8rem;
-        margin-left: 1rem;
     }
 
     nav a:hover {
@@ -203,20 +192,14 @@ footer p {
     }
 
     nav ul a {
-        margin-top: 2rem;
-        padding: 0.5rem;
         text-decoration: none;
         display: block;
         color: black;
-        margin-right: 1rem;
     }
 
     header,
     footer p {
-        margin-top: 2rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding: 0.5rem;
+        max-width: 100%;
     }
 
 }

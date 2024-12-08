@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Christi Dobbins">
-    <meta name="description" content="Christi Dobbins' week 06 final project rabbitry website.">
+    <meta name="description" content="Christi Dobbins' final project for week 06 - Rhinelander Rabbitry website.">
     <title>WDD 131 | HTML Project - Rhinelander Rabbitry Website | Christi Dobbins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-</head>
-
-<link rel="stylesheet" href="styles/rabbitry.css">
+    <link rel="stylesheet" href="styles/rabbitry.css">
+    <script src="scripts/rabbitry.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <img src="images/orion-lyra.webp" alt="Image of a rabbit in the sunset." class="header-image">
+            <img src="images/orion-lyra.webp" alt="Rabbit in the sunset" class="header-image" loading="lazy">
             <div class="header-text">
                 <h1>Rhinelander Rabbitry</h1>
                 <button id="menu" class="menu" aria-label="menu"></button>
@@ -31,80 +30,74 @@
                         <li><a href="mini-lops.html" class="filter-btn" data-filter="mini-lops" target="_blank">Mini-Lops</a></li>
                         <li><a href="harlequins.html" class="filter-btn" data-filter="harlequins" target="_blank">Harlequins</a></li>
                         <li><a href="all.html" class="filter-btn" data-filter="all">All</a></li>
-                        <li><a href="contact-us.html" class="filter-btn" data-filter="contact-us" target="_blank">Contact US</a></li>
+                        <li><a href="contact-us.html" class="filter-btn" data-filter="contact-us" target="_blank">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <!-- <strong> -->
     <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
-    <!-- </strong> -->
     <main>
         <section id="poem-cards-container">
-
             <div class="poem-card">
                 <p>
                     In fields where sunlight gently fades,<br>Beneath the leafy, whispering glades,<br>Live silent shadows, soft and
                     light,<br>Hopping through the day and night.
                 </p>
             </div>
-
-
-            <figure class="image-card"> <img src="images/regi.webp" alt="Japanese Harlequin" loading="lazy">
-                <figcaption><a href="harlequins.html" target="_blank">click here to see & learn more about Harlequins</a></figcaption>
+            <figure class="image-card">
+                <img src="images/regi.webp" alt="Japanese Harlequin" loading="lazy">
+                <figcaption><a href="harlequins.html" target="_blank">See & learn about Harlequins</a></figcaption>
             </figure>
-
-
-            <figure class="image-card"> <img src="images/puppy2.webp" alt="Black Self Mini Lop" loading="lazy">
-                <figcaption><a href="mini-lops.html" target="_blank">click here to see & learn more about Rhinelanders</a></figcaption>
+            <figure class="image-card">
+                <img src="images/puppy2.webp" alt="Black Self Mini Lop" loading="lazy">
+                <figcaption><a href="mini-lops.html" target="_blank">See & learn about Mini Lops</a></figcaption>
             </figure>
-
-
             <div class="poem-card">
                 <p>
                     Oh, gentle bunnies, so serene,<br>Embodiments of peace unseen,<br>In their quiet, modest grace,<br>They teach us how to
                     find our place.
                 </p>
             </div>
-
-
-            <figure class="image-card"> <img src="images/kit-lineup.webp" alt="Rhinelnder Kits" loading="lazy">
-                <figcaption><a href="rhinelanders.html" target="_blank">click here to see & learn more about Rhinelanders</a></figcaption>
+            <figure class="image-card">
+                <img src="images/kit-lineup.webp" alt="Rhinelander Kits" loading="lazy">
+                <figcaption><a href="rhinelanders.html" target="_blank">See & learn about Rhinelanders</a></figcaption>
             </figure>
-
-
-            <figure class="image-card"> <img src="images/lyraandkits.jpg" alt="Rhinelnder Kits" loading="lazy">
-                <figcaption><a href="rhinelanders.html" target="_blank">click here to see & learn more about Mini Lops</a></figcaption>
+            <figure class="image-card">
+                <img src="images/lyraandkits.jpg" alt="Rhinelander Kits" loading="lazy">
+                <figcaption><a href="rhinelanders.html" target="_blank">See & learn about Rhinelanders</a></figcaption>
             </figure>
-
-
             <div class="poem-card">
                 <p>
-                    With every hop, in graceful stride,<br>Through open fields, and meadows wide,<br>They whisper secrets to the earth,<br>Of
-                    quiet strength, of gentle worth.
+                    With every hop, in graceful stride,<br>Through open fields, and meadows wide,<br>They whisper secrets to the
+                    earth,<br>Of quiet strength, of gentle worth.
                 </p>
             </div>
-
-
             <div class="poem-card">
                 <p>
                     In their eyes, pure glee does gleam,<br>A mirrored world where hope can dream,<br>So hop along, with joy and
                     pride,<br>For in your hearts, all fears subside.
                 </p>
             </div>
-
-
-            <figure class="image-card"> <img src="images/black-mini-lop.webp" alt="Broken Black Mini Lop" loading="lazy">
-                <figcaption><a href="all.html" target="_blank">click here to see all the buns!</figcaption>
+            <figure class="image-card">
+                <img src="images/black-mini-lop.webp" alt="Broken Black Mini Lop" loading="lazy">
+                <figcaption><a href="all.html" target="_blank">See all the buns!</a></figcaption>
             </figure>
         </section>
+        <div id="contact-us">
+            <p>
+                <a id="contact-us" link rel="prefetch" href="contact-us.html" target="_blank">Click Here if you have questions, or just want
+                    to
+                    say hello. Feel free to reach out to us and we'll help you as you go.</a>
+            </p>
+        </div>
     </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
-        <p>Last modified: <span id="lastModified"></span></p>
-    </footer>
-    <script src="scripts/rabbitry.js" defer></script>
+</body>
+<footer>
+    <p>&copy; <span id="currentyear"></span> 🐇🥕🥬🫐🌿 Christi Dobbins 🐇🥕🥬🫐🌿 USA</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+</footer>
+<script src="scripts/rabbitry.js" defer></script>
 </body>
 
 </html>
