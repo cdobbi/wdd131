@@ -1,0 +1,73 @@
+@media (max-width: 600px) {
+    header {
+        background-color: var(--tertiary-color);
+    }
+
+    header img {
+        display: none;
+    }
+
+    #poem-cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        /* Add gap between items */
+    }
+
+    .image-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        margin: 0 auto;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(2) {
+        margin-top: -8rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image-card:nth-child(5) {
+        margin-top: -12rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(6) {
+        margin-top: -0.1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(9) {
+        margin-top: -55rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer {
+        display: block !important;
+        visibility: visible !important;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--tertiary-color);
+        color: var(--nav-color);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer p {
+        font-size: 1rem;
+        padding-top: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+}

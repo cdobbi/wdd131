@@ -1,0 +1,121 @@
+@media (max-width: 937px) {
+    header {
+        background-color: var(--tertiary-color);
+    }
+
+    header h1 {
+        display: none;
+    }
+
+    button.menu {
+        display: flex;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+    }
+
+    button.menu::before {
+        content: "☰";
+        font-size: large;
+        color: red;
+        margin-right: 1rem;
+    }
+
+    button.menu.open::before {
+        content: "✖";
+        font-size: large;
+        color: red;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation.open ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #poem-cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .poem-card {
+        display: none;
+    }
+
+    .image-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        margin: 0 auto;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(2) {
+        margin-top: -1rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image-card:nth-child(5) {
+        margin-top: 0.3rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(6) {
+        margin-top: -0.1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .image-card:nth-child(9) {
+        margin-top: -3rem;
+        transition: all 0.3s ease-in-out;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer {
+        display: block !important;
+        visibility: visible !important;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--tertiary-color);
+        color: var(--nav-color);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer p {
+        font-size: 1rem;
+        padding-top: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+}
