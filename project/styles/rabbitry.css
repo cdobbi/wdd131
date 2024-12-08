@@ -63,11 +63,11 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-nav ul,
-nav li {
+nav ul {
     display: flex;
     list-style: none;
-    margin: 0.vw;
+    padding: 0.5rem;
+    margin: 0 auto;
     font-family: var(--heading-font);
     justify-content: center;
     transition: all 0.3s ease-in-out;
@@ -95,6 +95,7 @@ button.menu {
 button.filter-btn,
 a.filter-btn {
     text-decoration: none;
+    padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -158,6 +159,37 @@ main {
 
 .image-card figcaption {
     margin-top: 0.5rem;
+    font-size: 0.3rem;
+    text-align: center;
+    font-family: var(--heading-font);
+    transition: all 0.3s ease-in-out;
+}
+
+#poem-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--paragraph-font);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card figcaption {
+    margin-top: 0.5rem;
     font-size: 0.2vw;
     text-align: center;
     font-family: var(--heading-font);
@@ -183,6 +215,15 @@ main {
     margin-left: 1rem;
     transition: all 0.3s ease-in-out;
 }
+
+/*.image-card:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    width: 60%;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}*/
 
 .poem-card:nth-child(4) {
     grid-column: 2 / 3;
@@ -226,7 +267,7 @@ main {
 .image-card:nth-child(9) {
     grid-column: 1/ 2;
     grid-row: 2 / 3;
-    margin-top: 36.5rem;
+    margin-top: 40rem;
     margin-right: 1rem;
     margin-left: 5.5rem;
     transition: all 0.3s ease-in-out;
@@ -235,7 +276,7 @@ main {
 .poem-card:nth-child(8) {
     grid-column: 2 / 3;
     grid-row: 2 / 4;
-    margin-top: 32rem;
+    margin-top: 31rem;
     margin-right: 3rem;
     margin-left: 3rem;
     text-align: center;
@@ -257,7 +298,7 @@ footer p {
     padding-top: 1rem;
     transition: all 0.3s ease-in-out;
     font-family: var(--heading-font);
-
+    
 }
 
 @media (max-width: 937px) {
@@ -280,7 +321,7 @@ footer p {
         position: absolute;
         right: 10px;
     }
-
+    
     button.menu::before {
         content: "☰";
         font-size: large;
@@ -318,7 +359,7 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 1rem;    
     }
 
     .poem-card {
@@ -391,10 +432,6 @@ footer p {
         display: none;
     }
 
-    ul {
-        text-align: center;
-    }
-
     #poem-cards-container {
         display: flex;
         flex-direction: column;
@@ -419,7 +456,7 @@ footer p {
     }
 
     .image-card:nth-child(2) {
-        margin-top: -1rem;
+        margin-top: -8rem;
         transition: all 0.3s ease-in-out;
         margin-left: 0;
         margin-right: 0;

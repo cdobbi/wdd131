@@ -1,185 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
-
-:root {
-    --primary-color: #ebe0d8;
-    --secondary-color: #e4a150;
-    --accent1-color: #000000;
-    --accent2-color: #70558e;
-    --heading-font: "Comic Neue", sans-serif;
-    --paragraph-font: "Poppins", sans-serif;
-    --nav-color: black;
-    --nav-hover-link-color: #9e0570;
-    --nav-hover-background-color: #a76092;
-    --nav-visited-link-color: #9e0570;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
-    background-color: var(--primary-color);
+    display: block;
+    font-family: "Merriweather", sans-serif;
+    font-style: normal;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--heading-font);
+button.menu {
+    display: none;
 }
 
-header {
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+button.filter-btn,
+a.filter-btn {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+a.button.filter-btn:hover {
+    background: rgb(57, 97, 120);
+    color: yellow;
+    font-weight: bold;
+}
+
+.navigation {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* Ensures space between header elements */
-    background-color: var(--secondary-color);
-    padding: 20px;
 }
 
-p {
-    padding: 5px;
+main {
+    padding: 1rem;
 }
 
-nav {
-    font-family: var(--paragraph-font);
-    font-size: 1.2rem;
-    display: flex;
-    margin-left: auto;
-    /* This will push the nav to the right */
+#temple-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&display=swap');
-
-:root {
-    --primary-color: #ebe0d8;
-    --secondary-color: #e4a150;
-    --accent1-color: #000000;
-    --accent2-color: #70558e;
-    --heading-font: "Comic Neue", sans-serif;
-    --paragraph-font: "Poppins", sans-serif;
-    --nav-color: black;
-    --nav-hover-link-color: #9e0570;
-    --nav-hover-background-color: #a76092;
-    --nav-visited-link-color: #9e0570;
-}
-
-body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
-    background-color: var(--primary-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--heading-font);
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Ensures space between header elements */
-    background-color: var(--secondary-color);
-    padding: 20px;
-}
-
-p {
-    padding: 5px;
-}
-
-nav {
-    font-family: var(--paragraph-font);
+main p {
+    text-align: center;
     font-size: 1rem;
-    display: flex;
-    margin-left: auto;
-    /* This will push the nav to the right */
+    color: rgb(0, 0, 0);
+    padding: 0.2rem;
 }
 
-nav ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(46, 84, 107);
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
-nav a,
-nav a:link,
-nav a:visited {
-    color: var(--nav-color);
-    display: block;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
-    font-weight: bold;
+div.temple-card h2 {
+    color: rgb(136, 135, 135);
+    font-size: 1.5rem;
 }
 
 img {
-    max-height: 300px;
-    width: auto;
+    height: auto;
+    padding: 1rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
 }
 
-#random-fact {
-    font-size: 0.5em;
-    color: var(--accent2-color);
-    margin-top: .1px;
-    text-align: center;
-}
-
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-nav ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav a,
-nav a:link,
-nav a:visited {
-    color: var(--nav-color);
-    display: block;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+footer p {
+    padding: 0.5rem;
+    margin-top: 2rem;
+    text-align: left;
     font-weight: bold;
 }
 
-img {
-    max-height: 300px;
-    width: auto;
+@media (max-width: 937px) {
+    header {
+        background-color: rgb(220, 232, 254);
+    }
+
+    h1 {
+        display: none;
+    }
+
+    button.menu {
+        display: flex;
+        padding: 0.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+    }
+
+    .temple-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    button.menu::before {
+        content: "☰";
+        font-size: large;
+        color: red;
+        margin-right: 1rem;
+    }
+
+    button.menu.open::before {
+        content: "✖";
+        font-size: large;
+        color: red;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation.open ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #temple-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-#random-fact {
-    font-size: 0.5em;
-    color: var(--accent2-color);
-    margin-top: .1px;
-    text-align: center;
+@media (max-width: 600px) {
+    header {
+        background-color: rgb(220, 232, 254);
+    }
+
+    #temple-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    #temple-cards-container img {
+        width: 100%;
+    }
 }
 
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: none;
+@media (min-width: 937px) {
+
+    header,
+    footer {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(93, 119, 105);
+        color: black;
+        padding: 0.5rem;
+        margin: 1rem auto;
+    }
+
+    button.menu {
+        display: none;
+        color: black;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1.8rem;
+        margin-left: 1rem;
+    }
+
+    nav a:hover {
+        background: rgb(46, 84, 107);
+        color: yellow;
+    }
+
+    nav ul a {
+        margin-top: 2rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        display: block;
+        color: black;
+        margin-right: 1rem;
+    }
+
+    header,
+    footer p {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.5rem;
+    }
+
 }
