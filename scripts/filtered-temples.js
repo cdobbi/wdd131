@@ -85,7 +85,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-3547-thumb.jpg"
+        imageUrl: "images/rome-italy-temple-3547-thumb.webp"
     },
     {
         templeName: "Draper Utah",
