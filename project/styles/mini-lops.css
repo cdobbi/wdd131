@@ -1,205 +1,236 @@
-* {
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 body {
-    display: block;
-    font-family: "Merriweather", sans-serif;
+    /* body is a grid container */
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* full height */
+    margin: 0;
+    /* no margin */
+    grid-template-rows: auto 1fr auto;
+    /* header, main, footer */
+    grid-template-columns: 1fr;
+    /* full width */
+    font-family: "Poppins", sans-serif;
+    /* font family */
     font-style: normal;
-    margin: 0 auto;
+    /* font style */
+    font-weight: 450;
+    /* font weight */
+    grid-template-areas:
+        /* grid areas */
+        "header"
+        "main"
+        "footer";
 }
 
-button.menu {
-    display: none;
+header {
+    /* header is a grid container */
+    box-sizing: border-box;
+    /* padding width */
+    background: rgb(245, 210, 188);
+    /* header background color */
+    padding: 1.5rem;
+    /* padding around header */
+    grid-area: header;
+    /* header full width */
+    width: 80%;
+    /* header full width */
+}
+
+h1 {
+    /* h1 is a flex container */
+    font-family: "Poppins", sans-serif;
+    /* font family */
+    font-weight: 100;
+    /* font weight */
+    font-style: normal;
+    /* font style */
+    font-size: 2rem;
+    /* font size */
+    margin: 1.5rem;
+    /* margin */
+    text-align: center;
+    /* center text */
+}
+
+nav {
+    /* nav is a flex container */
+    box-sizing: border-box;
+    /* padding width */
+    background-color: rgb(254, 119, 137);
+    /* nav background color */
+    padding: 1rem;
+    /* padding around nav */
+    max-width: 100%;
+    /* nav bar full width */
 }
 
 nav ul {
+    /* nav links */
     display: flex;
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0 auto;
-}
-
-button.filter-btn,
-a.filter-btn {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-a.button.filter-btn:hover {
-    background: rgb(57, 97, 120);
-    color: yellow;
-    font-weight: bold;
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-}
-
-#temple-cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-main p {
-    text-align: center;
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
-}
-
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: rgb(46, 84, 107);
-}
-
-div.temple-card h2 {
-    color: rgb(136, 135, 135);
-    font-size: 1.5rem;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-    margin-bottom: 1rem;
-}
-
-footer p {
+    /* flex container */
+    justify-content: space-between;
+    /* space between links */
+    padding: 0;
+    /* no padding */
+    margin: 0;
+    /* no margin */
     width: 100%;
-    text-align: left;
-    font-weight: bold;
+    /* full width */
+    list-style: none;
+    /* remove bullet points */
 }
 
-@media (max-width: 937px) {
-    header {
-        width: 100%;
-        margin: 0 auto;
-        background-color: rgb(220, 232, 254);
-    }
-
-    h1 {
-        display: none;
-    }
-
-    button.menu {
-        display: flex;
-        cursor: pointer;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        right: 10px;
-    }
-
-    .temple-card img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    button.menu::before {
-        content: "☰";
-        font-size: large;
-        color: red;
-        margin-right: 1rem;
-    }
-
-    button.menu.open::before {
-        content: "✖";
-        font-size: large;
-        color: red;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .navigation.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation.open ul {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #temple-cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+nav a {
+    /* nav links */
+    display: block;
+    /* block element */
+    color: black;
+    /* text color */
+    text-align: center;
+    /* center text */
+    padding: 0.3rem;
+    /* padding around text */
+    text-decoration: none;
+    /* remove underline */
 }
 
-@media (max-width: 600px) {
-    header {
-        background-color: rgb(220, 232, 254);
-    }
-
-    #temple-cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    #temple-cards-container img {
-        width: 100%;
-    }
+nav a:hover {
+    /* hover effect */
+    border: 3px solid #9512a3;
+    /* border color */
+    border-radius: 5px;
+    /* rounded corners */
+    text-decoration: none;
+    /* remove underline */
+    color: #e8fd60;
+    /* text color */
 }
 
-@media (min-width: 937px) {
+main {
+    /* main is a grid container */
+    display: grid;
+    /* main is a grid container, maaning horizontal */
+    grid-template-columns: 2fr 1fr;
+    /* main takes 2/3, aside takes 1/3 */
+    gap: .8rem;
+    /* gap between main and aside */
+    max-width: 80%;
+    /* main has full width */
+    background: rgb(199, 228, 228);
+    padding: 2rem;
+    /* padding around main */
+    margin: 0 auto;
+    /* centered horizontally */
+    box-sizing: border-box;
+    /* padding width */
+    grid-area: main;
+}
 
-    header,
-    footer {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        background-color: rgb(93, 119, 105);
-        color: black;
-    }
+.card {
+    /* card is a flex container */
+    padding: 1rem;
+    /* padding around card */
+    border: 1px solid #111010;
+    /* border color */
+    border-radius: 5px;
+    /* rounded corners */
+    background: rgb(206, 221, 229);
+    /* card background color */
+}
 
-    button.menu {
-        display: none;
-        color: black;
-    }
+.card h2 {
+    /* h2 within card */
+    background-color: rgb(253, 248, 211);
+    /* bar color */
+    color: black;
+    /* text color */
+    padding: 0rem;
+    /* bar padding*/
+    text-align: center;
+    /* center text within the bar, meaning horizontally */
+    margin: -1rem -1rem 1rem -1rem;
+    /* margins align with card edges, meaning -1rem top, right, bottom, left */
+    border-radius: 5px 5px 0 0;
+    /* rounded corners */
+}
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        font-size: .8rem;
-    }
+.about-me-content {
+    /* about-me-content is a flex container */
+    display: flex;
+    /* flex container, meaning horizontal */
+    align-items: center;
+    /* center items vertically */
+}
 
-    h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
+.about-me-content p {
+    /* paragraph within about-me-content */
+    flex: 1;
+    /* take up remaining space */
+    margin-right: 1rem;
+    /* space between image and text */
+    padding: 1rem;
+    /* padding around text */
+    margin-top: auto;
+    /* align text to the top */
+}
 
-    nav a:hover {
-        background: rgb(46, 84, 107);
-        color: yellow;
-    }
+.about-me-content img {
+    /* image within about-me-content */
+    width: 100px;
+    /* image width */
+    height: auto;
+    /* maintain aspect ratio */
+    padding: .5rem;
+}
 
-    nav ul a {
-        text-decoration: none;
-        display: block;
-        color: black;
-    }
+.country-content {
+    /* country-content is a flex container */
+    display: flex;
+    /* flex container, meaning horizontal */
+    align-items: center;
+    /* center items vertically*/
+}
 
-    header,
-    footer p {
-        max-width: 100%;
-    }
+.country-content p {
+    /* paragraph within country-content */
+    flex: 1;
+    /* take up remaining space, meaning 2/3 */
+    margin-left: 1rem;
+    /* space between image and text */
+    padding: 1rem;
+    /* padding around text */
+    margin-top: auto;
+    /* align text to the top */
+}
 
+.country-content img {
+    /* image within country-content */
+    width: 150px;
+    /* image width, meaning 150px */
+    height: auto;
+    /* maintain aspect ratio */
+}
+
+aside.card {
+    /* aside is a card */
+    background: rgb(220, 245, 227);
+    /* aside background color */
+    padding: 1rem;
+    /* padding around aside. 1rem means 1*16px */
+    grid-column: 2;
+    /* aside in second column, meaning 1/3 width */
+}
+
+footer {
+    width: 80%;
+    /* footer is a grid container */
+    background: rgb(210, 202, 191);
+    /* footer background color */
+    padding: 0rem;
+    /* padding around footer */
+    text-align: center;
+    /* center text */
+    grid-area: footer;
+    /* footer takes full width */
 }

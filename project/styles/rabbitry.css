@@ -11,7 +11,7 @@
     --nav-color: black;
     --nav-hover-link-color: #8e3904;
     --nav-hover-background-color: #fbb198;
-    --nav-visited-link-color: #9e0570;
+    --nav-visited-link-color: black;
 }
 
 * {
@@ -63,6 +63,10 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+a.filter-btn {
+    color: var(--nav-color);
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -71,6 +75,7 @@ nav ul {
     font-family: var(--heading-font);
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    color: var(--nav-color);
 }
 
 nav a {
@@ -117,6 +122,7 @@ a.button.filter-btn:hover {
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease-in-out;
+    color: var(--nav-color);
 }
 
 #random-trivia {
@@ -194,7 +200,7 @@ main {
 
 .image-card figcaption {
     margin-top: 0.5rem;
-    font-size: 0.2vw;
+    font-size: 1.3vw;
     text-align: center;
     font-family: var(--heading-font);
     transition: all 0.3s ease-in-out;
@@ -300,5 +306,4 @@ footer p {
     padding-top: 1rem;
     transition: all 0.3s ease-in-out;
     font-family: var(--heading-font);
-
 }

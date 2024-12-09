@@ -7,6 +7,10 @@
         display: none;
     }
 
+    header img {
+        display: none;
+    }
+
     button.menu {
         display: flex;
         cursor: pointer;
