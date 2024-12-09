@@ -9,6 +9,7 @@
 
     header img {
         display: none;
+        transition: all 0.3s ease-in-out;
     }
 
     button.menu {
@@ -85,17 +86,17 @@
     /* rhinelander kit lineup*/
     .image-card:nth-child(5) {
         margin-top: 0.005rem;
-        transition: all 0.3s ease-in-out;
         margin-left: 0;
         margin-right: 0;
+        transition: all 0.3s ease-in-out;
     }
 
     /* puppy2 */
     .image-card:nth-child(7) {
-        transition: all 0.3s ease-in-out;
         margin-top: -3rem;
         margin-left: 0;
         margin-right: 0;
+        transition: all 0.3s ease-in-out;
     }
 
     footer {

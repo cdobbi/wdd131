@@ -45,7 +45,6 @@ header {
 .header-image {
     width: 20.5em;
     height: 23.75em;
-    max-width: 100%;
     margin: 2rem 3rem -7em 4rem;
     transition: all 0.3s ease-in-out;
 }
