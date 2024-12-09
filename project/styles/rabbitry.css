@@ -266,15 +266,14 @@ main {
     margin-bottom: 3rem;
     transition: all 0.3s ease-in-out;
 }
- /* black mini lop image */
+
+/* black mini lop image */
 .image-card:nth-child(7) {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin-top: 31rem;
-    margin-right: 1rem;
-    margin-left: 5.5rem;
-    transition: all 0.3s ease-in-out;
+    grid-row: 4 / 5;
+    margin-top: -11rem;
     margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 a#contact-us {

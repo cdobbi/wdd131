@@ -82,26 +82,18 @@
         transition: all 0.3s ease-in-out;
     }
 
-    .image-card:nth-child(2) {
-        margin-top: -1rem;
+    /* rhinelander kit lineup*/
+    .image-card:nth-child(5) {
+        margin-top: 0.005rem;
         transition: all 0.3s ease-in-out;
         margin-left: 0;
         margin-right: 0;
     }
 
-    .image-card:nth-child(5) {
-        margin-top: 0.3rem;
+    /* puppy2 */
+    .image-card:nth-child(7) {
         transition: all 0.3s ease-in-out;
-    }
-
-    .image-card:nth-child(6) {
-        margin-top: -0.1rem;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .image-card:nth-child(9) {
         margin-top: -3rem;
-        transition: all 0.3s ease-in-out;
         margin-left: 0;
         margin-right: 0;
     }
