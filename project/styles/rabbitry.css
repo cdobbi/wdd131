@@ -191,6 +191,7 @@ main {
     align-items: center;
     font-family: var(--paragraph-font);
     transition: all 0.3s ease-in-out;
+    font-size: 1.4vw;
 }
 
 .image-card img {
@@ -273,6 +274,7 @@ main {
     grid-row: 4 / 5;
     margin-top: -11rem;
     margin-bottom: 1rem;
+    margin-left: 5rem;
     transition: all 0.3s ease-in-out;
 }
 
