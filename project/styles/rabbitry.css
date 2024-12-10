@@ -1,29 +1,42 @@
 
 :root {
-    --primary-color: #ebe0d8;
-    --secondary-color: #e4a150;
-    --tertiary-color: #f4e699;
-    --accent1-color: #000000;
-    --accent2-color: #d40e0e;
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Dancing Script", cursive;
+    --primary-color: #c7e4e4;
+    --secondary-color: #f9b869;
+    --tertiary-color: #f4e699;
+    --accent1-color: #d2cabf;
+    --accent2-color: #d40e0e;
     --nav-color: black;
-    --nav-hover-link-color: #8e3904;
-    --nav-hover-background-color: #fbb198;
+    --nav-a-border-color:#8e3904;
+    --nav-background-color:#fca588;
+    --nav-hover-link-color: #e8fd60;
+    --nav-hover-background-color: #fe7789;
     --nav-visited-link-color: black;
+    --aside-color: #dcf5e3;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+}e4
 
 body {
-    display: block;
-    font-family: var(--paragraph-font);
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    max-width: 2200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: 450;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
 h1, h2, h3 {
@@ -69,6 +82,11 @@ a {
 
 a.filter-btn {
     color: var(--nav-color);
+}
+
+nav {
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul {
@@ -132,18 +150,18 @@ a.button.filter-btn:hover {
 #random-trivia {
     font-size: 0.5vw;
     font-family: var(--heading-font);
-    margin-right: 1.5rem;
+    margin-right: 0 auto;
     text-align: right;
     font-style: italic;
     font-weight: lighter;
     transition: all 0.3s ease-in-out;
+    background: var(--accent1-color);
 }
 
 main {
     padding: 1rem;
-    background-color: var(--primary-color);
     min-height: 100vh;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
 }
@@ -289,17 +307,13 @@ a#contact-us {
 }
 
 footer {
-    margin-top: -1rem;
-    background-color: var(--secondary-color);
+    width: 95%;
+    background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
+    padding: 1rem; /* Add padding to ensure content is not touching the border */
+    margin-top: 1rem;
     transition: all 0.3s ease-in-out;
-    text-decoration: none;
-}
-
-footer p {
-    font-size: 1rem;
-    padding-top: 1rem;
-    transition: all 0.3s ease-in-out;
-    font-family: var(--heading-font);
+    border: 2px solid var(--accent1-color); /* Add border to footer */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }

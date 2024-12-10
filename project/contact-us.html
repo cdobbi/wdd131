@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Christi Dobbins">
     <meta name="description" content="Rhinelanders - Rhinelander Rabbitry">
-    <title>Contact US - Rhinelander Rabbitry</title>
+    <title>All - Rhinelander Rabbitry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload"
@@ -14,17 +14,14 @@
         as="style">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap">
-    <link rel="preload" href="styles/rabbitry.css" as="style">
-    <link rel="stylesheet" href="styles/rabbitry.css">
-    <link rel="stylesheet" href="styles/rabbitry-medium.css" media="screen and (max-width: 937px)">
-    <link rel="stylesheet" href="styles/rabbitry-small.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="styles/all.css">
     <script src="scripts/rabbitry.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <h1>Contact Us<br>🐇🥕🥬🫐🌿<br>STOPPED TO HAVE A SNACK<br>🐇🥕🥬🫐🌿</h1>
+            <h1>Rhinelander Rabbitry 🐇🥕🥬🫐🌿 All the Bunnies </h1>
             <nav id="nav-menu" class="navigation">
                 <ul>
                     <li><a href="rabbitry.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
@@ -36,10 +33,13 @@
                 </ul>
             </nav>
     </header>
+    <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
     <main>
-        <div class="content">
-            <!-- Place Main Content Here -->
-        </div>
+        <section class="rabbit-cards">
+            <img src="images/rhinelander-jupiter2.webp" alt="Jupiter" class="rabbit-image">
+            <img src="images/rhinelander-astra-kit.webp" alt="Astra Kit" class="rabbit-image">
+            <img src="images/rhinelander-tripp.webp" alt="Tripp" class="rabbit-image">
+        </section>
         <aside>
             <h2>Useful Links</h2>
             <ul>
@@ -55,10 +55,24 @@
                 <li><a href="https://extension.usu.edu/utah4h/files/companion-animals-rank-advancment-rabbits.pdf" target="_blank">Rabbit
                         Rank Advancement Manual</a></li>
             </ul>
+            <br>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
         </aside>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>&copy; <span id="currentyear"></span> 🐇🥕🥬🫐🌿 Christi Dobbins 🐇🥕🥬🫐🌿 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/rabbitry.js" defer></script>

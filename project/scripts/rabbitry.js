@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("lastModified").textContent = document.lastModified;
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    console.log("DOM fully loaded and parsed");
-
+document.addEventListener('DOMContentLoaded', function() {
     const trivia = [
         "Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.",
         "Hopping Trivia: Rhinelanders are rare with about 2,000 in the world.",
@@ -52,11 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("random-trivia").textContent = randomTrivia;
 
     // Hamburger menu functionality
-    const menuButton = document.getElementById('menu');
-    const navMenu = document.getElementById('nav-menu');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu').querySelector('ul');
 
-    menuButton.addEventListener('click', function() {
-        navMenu.classList.toggle('open');
-        menuButton.classList.toggle('open');
+    hamburgerMenu.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
     });
 });
