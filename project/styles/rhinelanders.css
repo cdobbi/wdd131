@@ -1,236 +1,125 @@
+:root {
+    --primary-color: #ebe0d8;
+    --secondary-color: #e4a150;
+    --tertiary-color: #f4e699;
+    --accent1-color: #000000;
+    --accent2-color: #d40e0e;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Dancing Script", cursive;
+    --nav-color: black;
+    --nav-hover-link-color: #8e3904;
+    --nav-hover-background-color: #fbb198;
+    --nav-visited-link-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    /* body is a grid container */
     display: grid;
     place-items: center;
     height: 100vh;
-    /* full height */
     margin: 0;
-    /* no margin */
+    max-width: 1200px;
     grid-template-rows: auto 1fr auto;
-    /* header, main, footer */
     grid-template-columns: 1fr;
-    /* full width */
     font-family: "Poppins", sans-serif;
-    /* font family */
     font-style: normal;
-    /* font style */
     font-weight: 450;
-    /* font weight */
+    background: var(--primary-color);
     grid-template-areas:
-        /* grid areas */
         "header"
         "main"
         "footer";
 }
 
 header {
-    /* header is a grid container */
+    background: var(--tertiary-color);
     box-sizing: border-box;
-    /* padding width */
     background: rgb(245, 210, 188);
-    /* header background color */
     padding: 1.5rem;
-    /* padding around header */
     grid-area: header;
-    /* header full width */
     width: 80%;
-    /* header full width */
 }
 
 h1 {
-    /* h1 is a flex container */
     font-family: "Poppins", sans-serif;
-    /* font family */
     font-weight: 100;
-    /* font weight */
     font-style: normal;
-    /* font style */
     font-size: 2rem;
-    /* font size */
     margin: 1.5rem;
-    /* margin */
     text-align: center;
-    /* center text */
+    background: var(--tertiary-color);
 }
 
 nav {
-    /* nav is a flex container */
     box-sizing: border-box;
-    /* padding width */
     background-color: rgb(254, 119, 137);
-    /* nav background color */
     padding: 1rem;
-    /* padding around nav */
     max-width: 100%;
-    /* nav bar full width */
 }
 
 nav ul {
-    /* nav links */
     display: flex;
-    /* flex container */
     justify-content: space-between;
-    /* space between links */
     padding: 0;
-    /* no padding */
     margin: 0;
-    /* no margin */
     width: 100%;
-    /* full width */
     list-style: none;
-    /* remove bullet points */
 }
 
 nav a {
-    /* nav links */
     display: block;
-    /* block element */
     color: black;
-    /* text color */
     text-align: center;
-    /* center text */
     padding: 0.3rem;
-    /* padding around text */
     text-decoration: none;
-    /* remove underline */
 }
 
 nav a:hover {
-    /* hover effect */
     border: 3px solid #9512a3;
-    /* border color */
     border-radius: 5px;
-    /* rounded corners */
     text-decoration: none;
-    /* remove underline */
     color: #e8fd60;
-    /* text color */
 }
 
 main {
-    /* main is a grid container */
     display: grid;
-    /* main is a grid container, maaning horizontal */
     grid-template-columns: 2fr 1fr;
-    /* main takes 2/3, aside takes 1/3 */
     gap: .8rem;
-    /* gap between main and aside */
-    max-width: 80%;
-    /* main has full width */
+    width: 100%;
     background: rgb(199, 228, 228);
     padding: 2rem;
-    /* padding around main */
     margin: 0 auto;
-    /* centered horizontally */
     box-sizing: border-box;
-    /* padding width */
     grid-area: main;
 }
 
-.card {
-    /* card is a flex container */
-    padding: 1rem;
-    /* padding around card */
-    border: 1px solid #111010;
-    /* border color */
+.rabbit-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.rabbit-image {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-    /* rounded corners */
-    background: rgb(206, 221, 229);
-    /* card background color */
 }
 
-.card h2 {
-    /* h2 within card */
-    background-color: rgb(253, 248, 211);
-    /* bar color */
-    color: black;
-    /* text color */
-    padding: 0rem;
-    /* bar padding*/
-    text-align: center;
-    /* center text within the bar, meaning horizontally */
-    margin: -1rem -1rem 1rem -1rem;
-    /* margins align with card edges, meaning -1rem top, right, bottom, left */
-    border-radius: 5px 5px 0 0;
-    /* rounded corners */
-}
-
-.about-me-content {
-    /* about-me-content is a flex container */
-    display: flex;
-    /* flex container, meaning horizontal */
-    align-items: center;
-    /* center items vertically */
-}
-
-.about-me-content p {
-    /* paragraph within about-me-content */
-    flex: 1;
-    /* take up remaining space */
-    margin-right: 1rem;
-    /* space between image and text */
-    padding: 1rem;
-    /* padding around text */
-    margin-top: auto;
-    /* align text to the top */
-}
-
-.about-me-content img {
-    /* image within about-me-content */
-    width: 100px;
-    /* image width */
-    height: auto;
-    /* maintain aspect ratio */
-    padding: .5rem;
-}
-
-.country-content {
-    /* country-content is a flex container */
-    display: flex;
-    /* flex container, meaning horizontal */
-    align-items: center;
-    /* center items vertically*/
-}
-
-.country-content p {
-    /* paragraph within country-content */
-    flex: 1;
-    /* take up remaining space, meaning 2/3 */
-    margin-left: 1rem;
-    /* space between image and text */
-    padding: 1rem;
-    /* padding around text */
-    margin-top: auto;
-    /* align text to the top */
-}
-
-.country-content img {
-    /* image within country-content */
-    width: 150px;
-    /* image width, meaning 150px */
-    height: auto;
-    /* maintain aspect ratio */
-}
-
-aside.card {
-    /* aside is a card */
+aside {
     background: rgb(220, 245, 227);
-    /* aside background color */
     padding: 1rem;
-    /* padding around aside. 1rem means 1*16px */
-    grid-column: 2;
-    /* aside in second column, meaning 1/3 width */
+    box-sizing: border-box;
 }
 
 footer {
-    width: 80%;
-    /* footer is a grid container */
+    width: 100%;
     background: rgb(210, 202, 191);
-    /* footer background color */
     padding: 0rem;
-    /* padding around footer */
     text-align: center;
-    /* center text */
     grid-area: footer;
-    /* footer takes full width */
 }

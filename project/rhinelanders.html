@@ -14,17 +14,18 @@
         as="style">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap">
-    <link rel="preload" href="styles/rabbitry.css" as="style">
-    <link rel="stylesheet" href="styles/rabbitry.css">
-    <link rel="stylesheet" href="styles/rabbitry-medium.css" media="screen and (max-width: 937px)">
-    <link rel="stylesheet" href="styles/rabbitry-small.css" media="screen and (max-width: 600px)">
-    <script src="scripts/rabbitry.js" defer></script>
+    <link rel="icon" href="project/images/rhinelander-rabbitry-favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/rhinelanders.css">
+    <!-- <script src="scripts/rhinelanders.js" defer></script> -->
+    <script src="scripts/get-dates.js" defer></script>
+
 </head>
 
 <body>
-    <header>
+    <div class="container>" <header>
         <div class="header-content">
-            <h1>Rhinelanders<br>🐇🥕🥬🫐🌿<br>STOPPED TO HAVE A SNACK<br>🐇🥕🥬🫐🌿</h1>
+            <h1>Rhinelanders 🐇🥕🥬🫐🌿 Rhinelander Rabbitry</h1>
             <nav id="nav-menu" class="navigation">
                 <ul>
                     <li><a href="rabbitry.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
@@ -35,33 +36,42 @@
                     <li><a href="contact-us.html" class="filter-btn" data-filter="contact-us" target="_blank">Contact Us</a></li>
                 </ul>
             </nav>
-    </header>
-    <main>
-        <div class="content">
-            <!-- Place Main Content Here -->
-        </div>
-        <aside>
-            <h2>Useful Links</h2>
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Rhinelander_rabbit" target="_blank">Rhinelander Rabbit - Wikipedia</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Mini_Lop" target="_blank">Mini Lop - Wikipedia</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Harlequin_rabbit" target="_blank">Harlequin Rabbit - Wikipedia</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Rabbit" target="_blank">Rabbit - Wikipedia</a></li>
-                <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=rabbit" target="_blank">PubMed - Rabbit</a></li>
-                <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits" target="_blank">Merck Veterinary Manual -
-                        Rabbits</a></li>
-                <li><a href="https://arba.net/" target="_blank">American Rabbit Breeders Association</a></li>
-                <li><a href="https://4-h.org/" target="_blank">4-H - National 4-H Council</a></li>
-                <li><a href="https://extension.usu.edu/utah4h/files/companion-animals-rank-advancment-rabbits.pdf" target="_blank">Rabbit
-                        Rank Advancement Manual</a></li>
-            </ul>
-        </aside>
-    </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
-        <p>Last modified: <span id="lastModified"></span></p>
-    </footer>
-    <script src="scripts/rabbitry.js" defer></script>
+            </header>
+            <main>
+                <section class="rabbit-cards">
+                    <img src="images/sport.webp" alt="Sport" class="rabbit-image">
+                    <img src="images/tripp.webp" alt="Tripp" class="rabbit-image">
+                    <img src="images/spirit.webp" alt="Spirit" class="rabbit-image">
+                    <img src="images/trio.webp" alt="Trio" class="rabbit-image">
+                    <img src="images/rhinelander-rabbitry.webp" alt="Rhinelanders" class="rabbit-image">
+                    <img src="images/astra.webp" alt="Astra" class="rabbit-image">
+                </section>
+                <aside>
+                    <h2>Useful Links</h2>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Rhinelander_rabbit" target="_blank">Rhinelander Rabbit - Wikipedia</a>
+                        </li>
+                        <li><a href="https://en.wikipedia.org/wiki/Mini_Lop" target="_blank">Mini Lop - Wikipedia</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Harlequin_rabbit" target="_blank">Harlequin Rabbit - Wikipedia</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Rabbit" target="_blank">Rabbit - Wikipedia</a></li>
+                        <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=rabbit" target="_blank">PubMed - Rabbit</a></li>
+                        <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits" target="_blank">Merck Veterinary
+                                Manual -
+                                Rabbits</a></li>
+                        <li><a href="https://arba.net/" target="_blank">American Rabbit Breeders Association</a></li>
+                        <li><a href="https://4-h.org/" target="_blank">4-H - National 4-H Council</a></li>
+                        <li><a href="https://extension.usu.edu/utah4h/files/companion-animals-rank-advancment-rabbits.pdf"
+                                target="_blank">Rabbit
+                                Rank Advancement Manual</a></li>
+                    </ul>
+                </aside>
+            </main>
+
+            <footer>
+                <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+                <p>Last modified: <span id="lastModified"></span></p>
+            </footer>
+            <!-- <script src="scripts/rabbitry.js" defer></script> -->
 </body>
 
 </html>
