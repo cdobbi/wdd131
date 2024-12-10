@@ -1,3 +1,5 @@
+@import url('http://127.0.project\fonts\poppins\Comic_Neue,Poppins\Poppins\Poppins-Regular.ttf.1:5501/project/styles/fonts/poppins-v22-latin-regular.woff2://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Dancing Script", cursive;
@@ -39,7 +41,9 @@ body {
         "footer";
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--heading-font);
 }
 
@@ -134,14 +138,16 @@ main {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    border: 5px solid var(--accent1-color); /* Add border to images */
+    border: 5px solid var(--accent1-color);
+    /* Add border to images */
 }
 
 aside {
     background: var(--aside-color);
     padding: 1rem;
     margin: 0 auto;
-    border: 2px solid var(--accent1-color); /* Add border to aside */
+    border: 2px solid var(--accent1-color);
+    /* Add border to aside */
 }
 
 aside h2 {
@@ -154,20 +160,25 @@ aside h2 {
 
 aside ul {
     font-family: var(--heading-font);
-    list-style: none; /* Remove bullet points */
+    list-style: none;
+    /* Remove bullet points */
     padding: 0;
     margin: 0;
 }
 
 aside ul li {
-    margin-bottom: 1rem; /* Add space between links */
+    margin-bottom: 1rem;
+    /* Add space between links */
 }
 
 aside ul li a {
     display: block;
-    padding: 0.5rem 0; /* Add padding around the links */
-    text-decoration: none; /* Remove underline */
-    color: var(--nav-color); /* Set link color */
+    padding: 0.5rem 0;
+    /* Add padding around the links */
+    text-decoration: none;
+    /* Remove underline */
+    color: var(--nav-color);
+    /* Set link color */
 }
 
 aside ul li a:hover {
@@ -249,10 +260,11 @@ aside form button:hover {
     nav ul.show {
         display: flex;
     }
-    
+
     h1 {
         font-size: 1rem;
     }
+
     body {
         grid-template-rows: auto auto auto auto;
     }
