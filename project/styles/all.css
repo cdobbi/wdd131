@@ -294,10 +294,27 @@ aside form button:hover {
     cursor: pointer;
 }
 
-a:-webkit-any-link {
-    color: var(--nav-color);
-    cursor: pointer;
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #000;
+    font-size: 24px;
     text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0073b1; /* LinkedIn color */
+}
+
+a:-webkit-any-link contact-form {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
