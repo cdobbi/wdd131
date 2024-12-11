@@ -1,83 +1,89 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
+  
     // Hamburger menu functionality
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.getElementById('nav-menu').querySelector('ul');
-
-    hamburgerMenu.addEventListener('click', function() {
+  
+    // Debugging logs
+    console.log('Hamburger Menu:', hamburgerMenu);
+    console.log('Nav Menu:', navMenu);
+  
+    if (hamburgerMenu && navMenu) {
+      hamburgerMenu.addEventListener('click', function () {
         navMenu.classList.toggle('show');
-    });
-
+      });
+    } else {
+      console.error('Hamburger menu or nav menu not found');
+    }
+  
     // Trivia functionality
     const trivia = [
-        "Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.",
-        "Hopping Trivia: The Rhinelander is a rare breed of rabbit.",
-        "Hopping Trivia: Rhinelanders weigh between 6.5 to 10 pounds",
-        "Hopping Trivia: Rhinelanders are intelligent and trainable.",
-        "Hopping Trivia: In order to show a Rhinelander it must have at least 3 spots on the thigh.",
-        "Hopping Trivia: The Rhinelander was first bred in the 1920s.",
-        "Hopping Trivia: The Rhinelanders originated in Germany.",
-        "Hopping Trivia: Rhinelander rabbits require minimal grooming as they only shed twice a year.",
-        "Hopping Trivia: They originated in North Rhine-Westphalia, Germany, in the early 1900s.",
-        "Hopping Trivia: Rabbit ears move independently by 180 degrees, enabling them to hear from two directions at once.",
-        "Hopping Trivia: A rabbits sense of smell is even better than their eyesight.",
-        "Hopping Trivia: Rabbits can run up to 18 miles per hour.",
-        "Hopping Trivia: Rabbit tails are used to distract predators during a chase and to signal danger to other rabbits.",
-        "Hopping Trivia: Rabbits have nearly 360° panoramic vision, allowing them to detect predators from almost any direction.",
-        "Hopping Trivia: Rhinelanders were created by crossing a Japanese Harlequin and a Checkered Giant.",
-        "Hopping Trivia: In the wild, rabbits live in groups called colonies.",
-        "Hopping Trivia: Colonies of rabbits live in underground warrens.",
-        "Hopping Trivia: Rabbits are herbivores.",
-        "Hopping Trivia: Rabbits are crepuscular, meaning they are most active at dawn and dusk.",
-        "Hopping Trivia: Rabbits are social animals.",
-        "Hopping Trivia: Rabbits communicate through body language.",
-        "Hopping Trivia: Rabbits will give you kisses to show affection.",
-        "Hopping Trivia: Rabbits are prey animals.",
-        "Hopping Trivia: Rabbits have a third eyelid called a nictitating membrane.",
-        "Hopping Trivia: Rabbits love to eat apple tree leaves and branches.",
-        "Hopping Trivia: Rabbits love to eat dandelion leaves, roses and flowers.",
-        "Hopping Trivia: Rabbits love to eat mint leaves & parsley.",
-        "Hopping Trivia: Rhinelanders make exceptional emotional support animals.",
-        "Hopping Trivia: Rhinelanders are known for their friendly and outgoing personalities.",
-        "Hopping Trivia: Rhinelanders are known for their playful and curious nature.",
-        "Hopping Trivia: Temperatures above 85 degrees Fahrenheit sterilize bucks.",
-        "Hopping Trivia: Rhinelanders have a stripe that extends the length of their back.",
-        "Hopping Trivia: The Rhinelander is known for their distinctive coat markings.",
-        "Hopping Trivia: A rabbit doe has 2 uteruses",
-        "Hopping Trivia: Rabbits have 2 sets of incisors",
-        "Hopping Trivia: Rabbits have 28 teeth",
-        "Hopping Trivia: Rabbits have a lifespan of 1.6-12 years",
-        "Hopping Trivia: Rhinelanders require daily interaction and mental stimulation.",
-        "Hopping Trivia: The Marked Rhinelander is the only variety that can be shown competitively.",
-        "Hopping Trivia: If the Rhinelander doesn't have hip spots, it is referred to as a 'Charlie' variety.",
+      'Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.',
+      'Hopping Trivia: The Rhinelander is a rare breed of rabbit.',
+      'Hopping Trivia: Rhinelanders weigh between 6.5 to 10 pounds',
+      'Hopping Trivia: Rhinelanders are intelligent and trainable.',
+      'Hopping Trivia: The Rhinelanders originated in Germany.',
+      'Hopping Trivia: Rabbit ears move independently by 180 degrees, enabling them to hear from two directions at once.',
+      'Hopping Trivia: A rabbits sense of smell is even better than their eyesight.',
+      'Hopping Trivia: Rabbits can run up to 18 miles per hour.',
+      'Hopping Trivia: Rabbit tails are used to distract predators during a chase and to signal danger to other rabbits.',
+      'Hopping Trivia: Rabbits have nearly 360° panoramic vision, allowing them to detect predators from almost any direction.',
+      'Hopping Trivia: Rhinelanders were created by crossing a Japanese Harlequin and a Checkered Giant.',
+      'Hopping Trivia: Rabbits are herbivores.',
+      'Hopping Trivia: Rabbits are crepuscular, meaning they are most active at dawn and dusk.',
+      'Hopping Trivia: Rabbits are social animals.',
+      'Hopping Trivia: Rabbits communicate through body language.',
+      'Hopping Trivia: Rabbits will give you kisses to show affection.',
+      'Hopping Trivia: Rabbits are prey animals.',
+      'Hopping Trivia: Rabbits have a third eyelid called a nictitating membrane.',
+      'Hopping Trivia: Rabbits love to eat dandelion leaves, roses and flowers.',
+      'Hopping Trivia: Rhinelanders are known for their friendly and outgoing personalities.',
+      'Hopping Trivia: Rhinelanders are known for their playful and curious nature.',
+      'Hopping Trivia: Temperatures above 85 degrees Fahrenheit sterilize bucks.',
+      'Hopping Trivia: The Rhinelander is known for their distinctive coat markings.',
+      'Hopping Trivia: A rabbit doe has 2 uteruses',
+      'Hopping Trivia: Rabbits have 2 sets of incisors',
+      'Hopping Trivia: Rabbits have 28 teeth',
+      'Hopping Trivia: Rabbits have a lifespan of 1.6-12 years',
+      'Hopping Trivia: Rhinelanders require daily interaction and mental stimulation.',
     ];
-
+  
     const randomTrivia = trivia[Math.floor(Math.random() * trivia.length)];
-    console.log("Hopping Trivia: ", randomTrivia);
-    document.getElementById("random-trivia").textContent = randomTrivia;
-    document.getElementById("lastModified").textContent = document.lastModified;
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    console.log("DOM fully loaded and parsed");
-
+    console.log('Hopping Trivia: ', randomTrivia);
+    document.getElementById('random-trivia').textContent = randomTrivia;
+    document.getElementById('lastModified').textContent = document.lastModified;
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+  
     // Form submission functionality
     const contactForm = document.getElementById('contactForm');
-
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        const formData = {
-            name: name,
-            email: email,
-            message: message
-        };
-
-        localStorage.setItem('contactFormData', JSON.stringify(formData));
-
-        alert('Form submitted successfully!');
-
-        contactForm.reset();
-        });
- });
+    let isSubmitting = false;
+  
+    console.log('Attaching form submit event listener');
+  
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+  
+      if (isSubmitting) return;
+      isSubmitting = true;
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      // Debugging logs
+      console.log('Form submitted');
+      console.log('Name: ', name);
+      console.log('Email: ', email);
+      console.log('Message: ', message);
+  
+      // Display the thank you message
+      document.getElementById(
+        'submittedData'
+      ).innerHTML = `<h2>Thank you for your enquiry. Someone will be with you shortly. Have a hopping day!</h2>`;
+      document.getElementById('submittedData').style.display = 'block';
+  
+      contactForm.reset();
+      isSubmitting = false;
+    });
+  });
