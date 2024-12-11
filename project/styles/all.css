@@ -39,7 +39,7 @@ body {
         "trivia"
         "main"
         "footer";
-    }
+}
 
 h1,
 h2,
@@ -56,6 +56,15 @@ header {
     border: 4px solid var(--accent1-color);
     transition: all 0.3s ease-in-out;
 }
+
+.favicon {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px; /* Adjust the size as needed */
+    margin-right: 10px; /* Adjust the spacing as needed */
+    vertical-align: middle; /* Align the favicon vertically with the text */
+    transition: all 0.3s ease-in-out;
+}
+
 
 h1 {
     font-weight: 100;
@@ -118,13 +127,13 @@ nav a:visited {
 
 #random-trivia {
     grid-area: trivia;
-    font-size: 0.5vw;
-    font-family: var(--heading-font);
-    text-align: center;
-    font-style: italic;
     font-weight: 200;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
+    width: 98%;
+    font-size: 1.3vw;
+    font-family: var(--heading-font);
+    text-align: right;
+    font-style: italic;
+    background: var(--accent1-color);
 }
 
 main {
@@ -138,6 +147,127 @@ main {
     box-sizing: border-box;
     grid-area: main;
     max-width: 2200px;
+    transition: all 0.3s ease-in-out;
+}
+
+#poem-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2vw;
+    margin-top: 1vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--paragraph-font);
+    font-size: 2.3vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card figcaption {
+    margin-top: 0.5vw;
+    font-size: 1.3vw;
+    text-align: center;
+    font-family: var(--heading-font);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-card figcaption {
+    margin-top: 0.5vw;
+    font-size: 0.3vw;
+    text-align: center;
+    font-family: var(--heading-font);
+    transition: all 0.3s ease-in-out;
+}
+
+.poem-card p {
+    font-size: 2.2vw;
+    font-family: var(--paragraph-font);
+    text-align: center;
+    object-fit: contain;
+    margin-bottom: 1vw;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 1st poem stanza*/
+.poem-card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-top: 8vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Regi image */
+.image-card:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    margin-bottom: vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Puppy2 image */
+.image-card:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 0 / 3;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* rest of the poem stanzas */
+.poem-card:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    text-align: center;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* rhinelander line-up image */
+.image-card:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* lyra & her kits image */
+.image-card:nth-child(6) {
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* black mini lop image */
+.image-card:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
