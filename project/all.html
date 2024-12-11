@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Christi Dobbins">
     <meta name="description" content="Rhinelanders - Rhinelander Rabbitry">
-    <title>All the Bunnies Page - Rhinelander Rabbitry</title>
+    <title>All the Bunnies & Contact Us Page - Rhinelander Rabbitry</title>
+    <link rel="icon" href="images/favicon-rhinelander.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet"> <link rel="stylesheet" href="styles/all.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/all.css">
     <script src="scripts/rabbitry.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <h1>Rhinelander Rabbitry 🐇🥕🥬🫐🌿 All the Bunnies</h1>            
+            <h1>Rhinelander Rabbitry 🐇🥕🥬🫐🌿 All the Bunnies </h1>
             <nav id="nav-menu" class="navigation">
                 <div class="hamburger-menu" id="hamburger-menu">
                     &#9776;
@@ -27,9 +31,8 @@
                     <li><a href="mini-lops.html" class="filter-btn" data-filter="mini-lops" target="_blank">Mini Lops</a></li>
                     <li><a href="harlequins.html" class="filter-btn" data-filter="harlequins" target="_blank">Harlequins</a></li>
                     <li><a href="all.html" class="filter-btn" data-filter="all-bunnies" target="_blank">All Our Bunnies</a></li>
-                    <li><a href="contact-us.html" class="filter-btn" data-filter="contact-us" target="_blank">Contact Us</a></li>
                 </ul>
-                </div>
+
             </nav>
     </header>
     <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
@@ -54,6 +57,7 @@
             <img src="images/rhinelander-lilys-drawing2.webp" alt="Lilys drawing " class="rabbit-image">
             <img src="images/rhinelander-lilys-drawing1.webp" alt="Lilys second drawing" class="rabbit-image">
         </section>
+
         <aside>
             <h2>Useful Links</h2>
             <ul>
@@ -69,6 +73,20 @@
                 <li><a href="https://extension.usu.edu/utah4h/files/companion-animals-rank-advancment-rabbits.pdf" target="_blank">Rabbit
                         Rank Advancement Manual</a></li>
             </ul>
+            <br>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </aside>
     </main>
     <footer>

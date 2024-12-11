@@ -7,9 +7,9 @@
     <meta name="author" content="Christi Dobbins">
     <meta name="description" content="WDD 131 Dynamic Web Fundamentals final project - Rhinelander Rabbitry">
     <title>Rhinelander Rabbitry</title>
-    
+
     <link rel="icon" href="images/favicon-rhinelander.ico" type="image/x-icon">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,107 +24,73 @@
 <body>
     <header>
         <div class="header-content">
-            <!-- <img src="images/rhinelander-orion-lyra.webp" alt="Rabbit in the sunset" class="header-image"> -->
-            <div class="header-text">
-                <h1>
-                    <img src="images/favicon-rhinelander.png" alt="favicon" class="favicon">
-                    Rhinelander Rabbitry
-                </h1>
-                <nav id="nav-menu" class="navigation">
-
-                    <div class="hamburger-menu" id="hamburger-menu">
-                        &#9776;
-                    </div>
-                    <ul>
-                        <li><a href="rabbitry.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
-                        <li><a href="rhinelanders.html" class="filter-btn" data-filter="rhinelanders" target="_blank">Rhinelanders</a></li>
-                        <li><a href="mini-lops.html" class="filter-btn" data-filter="mini-lops" target="_blank">Mini-Lops</a></li>
-                        <li><a href="harlequins.html" class="filter-btn" data-filter="harlequins" target="_blank">Harlequins</a></li>
-                        <li><a href="all.html" class="filter-btn" data-filter="all">All</a></li>
-                        <li><a href="contact-us.html" class="filter-btn" data-filter="contact-us" target="_blank">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <h1> 
+                <img src="images/favicon-rhinelander.png" alt="favicon" class="favicon"> Rhinelander Rabbitry
+            </h1>
+            <nav id="nav-menu" class="navigation">
+                <div class="hamburger-menu" id="hamburger-menu">
+                    &#9776;
+                </div>
+                <ul>
+                    <li><a href="rabbitry.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
+                    <li><a href="rhinelanders.html" class="filter-btn" data-filter="rhinelanders" target="_blank">Rhinelanders</a></li>
+                    <li><a href="mini-lops.html" class="filter-btn" data-filter="mini-lops" target="_blank">Mini Lops</a></li>
+                    <li><a href="harlequins.html" class="filter-btn" data-filter="harlequins" target="_blank">Harlequins</a></li>
+                    <li><a href="all.html" class="filter-btn" data-filter="all-bunnies" target="_blank">All Our Bunnies</a></li>
+                </ul>
         </div>
+        </nav>
     </header>
     <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
     <main>
-        <section id="poem-cards-container">
-            <div class="poem-card">
-                <p>
-                    In fields where sunlight gently fades,<br>
-                    Beneath the leafy, whispering glades,<br>
-                    Live silent shadows, soft and light,<br>
-                    Hopping through the day and night.
-                </p>
-            </div>
-            <figure class="image-card">
-                <a href="harlequins.html" target="_blank">
-                    <img src="images/regi.webp"
-                        srcset="images/small-regi.webp 150w, images/medium-regi.webp 300w, images/large-regi.webp 600w"
-                        sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px"
-                        alt="Image of our Japanese Harlequin, Sir. Regynold.">
-                </a>
-                <figcaption><a href="harlequins.html" target="_blank">View our photos & learn more about Harlequins</a></figcaption>
-                <figure class="image-card">
-                    <a href="mini-lops.html" target="_blank">
-                        <img src="images/sarafina.webp"
-                            srcset="images/small-sarafina.webp 150w, images/medium-sarafina.webp 300w, images/large-sarafina.webp 600w"
-                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of our Agouti Mini Lop, Sarafina.">
-                    </a>
-                    <figcaption><a href="mini-lops.html" target="_blank">View our photos & learn about Mini Lops</a></figcaption>
-                </figure>
-                <div class="poem-card">
-                    <p>
-                        Oh, gentle bunnies, so serene,<br>
-                        Embodiments of peace unseen,<br>
-                        In their quiet, modest grace,<br>
-                        They teach us how to find our place.<br><br>
-                        With every hop, in graceful stride,<br>
-                        Through open fields, and meadows wide,<br>
-                        They whisper secrets to the earth,<br>
-                        Of quiet strength, of gentle worth.<br><br>
-                        In their eyes, pure glee does gleam,<br>
-                        A mirrored world where hope can dream,<br>
-                        So hop along, with joy and pride,<br>
-                        For in your hearts, all fears subside.
-                    </p>
-                </div>
-                <figure class="image-card">
-                    <a href="rhinelanders.html" target="_blank">
-                        <img src="images/rhinelander-kit-lineup.webp"
-                            srcset="images/small-rhinelander-kit-lineup.webp 150w, images/medium-rhinelander-kit-lineup.webp 300w, images/large-rhinelander-kit-lineup.webp 600w"
-                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of our Lyras kits in a column.">
-                    </a>
-                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
-                </figure>
-                <figure class="image-card">
-                    <a href="rhinelanders.html" target="_blank">
-                        <img src="images/rhinelander-lyraandkits.webp"
-                            srcset="images/small-lyraandkits.webp 150w, images/medium-lyraandkits.webp 300w, images/large-lyraandkits.webp 600w"
-                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px"
-                            alt="Image of our Charlie Rhinelander, Lyra & her kits">
-                    </a>
-                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
-                </figure>
-                <figure class="image-card">
-                    <a href="all.html" target="_blank">
-                        <img src="images/black-mini-lop.webp"
-                            srcset="images/small-black-mini-lop.webp 150w, images/medium-black-mini-lop.webp 300w, images/large-black-mini-lop.webp 600w"
-                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of a Black Self Mini Lop">
-                    </a>
-                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
-                </figure>
-                <figcaption><a href="all.html" target="_blank">Pick out your bun - Submit your art - Contact us!</a></figcaption>
-            </figure>
-        </section>
-    </main>
-</body>
+        <section class="rabbit-cards">
+            <a href="harlequins.html" target="_blank"><img src="images/harlequin-regi.webp" alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image"></a>
+            <a href="all.html" target="_blank"><img src="images/mini-lop-black.webp" alt="Image of a Black Self Mini Lop" class="rabbit-image"></a>
 
-<footer>
-    <p>&copy; <span id="currentyear"></span> 🐇🥕🥬🫐🌿 Christi Dobbins 🐇🥕🥬🫐🌿 USA</p>
-    <p>Last modified: <span id="lastModified"></span></p>
-</footer>
-<script src="scripts/rabbitry.js" defer></script>
+            <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-lyras-kits2-12-24.webp" alt="Image of our Charlie Rhinelander, Lyra & her kits" class="rabbit-image"></a>
+            <a href="mini-lops.html" target="_blank"><img src="images/mini-lop-sarafina.webp" alt="Image of our Agouti Mini Lop, Sarafina." class="rabbit-image"></a>
+
+            <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-astra3.webp" alt="Image of our Sport Rhinelander, Astra." class="rabbit-image"></a>
+            <a href="harlequin.html" target="_blank"><img src="images/harlequin-kit.webp" alt="Image of Demis kit." class="rabbit-image"></a>
+
+        </section>
+        <aside>
+            <h2>Poem</h2>
+            <p>
+                In fields where sunlight gently fades,<br>
+                Beneath the leafy, whispering glades,<br>
+                Live silent shadows, soft and light,<br>
+                Hopping through the day and night.
+            </p>
+            <br>
+            <p>
+                Oh, gentle bunnies, so serene,<br>
+                Embodiments of peace unseen,<br>
+                In their quiet, modest grace,<br>
+                They teach us how to find our place.
+            </p>
+            <br>
+            <p>
+                With every hop, in graceful stride,<br>
+                Through open fields, and meadows wide,<br>
+                They whisper secrets to the earth,<br>
+                Of quiet strength, of gentle worth.
+            </p>
+            <br>
+            <p>
+                In their eyes, pure glee does gleam,<br>
+                A mirrored world where hope can dream,<br>
+                So hop along, with joy and pride,<br>
+                For in your hearts, all fears subside.<br>
+                -- Christi Dobbins❤️‍🩹
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🐇🥕🥬🫐🌿 Christi Dobbins 🐇🥕🥬🫐🌿 USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/rabbitry.js" defer></script>
+</body>
 
 </html>
