@@ -1,4 +1,4 @@
-
+@import url('http://127.0.project\fonts\poppins\Comic_Neue,Poppins\Poppins\Poppins-Regular.ttf.1:5501/project/styles/fonts/poppins-v22-latin-regular.woff2://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 :root {
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Dancing Script", cursive;
@@ -39,7 +39,9 @@ body {
         "footer";
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--heading-font);
 }
 
@@ -48,7 +50,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    min-height: 10rem;
+    min-height: 10vw;
     transition: all 0.3s ease-in-out;
 }
 
@@ -61,51 +63,48 @@ header {
 .header-image {
     width: 20.5em;
     height: 23.75em;
-    margin: 2rem 3rem -7em 4rem;
+    margin: 2vw 3vw -7em 4vw;
+    padding-bottom: 1.5vw;
+    padding-top: 1.5vw;
     transition: all 0.3s ease-in-out;
 }
 
 .header-text {
-    font-size: 1.9rem;
-    margin-bottom: -5rem;
+    font-size: 1.9vw;
+    margin-left: 5vw;
     font-family: var(--heading-font);
-    transition: all 0.3s ease-in-out;
-}
-
-a {
-    text-decoration: none;
-    color: var(--nav-color);
-    transition: all 0.3s ease-in-out;
-    font-family: var(--heading-font);
-    font-size: 0.8rem;
-}
-
-a.filter-btn {
-    color: var(--nav-color);
-}
-
-nav {
-    padding: 0.5rem;
     transition: all 0.3s ease-in-out;
 }
 
 nav ul {
     display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
     list-style: none;
-    padding: 0.5rem;
-    margin: 0 auto;
-    font-family: var(--heading-font);
-    justify-content: center;
     transition: all 0.3s ease-in-out;
+}
+
+a.filter-btn {
+    font-size: 1.5vw;
+    font-family: var(--heading-font);
     color: var(--nav-color);
+    text-align: center;
+    padding: 1vw;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 nav a {
-    text-decoration: none;
+    display: block;
+    font-size: 1.5vw;
+    font-weight: 300;
+    font-family: var(--heading-font);
     color: var(--nav-color);
-    white-space: nowrap;
-    font-size: 1.05rem;
+    text-align: center;
+    padding: 0.3vw;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -119,47 +118,19 @@ nav a:visited {
     color: var(--nav-visited-link-color) !important;
 }
 
-button.menu {
-    display: none;
-}
-
-button.filter-btn,
-a.filter-btn {
-    text-decoration: none;
-    padding: 0.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-a.button.filter-btn:hover {
-    background: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease-in-out;
-    color: var(--nav-color);
-}
-
 #random-trivia {
-    font-size: 0.5vw;
+    font-size: 1.3vw;
     font-family: var(--heading-font);
     margin-right: 0 auto;
     text-align: right;
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 300;
     transition: all 0.3s ease-in-out;
     background: var(--accent1-color);
 }
 
 main {
-    padding: 1rem;
+    padding: 1vw;
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
@@ -169,8 +140,8 @@ main {
 #poem-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1vw;
+    margin-top: 1vw;
     transition: all 0.3s ease-in-out;
 }
 
@@ -190,8 +161,8 @@ main {
 }
 
 .image-card figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.3rem;
+    margin-top: 0.5vw;
+    font-size: 0.3vw;
     text-align: center;
     font-family: var(--heading-font);
     transition: all 0.3s ease-in-out;
@@ -200,8 +171,8 @@ main {
 #poem-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 2vw;
+    margin-top: 1vw;
     transition: all 0.3s ease-in-out;
 }
 
@@ -210,8 +181,8 @@ main {
     flex-direction: column;
     align-items: center;
     font-family: var(--paragraph-font);
+    font-size: 2.3vw;
     transition: all 0.3s ease-in-out;
-    font-size: 1.4vw;
 }
 
 .image-card img {
@@ -221,9 +192,18 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
+.poem-card p {
+    font-size: 2.2vw;
+    font-family: var(--paragraph-font);
+    text-align: center;
+    object-fit: contain;
+    margin-bottom: 1vw;
+    transition: all 0.3s ease-in-out;
+}
+
 .image-card figcaption {
-    margin-top: 0.5rem;
-    font-size: 1vw;
+    margin-top: 0.5vw;
+    font-size: 1.3vw;
     text-align: center;
     font-family: var(--heading-font);
     transition: all 0.3s ease-in-out;
@@ -233,9 +213,10 @@ main {
 .poem-card:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    margin-top: 6.9rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-top: 8vw;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
@@ -244,9 +225,10 @@ main {
 .image-card:nth-child(2) {
     grid-column: 3 / 5;
     grid-row: 1 / 3;
-    margin-right: 2rem;
-    margin-top: -1rem;
-    margin-left: 1rem;
+    margin-bottom: vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -254,7 +236,10 @@ main {
 .image-card:nth-child(3) {
     grid-column: 2 / 3;
     grid-row: 0 / 3;
-    margin-right: 1rem;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -263,9 +248,10 @@ main {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     text-align: center;
-    margin-top: 3rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -273,9 +259,10 @@ main {
 .image-card:nth-child(5) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin-top: -8rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -283,8 +270,10 @@ main {
 .image-card:nth-child(6) {
     grid-column: 3 / 5;
     grid-row: 3 / 4;
-    margin-right: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -292,28 +281,36 @@ main {
 .image-card:nth-child(7) {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    margin-top: -11rem;
-    margin-bottom: 1rem;
-    margin-left: 5rem;
+    margin-bottom: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
-a#contact-us {
+a {
     font-family: var(--heading-font);
     width: 100%;
-    font-size: 0.5rem;
+    font-size: vw;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
 }
 
 footer {
-    width: 95%;
+    width: 100%;
     background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
-    padding: 1rem; /* Add padding to ensure content is not touching the border */
-    margin-top: 1rem;
+    padding: 1vw; /* Add padding to ensure content is not touching the border */
+    margin-top: 1vw;
     transition: all 0.3s ease-in-out;
     border: 2px solid var(--accent1-color); /* Add border to footer */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2vw;
+    cursor: pointer;
+
 }

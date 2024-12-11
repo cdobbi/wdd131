@@ -7,8 +7,15 @@
         display: none;
     }
 
+    img.header-image {
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
     header img {
         display: none;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
         transition: all 0.3s ease-in-out;
     }
 
@@ -64,14 +71,16 @@
         gap: 1rem;
     }
 
-    .poem-card {
+    /* .poem-card {
         display: none;
-    }
-
+    } */
+    .poem-card
     .image-card {
         grid-column: auto !important;
         grid-row: auto !important;
+        margin-top: 5vw;
         margin: 0 auto;
+        font-size: 2vw;
         width: 100%;
         transition: all 0.3s ease-in-out;
     }

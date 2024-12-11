@@ -9,7 +9,9 @@
     <title>Rhinelander Rabbitry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,1,100;1,200;1,300;&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/rabbitry.css">
     <link rel="stylesheet" href="styles/rabbitry-medium.css" media="screen and (max-width: 937px)">
     <link rel="stylesheet" href="styles/rabbitry-small.css" media="screen and (max-width: 600px)">
@@ -24,9 +26,9 @@
                 <h1>Rhinelander Rabbitry</h1>
                 <nav id="nav-menu" class="navigation">
 
-                <div class="hamburger-menu" id="hamburger-menu">
-                    &#9776;
-                </div>
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        &#9776;
+                    </div>
                     <ul>
                         <li><a href="rabbitry.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
                         <li><a href="rhinelanders.html" class="filter-btn" data-filter="rhinelanders" target="_blank">Rhinelanders</a></li>
@@ -39,7 +41,9 @@
             </div>
         </div>
     </header>
-    <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
+    <div id="random-trivia-container">
+        <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
+    </div>
     <main>
         <section id="poem-cards-container">
             <div class="poem-card">
@@ -52,53 +56,64 @@
             </div>
             <figure class="image-card">
                 <a href="harlequins.html" target="_blank">
-                    <img src="images/regi.webp" alt="Image of our Japanese Harlequin, Sir. Regynold."></a>
+                    <img src="images/regi.webp"
+                        srcset="images/small-regi.webp 150w, images/medium-regi.webp 300w, images/large-regi.webp 600w"
+                        sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px"
+                        alt="Image of our Japanese Harlequin, Sir. Regynold.">
                 </a>
-                <figcaption><a href="harlequins.html" target="_blank">See & learn about Harlequins</a></figcaption>
-            </figure>
-            <figure class="image-card">
-                <a href="mini-lops.html" target="_blank">
-                    <img src="images/puppy2.webp" alt="Image of our broken black Mini Lop, Puppy."></a>
-                <figcaption><a href="mini-lops.html" target="_blank">See & learn about Mini Lops</a></figcaption>
-            </figure>
-            <div class="poem-card">
-                <p>
-                    Oh, gentle bunnies, so serene,<br>
-                    Embodiments of peace unseen,<br>
-                    In their quiet, modest grace,<br>
-                    They teach us how to find our place.<br><br>
-                    With every hop, in graceful stride,<br>
-                    Through open fields, and meadows wide,<br>
-                    They whisper secrets to the earth,<br>
-                    Of quiet strength, of gentle worth.<br><br>
-                    In their eyes, pure glee does gleam,<br>
-                    A mirrored world where hope can dream,<br>
-                    So hop along, with joy and pride,<br>
-                    For in your hearts, all fears subside.
-                </p>
-            </div>
-            <figure class="image-card">
-                <a href="rhinelanders.html" target="_blank">
-                    <img src="images/kit-lineup.webp" alt="Image of our Rhinelander kits in a column."></a>
-                <figcaption><a href="rhinelanders.html" target="_blank">See & learn about Rhinelanders</a></figcaption>
-            </figure>
-            <figure class="image-card">
-                <a href="rhinelanders.html" target="_blank">
-                    <img src="images/rhinelander-lyraandkits.webp" alt="Image of our Lyra & her kits"></a>
-                <figcaption><a href="rhinelanders.html" target="_blank">See & learn about Rhinelanders</a></figcaption>
-            </figure>
-            <figure class="image-card">
-                <a href="all.html" target="_blank">
-                    <img src="images/black-mini-lop.webp" alt="Image of a Black Self Mini Lop"></a>
-                <figcaption><a href="all.html" target="_blank">See all the buns!</a></figcaption>
+                <figcaption><a href="harlequins.html" target="_blank">View our photos & learn more about Harlequins</a></figcaption>
+                <figure class="image-card">
+                    <a href="mini-lops.html" target="_blank">
+                        <img src="images/sarafina.webp"
+                            srcset="images/small-sarafina.webp 150w, images/medium-sarafina.webp 300w, images/large-sarafina.webp 600w"
+                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of our Agouti Mini Lop, Sarafina.">
+                    </a>
+                    <figcaption><a href="mini-lops.html" target="_blank">View our photos & learn about Mini Lops</a></figcaption>
+                </figure>
+                <div class="poem-card">
+                    <p>
+                        Oh, gentle bunnies, so serene,<br>
+                        Embodiments of peace unseen,<br>
+                        In their quiet, modest grace,<br>
+                        They teach us how to find our place.<br><br>
+                        With every hop, in graceful stride,<br>
+                        Through open fields, and meadows wide,<br>
+                        They whisper secrets to the earth,<br>
+                        Of quiet strength, of gentle worth.<br><br>
+                        In their eyes, pure glee does gleam,<br>
+                        A mirrored world where hope can dream,<br>
+                        So hop along, with joy and pride,<br>
+                        For in your hearts, all fears subside.
+                    </p>
+                </div>
+                <figure class="image-card">
+                    <a href="rhinelanders.html" target="_blank">
+                        <img src="images/rhinelander-kit-lineup.webp"
+                            srcset="images/small-rhinelander-kit-lineup.webp 150w, images/medium-rhinelander-kit-lineup.webp 300w, images/large-rhinelander-kit-lineup.webp 600w"
+                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of our Lyras kits in a column.">
+                    </a>
+                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
+                </figure>
+                <figure class="image-card">
+                    <a href="rhinelanders.html" target="_blank">
+                        <img src="images/rhinelander-lyraandkits.webp"
+                            srcset="images/small-lyraandkits.webp 150w, images/medium-lyraandkits.webp 300w, images/large-lyraandkits.webp 600w"
+                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px"
+                            alt="Image of our Charlie Rhinelander, Lyra & her kits">
+                    </a>
+                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
+                </figure>
+                <figure class="image-card">
+                    <a href="all.html" target="_blank">
+                        <img src="images/black-mini-lop.webp"
+                            srcset="images/small-black-mini-lop.webp 150w, images/medium-black-mini-lop.webp 300w, images/large-black-mini-lop.webp 600w"
+                            sizes="(max-width: 600px) 150px, (max-width: 937px) 300px, 600px" alt="Image of a Black Self Mini Lop">
+                    </a>
+                    <figcaption><a href="rhinelanders.html" target="_blank">View our photos & learn about Rhinelanders</a></figcaption>
+                </figure>
+                <figcaption><a href="all.html" target="_blank">Pick out your bun - Submit your art - Contact us!</a></figcaption>
             </figure>
         </section>
-        <div id="contact-us">
-            <p>
-                <a href="contact-us.html" target="_blank">Click Here if you want to say hello. Feel free to reach out to us and we'll help
-                    you as you go.</a>
-            </p>
-        </div>
     </main>
 </body>
 

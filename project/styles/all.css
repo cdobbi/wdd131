@@ -39,7 +39,7 @@ body {
         "trivia"
         "main"
         "footer";
-}
+    }
 
 h1,
 h2,
@@ -51,7 +51,7 @@ header {
     width: 98%;
     background: var(--tertiary-color);
     box-sizing: border-box;
-    padding: 1.5rem;
+    padding: 1.5vw;
     grid-area: header;
     border: 4px solid var(--accent1-color);
     transition: all 0.3s ease-in-out;
@@ -60,17 +60,25 @@ header {
 h1 {
     font-weight: 100;
     font-style: normal;
-    font-size: 3rem;
-    margin: 1.5rem;
+    font-size: 3vw;
+    margin: 1.5vw;
     text-align: center;
     background: var(--tertiary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    font-size: 25vw;
+    font-weight: 200;
+    text-align: center;
+    margin: 1.5vw;
     transition: all 0.3s ease-in-out;
 }
 
 nav {
     box-sizing: border-box;
     background-color: var(--nav-background-color);
-    padding: 1rem;
+    padding: 1vw;
     max-width: 100%;
     transition: all 0.3s ease-in-out;
 }
@@ -87,10 +95,12 @@ nav ul {
 
 nav a {
     display: block;
+    font-size: 1.5vw;
+    font-weight: 300;
     font-family: var(--heading-font);
     color: var(--nav-color);
     text-align: center;
-    padding: 0.3rem;
+    padding: 0.3vw;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
@@ -102,13 +112,17 @@ nav a:hover {
     color: var(--nav-hover-link-color);
 }
 
+nav a:visited {
+    color: var(--nav-visited-link-color) !important;
+}
+
 #random-trivia {
     grid-area: trivia;
     font-size: 0.5vw;
     font-family: var(--heading-font);
     text-align: center;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 200;
     transition: all 0.3s ease-in-out;
     width: 100%;
 }
@@ -117,7 +131,7 @@ main {
     max-width: 2200px;
     display: grid;
     grid-template-columns: 3.5fr 1fr;
-    gap: .8rem;
+    gap: .8vw;
     width: 98%;
     padding-top: 0;
     margin: 0 auto;
@@ -130,7 +144,7 @@ main {
 .rabbit-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1vw;
     transition: all 0.3s ease-in-out;
 }
 
@@ -144,39 +158,47 @@ main {
 
 aside {
     background: var(--aside-color);
-    padding: 1rem;
+    padding: 1vw;
     margin: 0 auto;
     border: 2px solid var(--accent1-color);
     /* Add border to aside */
 }
 
+aside a {
+    color: var(--nav-color);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+
 aside h2 {
     text-align: center;
     font-family: var(--heading-font);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+    margin-top: 1.5vw;
 }
 
 aside ul {
     font-family: var(--heading-font);
     list-style: none;
-    /* Remove bullet points */
+    /* vwove bullet points */
     padding: 0;
     margin: 0;
 }
 
 aside ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
     /* Add space between links */
 }
 
 aside ul li a {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.5vw 0;
     /* Add padding around the links */
     text-decoration: none;
-    /* Remove underline */
+    /* vwove underline */
     color: var(--nav-color);
     /* Set link color */
 }
@@ -190,8 +212,8 @@ footer {
     background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 1vw;
+    margin-top: 1vw;
     transition: all 0.3s ease-in-out;
     border: 2px solid var(--accent1-color);
     box-sizing: border-box;
@@ -199,32 +221,35 @@ footer {
 
 aside form {
     margin-right: 0 auto;
-    margin-top: 1rem;
+    margin-top: 1vw;
     display: flex;
     flex-direction: column;
 }
 
 aside form label {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1vw;
+    font-weight: 300;
     font-family: var(--heading-font);
 }
 
 aside form input,
 aside form textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+    padding: 0.5vw;
+    margin-top: 0.5vw;
     border: 1px solid var(--accent1-color);
     border-radius: 5px;
     font-family: var(--paragraph-font);
 }
 
 aside form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
+    margin-top: 1vw;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    
     background-color: var(--secondary-color);
-    border: none;
     border-radius: 5px;
+    border-color: var(--accent1-color);
     color: white;
     font-family: var(--heading-font);
     cursor: pointer;
@@ -236,9 +261,8 @@ aside form button:hover {
 
 .hamburger-menu {
     display: none;
-    font-size: 2rem;
+    font-size: 2vw;
     cursor: pointer;
-
 }
 
 @media (max-width: 768px) {
@@ -254,7 +278,7 @@ aside form button:hover {
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 1rem;
+        padding: 1vw;
     }
 
     nav ul.show {
@@ -262,7 +286,7 @@ aside form button:hover {
     }
 
     h1 {
-        font-size: 1rem;
+        font-size: 1vw;
     }
 
     body {
@@ -278,12 +302,6 @@ aside form button:hover {
     }
 
     aside {
-        margin-top: 1rem;
+        margin-top: 1vw;
     }
 }
-
-/* .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-} */
