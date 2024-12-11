@@ -57,4 +57,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lastModified").textContent = document.lastModified;
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     console.log("DOM fully loaded and parsed");
-});
+
+    // Form submission functionality
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const formData = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+        alert('Form submitted successfully!');
+
+        contactForm.reset();
+        });
+ });
