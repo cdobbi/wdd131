@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
 
-    // Define elements first
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.querySelector('nav ul');
 
-    // Debugging logs
     console.log('Hamburger Menu:', hamburgerMenu);
     console.log('Nav Menu:', navMenu);
 
-    // Add event listener if elements exist
     if (hamburgerMenu && navMenu) {
         hamburgerMenu.addEventListener('click', function () {
             navMenu.classList.toggle('show');
@@ -57,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('lastModified').textContent = document.lastModified;
     document.getElementById('currentyear').textContent = new Date().getFullYear();
 
-    // Form submission functionality
     if (window.location.pathname.includes('contact-us.html')) {
         const contactForm = document.getElementById('contactForm');
         let isSubmitting = false;
@@ -75,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const email = document.getElementById('email').value;
                 const message = document.getElementById('message').value;
 
-                // Store data locally
                 const formData = {
                     name: name,
                     email: email,
@@ -83,13 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
                 localStorage.setItem('contactFormData', JSON.stringify(formData));
 
-                // Debugging logs
                 console.log('Form submitted');
                 console.log('Name: ', name);
                 console.log('Email: ', email);
                 console.log('Message: ', message);
 
-                // Display the thank you message
                 document.getElementById('submittedData').innerHTML = `<h2>Thank you for saying hello. I've received your information and will get back to you shortly. Have a hopping day!</h2>`;
                 document.getElementById('submittedData').style.display = 'block';
 
@@ -98,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const storedData = JSON.parse(localStorage.getItem('contactFormData'));
                 if (storedData) {
                     console.log('Stored Form Data:', storedData);
-                    // Displayed in the DOM //
                 }
             });
         } else {
