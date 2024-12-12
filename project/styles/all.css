@@ -39,7 +39,9 @@ body {
         "trivia"
         "main"
         "footer";
-    }
+}
+
+
 
 h1,
 h2,
@@ -75,6 +77,7 @@ h1 {
 }
 
 h2 {
+    font-family: var(--heading-font);
     font-size: 3vw;
     font-weight: 200;
     text-align: left;
@@ -139,6 +142,7 @@ nav a:visited {
 
 main {
     display: grid;
+    grid-area: main;
     max-width: 2200px;
     display: grid;
     grid-template-columns: 3.5fr 1fr;
@@ -147,7 +151,6 @@ main {
     padding-top: 0;
     margin: 0 auto;
     box-sizing: border-box;
-    grid-area: main;
     max-width: 2200px;
     transition: all 0.3s ease-in-out;
 }
@@ -160,25 +163,17 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
-.welcome-section {
-    background: var(--accent1-color);
-    padding: 1vw;
-    border: 2px solid var(--accent1-color);
-    /* Add border to section */
-}
-
 section.welcome-message {
-    background: var(--accent1-color);
     padding: 1vw;
     border: 2px solid var(--accent1-color);
     /* Add border to section */
-    height: 50vh;
+    height: 100;
 }
 
 
 .rabbit-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
     gap: 1vw;
     transition: all 0.3s ease-in-out;
     margin-top: 0;
@@ -201,15 +196,12 @@ section.welcome-message {
     height: auto;
     border-radius: 5px;
     border: 5px solid var(--accent1-color);
-    /* Add border to images */
-}
+    object-fit: cover;}
 
 aside {
     background: var(--aside-color);
     padding: 1vw;
-    margin: 0 auto;
     border: 2px solid var(--accent1-color);
-    /* Add border to aside */
 }
 
 aside a {
@@ -223,16 +215,17 @@ aside a {
 aside h2 {
     text-align: center;
     font-family: var(--heading-font);
-    font-size: 3vw;
+    padding: 0.5vw;
+    font-size: 2.5vw;
     margin-bottom: 1.5vw;
-    margin-top: 1.5vw;
+    margin-top: 2vw;
 }
 
 aside p {
     font-family: var(--paragraph-font);
-    font-size: 2.5vw;
-    margin-bottom: 1vw;
+    font-size: 1.4vw;
     text-align: center;
+    padding: 0.3rem;
 }
 
 aside ul {
