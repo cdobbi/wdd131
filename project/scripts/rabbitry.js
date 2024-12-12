@@ -56,34 +56,40 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('currentyear').textContent = new Date().getFullYear();
   
     // Form submission functionality
-    const contactForm = document.getElementById('contactForm');
-    let isSubmitting = false;
-  
-    console.log('Attaching form submit event listener');
-  
-    contactForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-  
-      if (isSubmitting) return;
-      isSubmitting = true;
-  
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-  
-      // Debugging logs
-      console.log('Form submitted');
-      console.log('Name: ', name);
-      console.log('Email: ', email);
-      console.log('Message: ', message);
-  
-      // Display the thank you message
-      document.getElementById(
-        'submittedData'
-      ).innerHTML = `<h2>Thank you for your enquiry. Someone will be with you shortly. Have a hopping day!</h2>`;
-      document.getElementById('submittedData').style.display = 'block';
-  
-      contactForm.reset();
-      isSubmitting = false;
-    });
-  });
+    if (window.location.pathname.includes('contact-us.html')) {
+        const contactForm = document.getElementById('contactForm');
+        let isSubmitting = false;
+      
+        console.log('Attaching form submit event listener');
+      
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+            
+                if (isSubmitting) return;
+                isSubmitting = true;
+            
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+            
+                // Debugging logs
+                console.log('Form submitted');
+                console.log('Name: ', name);
+                console.log('Email: ', email);
+                console.log('Message: ', message);
+            
+                // Display the thank you message
+                document.getElementById(
+                    'submittedData'
+                ).innerHTML = `<h2>Thank you for your enquiry. Someone will be with you shortly. Have a hopping day!</h2>`;
+                document.getElementById('submittedData').style.display = 'block';
+            
+                contactForm.reset();
+                isSubmitting = false;
+            });
+        } else {
+            console.error('Contact form not found');
+        }
+    }
+});

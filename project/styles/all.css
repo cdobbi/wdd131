@@ -317,6 +317,11 @@ a:-webkit-any-link contact-form {
     text-decoration: underline;
 }
 
+.row {
+    margin: 0;
+    padding: 0;
+}
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
