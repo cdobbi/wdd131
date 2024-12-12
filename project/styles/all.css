@@ -1,7 +1,4 @@
-/* Correct Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* Root Variables */
 :root {
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Dancing Script", cursive;
@@ -34,7 +31,7 @@ body {
     place-items: center;
     min-height: 100vh;
     margin: 0;
-    max-width: 2200px;
+    max-width: 1600px;
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr;
     font-family: var(--heading-font);
@@ -56,23 +53,23 @@ h3 {
 header {
     width: 98%;
     background: var(--tertiary-color);
-    box-sizing: border-box;
     grid-area: header;
     transition: all 0.3s ease-in-out;
 }
 
-.favicon {
-    width: 45px;
-    height: 45px;
+.favicon{
+    width: 90px;
+    height: 110px;
     margin-right: 10px;
     vertical-align: middle;
+    border-radius: 25%;
+    transition: all 0.3s ease-in-out;
 }
 
 h1 {
-    font-weight: 100;
-    font-style: normal;
-    font-size: 2rem;
-    margin: 1.5rem;
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 1rem;
     text-align: center;
     background: var(--tertiary-color);
     transition: all 0.3s ease-in-out;
@@ -81,9 +78,8 @@ h1 {
 h2 {
     font-family: var(--heading-font);
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 300;
     text-align: left;
-    margin: 1.5rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -96,8 +92,7 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: space-around;
     width: 100%;
     list-style: none;
     transition: all 0.3s ease-in-out;
@@ -105,12 +100,11 @@ nav ul {
 
 nav a {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 300;
+    padding: 0.8rem;
     font-family: var(--heading-font);
     color: var(--nav-color);
-    text-align: center;
-    padding: 0.3rem;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
@@ -128,7 +122,7 @@ nav a:visited {
 
 #random-trivia {
     grid-area: trivia;
-    max-width: 2200px;
+    max-width: 1600px;
     margin-bottom: 1rem;
     font-size: 1.1rem;
     font-family: var(--paragraph-font);
@@ -137,6 +131,30 @@ nav a:visited {
     transition: all 0.3s ease-in-out;
     width: 98%;
     background: var(--accent1-color);
+}
+
+.hamburger-menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger-menu::before {
+    content: '☰'; 
+    color: red;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu.active::before {
+    content: '✖';
+    color: red;
 }
 
 main {
@@ -163,9 +181,10 @@ section.welcome-message {
 
 section.welcome-message p {
     font-family: var(--heading-font);
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: left;
     padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .rabbit-cards {
@@ -177,24 +196,12 @@ section.welcome-message p {
     margin-top: 0;
 }
 
-.rabbit-card a {
-    display: block;
-    text-align: center;
-    background: var(--accent1-color);
-    color: var(--nav-color);
-    text-decoration: none;
-    font-family: var(--heading-font);
-    font-size: 1.5rem;
-    font-weight: 300;
-    transition: all 0.3s ease-in-out;
-}
-
 .rabbit-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 5px solid var(--accent1-color);
 }
 
@@ -209,7 +216,7 @@ aside a {
     text-decoration: none;
     font-family: var(--heading-font);
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 aside h2 {
@@ -255,11 +262,8 @@ footer {
     background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
-    padding: 1rem;
     margin-top: 1rem;
     transition: all 0.3s ease-in-out;
-    border: 2px solid var(--accent1-color);
-    box-sizing: border-box;
 }
 
 aside form {
@@ -300,35 +304,12 @@ aside form button:hover {
     background-color: var(--nav-hover-background-color);
 }
 
-.hamburger-menu {
-    display: none;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    cursor: pointer;
-}
-
-.hamburger-menu::before {
-    content: '☰'; 
-    color: red;
-    font-size: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
-}
-
-.hamburger-menu.active::before {
-    content: '✖';
-    color: red;
-}
-
 .social-icons {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-right: 1rem;
+    margin-top: -1rem;
 }
 
 .social-icon {
@@ -350,9 +331,15 @@ a.blurb {
     text-decoration: underline;
 }
 
+
 @media (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: 200;
     }
 
     .hamburger-menu {
@@ -360,7 +347,6 @@ a.blurb {
     }
 
     nav ul {
-        display: none;
         flex-direction: column;
         width: 100%;
         background-color: var(--nav-background-color);
@@ -375,8 +361,16 @@ a.blurb {
         display: flex;
     }
 
-    h1 {
-        font-size: 3rem; 
+    #random-trivia {
+        font-size: 0.5rem;
+        grid-area: trivia;
+        max-width: 2220px;
+        font-family: var(--paragraph-font);
+        text-align: right;
+        font-weight: normal;
+        transition: all 0.3s ease-in-out;
+        width: 98%;
+        background: var(--accent1-color);
     }
 
     body {
@@ -402,14 +396,4 @@ a.blurb {
     aside {
         margin-top: 1rem;
     }
-}
-
-nav ul {
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
-}
-
-nav ul.show {
-    max-height: 500px; /* Adjust as needed */
 }
