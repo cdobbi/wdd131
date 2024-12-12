@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Display the thank you message
                 document.getElementById(
                     'submittedData'
-                ).innerHTML = `<h2>Thank you for your enquiry. Someone will be with you shortly. Have a hopping day!</h2>`;
+                ).innerHTML = `<h2>Thank you for saying hello. I've received your information and will get back to you shortly. Have a hopping day!</h2>`;
                 document.getElementById('submittedData').style.display = 'block';
             
                 contactForm.reset();

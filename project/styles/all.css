@@ -288,6 +288,15 @@ aside form button:hover {
     background-color: var(--nav-hover-background-color);
 }
 
+div#submittedData h2 {
+    margin-top: 1vw;
+    padding: 1vw;
+    background-color: var(--accent1-color);
+    border: 5px solid var(--accent1-color);
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+}
+
 .hamburger-menu {
     display: none;
     font-size: 2vw;
