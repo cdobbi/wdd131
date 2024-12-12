@@ -1,5 +1,7 @@
-@import url('http://127.0.project\fonts\poppins\Comic_Neue,Poppins\Poppins\Poppins-Regular.ttf.1:5501/project/styles/fonts/poppins-v22-latin-regular.woff2://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Correct Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Root Variables */
 :root {
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Dancing Script", cursive;
@@ -23,15 +25,19 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     display: grid;
     place-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     max-width: 2200px;
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr;
-    font-family: var(--header-font);
+    font-family: var(--heading-font);
     font-style: normal;
     font-weight: 450;
     grid-template-areas:
@@ -40,8 +46,6 @@ body {
         "main"
         "footer";
 }
-
-
 
 h1,
 h2,
@@ -53,24 +57,22 @@ header {
     width: 98%;
     background: var(--tertiary-color);
     box-sizing: border-box;
-    padding: 1.5vw;
     grid-area: header;
     transition: all 0.3s ease-in-out;
 }
 
 .favicon {
-    width: 80px; /* Adjust the size as needed */
-    height: 80px; /* Adjust the size as needed */
-    margin-right: 10px; /* Adjust the spacing as needed */
-    vertical-align: middle; /* Align the favicon vertically with the text */
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
-
 
 h1 {
     font-weight: 100;
     font-style: normal;
-    font-size: 3vw;
-    margin: 1.5vw;
+    font-size: 2rem;
+    margin: 1.5rem;
     text-align: center;
     background: var(--tertiary-color);
     transition: all 0.3s ease-in-out;
@@ -78,17 +80,16 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    font-size: 3vw;
+    font-size: 3rem;
     font-weight: 200;
     text-align: left;
-    margin: 1.5vw;
+    margin: 1.5rem;
     transition: all 0.3s ease-in-out;
 }
 
 nav {
     box-sizing: border-box;
     background-color: var(--nav-background-color);
-    padding: 1vw;
     max-width: 100%;
     transition: all 0.3s ease-in-out;
 }
@@ -96,7 +97,6 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
-    padding: 0;
     margin: 0;
     width: 100%;
     list-style: none;
@@ -105,18 +105,18 @@ nav ul {
 
 nav a {
     display: block;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
     font-weight: 300;
     font-family: var(--heading-font);
     color: var(--nav-color);
     text-align: center;
-    padding: 0.3vw;
+    padding: 0.3rem;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
 
 nav a:hover {
-    border: var(--nav-a-border-color) 1px solid;
+    border: var(--nav-a-border-color) 3px solid;
     border-radius: 5px;
     text-decoration: none;
     color: var(--nav-hover-link-color);
@@ -129,11 +129,10 @@ nav a:visited {
 #random-trivia {
     grid-area: trivia;
     max-width: 2200px;
-    margin-bottom: 1vw;
-    font-size: 0.5vw;
-    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-family: var(--paragraph-font);
     text-align: right;
-    font-style: italic;
     font-weight: 200;
     transition: all 0.3s ease-in-out;
     width: 98%;
@@ -141,40 +140,39 @@ nav a:visited {
 }
 
 main {
-    display: grid;
     grid-area: main;
-    max-width: 2200px;
     display: grid;
     grid-template-columns: 3.5fr 1fr;
-    gap: .8vw;
+    gap: 0.8rem;
     width: 98%;
     padding-top: 0;
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 2200px;
     transition: all 0.3s ease-in-out;
 }
 
-.main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1vw;
-    align-items: start;
-    transition: all 0.3s ease-in-out;
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 section.welcome-message {
-    padding: 1vw;
+    padding: 1rem;
     border: 2px solid var(--accent1-color);
-    /* Add border to section */
-    height: 100;
 }
 
+section.welcome-message p {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    text-align: left;
+    padding: 0.5rem;
+}
 
 .rabbit-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    grid-auto-rows: 250px;
     transition: all 0.3s ease-in-out;
     margin-top: 0;
 }
@@ -186,21 +184,23 @@ section.welcome-message {
     color: var(--nav-color);
     text-decoration: none;
     font-family: var(--heading-font);
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-weight: 300;
     transition: all 0.3s ease-in-out;
 }
 
 .rabbit-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     border-radius: 5px;
     border: 5px solid var(--accent1-color);
-    object-fit: cover;}
+}
 
 aside {
     background: var(--aside-color);
-    padding: 1vw;
+    padding: 0.5rem;
     border: 2px solid var(--accent1-color);
 }
 
@@ -208,22 +208,22 @@ aside a {
     color: var(--nav-color);
     text-decoration: none;
     font-family: var(--heading-font);
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
 aside h2 {
     text-align: center;
     font-family: var(--heading-font);
-    padding: 0.5vw;
-    font-size: 2.5vw;
-    margin-bottom: 1.5vw;
-    margin-top: 2vw;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
 aside p {
     font-family: var(--paragraph-font);
-    font-size: 1.4vw;
+    font-size: 1.4rem;
     text-align: center;
     padding: 0.3rem;
 }
@@ -231,24 +231,19 @@ aside p {
 aside ul {
     font-family: var(--heading-font);
     list-style: none;
-    /* vwove bullet points */
     padding: 0;
     margin: 0;
 }
 
 aside ul li {
-    margin-bottom: 1vw;
-    /* Add space between links */
+    margin-bottom: 1rem;
 }
 
 aside ul li a {
     display: block;
-    padding: 0.5vw 0;
-    /* Add padding around the links */
+    padding: 0.5rem 0;
     text-decoration: none;
-    /* remove underline */
     color: var(--nav-color);
-    /* Set link color */
 }
 
 aside ul li a:hover {
@@ -260,44 +255,42 @@ footer {
     background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
-    padding: 1vw;
-    margin-top: 1vw;
+    padding: 1rem;
+    margin-top: 1rem;
     transition: all 0.3s ease-in-out;
     border: 2px solid var(--accent1-color);
     box-sizing: border-box;
 }
 
 aside form {
-    margin-right: 0 auto;
-    margin-top: 1vw;
+    margin: 1rem auto 0 auto;
     display: flex;
     flex-direction: column;
 }
 
 aside form label {
     text-align: center;
-    margin-top: 1vw;
+    margin-top: 1rem;
     font-weight: 300;
     font-family: var(--heading-font);
 }
 
 aside form input,
 aside form textarea {
-    padding: 0.5vw;
-    margin-top: 0.5vw;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     border: 1px solid var(--accent1-color);
     border-radius: 5px;
     font-family: var(--paragraph-font);
 }
 
 aside form button {
-    margin-top: 1vw;
-    padding: 0.5vw;
-    font-size: 1.5vw;
-    
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
     background-color: var(--secondary-color);
     border-radius: 5px;
-    border-color: var(--accent1-color);
+    border: 1px solid var(--accent1-color);
     color: white;
     font-family: var(--heading-font);
     cursor: pointer;
@@ -309,8 +302,26 @@ aside form button:hover {
 
 .hamburger-menu {
     display: none;
-    font-size: 2vw;
+    width: 40px;
+    height: 40px;
+    position: relative;
     cursor: pointer;
+}
+
+.hamburger-menu::before {
+    content: '☰'; 
+    color: red;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu.active::before {
+    content: '✖';
+    color: red;
 }
 
 .social-icons {
@@ -330,13 +341,20 @@ aside form button:hover {
     color: #0073b1; /* LinkedIn color */
 }
 
-a:-webkit-any-link contact-form {
+a.blurb {
+    display: block;
+    text-align: center;
+    margin-top: 5rem;
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
     .hamburger-menu {
         display: block;
     }
@@ -349,7 +367,8 @@ a:-webkit-any-link contact-form {
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 1vw;
+        padding: 1rem;
+        z-index: 1000;
     }
 
     nav ul.show {
@@ -357,7 +376,7 @@ a:-webkit-any-link contact-form {
     }
 
     h1 {
-        font-size: 1vw;
+        font-size: 3rem; 
     }
 
     body {
@@ -369,10 +388,28 @@ a:-webkit-any-link contact-form {
     }
 
     .rabbit-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.5rem;
+        grid-auto-rows: 150px;
+    }
+
+    .rabbit-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     aside {
-        margin-top: 1vw;
+        margin-top: 1rem;
     }
+}
+
+nav ul {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+nav ul.show {
+    max-height: 500px; /* Adjust as needed */
 }
