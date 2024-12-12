@@ -75,9 +75,9 @@ h1 {
 }
 
 h2 {
-    font-size: 25vw;
+    font-size: 3vw;
     font-weight: 200;
-    text-align: center;
+    text-align: left;
     margin: 1.5vw;
     transition: all 0.3s ease-in-out;
 }
@@ -138,6 +138,7 @@ nav a:visited {
 }
 
 main {
+    display: grid;
     max-width: 2200px;
     display: grid;
     grid-template-columns: 3.5fr 1fr;
@@ -151,11 +152,36 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    align-items: start;
+    transition: all 0.3s ease-in-out;
+}
+
+.welcome-section {
+    background: var(--accent1-color);
+    padding: 1vw;
+    border: 2px solid var(--accent1-color);
+    /* Add border to section */
+}
+
+section.welcome-message {
+    background: var(--accent1-color);
+    padding: 1vw;
+    border: 2px solid var(--accent1-color);
+    /* Add border to section */
+    height: 50vh;
+}
+
+
 .rabbit-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
     transition: all 0.3s ease-in-out;
+    margin-top: 0;
 }
 
 .rabbit-card a {
@@ -288,15 +314,6 @@ aside form button:hover {
     background-color: var(--nav-hover-background-color);
 }
 
-div#submittedData h2 {
-    margin-top: 1vw;
-    padding: 1vw;
-    background-color: var(--accent1-color);
-    border: 5px solid var(--accent1-color);
-    font-family: var(--paragraph-font);
-    font-size: 1rem;
-}
-
 .hamburger-menu {
     display: none;
     font-size: 2vw;
@@ -324,11 +341,6 @@ a:-webkit-any-link contact-form {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
-}
-
-.row {
-    margin: 0;
-    padding: 0;
 }
 
 @media (max-width: 768px) {

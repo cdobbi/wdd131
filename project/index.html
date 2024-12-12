@@ -1,5 +1,4 @@
-<!-- The filter-btn class is used to filter the rabbit cards by breed. The data-filter attribute is used to determine which breed to filter by.
- The target attribute is used to open the link in a new tab. The FORM is in the ALl the Bunnies tab and theres a reference at the bottom of the main page that links to the contct form.
+<!-- The form is in the 'contact-us' file. Theres a reference at the bottom of the main page that links to the contct form.
  You'll find the form output wihtin the inspect console log.
  I spent 4 HOURS setting up a server and then found out that it can't be accessed through the byu link within github.
  I added social links that link to my index.html. All links work and open to new pages. -->
@@ -46,27 +45,26 @@
     </header>
     <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
     <main>
-        <p id="welcome-message">Welcome to Rhinelander Rabbitry! 🐇🥕🥬🫐🌿</p><br>
-        <p id="welcome-message">We are a small rabbitry located in the Utah County. Rabbits came into our lives unnexpectadly. They'be been
-            a huge blessing in our lives. They make us laugh and smile daily, as my neice would say. Our focus is breeding Rhinelanders,
-            Mini Lops, and
-            Harlequins. We are dedicated to providing the best care for our rabbits and ensuring they go to loving homes. We also enjoy
-            educating others about rabbits and their care. We hope you enjoy learning about our bunnies and feel free to contact
-            us if you have any questions or are interested in adopting a rabbit.</p>
-        <section class="rabbit-cards">
-            <a href="harlequins.html" target="_blank"><img src="images/harlequin-regi.webp"
-                    alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image"></a>
-            <a href="all.html" target="_blank"><img src="images/mini-lop-black.webp" alt="Image of a Black Self Mini Lop"
-                    class="rabbit-image"></a>
-            <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-lyras-kits2-12-24.webp"
-                    alt="Image of our Charlie Rhinelander, Lyra & her kits" class="rabbit-image"></a>
-            <a href="mini-lops.html" target="_blank"><img src="images/mini-lop-sarafina.webp" alt="Image of our Agouti Mini Lop, Sarafina."
-                    class="rabbit-image"></a>
-            <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-astra3.webp"
-                    alt="Image of our Sport Rhinelander, Astra." class="rabbit-image"></a>
-            <a href="harlequin.html" target="_blank"><img src="images/rhinelander-orion.webp" alt="Image of Demis kit."
-                    class="rabbit-image"></a>
-
+        <section class="welcome-message">
+            <h2>Welcome to Rhinelander Rabbitry</h2>
+            <p id="welcome-message">
+                For three years, I stood firm, telling her that we weren't going to get a rabbit. But life has a funny way of
+                changing our planes...<br><br>
+            </p>
+            <p>One day, our cat caught a tiny kit. We brought it inside, expecting to make it comfortable in
+                its final moments. To our surprise, the little one didn't just survive—it thrived. That unexpected turn of events
+                marked the beginning of our journey into the world of rabbits.<br><br>
+            </p>
+            <p>As soon as the neighbors heard about our new addition, they began to bring us their unwanted bunnies or injured feral
+                buns. We quickly found ourselves with a small herd of rabbits, each with its own unique story and in need of homes as
+                our space to house them had run out.<br><br>
+            </p>
+            <p>Although we've grown our little rabbit village, we are still small, which allows us to focus on breeding quality pet
+                and show animals. We are dedicated to providing the best care for our rabbits and ensuring they go to loving homes. We
+                hope you enjoy learning about our bunnies and feel free to contact us if you have any questions or are interested in
+                adopting a rabbit.</p><br><br>
+                
+            <p>Welcome to Rhinelander Rabbitry, where every bunny has a story, and every story has a heart!</p>
         </section>
         <aside>
             <h2>Poem</h2>
@@ -99,6 +97,15 @@
                 -- Christi Dobbins ❤️‍🩹
             </p>
         </aside>
+        <section class="rabbit-cards">
+            <img src="images/harlequin-regi.webp" alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image" loading="lazy">
+            <img src="images/mini-lop-black.webp" alt="Image of a Black Self Mini Lop" class="rabbit-image" loading="lazy">
+            <img src="images/rhinelander-lyras-kits2-12-24.webp" alt="Image of our Charlie Rhinelander, Lyra & her kits" class="rabbit-image" loading="lazy">
+            <img src="images/mini-lop-sarafina.webp" alt="Image of our Agouti Mini Lop, Sarafina." class="rabbit-image" loading="lazy">
+            <img src="images/rhinelander-astra3.webp" alt="Image of our Sport Rhinelander, Astra." class="rabbit-image" loading="lazy">
+            <img src="images/harlequin-kit.webp" alt="Image of Demis kit." class="rabbit-image" loading="lazy">
+        </section>
+        
         <a href="contact-us.html" class="contact-form" data-filter="contact-form" target="_blank">Click here to contact us, if you want to
             adopt a
             bun or to see/submit a drawing of a rabbit.</a>
