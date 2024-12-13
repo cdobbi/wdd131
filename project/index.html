@@ -1,16 +1,15 @@
 <!-- 
- The form is in the "contact-us" file.
- Form fiels marked as required after submission.
-Form submit message displayed after submission.
-User submission can be seen in the inspect console log.
-Randomized rabbit facts that change with page refresh.
-Took 100+ photos myself and Sqooshed them webp format.
-Home page image links.
-Original poem composed specifically for this project.
-Social icon in footer linked to 'About Me' index.html.
-Passes lighthouse 100% mobile and 98% desktop.
-Favicon added to thesite page tab.
-Hamburger button attempted but not working. I spent 2 days on it. :(
+- Form is in the "contact-us.html" file. Form fields mark as required after submissionif if they havent been filled out. 
+  Form submitted message displayed after submission. 
+- Local storage from the users input can be seen in the inspect console log.
+- Array in JavaScript is an array of rabbit trivia that is acessed randomly and displayed in the header.
+
+- Took 100+ photos myself and Sqooshed them webp format.
+- Original poem composed specifically for this project.
+- Social icon in footer linked to 'About Me' index.html.
+- Passes lighthouse 100% mobile and 98% desktop.
+- Favicon added to the site page tab.
+- Hamburger button attempted but not working. I spent 2 days on it. :(
  -->
 
 <!DOCTYPE html>
@@ -53,44 +52,60 @@ Hamburger button attempted but not working. I spent 2 days on it. :(
             </nav>
         </div>
     </header>
-    <p id="random-trivia">Hopping Trivia: Rabbits have 360-degree vision.</p>
+    <div id="random-trivia">
+        <p>Hopping Trivia: Rabbits have 360-degree vision.</p>
+    </div>
     <main>
         <section class="welcome-message">
             <h2>Welcome!</h2>
             <p id="welcome-message">
-                For three years, I stood firm, telling my daughter that we weren't going to get her a rabbit, but life has a funny way of
+                For years I stood firm, telling my daughter we weren't getting a rabbit, but life has a way of
                 changing plans.</p>
             <p>
-                One day, our cat caught a tiny kit. We brought it inside, expecting to make it comfortable in
-                its final moments. To our surprise, the little one didn't just survive—it thrived. That unexpected turn of events
-                marked the beginning of our journey into the surprising and fascinating world of rabbitry. </p>
+                Our cat caught a tiny kit. We brought it inside, to make it comfortable in
+                its final moments. To our surprise, the little one didn't just survive—it thrived. That marked the
+                beginning of our journey into the surprising world of rabbitry. </p>
             <p>
-                We discovered that people around the world show these adorable creatures competitively! 🙀 There are rabbit shows,
-                hurdle jumping, and obstacle course competitions, clubs, organizations, 4-H and other groups dedicated to rabbits.
+                People around the world show these adorable creatures competitively! 🙀 There's rabbit shows,
+                hurdle jumping, obstacle course competitions, clubs, organizations, 4-H and other groups dedicated to rabbits.
                 The rabbit world is delightfully enormous!</p>
             <p>
-                As neighbors heard about our new addition, they began to bring us their unwanted bunnies or injured feral
-                buns. We bottle fed and mended wounds and quickly found ourselves with a small herd of rabbits each with
-                its own unique story and in need of homes. </p>
+                Random people Knowing we have buns, would (and still do) bring us unwanted or feral rabbits. we quickly found ourselves with
+                a small colony but each in need of a home. </p>
             <p>
-                Although we've grown our little rabbit village, we are still small, which allows us to focus on breeding quality pet
-                and show animals. We are dedicated to providing the best care for our rabbits and ensuring they have a successful transition
-                to their new homes.</p>
+                Although we've grown our little rabbit village, breed and show Rhinelanders, Mini-Lops and Harlequins, we're still small.
+                This allows us to focus on breeding quality pet
+                and show animals. Our goals are to provide the best life for our rabbits and share with others, the healing that comes from
+                owning one.</p>
             <p>
-                We hope you enjoy the cute pictures of some of the bunnies we've had or currently have. I included links to
-                helpful webpages and will continue updating those as I discover additional reliable resources. Have fun learning about
-                bunnies and feel free to contact us if you have any questions or are interested in purchasing a rabbit.</p>
+                Enjoy the cute pictures of some of the bunnies. I included links to
+                helpful webpages on various pages and feel free to contact us if you have any questions or
+                are interested in adopting the most productive therapy you'll ever have.</p>
             <div class="rabbit-cards">
                 <a href="harlequins.html" target="_blank"><img src="images/harlequin-regi.webp" loading="lazy"
                         alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image"></a>
-                <a href="all.html" target="_blank"><img src="images/mini-lop-black.webp" loading="lazy" alt="Image of a Black Self Mini Lop"
-                        class="rabbit-image"></a>
+                <a href="harlequins.html" target="_blank"><img src="images/harlequin-black.webp" loading="lazy"
+                        alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image"></a>
                 <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-lyras-kits2-12-24.webp" loading="lazy"
                         alt="Image of our Charlie Rhinelander, Lyra & her kits" class="rabbit-image"></a>
-                <a href="mini-lops.html" target="_blank"><img src="images/mini-lop-sarafina.webp" loading="lazy"
-                        alt="Image of our Agouti Mini Lop, Sarafina." class="rabbit-image"></a>
+                <a href="all.html" target="_blank"><img src="images/index-yawn.webp" loading="lazy" alt="Image of a Black Self Mini Lop"
+                        class="rabbit-image"></a>
                 <a href="rhinelanders.html" target="_blank"><img src="images/rhinelander-astra3.webp" loading="lazy"
                         alt="Image of our Sport Rhinelander, Astra." class="rabbit-image"></a>
+                <a href="all.html" target="_blank"><img src="images/index-zipper.webp" loading="lazy" alt="Image of a Black Self Mini Lop"
+                        class="rabbit-image"></a>
+                <a href="harlequins.html" target="_blank"><img src="images/index-potato.webp" loading="lazy"
+                        alt="Image of our Japanese Harlequin, Sir. Regynold." class="rabbit-image"></a>
+                <a href="mini-lop.html" target="_blank"><img src="images/rhinelander-jupiter2.webp" loading="lazy"
+                        alt="Image of a Black Self Mini Lop" class="rabbit-image"></a>
+                <a href="mini-lops.html" target="_blank"><img src="images/mini-lop-sarafina.webp" loading="lazy"
+                        alt="Image of our Agouti Mini Lop, Sarafina." class="rabbit-image"></a>
+                <a href="all.html" target="_blank"><img src="images/index-red-door.webp" loading="lazy" alt="Image of a Black Self Mini Lop"
+                        class="rabbit-image"></a>
+                <a href="all.html" target="_blank"><img src="images/index-daisy.webp" loading="lazy" alt="Image of a Black Self Mini Lop"
+                        class="rabbit-image"></a>
+                <a href="all.html" target="_blank"><img src="images/ribbon2.jpg" loading="lazy" alt="Image of a Black Self Mini Lop"
+                        class="rabbit-image"></a>
             </div>
             <a href="contact-us.html" class="blurb" data-filter="blurb" target="_blank">Click here to contact us or to submit a
                 drawing of a rabbit.</a>
@@ -123,12 +138,12 @@ Hamburger button attempted but not working. I spent 2 days on it. :(
                 A mirrored world where hope can dream,<br>
                 So hop along, with joy and pride,<br>
                 For in your hearts, all fears subside.<br>
-                -- Christi Dobbins ❤️‍🩹
+                <br>-- CD ❤️‍🩹
             </p>
         </aside>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> 🐇 Christi Dobbins 🐇 USA</p>
+        <p>&copy; <span id="currentyear"></span>WDD 131 - Dynamic Web Development 🐇 Christi Dobbins 🐇 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/christi-dobbins-46a6aa98" target="_blank" class="social-icon">

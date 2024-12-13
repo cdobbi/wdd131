@@ -1,6 +1,30 @@
+// Simple sanitization function to prevent XSS
+function sanitizeHTML(str) {
+    var temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
 
+    // Update Last Modified and Current Year
+    const lastModifiedElement = document.getElementById('lastModified');
+    const currentYearElement = document.getElementById('currentyear');
+
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+    } else {
+        console.error('Element with ID "lastModified" not found');
+    }
+
+    if (currentYearElement) {
+        currentYearElement.textContent = `Current Year: ${new Date().getFullYear()}`;
+    } else {
+        console.error('Element with ID "currentyear" not found');
+    }
+
+    // Hamburger Menu Toggle
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.querySelector('nav ul');
 
@@ -12,20 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
             navMenu.classList.toggle('show');
             hamburgerMenu.classList.toggle('active');
             const isActive = hamburgerMenu.classList.contains('active');
-            hamburgerMenu.setAttribute('aria-expanded', isActive);
+            hamburgerMenu.setAttribute('aria-expanded', `${isActive}`);
             console.log('Hamburger menu clicked. Classes toggled.');
         });
     } else {
         console.error('Hamburger menu or nav menu not found');
     }
-    const trivia = [
+
+    // Display Random Trivia
+    const triviaArray = [
         'Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.',
         'Hopping Trivia: The Rhinelander is a rare breed of rabbit.',
-        'Hopping Trivia: Rhinelanders weigh between 6.5 to 10 pounds',
+        'Hopping Trivia: Rhinelanders weigh between 6.5 to 10 pounds.',
         'Hopping Trivia: Rhinelanders are intelligent and trainable.',
         'Hopping Trivia: The Rhinelanders originated in Germany.',
         'Hopping Trivia: Rabbit ears move independently by 180 degrees, enabling them to hear from two directions at once.',
-        'Hopping Trivia: A rabbits sense of smell is even better than their eyesight.',
+        'Hopping Trivia: A rabbit’s sense of smell is even better than their eyesight.',
         'Hopping Trivia: Rabbits can run up to 18 miles per hour.',
         'Hopping Trivia: Rabbit tails are used to distract predators during a chase and to signal danger to other rabbits.',
         'Hopping Trivia: Rabbits have nearly 360° panoramic vision, allowing them to detect predators from almost any direction.',
@@ -42,18 +68,26 @@ document.addEventListener('DOMContentLoaded', function () {
         'Hopping Trivia: Rhinelanders are known for their playful and curious nature.',
         'Hopping Trivia: Temperatures above 85 degrees Fahrenheit sterilize bucks.',
         'Hopping Trivia: The Rhinelander is known for their distinctive coat markings.',
-        'Hopping Trivia: A rabbit doe has 2 uteruses',
-        'Hopping Trivia: Rabbits have 2 sets of incisors',
-        'Hopping Trivia: Rabbits have 28 teeth',
-        'Hopping Trivia: Rabbits have a lifespan of 1.6-12 years',
+        'Hopping Trivia: A rabbit doe has 2 uteruses.',
+        'Hopping Trivia: Rabbits have 2 sets of incisors.',
+        'Hopping Trivia: Rabbits have 28 teeth.',
+        'Hopping Trivia: Rabbits have a lifespan of 1.6-12 years.',
         'Hopping Trivia: Rhinelanders require daily interaction and mental stimulation.',
     ];
-    const randomTrivia = trivia[Math.floor(Math.random() * trivia.length)];
-    console.log('Hopping Trivia: ', randomTrivia);
-    document.getElementById('random-trivia').textContent = randomTrivia;
-    document.getElementById('lastModified').textContent = document.lastModified;
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
 
+    function displayRandomTrivia() {
+        const randomTrivia = triviaArray[Math.floor(Math.random() * triviaArray.length)];
+        const triviaElement = document.getElementById('random-trivia');
+        if (triviaElement) {
+            triviaElement.textContent = randomTrivia;
+        } else {
+            console.error('Element with ID "random-trivia" not found');
+        }
+    }
+
+    displayRandomTrivia(); // Call the function once to display trivia
+
+    // Handle Form Submission on 'contact-us.html'
     if (window.location.pathname.includes('contact-us.html')) {
         const contactForm = document.getElementById('contactForm');
         let isSubmitting = false;
@@ -67,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (isSubmitting) return;
                 isSubmitting = true;
 
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
+                const name = document.getElementById('name')?.value.trim() || '';
+                const email = document.getElementById('email')?.value.trim() || '';
+                const message = document.getElementById('message')?.value.trim() || '';
 
                 const formData = {
                     name: name,
@@ -79,22 +113,55 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('contactFormData', JSON.stringify(formData));
 
                 console.log('Form submitted');
-                console.log('Name: ', name);
-                console.log('Email: ', email);
-                console.log('Message: ', message);
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Message:', message);
 
-                document.getElementById('submittedData').innerHTML = `<h2>Thank you for saying hello. I've received your information and will get back to you shortly. Have a hopping day!</h2>`;
-                document.getElementById('submittedData').style.display = 'block';
+                // Reset the Hello message flag to allow it to display again after new submission
+                localStorage.setItem('hasDisplayedHelloMessage', 'false');
+
+                // Set session flag to show submission message
+                sessionStorage.setItem('showSubmissionMessage', 'true');
 
                 contactForm.reset();
                 isSubmitting = false;
-                const storedData = JSON.parse(localStorage.getItem('contactFormData'));
-                if (storedData) {
-                    console.log('Stored Form Data:', storedData);
-                }
-            });
+            }); // Closing parenthesis and brace for event listener
         } else {
             console.error('Contact form not found');
+        }
+
+        // Display submission message if session flag is set
+        const showMessage = sessionStorage.getItem('showSubmissionMessage');
+        if (showMessage === 'true') {
+            const submittedDataElement = document.getElementById('submittedData');
+            if (submittedDataElement) {
+                submittedDataElement.innerHTML = `<h2>We'll get back to you soon!</h2>`;
+                submittedDataElement.style.display = 'block';
+            } else {
+                console.error('Element with ID "submittedData" not found');
+            }
+            // Remove the session flag to prevent the message from showing again
+            sessionStorage.removeItem('showSubmissionMessage');
+        }
+
+        // Retrieve and display stored form data only once
+        const hasDisplayedHelloMessage = localStorage.getItem('hasDisplayedHelloMessage');
+
+        if (hasDisplayedHelloMessage !== 'true') {
+            const storedData = JSON.parse(localStorage.getItem('contactFormData'));
+            if (storedData) {
+                const submittedDataElement = document.getElementById('submittedData');
+                if (submittedDataElement) {
+                    submittedDataElement.innerHTML = `
+                        <h2>Hello ${sanitizeHTML(storedData.name)}, we'll get back to you soon!</h2>
+                    `;
+                    submittedDataElement.style.display = 'block';
+                    // Set flag to indicate the message has been displayed
+                    localStorage.setItem('hasDisplayedHelloMessage', 'true');
+                } else {
+                    console.error('Element with ID "submittedData" not found');
+                }
+            }
         }
     }
 });

@@ -26,6 +26,7 @@
 
 html {
     font-size: 16px;
+    max-width: 100%;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
     place-items: center;
     min-height: 100vh;
     margin: 0;
-    max-width: 1600px;
+    max-width:2200px;
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr;
     font-family: var(--heading-font);
@@ -53,7 +54,7 @@ h3 {
 }
 
 header {
-    width: 98%;
+    width: 100%;
     background: var(--tertiary-color);
     grid-area: header;
     transition: all 0.3s ease-in-out;
@@ -69,9 +70,9 @@ header {
 }
 
 h1 {
+    font-size: 3.5rem;
     font-weight: 300;
-    font-size: 3rem;
-    margin: 1rem;
+    padding: 3rem;
     text-align: center;
     background: var(--tertiary-color);
     transition: all 0.3s ease-in-out;
@@ -79,8 +80,8 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 100;
     text-align: left;
     transition: all 0.3s ease-in-out;
 }
@@ -88,7 +89,7 @@ h2 {
 nav {
     box-sizing: border-box;
     background-color: var(--nav-background-color);
-    max-width: 100%;
+    width: 100%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -107,9 +108,8 @@ nav li {
 
 nav a {
     display: block;
-    font-size: 1.8rem;
-    font-weight: 300;
-    padding: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 200;
     font-family: var(--heading-font);
     color: var(--nav-color);
     transition: all 0.3s ease-in-out;
@@ -129,15 +129,14 @@ nav a:visited {
 
 #random-trivia {
     grid-area: trivia;
-    max-width: 1600px;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    width: 100%;
+    font-size: 1.5rem;
     font-family: var(--paragraph-font);
     text-align: right;
     font-weight: 200;
-    transition: all 0.3s ease-in-out;
-    width: 98%;
     background: var(--accent1-color);
+    transition: all 0.3s ease-in-out;
+
 }
 
 main {
@@ -145,8 +144,8 @@ main {
     display: grid;
     grid-template-columns: 3.5fr 1fr;
     gap: 0.8rem;
-    width: 98%;
-    padding-top: 0;
+    width: 100%;
+    padding: 1rem;
     margin: 0 auto;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
@@ -167,6 +166,7 @@ section.welcome-message p {
     font-size: 1.5rem;
     text-align: left;
     padding: 0.5rem;
+    font-weight: 200;
     transition: all 0.3s ease-in-out;
 }
 
@@ -175,8 +175,8 @@ section.welcome-message p {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
     grid-auto-rows: 250px;
-    transition: all 0.3s ease-in-out;
     margin-top: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .rabbit-image {
@@ -186,13 +186,15 @@ section.welcome-message p {
     display: block;
     border-radius: 10px;
     border: 5px solid var(--accent1-color);
+    transition: all 0.3s ease-in-out;
 }
 
 aside {
     background: var(--aside-color);
-    padding: 0.5rem;
+    padding: 5rem;
     border: 2px solid var(--accent1-color);
     list-style: none;
+    margin: 0;
 }
 
 aside li {
@@ -226,24 +228,40 @@ aside nav ul {
 
 aside p {
     font-family: var(--paragraph-font);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 0.3rem;
+    padding: 0.5rem;
 }
 
+#submittedData {
+    display: none; /* Hidden by default */
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#submittedData h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent2-color);
+}
 footer {
-    width: 98%;
+    padding: 1rem;
+    width: 100%;
     background: var(--accent1-color);
     color: var(--nav-color);
     text-align: center;
-    margin-top: 1rem;
     transition: all 0.3s ease-in-out;
 }
 
 footer p {
     font-family: var(--heading-font);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+
 }
 
 aside form {
@@ -251,6 +269,14 @@ aside form {
     display: flex;
     flex-direction: column;
     list-style: none;
+}
+
+aside form h1 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
 }
 
 aside form label {
@@ -271,12 +297,12 @@ aside form textarea {
 }
 
 aside form button {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0.5rem;
     font-size: 1.5rem;
     background-color: var(--secondary-color);
     border-radius: 5px;
-    border: 1px solid var(--accent1-color);
+    border: 2px solid var(--accent1-color);
     color: black;
     font-family: var(--heading-font);
     cursor: pointer;
@@ -295,7 +321,7 @@ aside form button:hover {
     justify-content: flex-end;
     gap: 15px;
     margin-right: 1rem;
-    margin-top: -1rem;
+    margin-top: -3rem;
 }
 
 .social-icon {
