@@ -277,7 +277,7 @@ aside form button {
     background-color: var(--secondary-color);
     border-radius: 5px;
     border: 1px solid var(--accent1-color);
-    color: white;
+    color: black;
     font-family: var(--heading-font);
     cursor: pointer;
 }
