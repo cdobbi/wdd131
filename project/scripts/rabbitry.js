@@ -1,28 +1,32 @@
-const lastModifiedElement = document.getElementById('lastModified');
-const currentYearElement = document.getElementById('currentyear');
-
 function sanitizeHTML(str) {
-  var temp = document.createElement('div');
+  const temp = document.createElement('div');
   temp.textContent = str;
   return temp.innerHTML;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM fully loaded and parsed');
+
+  const lastModifiedElement = document.getElementById('lastModified');
+  const currentYearElement = document.getElementById('currentyear');
+
+  // Update Last Modified
   if (lastModifiedElement) {
-    lastModifiedElement.textContent = `${document.lastModified}`;
+    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
   } else {
     console.error('Element with ID "lastModified" not found');
   }
 
+  // Update Current Year
   if (currentYearElement) {
-    currentYearElement.textContent = `${new Date().getFullYear()}`;
+    currentYearElement.textContent = `Current Year: ${new Date().getFullYear()}`;
   } else {
     console.error('Element with ID "currentyear" not found');
   }
 
+  // Hamburger Menu Functionality
   const hamburgerMenu = document.getElementById('hamburger-menu');
-  const navMenu = document.querySelector('nav ul');
+  const navMenu = document.getElementById('nav-menu');
 
   console.log('Hamburger Menu:', hamburgerMenu);
   console.log('Nav Menu:', navMenu);
@@ -39,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Hamburger menu or nav menu not found');
   }
 
+  // Trivia Section
   const triviaArray = [
     'Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.',
     'Hopping Trivia: The Rhinelander is a rare breed of rabbit.',
@@ -83,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   displayRandomTrivia();
 
+  // Contact Form Functionality
   if (window.location.pathname.includes('contact-us.html')) {
     const contactForm = document.getElementById('contactForm');
     let isSubmitting = false;
@@ -122,7 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const submissionMessageElement =
           document.getElementById('submissionMessage');
         if (submissionMessageElement) {
-          submissionMessageElement.innerHTML = `<h2>Get Hopping!</h2>`;
+          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(
+            name
+          )}, thank you for your inquiry. I'll bet back to you shortly."</h2>`;
           submissionMessageElement.style.display = 'block';
         } else {
           console.error('Element with ID "submissionMessage" not found');
@@ -156,10 +164,10 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         if (personalizedMessageElement) {
           personalizedMessageElement.innerHTML = `
-                        <h2>Hello ${sanitizeHTML(
-                          storedData.name
-                        )}, we'll get back to you soon!</h2>
-                    `;
+                          <h2>Hello ${sanitizeHTML(
+                            storedData.name
+                          )}, we'll get back to you soon!</h2>
+                      `;
           personalizedMessageElement.style.display = 'block';
           // Set flag to indicate the message has been displayed
           localStorage.setItem('hasDisplayedHelloMessage', 'true');
