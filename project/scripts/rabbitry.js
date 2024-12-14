@@ -1,50 +1,45 @@
-// Simple sanitization function to prevent XSS
+const lastModifiedElement = document.getElementById('lastModified');
+const currentYearElement = document.getElementById('currentyear');
+
 function sanitizeHTML(str) {
-    var temp = document.createElement('div');
-    temp.textContent = str;
-    return temp.innerHTML;
+  var temp = document.createElement('div');
+  temp.textContent = str;
+  return temp.innerHTML;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM fully loaded and parsed');
+  console.log('DOM fully loaded and parsed');
+  if (lastModifiedElement) {
+    lastModifiedElement.textContent = `${document.lastModified}`;
+  } else {
+    console.error('Element with ID "lastModified" not found');
+  }
 
-    // Update Last Modified and Current Year
-    const lastModifiedElement = document.getElementById('lastModified');
-    const currentYearElement = document.getElementById('currentyear');
+  if (currentYearElement) {
+    currentYearElement.textContent = `${new Date().getFullYear()}`;
+  } else {
+    console.error('Element with ID "currentyear" not found');
+  }
 
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
-    } else {
-        console.error('Element with ID "lastModified" not found');
-    }
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
 
-    if (currentYearElement) {
-        currentYearElement.textContent = `Current Year: ${new Date().getFullYear()}`;
-    } else {
-        console.error('Element with ID "currentyear" not found');
-    }
+  console.log('Hamburger Menu:', hamburgerMenu);
+  console.log('Nav Menu:', navMenu);
 
-    // Hamburger Menu Toggle
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navMenu = document.querySelector('nav ul');
-
-console.log('Hamburger Menu:', hamburgerMenu);
-console.log('Nav Menu:', navMenu);
-
-if (hamburgerMenu && navMenu) {
+  if (hamburgerMenu && navMenu) {
     hamburgerMenu.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-        hamburgerMenu.classList.toggle('active');
-        const isActive = hamburgerMenu.classList.contains('active');
-        hamburgerMenu.setAttribute('aria-expanded', `${isActive}`);
-        console.log('Hamburger menu clicked. Classes toggled.');
+      navMenu.classList.toggle('show');
+      hamburgerMenu.classList.toggle('active');
+      const isActive = hamburgerMenu.classList.contains('active');
+      hamburgerMenu.setAttribute('aria-expanded', `${isActive}`);
+      console.log('Hamburger menu clicked. Classes toggled.');
     });
-} else {
+  } else {
     console.error('Hamburger menu or nav menu not found');
-}
+  }
 
-    // Display Random Trivia
-const triviaArray = [
+  const triviaArray = [
     'Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.',
     'Hopping Trivia: The Rhinelander is a rare breed of rabbit.',
     'Hopping Trivia: Rhinelanders weigh between 6.5 to 10 pounds.',
@@ -73,95 +68,105 @@ const triviaArray = [
     'Hopping Trivia: Rabbits have 28 teeth.',
     'Hopping Trivia: Rabbits have a lifespan of 1.6-12 years.',
     'Hopping Trivia: Rhinelanders require daily interaction and mental stimulation.',
-];
+  ];
 
-function displayRandomTrivia() {
-    const randomTrivia = triviaArray[Math.floor(Math.random() * triviaArray.length)];
+  function displayRandomTrivia() {
+    const randomTrivia =
+      triviaArray[Math.floor(Math.random() * triviaArray.length)];
     const triviaElement = document.getElementById('random-trivia');
     if (triviaElement) {
-        triviaElement.textContent = randomTrivia;
+      triviaElement.textContent = randomTrivia;
     } else {
-        console.error('Element with ID "random-trivia" not found');
+      console.error('Element with ID "random-trivia" not found');
     }
-}
+  }
 
-displayRandomTrivia(); // Call the function once to display trivia
+  displayRandomTrivia();
 
-    // Handle Form Submission on 'contact-us.html'
-    if (window.location.pathname.includes('contact-us.html')) {
-        const contactForm = document.getElementById('contactForm');
-        let isSubmitting = false;
+  if (window.location.pathname.includes('contact-us.html')) {
+    const contactForm = document.getElementById('contactForm');
+    let isSubmitting = false;
 
-        console.log('Attaching form submit event listener');
+    console.log('Attaching form submit event listener');
 
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-                if (isSubmitting) return;
-                isSubmitting = true;
+        if (isSubmitting) return;
+        isSubmitting = true;
 
-                const name = document.getElementById('name')?.value.trim() || '';
-                const email = document.getElementById('email')?.value.trim() || '';
-                const message = document.getElementById('message')?.value.trim() || '';
+        const name = document.getElementById('name')?.value.trim() || '';
+        const email = document.getElementById('email')?.value.trim() || '';
+        const message = document.getElementById('message')?.value.trim() || '';
 
-                const formData = {
-                    name: name,
-                    email: email,
-                    message: message,
-                };
-                localStorage.setItem('contactFormData', JSON.stringify(formData));
+        const formData = {
+          name: name,
+          email: email,
+          message: message,
+        };
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
 
-                console.log('Form submitted');
-                console.log('Name:', name);
-                console.log('Email:', email);
-                console.log('Message:', message);
+        console.log('Form submitted');
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
 
-                // Reset the Hello message flag to allow it to display again after new submission
-                localStorage.setItem('hasDisplayedHelloMessage', 'false');
+        localStorage.setItem('hasDisplayedHelloMessage', 'false');
 
-                // Set session flag to show submission message
-                sessionStorage.setItem('showSubmissionMessage', 'true');
+        sessionStorage.setItem('showSubmissionMessage', 'true');
 
-                contactForm.reset();
-                isSubmitting = false;
-            }); // Closing parenthesis and brace for event listener
+        contactForm.reset();
+        isSubmitting = false;
+
+        const submissionMessageElement =
+          document.getElementById('submissionMessage');
+        if (submissionMessageElement) {
+          submissionMessageElement.innerHTML = `<h2>Get Hopping!</h2>`;
+          submissionMessageElement.style.display = 'block';
         } else {
-            console.error('Contact form not found');
+          console.error('Element with ID "submissionMessage" not found');
         }
-
-        // Display submission message if session flag is set
-        const showMessage = sessionStorage.getItem('showSubmissionMessage');
-        if (showMessage === 'true') {
-            const submittedDataElement = document.getElementById('submittedData');
-            if (submittedDataElement) {
-                submittedDataElement.innerHTML = `<h2>We'll get back to you soon!</h2>`;
-                submittedDataElement.style.display = 'block';
-            } else {
-                console.error('Element with ID "submittedData" not found');
-            }
-            // Remove the session flag to prevent the message from showing again
-            sessionStorage.removeItem('showSubmissionMessage');
-        }
-
-        // Retrieve and display stored form data only once
-        const hasDisplayedHelloMessage = localStorage.getItem('hasDisplayedHelloMessage');
-
-        if (hasDisplayedHelloMessage !== 'true') {
-            const storedData = JSON.parse(localStorage.getItem('contactFormData'));
-            if (storedData) {
-                const submittedDataElement = document.getElementById('submittedData');
-                if (submittedDataElement) {
-                    submittedDataElement.innerHTML = `
-                        <h2>Hello ${sanitizeHTML(storedData.name)}, we'll get back to you soon!</h2>
-                    `;
-                    submittedDataElement.style.display = 'block';
-                    // Set flag to indicate the message has been displayed
-                    localStorage.setItem('hasDisplayedHelloMessage', 'true');
-                } else {
-                    console.error('Element with ID "submittedData" not found');
-                }
-            }
-        }
+      });
+    } else {
+      console.error('Contact form not found');
     }
+
+    const showMessage = sessionStorage.getItem('showSubmissionMessage');
+    if (showMessage === 'true') {
+      const submittedDataElement = document.getElementById('submittedData');
+      if (submittedDataElement) {
+        submittedDataElement.innerHTML = `<h2>We'll get back to you soon!</h2>`;
+        submittedDataElement.style.display = 'block';
+      } else {
+        console.error('Element with ID "submittedData" not found');
+      }
+      sessionStorage.removeItem('showSubmissionMessage');
+    }
+
+    const hasDisplayedHelloMessage = localStorage.getItem(
+      'hasDisplayedHelloMessage'
+    );
+
+    if (hasDisplayedHelloMessage !== 'true') {
+      const storedData = JSON.parse(localStorage.getItem('contactFormData'));
+      if (storedData) {
+        const personalizedMessageElement = document.getElementById(
+          'personalizedMessage'
+        );
+        if (personalizedMessageElement) {
+          personalizedMessageElement.innerHTML = `
+                        <h2>Hello ${sanitizeHTML(
+                          storedData.name
+                        )}, we'll get back to you soon!</h2>
+                    `;
+          personalizedMessageElement.style.display = 'block';
+          // Set flag to indicate the message has been displayed
+          localStorage.setItem('hasDisplayedHelloMessage', 'true');
+        } else {
+          console.error('Element with ID "personalizedMessage" not found');
+        }
+      }
+    }
+  }
 });

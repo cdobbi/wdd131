@@ -15,17 +15,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="scripts/rabbitry.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
             <h1>Rhinelander Rabbitry 🐇🥕🥬🫐🌿 Contact Us</h1>
+            <button id="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+                &#9776;
+            </button>
             <nav id="nav-menu" class="navigation">
-                <div class="hamburger-menu" id="hamburger-menu">
-                    &#9776;
-                </div>
                 <ul>
                     <li><a href="index.html" class="filter-btn" data-filter="home" target="_blank">Home</a></li>
                     <li><a href="rhinelanders.html" class="filter-btn" data-filter="rhinelanders" target="_blank">Rhinelanders</a></li>
@@ -46,25 +45,26 @@
             <img src="images/other-jr-youth-bob.webp" alt="rabbit image4 " class="rabbit-image" loading="lazy>
             <img src=" images/other-lilys-drawing1.webp" alt="Lilys drawing" class="rabbit-image" loading="lazy">
         </section>
-
         <aside>
             <h2>Contact Us</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-            
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-            
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-            
+
                 <button type="submit">Let's Hop To It!</button>
-            </form> 
+            </form>
+            <div id="submissionMessage" style="display: none;"></div>
+            <div id="personalizedMessage" style="display: none;"></div>
         </aside>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span>WDD 131 - Dynamic Web Development 🐇 Christi Dobbins 🐇 USA</p>
+        <p>&copy; <span id="year"> </span>WDD 131 - Dynamic Web Development 🐇 Christi Dobbins 🐇 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/christi-dobbins-46a6aa98" target="_blank" class="social-icon">
@@ -78,6 +78,11 @@
             </a>
         </div>
     </footer>
+    <!-- <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+    </script> -->
     <script src="scripts/rabbitry.js" defer></script>
 </body>
 
