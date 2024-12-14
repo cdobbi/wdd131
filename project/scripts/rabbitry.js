@@ -128,9 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const submissionMessageElement =
           document.getElementById('submissionMessage');
         if (submissionMessageElement) {
-          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(
-            name
-          )}, thank you for your inquiry. I'll bet back to you shortly."</h2>`;
+          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I'll get back to you shortly.</h2>`;
           submissionMessageElement.style.display = 'block';
         } else {
           console.error('Element with ID "submissionMessage" not found');
