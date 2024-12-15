@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const submissionMessageElement =
           document.getElementById('submissionMessage');
         if (submissionMessageElement) {
-          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I'll get back to you shortly.</h2>`;
+          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
           submissionMessageElement.style.display = 'block';
         } else {
           console.error('Element with ID "submissionMessage" not found');
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (showMessage === 'true') {
       const submittedDataElement = document.getElementById('submittedData');
       if (submittedDataElement) {
-        submittedDataElement.innerHTML = `<h2>We'll get back to you soon!</h2>`;
+        submittedDataElement.innerHTML = `<h2><h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
         submittedDataElement.style.display = 'block';
       } else {
         console.error('Element with ID "submittedData" not found');

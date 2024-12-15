@@ -249,6 +249,22 @@ aside p {
     font-size: 1.5rem;
     color: var(--accent2-color);
 }
+
+#personalizedMessage h2 {
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color:darkmagenta
+}
+
+div#submissionMessage h2 {
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color:darkmagenta
+}
 footer {
     padding: 1rem;
     width: 100%;
@@ -385,6 +401,21 @@ a.blurb {
         margin: 0.5rem 0;
     }
 
+    .hamburger-menu {
+        display: block;
+        background-color:bisque;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -443,5 +474,11 @@ a.blurb {
     #random-trivia {
         font-size: 1rem;
         text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
     }
 }
