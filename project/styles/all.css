@@ -70,6 +70,7 @@ header {
 }
 
 h1 {
+    animation: twinkle 2s infinite;
     font-size: 3.5rem;
     font-weight: 300;
     padding: 3rem;
@@ -232,9 +233,18 @@ aside p {
     padding: 0.5rem;
 }
 
+.twinkle-text {
+    animation: twinkle 3s infinite;
+}
+
+header h1 {
+    animation: twinkle 3s infinite;
+}
+
 #submittedData {
     display: none;
-    /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     padding: 1rem;
     background-color: #f0f0f0;
     border: 2px solid var(--accent1-color);
@@ -263,6 +273,10 @@ div#submissionMessage h2 {
     font-size: 1rem;
     font-weight: 200;
     color: black;
+}
+
+#submittedData.show {
+    opacity: 1;
 }
 
 footer {
@@ -349,7 +363,6 @@ aside form button:hover {
 
 .social-icon:hover {
     color: #0073b1;
-    /* LinkedIn color */
 }
 
 a.blurb {
@@ -384,6 +397,52 @@ a.blurb {
 .hamburger-menu.active::before {
     content: '✖';
     color: black;
+}
+
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+        text-shadow: 0 0 5px white, 0 0 10px white;
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 2px white, 0 0 5px white;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 5px white, 0 0 10px white;
+    }
+}
+
+header h1 {
+    animation: twinkle 2s infinite;
+}
+
+.twinkle-text {
+    animation: twinkle 3s infinite;
+}
+
+#submittedData {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#submittedData h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent2-color);
+}
+
+#submittedData.show {
+    opacity: 1;
 }
 
 
