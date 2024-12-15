@@ -164,7 +164,7 @@ section.welcome-message {
 
 section.welcome-message p {
     font-family: var(--heading-font);
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: left;
     padding: 0.5rem;
     font-weight: 200;
@@ -238,6 +238,7 @@ aside p {
 }
 
 header h1 {
+    font-size: 3.5rem;
     animation: twinkle 3s infinite;
 }
 
@@ -416,6 +417,7 @@ a.blurb {
 }
 
 header h1 {
+    font-size: 3.5rem;
     animation: twinkle 2s infinite;
 }
 
@@ -437,7 +439,7 @@ header h1 {
 
 #submittedData h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--accent2-color);
 }
 
@@ -448,25 +450,25 @@ header h1 {
 
 @media (max-width: 768px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     header {
-        margin-bottom: 5rem;
+        margin-bottom: 0;
         align-items: center;
     }
 
     header h1 {
+        font-size: 2.5rem;
         text-align: center;
         margin: 0;
-        font-size: 1rem;
         font-weight: 200;
     }
 
     a.filter-btn {
         text-align: center;
         margin-left: 1rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     nav ul li {
@@ -559,7 +561,7 @@ header h1 {
     }
 
     #random-trivia {
-        font-size: 1rem;
+        font-size: 2rem;
         text-align: center;
     }
 }
