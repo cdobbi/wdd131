@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         if (personalizedMessageElement) {
           personalizedMessageElement.innerHTML = `
-                          <h2>Hello ${sanitizeHTML(
+                          <h2>Hello again ${sanitizeHTML(
                             storedData.name
                           )}, we'll get back to you soon!</h2>
                       `;
