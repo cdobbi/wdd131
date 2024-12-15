@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const lastModifiedElement = document.getElementById('lastModified');
   const currentYearElement = document.getElementById('currentyear');
 
-  // Update Last Modified
   if (lastModifiedElement) {
     lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
   } else {
@@ -24,26 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Element with ID "currentyear" not found');
   }
 
-  // Hamburger Menu Functionality
-  const hamburgerMenu = document.getElementById('hamburger-menu');
-  const navMenu = document.getElementById('nav-menu');
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('#nav-menu ul');
 
-  console.log('Hamburger Menu:', hamburgerMenu);
-  console.log('Nav Menu:', navMenu);
+    if (!hamburger) {
+      console.error('Hamburger menu not found');
+      return;
+    }
 
-  if (hamburgerMenu && navMenu) {
-    hamburgerMenu.addEventListener('click', function () {
+    if (!navMenu) {
+      console.error('Navigation menu not found');
+      return;
+    }
+
+    hamburger.addEventListener('click', function () {
       navMenu.classList.toggle('show');
-      hamburgerMenu.classList.toggle('active');
-      const isActive = hamburgerMenu.classList.contains('active');
-      hamburgerMenu.setAttribute('aria-expanded', `${isActive}`);
-      console.log('Hamburger menu clicked. Classes toggled.');
-    });
-  } else {
-    console.error('Hamburger menu or nav menu not found');
-  }
+      this.classList.toggle('active');
 
-  // Trivia Section
+      // Toggle aria-expanded for accessibility
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+
   const triviaArray = [
     'Hopping Trivia: The Rhinelander has a distinctive butterfly marking on its nose.',
     'Hopping Trivia: The Rhinelander is a rare breed of rabbit.',
@@ -88,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   displayRandomTrivia();
 
-  // Contact Form Functionality
   if (window.location.pathname.includes('contact-us.html')) {
     const contactForm = document.getElementById('contactForm');
     let isSubmitting = false;
@@ -128,7 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const submissionMessageElement =
           document.getElementById('submissionMessage');
         if (submissionMessageElement) {
-          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
+          submissionMessageElement.innerHTML = `<h2>Hello ${sanitizeHTML(
+            name
+          )}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
           submissionMessageElement.style.display = 'block';
         } else {
           console.error('Element with ID "submissionMessage" not found');
@@ -142,7 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (showMessage === 'true') {
       const submittedDataElement = document.getElementById('submittedData');
       if (submittedDataElement) {
-        submittedDataElement.innerHTML = `<h2><h2>Hello ${sanitizeHTML(name)}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
+        submittedDataElement.innerHTML = `<h2><h2>Hello ${sanitizeHTML(
+          name
+        )}, thank you for your inquiry. I\'ll get back to you shortly.</h2>`;
         submittedDataElement.style.display = 'block';
       } else {
         console.error('Element with ID "submittedData" not found');
@@ -167,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
                           )}, we'll get back to you soon!</h2>
                       `;
           personalizedMessageElement.style.display = 'block';
-          // Set flag to indicate the message has been displayed
           localStorage.setItem('hasDisplayedHelloMessage', 'true');
         } else {
           console.error('Element with ID "personalizedMessage" not found');
